@@ -1,0 +1,2226 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>netty · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../nginx/基本命令.html" />
+    
+    
+    <link rel="prev" href="../mysql/面试题.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dubbo/dubbo spi思想.html">
+            
+                <a href="../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dubbo/dubbo工作原理.html">
+            
+                <a href="../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../dubbo/dubbo支持协议.html">
+            
+                <a href="../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dubbo/dubbo组件扩展.html">
+            
+                <a href="../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dubbo/为什么拆分系统.html">
+            
+                <a href="../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../dubbo/什么是RPC.html">
+            
+                <a href="../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../java基础/Java基础.html">
+            
+                <a href="../java基础/Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../java基础/jdk8新特性.html">
+            
+                <a href="../java基础/jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../java基础/NIO.html">
+            
+                <a href="../java基础/NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../java基础/string.html">
+            
+                <a href="../java基础/string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../java基础/反射.html">
+            
+                <a href="../java基础/反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../java基础/并发包/cas.html">
+            
+                <a href="../java基础/并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../java基础/并发包/countDownLatch.html">
+            
+                <a href="../java基础/并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../java基础/并发包/reentrantLock.html">
+            
+                <a href="../java基础/并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../java基础/并发包/Synchronized.html">
+            
+                <a href="../java基础/并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../java基础/并发包/threadLocal.html">
+            
+                <a href="../java基础/并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../java基础/并发包/原子变量类.html">
+            
+                <a href="../java基础/并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../java基础/并发包/线程中断处理.html">
+            
+                <a href="../java基础/并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../java基础/并发包/线程池.html">
+            
+                <a href="../java基础/并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../java基础/并发包/面试题.html">
+            
+                <a href="../java基础/并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../java基础/线程相关.html">
+            
+                <a href="../java基础/线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../java基础/集合/BlockingQueue.html">
+            
+                <a href="../java基础/集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../java基础/集合/ConcurrentHashmap.html">
+            
+                <a href="../java基础/集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../java基础/集合/hashMap.html">
+            
+                <a href="../java基础/集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../java基础/集合/面试题.html">
+            
+                <a href="../java基础/集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../jvm/gc过程.html">
+            
+                <a href="../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../jvm/JVM 架构.html">
+            
+                <a href="../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../jvm/JVM参数调优.html">
+            
+                <a href="../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../jvm/JVM相关基础.html">
+            
+                <a href="../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../jvm/内存分代.html">
+            
+                <a href="../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../jvm/内存模型.html">
+            
+                <a href="../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../jvm/垃圾回收.html">
+            
+                <a href="../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../jvm/字符串常量池.html">
+            
+                <a href="../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../jvm/对象生命周期.html">
+            
+                <a href="../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../jvm/引用类型.html">
+            
+                <a href="../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../jvm/类加载机制.html">
+            
+                <a href="../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="../kafka/kafka使用过程问题.html">
+            
+                <a href="../kafka/kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="../kafka/kafka基本概念.html">
+            
+                <a href="../kafka/kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="../kafka/kafka扩容.html">
+            
+                <a href="../kafka/kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="../kafka/kafka负载均衡.html">
+            
+                <a href="../kafka/kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="../kafka/leader选举.html">
+            
+                <a href="../kafka/leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="../kafka/MQ基本概念.html">
+            
+                <a href="../kafka/MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="../kafka/保证幂等性.html">
+            
+                <a href="../kafka/保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="../kafka/保证消费顺序性.html">
+            
+                <a href="../kafka/保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="../kafka/保证高可用性.html">
+            
+                <a href="../kafka/保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="../kafka/解决消息丢失问题.html">
+            
+                <a href="../kafka/解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="../kafka/设计一个消息队列.html">
+            
+                <a href="../kafka/设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="../mybatis/缓存机制.html">
+            
+                <a href="../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="../mybatis/面试题.html">
+            
+                <a href="../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="../mysql/innoDB索引.html">
+            
+                <a href="../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="../mysql/MVCC.html">
+            
+                <a href="../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="../mysql/mysql架构.html">
+            
+                <a href="../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="../mysql/undo、redo.html">
+            
+                <a href="../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="../mysql/主从复制.html">
+            
+                <a href="../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="../mysql/事务隔离.html">
+            
+                <a href="../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="../mysql/分库分表策略.html">
+            
+                <a href="../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="../mysql/锁机制.html">
+            
+                <a href="../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="../mysql/面试题.html">
+            
+                <a href="../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.66" data-path="netty.html">
+            
+                <a href="netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="../nginx/基本命令.html">
+            
+                <a href="../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="../redis/redis 过期策略.html">
+            
+                <a href="../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="../redis/redis、memcached区别.html">
+            
+                <a href="../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="../redis/redis分布式锁.html">
+            
+                <a href="../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="../redis/redis哨兵保证高可用.html">
+            
+                <a href="../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="../redis/redis基本数据类型.html">
+            
+                <a href="../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="../redis/redis数据结构.html">
+            
+                <a href="../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="../redis/redis线程模型.html">
+            
+                <a href="../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="../redis/redis集群.html">
+            
+                <a href="../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="../redis/一致性Hash.html">
+            
+                <a href="../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="../redis/主从复制原理.html">
+            
+                <a href="../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="../redis/内存淘汰.html">
+            
+                <a href="../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="../redis/持久化方式.html">
+            
+                <a href="../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="../redis/雪崩、穿透、预热.html">
+            
+                <a href="../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="../redis/面试题.html">
+            
+                <a href="../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="../spring/IOC、AOP.html">
+            
+                <a href="../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="../spring/spring 事务隔离级别.html">
+            
+                <a href="../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="../spring/涉及的设计模式.html">
+            
+                <a href="../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="../springBoot/springBoot工作原理.html">
+            
+                <a href="../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="../springCloud/eureka.html">
+            
+                <a href="../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="../springCloud/hystrix.html">
+            
+                <a href="../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="../springCloud/spring cloud相关组件.html">
+            
+                <a href="../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="../springCloud/微服务概念.html">
+            
+                <a href="../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="../springMVC/工作流程.html">
+            
+                <a href="../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="../tomcat/tomcat结构.html">
+            
+                <a href="../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="../zookeeper/zk工作流程.html">
+            
+                <a href="../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="../zookeeper/zk架构.html">
+            
+                <a href="../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="../zookeeper/zk缺点.html">
+            
+                <a href="../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="../zookeeper/分布式锁实现.html">
+            
+                <a href="../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="../分布式/分布式系统架构.html">
+            
+                <a href="../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.104" data-path="../分布式/短链接/短链接.html">
+            
+                <a href="../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.105" data-path="../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.106" data-path="../密码学/密码学加密.html">
+            
+                <a href="../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.107" data-path="../操作系统/IO.html">
+            
+                <a href="../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.108" data-path="../操作系统/内存管理.html">
+            
+                <a href="../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.109" data-path="../操作系统/操作系统基础.html">
+            
+                <a href="../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.110" data-path="../操作系统/磁盘与文件.html">
+            
+                <a href="../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.111" data-path="../操作系统/线程与进程.html">
+            
+                <a href="../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.112" data-path="../操作系统/设备管理.html">
+            
+                <a href="../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.113" data-path="../数据结构与算法/总结.html">
+            
+                <a href="../数据结构与算法/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.114" data-path="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                <a href="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.115" data-path="../数据结构与算法/数据结构/树/树.html">
+            
+                <a href="../数据结构与算法/数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.116" data-path="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                <a href="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.117" data-path="../数据结构与算法/算法/大数据算法.html">
+            
+                <a href="../数据结构与算法/算法/大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.118" data-path="../数据结构与算法/算法/字符串匹配.html">
+            
+                <a href="../数据结构与算法/算法/字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.119" data-path="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                <a href="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.120" data-path="../数据结构与算法/算法/最小生成树算法.html">
+            
+                <a href="../数据结构与算法/算法/最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.121" data-path="../数据结构与算法/算法/最短路径算法.html">
+            
+                <a href="../数据结构与算法/算法/最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.122" data-path="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                <a href="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.123" data-path="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.124" data-path="../计算机网络/HTTP/http原理.html">
+            
+                <a href="../计算机网络/HTTP/http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.125" data-path="../计算机网络/HTTP/一次http请求过程.html">
+            
+                <a href="../计算机网络/HTTP/一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.126" data-path="../计算机网络/HTTP/断点续传.html">
+            
+                <a href="../计算机网络/HTTP/断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.127" data-path="../计算机网络/HTTP/跨站攻击.html">
+            
+                <a href="../计算机网络/HTTP/跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.128" data-path="../计算机网络/HTTPS/https原理.html">
+            
+                <a href="../计算机网络/HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.129" data-path="../计算机网络/IP/IP协议相关.html">
+            
+                <a href="../计算机网络/IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.130" data-path="../计算机网络/TCP/TCP.html">
+            
+                <a href="../计算机网络/TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.131" data-path="../计算机网络/Websocket/Websocket.html">
+            
+                <a href="../计算机网络/Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.132" data-path="../计算机网络/协议.html">
+            
+                <a href="../计算机网络/协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.133" data-path="../设计模式/常用的设计模式.html">
+            
+                <a href="../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.134" data-path="../项目经验/设计一个高并发系统.html">
+            
+                <a href="../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >netty</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1bio&#x3001;nio&#x548C;aio&#x7684;&#x533A;&#x522B;&#xFF1F;">1.BIO&#x3001;NIO&#x548C;AIO&#x7684;&#x533A;&#x522B;&#xFF1F;</h3>
+<ul>
+<li>BIO&#xFF1A;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x6709;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x65F6;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5C31;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x7EBF;&#x7A0B;&#x5F00;&#x9500;&#x5927;&#x3002;</li>
+<li>&#x4F2A;&#x5F02;&#x6B65;IO&#xFF1A;&#x5C06;&#x8BF7;&#x6C42;&#x8FDE;&#x63A5;&#x653E;&#x5165;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x4E00;&#x5BF9;&#x591A;&#xFF0C;&#x4F46;&#x7EBF;&#x7A0B;&#x8FD8;&#x662F;&#x5F88;&#x5B9D;&#x8D35;&#x7684;&#x8D44;&#x6E90;&#x3002;</li>
+<li>NIO&#xFF1A;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x6CE8;&#x518C;&#x5230;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x4E0A;&#xFF0C;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x8F6E;&#x8BE2;&#x5230;&#x8FDE;&#x63A5;&#x6709;I/O&#x8BF7;&#x6C42;&#x65F6;&#x624D;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</li>
+<li>AIO&#xFF1A;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;I/O&#x8BF7;&#x6C42;&#x90FD;&#x662F;&#x7531;OS&#x5148;&#x5B8C;&#x6210;&#x4E86;&#x518D;&#x901A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x53BB;&#x542F;&#x52A8;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;</li>
+<li>BIO&#x662F;&#x9762;&#x5411;&#x6D41;&#x7684;&#xFF0C;NIO&#x662F;&#x9762;&#x5411;&#x7F13;&#x51B2;&#x533A;&#x7684;&#xFF1B;BIO&#x7684;&#x5404;&#x79CD;&#x6D41;&#x662F;&#x963B;&#x585E;&#x7684;&#x3002;&#x800C;NIO&#x662F;&#x975E;&#x963B;&#x585E;&#x7684;&#xFF1B;BIO&#x7684;Stream&#x662F;&#x5355;&#x5411;&#x7684;&#xFF0C;&#x800C;NIO&#x7684;channel&#x662F;&#x53CC;&#x5411;&#x7684;&#x3002;</li>
+<li>NIO&#x7684;&#x7279;&#x70B9;&#xFF1A;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6A21;&#x578B;&#x3001;&#x5355;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x591A;&#x4EFB;&#x52A1;&#x3001;&#x975E;&#x963B;&#x585E;I/O&#xFF0C;I/O&#x8BFB;&#x5199;&#x4E0D;&#x518D;&#x963B;&#x585E;&#xFF0C;&#x800C;&#x662F;&#x8FD4;&#x56DE;0&#x3001;&#x57FA;&#x4E8E;block&#x7684;&#x4F20;&#x8F93;&#x6BD4;&#x57FA;&#x4E8E;&#x6D41;&#x7684;&#x4F20;&#x8F93;&#x66F4;&#x9AD8;&#x6548;&#x3001;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;IO&#x51FD;&#x6570;zero-copy&#x3001;IO&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;Java&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x7684;&#x53EF;&#x4F38;&#x7F29;&#x6027;&#x548C;&#x5B9E;&#x7528;&#x6027;&#x3002;&#x57FA;&#x4E8E;Reactor&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x3002;</li>
+<li>&#x5728;Reactor&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#x7B49;&#x5F85;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x6216;&#x8005;&#x53EF;&#x5E94;&#x7528;&#x6216;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x72B6;&#x6001;&#x53D1;&#x751F;&#xFF0C;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#x5C31;&#x628A;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x4F20;&#x7ED9;&#x4E8B;&#x5148;&#x6CE8;&#x518C;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x6216;&#x8005;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x540E;&#x8005;&#x6765;&#x505A;&#x5B9E;&#x9645;&#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x5728;Reactor&#x4E2D;&#x5B9E;&#x73B0;&#x8BFB;&#xFF1A;&#x6CE8;&#x518C;&#x8BFB;&#x5C31;&#x7EEA;&#x4E8B;&#x4EF6;&#x548C;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x5668;&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#x7B49;&#x5F85;&#x4E8B;&#x4EF6;&#x3001;&#x4E8B;&#x4EF6;&#x5230;&#x6765;&#xFF0C;&#x6FC0;&#x6D3B;&#x5206;&#x53D1;&#x5668;&#xFF0C;&#x5206;&#x53D1;&#x5668;&#x8C03;&#x7528;&#x4E8B;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x5668;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x5668;&#x5B8C;&#x6210;&#x5B9E;&#x9645;&#x7684;&#x8BFB;&#x64CD;&#x4F5C;&#xFF0C;&#x5904;&#x7406;&#x8BFB;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6CE8;&#x518C;&#x65B0;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x8FD8;&#x63A7;&#x5236;&#x6743;&#x3002;</li>
+</ul>
+<h3 id="2nio&#x7684;&#x7EC4;&#x6210;&#xFF1F;">2.NIO&#x7684;&#x7EC4;&#x6210;&#xFF1F;</h3>
+<ul>
+<li>Buffer&#xFF1A;&#x4E0E;Channel&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x6570;&#x636E;&#x662F;&#x4ECE;Channel&#x8BFB;&#x5165;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x4ECE;&#x7F13;&#x51B2;&#x533A;&#x5199;&#x5165;Channel&#x4E2D;&#x7684;<ul>
+<li>flip&#x65B9;&#x6CD5; &#xFF1A; &#x53CD;&#x8F6C;&#x6B64;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5C06;position&#x7ED9;limit&#xFF0C;&#x7136;&#x540E;&#x5C06;position&#x7F6E;&#x4E3A;0&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5207;&#x6362;&#x8BFB;&#x5199;&#x6A21;&#x5F0F;</li>
+<li>clear&#x65B9;&#x6CD5; &#xFF1A;&#x6E05;&#x9664;&#x6B64;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5C06;position&#x7F6E;&#x4E3A;0&#xFF0C;&#x628A;capacity&#x7684;&#x503C;&#x7ED9;limit&#x3002;</li>
+<li>rewind&#x65B9;&#x6CD5; &#xFF1A; &#x91CD;&#x7ED5;&#x6B64;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5C06;position&#x7F6E;&#x4E3A;0</li>
+</ul>
+</li>
+<li>DirectByteBuffer&#x53EF;&#x51CF;&#x5C11;&#x4E00;&#x6B21;&#x7CFB;&#x7EDF;&#x7A7A;&#x95F4;&#x5230;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x62F7;&#x8D1D;&#x3002;&#x4F46;Buffer&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#x7684;&#x6210;&#x672C;&#x66F4;&#x9AD8;&#xFF0C;&#x4E0D;&#x53EF;&#x63A7;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x7528;&#x5185;&#x5B58;&#x6C60;&#x6765;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;&#x76F4;&#x63A5;&#x7F13;&#x51B2;&#x533A;&#x4E3B;&#x8981;&#x5206;&#x914D;&#x7ED9;&#x90A3;&#x4E9B;&#x6613;&#x53D7;&#x57FA;&#x7840;&#x7CFB;&#x7EDF;&#x7684;&#x672C;&#x673A;I/O &#x64CD;&#x4F5C;&#x5F71;&#x54CD;&#x7684;&#x5927;&#x578B;&#x3001;&#x6301;&#x4E45;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x3002;&#x5982;&#x679C;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5C0F;&#x7684;&#x4E2D;&#x5C0F;&#x5E94;&#x7528;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;heapBuffer&#xFF0C;&#x7531;JVM&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;</li>
+<li>Channel&#xFF1A;&#x8868;&#x793A; IO &#x6E90;&#x4E0E;&#x76EE;&#x6807;&#x6253;&#x5F00;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x662F;&#x53CC;&#x5411;&#x7684;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x80FD;&#x4E0E;Buffer &#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x53EF;&#x77E5;&#xFF0C;FileChannel&#x7684;read&#x65B9;&#x6CD5;&#x548C;write&#x65B9;&#x6CD5;&#x90FD;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x590D;&#x5236;&#x4E86;&#x4E24;&#x6B21;&#xFF01;</li>
+<li>Selector&#x53EF;&#x4F7F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x7BA1;&#x7406;&#x591A;&#x4E2A;Channel&#xFF0C;open&#x65B9;&#x6CD5;&#x53EF;&#x521B;&#x5EFA;Selector&#xFF0C;register&#x65B9;&#x6CD5;&#x5411;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x5668;&#x6CE8;&#x518C;&#x901A;&#x9053;&#xFF0C;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#xFF1A;&#x8BFB;&#x3001;&#x5199;&#x3001;&#x8FDE;&#x63A5;&#x3001;accept&#x3002;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#x540E;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;SelectionKey&#xFF1A;&#x5B83;&#x8868;&#x793A;SelectableChannel &#x548C;Selector &#x4E4B;&#x95F4;&#x7684;&#x6CE8;&#x518C;&#x5173;&#x7CFB;&#xFF0C;wakeup&#x65B9;&#x6CD5;&#xFF1A;&#x4F7F;&#x5C1A;&#x672A;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x5524;&#x9192;&#x7684;&#x539F;&#x56E0;&#x662F;&#xFF1A;&#x6CE8;&#x518C;&#x4E86;&#x65B0;&#x7684;channel&#x6216;&#x8005;&#x4E8B;&#x4EF6;&#xFF1B;channel&#x5173;&#x95ED;&#xFF0C;&#x53D6;&#x6D88;&#x6CE8;&#x518C;&#xFF1B;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#x7684;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#xFF08;&#x5982;&#x5B9A;&#x65F6;&#x5668;&#x4E8B;&#x4EF6;&#xFF09;&#xFF0C;&#x5E0C;&#x671B;&#x53CA;&#x65F6;&#x5904;&#x7406;&#x3002;</li>
+<li>Selector&#x5728;Linux&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x662F;EPollSelectorImpl&#xFF0C;&#x59D4;&#x6258;&#x7ED9;EPollArrayWrapper&#x5B9E;&#x73B0;&#xFF0C;&#x5176;&#x4E2D;&#x4E09;&#x4E2A;native&#x65B9;&#x6CD5;&#x662F;&#x5BF9;epoll&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x800C;EPollSelectorImpl. implRegister&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;epoll_ctl&#x5411;epoll&#x5B9E;&#x4F8B;&#x4E2D;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD8;&#x5C06;&#x6CE8;&#x518C;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;(fd)&#x4E0E;SelectionKey&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x6DFB;&#x52A0;&#x5230;fdToKey&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;map&#x7EF4;&#x62A4;&#x4E86;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x4E0E;SelectionKey&#x7684;&#x6620;&#x5C04;&#x3002;</li>
+<li>fdToKey&#x6709;&#x65F6;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5927;&#xFF0C;&#x56E0;&#x4E3A;&#x6CE8;&#x518C;&#x5230;Selector&#x4E0A;&#x7684;Channel&#x975E;&#x5E38;&#x591A;&#xFF08;&#x767E;&#x4E07;&#x8FDE;&#x63A5;&#xFF09;&#xFF1B;&#x8FC7;&#x671F;&#x6216;&#x5931;&#x6548;&#x7684;Channel&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x5173;&#x95ED;&#x3002;fdToKey&#x603B;&#x662F;&#x4E32;&#x884C;&#x8BFB;&#x53D6;&#x7684;&#xFF0C;&#x800C;&#x8BFB;&#x53D6;&#x662F;&#x5728;select&#x65B9;&#x6CD5;&#x4E2D;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;</li>
+<li>Pipe&#xFF1A;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5355;&#x5411;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#xFF0C;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x5199;&#x5230;sink&#x901A;&#x9053;&#xFF0C;&#x4ECE;source&#x901A;&#x9053;&#x8BFB;&#x53D6;</li>
+<li>NIO&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;&#xFF1A;Selector.open()&#xFF1A;&#x6253;&#x5F00;&#x4E00;&#x4E2A;Selector&#xFF1B;ServerSocketChannel.open()&#xFF1A;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x7AEF;&#x7684;Channel&#xFF1B;bind()&#xFF1A;&#x7ED1;&#x5B9A;&#x5230;&#x67D0;&#x4E2A;&#x7AEF;&#x53E3;&#x4E0A;&#x3002;&#x5E76;&#x914D;&#x7F6E;&#x975E;&#x963B;&#x585E;&#x6A21;&#x5F0F;&#xFF1B;register()&#xFF1A;&#x6CE8;&#x518C;Channel&#x548C;&#x5173;&#x6CE8;&#x7684;&#x4E8B;&#x4EF6;&#x5230;Selector&#x4E0A;&#xFF1B;select()&#x8F6E;&#x8BE2;&#x62FF;&#x5230;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x7684;&#x4E8B;&#x4EF6;</li>
+</ul>
+<h3 id="3netty&#x7684;&#x7279;&#x70B9;&#xFF1F;">3.Netty&#x7684;&#x7279;&#x70B9;&#xFF1F;</h3>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;NIO&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;TCP&#x3001;UDP&#x548C;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#x7684;&#x652F;&#x6301;</li>
+<li>&#x4F7F;&#x7528;&#x66F4;&#x9AD8;&#x6548;&#x7684;socket&#x5E95;&#x5C42;&#xFF0C;&#x5BF9;epoll&#x7A7A;&#x8F6E;&#x8BE2;&#x5F15;&#x8D77;&#x7684;cpu&#x5360;&#x7528;&#x98D9;&#x5347;&#x5728;&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x4E86;&#x5904;&#x7406;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x76F4;&#x63A5;&#x4F7F;&#x7528;NIO&#x7684;&#x9677;&#x9631;&#xFF0C;&#x7B80;&#x5316;&#x4E86;NIO&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x91C7;&#x7528;&#x591A;&#x79CD;decoder/encoder &#x652F;&#x6301;&#xFF0C;&#x5BF9;TCP&#x7C98;&#x5305;/&#x5206;&#x5305;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x5904;&#x7406;</li>
+<li>&#x53EF;&#x4F7F;&#x7528;&#x63A5;&#x53D7;/&#x5904;&#x7406;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x63D0;&#x9AD8;&#x8FDE;&#x63A5;&#x6548;&#x7387;&#xFF0C;&#x5BF9;&#x91CD;&#x8FDE;&#x3001;&#x5FC3;&#x8DF3;&#x68C0;&#x6D4B;&#x7684;&#x7B80;&#x5355;&#x652F;&#x6301;</li>
+<li>&#x53EF;&#x914D;&#x7F6E;IO&#x7EBF;&#x7A0B;&#x6570;&#x3001;TCP&#x53C2;&#x6570;&#xFF0C; TCP&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x7F13;&#x51B2;&#x533A;&#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x4EE3;&#x66FF;&#x5806;&#x5185;&#x5B58;&#xFF0C;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x65B9;&#x5F0F;&#x5FAA;&#x73AF;&#x5229;&#x7528;ByteBuf</li>
+<li>&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5668;&#x53CA;&#x65F6;&#x7533;&#x8BF7;&#x91CA;&#x653E;&#x4E0D;&#x518D;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x964D;&#x4F4E;&#x4E86;GC&#x9891;&#x7387;</li>
+<li>&#x4F7F;&#x7528;&#x5355;&#x7EBF;&#x7A0B;&#x4E32;&#x884C;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x9AD8;&#x6548;&#x7684;Reactor&#x7EBF;&#x7A0B;&#x6A21;&#x578B;</li>
+<li>&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x4E86;volitale&#x3001;&#x4F7F;&#x7528;&#x4E86;CAS&#x548C;&#x539F;&#x5B50;&#x7C7B;&#x3001;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7C7B;&#x7684;&#x4F7F;&#x7528;&#x3001;&#x8BFB;&#x5199;&#x9501;&#x7684;&#x4F7F;&#x7528;</li>
+</ul>
+<h3 id="4netty&#x7684;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF1F;">4.Netty&#x7684;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF1F;</h3>
+<ul>
+<li>Netty&#x901A;&#x8FC7;Reactor&#x6A21;&#x578B;&#x57FA;&#x4E8E;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x4E86;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;boss&#x7EBF;&#x7A0B;&#x6C60;&#x548C;work&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x5176;&#x4E2D;boss&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7EBF;&#x7A0B;&#x8D1F;&#x8D23;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;accept&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x63A5;&#x6536;&#x5230;accept&#x4E8B;&#x4EF6;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x628A;&#x5BF9;&#x5E94;&#x7684;socket&#x5C01;&#x88C5;&#x5230;&#x4E00;&#x4E2A;NioSocketChannel&#x4E2D;&#xFF0C;&#x5E76;&#x4EA4;&#x7ED9;work&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x5176;&#x4E2D;work&#x7EBF;&#x7A0B;&#x6C60;&#x8D1F;&#x8D23;&#x8BF7;&#x6C42;&#x7684;read&#x548C;write&#x4E8B;&#x4EF6;&#xFF0C;&#x7531;&#x5BF9;&#x5E94;&#x7684;Handler&#x5904;&#x7406;&#x3002;</li>
+<li>&#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF1A;&#x6240;&#x6709;I/O&#x64CD;&#x4F5C;&#x90FD;&#x7531;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5B8C;&#x6210;&#xFF0C;&#x5373;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x548C;&#x5904;&#x7406;&#x90FD;&#x662F;&#x5728;&#x4E00;&#x4E2A;Reactor&#x7EBF;&#x7A0B;&#x4E0A;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x65E2;&#x8981;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;,&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x8D77;&#x8FDE;&#x63A5;&#xFF0C;&#x53C8;&#x8981;&#x53D1;&#x9001;/&#x8BFB;&#x53D6;&#x8BF7;&#x6C42;&#x6216;&#x5E94;&#x7B54;/&#x54CD;&#x5E94;&#x6D88;&#x606F;&#x3002;&#x4E00;&#x4E2A;NIO &#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x5904;&#x7406;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x7684;&#x94FE;&#x8DEF;&#xFF0C;&#x6027;&#x80FD;&#x4E0A;&#x65E0;&#x6CD5;&#x652F;&#x6491;&#xFF0C;&#x901F;&#x5EA6;&#x6162;&#xFF0C;&#x82E5;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5BF9;&#x4E8E;&#x9AD8;&#x8D1F;&#x8F7D;&#x3001;&#x5927;&#x5E76;&#x53D1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E0D;&#x5408;&#x9002;&#x3002;</li>
+<li>&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF1A;&#x6709;&#x4E00;&#x4E2A;NIO &#x7EBF;&#x7A0B;&#xFF08;Acceptor&#xFF09; &#x53EA;&#x8D1F;&#x8D23;&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x7684;TCP &#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#xFF1B;NIO &#x7EBF;&#x7A0B;&#x6C60;&#x8D1F;&#x8D23;&#x7F51;&#x7EDC;IO &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x6D88;&#x606F;&#x7684;&#x8BFB;&#x53D6;&#x3001;&#x89E3;&#x7801;&#x3001;&#x7F16;&#x7801;&#x548C;&#x53D1;&#x9001;&#xFF1B;1 &#x4E2A;NIO &#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5904;&#x7406;N &#x6761;&#x94FE;&#x8DEF;&#xFF0C;&#x4F46;&#x662F;1 &#x4E2A;&#x94FE;&#x8DEF;&#x53EA;&#x5BF9;&#x5E94;1 &#x4E2A;NIO &#x7EBF;&#x7A0B;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x64CD;&#x4F5C;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x5728;&#x5E76;&#x53D1;&#x767E;&#x4E07;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x6216;&#x9700;&#x8981;&#x5B89;&#x5168;&#x8BA4;&#x8BC1;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;Acceptor &#x7EBF;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5B58;&#x5728;&#x6027;&#x80FD;&#x4E0D;&#x8DB3;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x4E3B;&#x4ECE;&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF1A;Acceptor &#x7EBF;&#x7A0B;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#xFF0C;&#x5C06;SocketChannel &#x4ECE;&#x4E3B;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;Reactor &#x7EBF;&#x7A0B;&#x7684;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x4E0A;&#x79FB;&#x9664;&#xFF0C;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5230;Sub &#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7EBF;&#x7A0B;&#x4E0A;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;I/O &#x7684;&#x8BFB;&#x5199;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;mainReactor&#x53EA;&#x8D1F;&#x8D23;&#x63A5;&#x5165;&#x8BA4;&#x8BC1;&#x3001;&#x63E1;&#x624B;&#x7B49;&#x64CD;&#x4F5C;&#xFF1B;</li>
+</ul>
+<h3 id="5tcp-&#x7C98;&#x5305;&#x62C6;&#x5305;&#x7684;&#x539F;&#x56E0;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1F;">5.TCP &#x7C98;&#x5305;/&#x62C6;&#x5305;&#x7684;&#x539F;&#x56E0;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1F;</h3>
+<ul>
+<li>TCP&#x662F;&#x4EE5;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x5305;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;TCP&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5305;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x628A;&#x5C0F;&#x7684;&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x6570;&#x636E;&#x5305;&#x53D1;&#x9001;&#x3002;</li>
+<li>TCP&#x7C98;&#x5305;/&#x5206;&#x5305;&#x7684;&#x539F;&#x56E0;&#xFF1A;<ul>
+<li>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5199;&#x5165;&#x7684;&#x5B57;&#x8282;&#x5927;&#x5C0F;&#x5927;&#x4E8E;&#x5957;&#x63A5;&#x5B57;&#x53D1;&#x9001;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x62C6;&#x5305;&#x73B0;&#x8C61;&#xFF0C;&#x800C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5199;&#x5165;&#x6570;&#x636E;&#x5C0F;&#x4E8E;&#x5957;&#x63A5;&#x5B57;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;&#xFF0C;&#x7F51;&#x5361;&#x5C06;&#x5E94;&#x7528;&#x591A;&#x6B21;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x7F51;&#x7EDC;&#x4E0A;&#xFF0C;&#x8FD9;&#x5C06;&#x4F1A;&#x53D1;&#x751F;&#x7C98;&#x5305;&#x73B0;&#x8C61;&#xFF1B;</li>
+<li>&#x8FDB;&#x884C;MSS&#x5927;&#x5C0F;&#x7684;TCP&#x5206;&#x6BB5;&#xFF0C;&#x5F53;TCP&#x62A5;&#x6587;&#x957F;&#x5EA6;-TCP&#x5934;&#x90E8;&#x957F;&#x5EA6;&gt;MSS&#x7684;&#x65F6;&#x5019;&#x5C06;&#x53D1;&#x751F;&#x62C6;&#x5305;</li>
+<li>&#x4EE5;&#x592A;&#x7F51;&#x5E27;&#x7684;payload&#xFF08;&#x51C0;&#x8377;&#xFF09;&#x5927;&#x4E8E;MTU&#xFF08;1500&#x5B57;&#x8282;&#xFF09;&#x8FDB;&#x884C;ip&#x5206;&#x7247;&#x3002;</li>
+</ul>
+</li>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;<ul>
+<li>&#x6D88;&#x606F;&#x5B9A;&#x957F;&#xFF1A;FixedLengthFrameDecoder&#x7C7B;</li>
+<li>&#x5305;&#x5C3E;&#x589E;&#x52A0;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x5206;&#x5272;&#xFF1A;&#x884C;&#x5206;&#x9694;&#x7B26;&#x7C7B;&#xFF1A;LineBasedFrameDecoder&#x6216;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x9694;&#x7B26;&#x7C7B; &#xFF1A;DelimiterBasedFrameDecoder</li>
+<li>&#x5C06;&#x6D88;&#x606F;&#x5206;&#x4E3A;&#x6D88;&#x606F;&#x5934;&#x548C;&#x6D88;&#x606F;&#x4F53;&#xFF1A;LengthFieldBasedFrameDecoder&#x7C7B;&#x3002;&#x5206;&#x4E3A;&#x6709;&#x5934;&#x90E8;&#x7684;&#x62C6;&#x5305;&#x4E0E;&#x7C98;&#x5305;&#x3001;&#x957F;&#x5EA6;&#x5B57;&#x6BB5;&#x5728;&#x524D;&#x4E14;&#x6709;&#x5934;&#x90E8;&#x7684;&#x62C6;&#x5305;&#x4E0E;&#x7C98;&#x5305;&#x3001;&#x591A;&#x6269;&#x5C55;&#x5934;&#x90E8;&#x7684;&#x62C6;&#x5305;&#x4E0E;&#x7C98;&#x5305;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="6&#x4E86;&#x89E3;&#x54EA;&#x51E0;&#x79CD;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#xFF1F;">6.&#x4E86;&#x89E3;&#x54EA;&#x51E0;&#x79CD;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#xFF1F;</h3>
+<ul>
+<li>&#x5E8F;&#x5217;&#x5316;&#xFF08;&#x7F16;&#x7801;&#xFF09;&#x662F;&#x5C06;&#x5BF9;&#x8C61;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#xFF08;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x3001;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x7B49;&#xFF1B;&#x800C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF08;&#x89E3;&#x7801;&#xFF09;&#x5219;&#x662F;&#x5C06;&#x4ECE;&#x7F51;&#x7EDC;&#x3001;&#x78C1;&#x76D8;&#x7B49;&#x8BFB;&#x53D6;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x8FD8;&#x539F;&#x6210;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x5BF9;&#x8C61;&#x7684;&#x89E3;&#x7801;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B8C;&#x6210;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x5F71;&#x54CD;&#x5E8F;&#x5217;&#x5316;&#x6027;&#x80FD;&#x7684;&#x5173;&#x952E;&#x56E0;&#x7D20;&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7684;&#x7801;&#x6D41;&#x5927;&#x5C0F;&#xFF08;&#x7F51;&#x7EDC;&#x5E26;&#x5BBD;&#x7684;&#x5360;&#x7528;&#xFF09;&#x3001;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6027;&#x80FD;&#xFF08;CPU&#x8D44;&#x6E90;&#x5360;&#x7528;&#xFF09;&#xFF1B;&#x662F;&#x5426;&#x652F;&#x6301;&#x8DE8;&#x8BED;&#x8A00;&#xFF08;&#x5F02;&#x6784;&#x7CFB;&#x7EDF;&#x7684;&#x5BF9;&#x63A5;&#x548C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x5207;&#x6362;&#xFF09;&#x3002;</li>
+<li>Java&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7684;&#x5E8F;&#x5217;&#x5316;&#xFF1A;&#x65E0;&#x6CD5;&#x8DE8;&#x8BED;&#x8A00;&#x3001;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7684;&#x7801;&#x6D41;&#x592A;&#x5927;&#x3001;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6027;&#x80FD;&#x5DEE;</li>
+<li>XML&#xFF0C;&#x4F18;&#x70B9;&#xFF1A;&#x4EBA;&#x673A;&#x53EF;&#x8BFB;&#x6027;&#x597D;&#xFF0C;&#x53EF;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x6216;&#x7279;&#x6027;&#x7684;&#x540D;&#x79F0;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#x6570;&#x636E;&#x53EA;&#x5305;&#x542B;&#x6570;&#x636E;&#x672C;&#x8EAB;&#x4EE5;&#x53CA;&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x7C7B;&#x578B;&#x6807;&#x8BC6;&#x548C;&#x7A0B;&#x5E8F;&#x96C6;&#x4FE1;&#x606F;&#xFF1B;&#x53EA;&#x80FD;&#x5E8F;&#x5217;&#x5316;&#x516C;&#x5171;&#x5C5E;&#x6027;&#x548C;&#x5B57;&#x6BB5;&#xFF1B;&#x4E0D;&#x80FD;&#x5E8F;&#x5217;&#x5316;&#x65B9;&#x6CD5;&#xFF1B;&#x6587;&#x4EF6;&#x5E9E;&#x5927;&#xFF0C;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x590D;&#x6742;&#xFF0C;&#x4F20;&#x8F93;&#x5360;&#x5E26;&#x5BBD;&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5F53;&#x505A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x3002;</li>
+<li>JSON&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#xFF0C;&#x4F18;&#x70B9;&#xFF1A;&#x517C;&#x5BB9;&#x6027;&#x9AD8;&#x3001;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6613;&#x4E8E;&#x8BFB;&#x5199;&#x3001;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x6570;&#x636E;&#x8F83;&#x5C0F;&#xFF0C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x597D;&#xFF0C;&#x517C;&#x5BB9;&#x6027;&#x597D;&#x3001;&#x4E0E;XML&#x76F8;&#x6BD4;&#xFF0C;&#x5176;&#x534F;&#x8BAE;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x89E3;&#x6790;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x6570;&#x636E;&#x7684;&#x63CF;&#x8FF0;&#x6027;&#x6BD4;XML&#x5DEE;&#x3001;&#x4E0D;&#x9002;&#x5408;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x4E3A;ms&#x7EA7;&#x522B;&#x7684;&#x60C5;&#x51B5;&#x3001;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5F00;&#x9500;&#x6BD4;&#x8F83;&#x5927;&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF08;&#x53EF;&#x66FF;&#x4EE3;&#xFF38;&#xFF2D;&#xFF2C;&#xFF09;&#xFF1A;&#x8DE8;&#x9632;&#x706B;&#x5899;&#x8BBF;&#x95EE;&#x3001;&#x53EF;&#x8C03;&#x5F0F;&#x6027;&#x8981;&#x6C42;&#x9AD8;&#x3001;&#x57FA;&#x4E8E;Web browser&#x7684;Ajax&#x8BF7;&#x6C42;&#x3001;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x91CF;&#x76F8;&#x5BF9;&#x5C0F;&#xFF0C;&#x5B9E;&#x65F6;&#x6027;&#x8981;&#x6C42;&#x76F8;&#x5BF9;&#x4F4E;&#xFF08;&#x4F8B;&#x5982;&#x79D2;&#x7EA7;&#x522B;&#xFF09;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+<li>Fastjson&#xFF0C;&#x91C7;&#x7528;&#x4E00;&#x79CD;&#x201C;&#x5047;&#x5B9A;&#x6709;&#x5E8F;&#x5FEB;&#x901F;&#x5339;&#x914D;&#x201D;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x4F18;&#x70B9;&#xFF1A;&#x63A5;&#x53E3;&#x7B80;&#x5355;&#x6613;&#x7528;&#x3001;&#x76EE;&#x524D;java&#x8BED;&#x8A00;&#x4E2D;&#x6700;&#x5FEB;&#x7684;json&#x5E93;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x8FC7;&#x4E8E;&#x6CE8;&#x91CD;&#x5FEB;&#xFF0C;&#x800C;&#x504F;&#x79BB;&#x4E86;&#x201C;&#x6807;&#x51C6;&#x201D;&#x53CA;&#x529F;&#x80FD;&#x6027;&#x3001;&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x4E0D;&#x9AD8;&#xFF0C;&#x6587;&#x6863;&#x4E0D;&#x5168;&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x534F;&#x8BAE;&#x4EA4;&#x4E92;&#x3001;Web&#x8F93;&#x51FA;&#x3001;Android&#x5BA2;&#x6237;&#x7AEF;</li>
+<li>Thrift&#xFF0C;&#x4E0D;&#x4EC5;&#x662F;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#xFF0C;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;RPC&#x6846;&#x67B6;&#x3002;&#x4F18;&#x70B9;&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7684;&#x4F53;&#x79EF;&#x5C0F;, &#x901F;&#x5EA6;&#x5FEB;&#x3001;&#x652F;&#x6301;&#x591A;&#x79CD;&#x8BED;&#x8A00;&#x548C;&#x4E30;&#x5BCC;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x7684;&#x589E;&#x5220;&#x5177;&#x6709;&#x8F83;&#x5F3A;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x3001;&#x652F;&#x6301;&#x4E8C;&#x8FDB;&#x5236;&#x538B;&#x7F29;&#x7F16;&#x7801;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x4F7F;&#x7528;&#x8005;&#x8F83;&#x5C11;&#x3001;&#x8DE8;&#x9632;&#x706B;&#x5899;&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;&#x4E0D;&#x5B89;&#x5168;&#x3001;&#x4E0D;&#x5177;&#x6709;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;&#x65F6;&#x76F8;&#x5BF9;&#x56F0;&#x96BE;&#x3001;&#x4E0D;&#x80FD;&#x4E0E;&#x5176;&#x4ED6;&#x4F20;&#x8F93;&#x5C42;&#x534F;&#x8BAE;&#x5171;&#x540C;&#x4F7F;&#x7528;&#xFF08;&#x4F8B;&#x5982;HTTP&#xFF09;&#x3001;&#x65E0;&#x6CD5;&#x652F;&#x6301;&#x5411;&#x6301;&#x4E45;&#x5C42;&#x76F4;&#x63A5;&#x8BFB;&#x5199;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x4E0D;&#x9002;&#x5408;&#x505A;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;RPC&#x89E3;&#x51B3;&#x65B9;&#x6848;</li>
+<li>Avro&#xFF0C;Hadoop&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x9879;&#x76EE;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;JSON&#x7684;&#x5197;&#x957F;&#x548C;&#x6CA1;&#x6709;IDL&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F18;&#x70B9;&#xFF1A;&#x652F;&#x6301;&#x4E30;&#x5BCC;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x7B80;&#x5355;&#x7684;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x7ED3;&#x5408;&#x529F;&#x80FD;&#x3001;&#x5177;&#x6709;&#x81EA;&#x6211;&#x63CF;&#x8FF0;&#x5C5E;&#x6027;&#x3001;&#x63D0;&#x9AD8;&#x4E86;&#x6570;&#x636E;&#x89E3;&#x6790;&#x901F;&#x5EA6;&#x3001;&#x5FEB;&#x901F;&#x53EF;&#x538B;&#x7F29;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x5F62;&#x5F0F;&#x3001;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;RPC&#x3001;&#x652F;&#x6301;&#x8DE8;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x5BF9;&#x4E8E;&#x4E60;&#x60EF;&#x4E8E;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x7684;&#x7528;&#x6237;&#x4E0D;&#x76F4;&#x89C2;&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5728;Hadoop&#x4E2D;&#x505A;Hive&#x3001;Pig&#x548C;MapReduce&#x7684;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x3002;</li>
+<li>Protobuf&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4EE5;.proto&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#xFF0C;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;POJO&#x5BF9;&#x8C61;&#x548C;Protobuf&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x3002;&#x4F18;&#x70B9;&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7801;&#x6D41;&#x5C0F;&#xFF0C;&#x6027;&#x80FD;&#x9AD8;&#x3001;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF08;XML JSON&#x7B49;&#xFF09;&#x3001;&#x901A;&#x8FC7;&#x6807;&#x8BC6;&#x5B57;&#x6BB5;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x534F;&#x8BAE;&#x7684;&#x524D;&#x5411;&#x517C;&#x5BB9;&#x3001;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6587;&#x6863;&#x66F4;&#x5BB9;&#x6613;&#x7BA1;&#x7406;&#x548C;&#x7EF4;&#x62A4;&#x3002;&#x7F3A;&#x70B9;&#xFF1A;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x5DE5;&#x5177;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x3001;&#x652F;&#x6301;&#x7684;&#x8BED;&#x8A00;&#x76F8;&#x5BF9;&#x8F83;&#x5C11;&#xFF0C;&#x5B98;&#x65B9;&#x53EA;&#x652F;&#x6301;Java &#x3001;C++ &#x3001;python&#x3002;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5BF9;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x9AD8;&#x7684;RPC&#x8C03;&#x7528;&#x3001;&#x5177;&#x6709;&#x826F;&#x597D;&#x7684;&#x8DE8;&#x9632;&#x706B;&#x5899;&#x7684;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#x3001;&#x9002;&#x5408;&#x5E94;&#x7528;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x6301;&#x4E45;&#x5316;</li>
+<li>&#x5176;&#x5B83;<ul>
+<li>protostuff &#x57FA;&#x4E8E;protobuf&#x534F;&#x8BAE;&#xFF0C;&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;proto&#x6587;&#x4EF6;&#xFF0C;&#x76F4;&#x63A5;&#x5BFC;&#x5305;&#x5373;&#x53EF;</li>
+<li>Jboss marshaling &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5E8F;&#x5217;&#x5316;java&#x7C7B;&#xFF0C; &#x65E0;&#x987B;&#x5B9E;java.io.Serializable&#x63A5;&#x53E3;</li>
+<li>Message pack &#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x5316;&#x683C;&#x5F0F;</li>
+<li>Hessian &#x91C7;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x534F;&#x8BAE;&#x7684;&#x8F7B;&#x91CF;&#x7EA7;remoting onhttp&#x5DE5;&#x5177;</li>
+<li>kryo &#x57FA;&#x4E8E;protobuf&#x534F;&#x8BAE;&#xFF0C;&#x53EA;&#x652F;&#x6301;java&#x8BED;&#x8A00;,&#x9700;&#x8981;&#x6CE8;&#x518C;&#xFF08;Registration&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5E8F;&#x5217;&#x5316;&#xFF08;Output&#xFF09;&#xFF0C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF08;Input&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h3 id="7&#x5982;&#x4F55;&#x9009;&#x62E9;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#xFF1F;">7.&#x5982;&#x4F55;&#x9009;&#x62E9;&#x5E8F;&#x5217;&#x5316;&#x534F;&#x8BAE;&#xFF1F;</h3>
+<ul>
+<li>&#x5177;&#x4F53;&#x573A;&#x666F;<ul>
+<li>&#x5BF9;&#x4E8E;&#x516C;&#x53F8;&#x95F4;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x5728;100ms&#x4EE5;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x57FA;&#x4E8E;XML&#x7684;SOAP&#x534F;&#x8BAE;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x8003;&#x8651;&#x7684;&#x65B9;&#x6848;&#x3002;</li>
+<li>&#x57FA;&#x4E8E;Web browser&#x7684;Ajax&#xFF0C;&#x4EE5;&#x53CA;Mobile app&#x4E0E;&#x670D;&#x52A1;&#x7AEF;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x8BAF;&#xFF0C;JSON&#x534F;&#x8BAE;&#x662F;&#x9996;&#x9009;&#x3002;&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x4E0D;&#x592A;&#x9AD8;&#xFF0C;&#x6216;&#x8005;&#x4EE5;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x4E3A;&#x4E3B;&#xFF0C;&#x6216;&#x8005;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x8F7D;&#x8377;&#x5F88;&#x5C0F;&#x7684;&#x7684;&#x8FD0;&#x7528;&#x573A;&#x666F;&#xFF0C;JSON&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x6BD4;&#x8F83;&#x6076;&#x52A3;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x91C7;&#x7528;JSON&#x6216;XML&#x80FD;&#x591F;&#x6781;&#x5927;&#x7684;&#x63D0;&#x9AD8;&#x8C03;&#x8BD5;&#x6548;&#x7387;&#xFF0C;&#x964D;&#x4F4E;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x6210;&#x672C;&#x3002;</li>
+<li>&#x5F53;&#x5BF9;&#x6027;&#x80FD;&#x548C;&#x7B80;&#x6D01;&#x6027;&#x6709;&#x6781;&#x9AD8;&#x8981;&#x6C42;&#x7684;&#x573A;&#x666F;&#xFF0C;Protobuf&#xFF0C;Thrift&#xFF0C;Avro&#x4E4B;&#x95F4;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x7ADE;&#x4E89;&#x5173;&#x7CFB;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;T&#x7EA7;&#x522B;&#x7684;&#x6570;&#x636E;&#x7684;&#x6301;&#x4E45;&#x5316;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;Protobuf&#x548C;Avro&#x662F;&#x9996;&#x8981;&#x9009;&#x62E9;&#x3002;&#x5982;&#x679C;&#x6301;&#x4E45;&#x5316;&#x540E;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;hadoop&#x5B50;&#x9879;&#x76EE;&#x91CC;&#xFF0C;Avro&#x4F1A;&#x662F;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x6301;&#x4E45;&#x5C42;&#x975E;Hadoop&#x9879;&#x76EE;&#xFF0C;&#x4EE5;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x4E3A;&#x4E3B;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;Protobuf&#x4F1A;&#x66F4;&#x7B26;&#x5408;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x5F00;&#x53D1;&#x4E60;&#x60EF;&#x3002;&#x7531;&#x4E8E;Avro&#x7684;&#x8BBE;&#x8BA1;&#x7406;&#x5FF5;&#x504F;&#x5411;&#x4E8E;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#xFF0C;&#x5BF9;&#x4E8E;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x4E3A;&#x4E3B;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;Avro&#x662F;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;RPC&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;Thrift&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5E8F;&#x5217;&#x5316;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x652F;&#x6301;&#x4E0D;&#x540C;&#x7684;&#x4F20;&#x8F93;&#x5C42;&#x534F;&#x8BAE;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x8DE8;&#x9632;&#x706B;&#x5899;&#x8BBF;&#x95EE;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x573A;&#x666F;&#xFF0C;Protobuf&#x53EF;&#x4EE5;&#x4F18;&#x5148;&#x8003;&#x8651;&#x3002;</li>
+</ul>
+</li>
+<li>protobuf&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6709;&#x591A;&#x79CD;&#xFF1A;bool&#x3001;double&#x3001;float&#x3001;int32&#x3001;int64&#x3001;string&#x3001;bytes&#x3001;enum&#x3001;message&#x3002;protobuf&#x7684;&#x9650;&#x5B9A;&#x7B26;&#xFF1A;required: &#x5FC5;&#x987B;&#x8D4B;&#x503C;&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x3001;optional:&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x8D4B;&#x503C;&#x3001;repeated: &#x8BE5;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x4EFB;&#x610F;&#x6B21;&#x6570;&#xFF08;&#x5305;&#x62EC;0&#x6B21;&#xFF09;&#x3001;&#x679A;&#x4E3E;&#xFF1B;&#x53EA;&#x80FD;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5E38;&#x91CF;&#x96C6;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#x4F5C;&#x4E3A;&#x5176;&#x503C;&#xFF1B;</li>
+<li>protobuf&#x7684;&#x57FA;&#x672C;&#x89C4;&#x5219;&#xFF1A;&#x6BCF;&#x4E2A;&#x6D88;&#x606F;&#x4E2D;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x7559;&#x6709;&#x4E00;&#x4E2A;required&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3001;&#x5305;&#x542B;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;optional&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#xFF1B;repeated&#x8868;&#x793A;&#x7684;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x5305;&#x542B;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6570;&#x636E;&#xFF1B;[1,15]&#x4E4B;&#x5185;&#x7684;&#x6807;&#x8BC6;&#x53F7;&#x5728;&#x7F16;&#x7801;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#xFF08;&#x5E38;&#x7528;&#xFF09;&#xFF0C;[16,2047]&#x4E4B;&#x5185;&#x7684;&#x6807;&#x8BC6;&#x53F7;&#x5219;&#x5360;&#x7528;2&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x6807;&#x8BC6;&#x53F7;&#x4E00;&#x5B9A;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x3001;&#x4F7F;&#x7528;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6D88;&#x606F;&#x5D4C;&#x5957;&#x4EFB;&#x610F;&#x591A;&#x5C42;&#xFF0C;&#x53EF;&#x7528;&#x5D4C;&#x5957;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x6765;&#x4EE3;&#x66FF;&#x7EC4;&#x3002;</li>
+<li>protobuf&#x7684;&#x6D88;&#x606F;&#x5347;&#x7EA7;&#x539F;&#x5219;&#xFF1A;&#x4E0D;&#x8981;&#x66F4;&#x6539;&#x4EFB;&#x4F55;&#x5DF2;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x503C;&#x6807;&#x8BC6;&#xFF1B;&#x4E0D;&#x80FD;&#x79FB;&#x9664;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;required&#x5B57;&#x6BB5;&#xFF0C;optional&#x548C;repeated&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x4F46;&#x8981;&#x4FDD;&#x7559;&#x6807;&#x53F7;&#x4E0D;&#x80FD;&#x88AB;&#x91CD;&#x7528;&#x3002;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x662F;optional&#x6216;repeated&#x3002;&#x56E0;&#x4E3A;&#x65E7;&#x7248;&#x672C;&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x6216;&#x5199;&#x5165;&#x65B0;&#x589E;&#x7684;required&#x9650;&#x5B9A;&#x7B26;&#x7684;&#x5B57;&#x6BB5;&#x3002;</li>
+<li>&#x7F16;&#x8BD1;&#x5668;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;.java&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;Builder&#x7C7B;&#xFF08;&#x8BE5;&#x7C7B;&#x662F;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x7C7B;&#x63A5;&#x53E3;&#x7684;&#xFF09;&#x3002;&#x5982;&#xFF1A;UserProto.User.Builder builder = UserProto.User.newBuilder();builder.build()&#xFF1B;</li>
+<li>Netty&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#xFF1A;ProtobufVarint32FrameDecoder &#x662F;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x534A;&#x5305;&#x6D88;&#x606F;&#x7684;&#x89E3;&#x7801;&#x7C7B;&#xFF1B;ProtobufDecoder(UserProto.User.getDefaultInstance())&#x8FD9;&#x662F;&#x521B;&#x5EFA;&#x7684;UserProto.java&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x89E3;&#x7801;&#x7C7B;&#xFF1B;ProtobufVarint32LengthFieldPrepender &#x5BF9;protobuf&#x534F;&#x8BAE;&#x7684;&#x6D88;&#x606F;&#x5934;&#x4E0A;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;32&#x7684;&#x6574;&#x5F62;&#x5B57;&#x6BB5;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x5FD7;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x7684;&#x957F;&#x5EA6;&#x7684;&#x7C7B;&#xFF1B;ProtobufEncoder &#x662F;&#x7F16;&#x7801;&#x7C7B;</li>
+<li>&#x5C06;StringBuilder&#x8F6C;&#x6362;&#x4E3A;ByteBuf&#x7C7B;&#x578B;&#xFF1A;copiedBuffer()&#x65B9;&#x6CD5;</li>
+</ul>
+<h3 id="8netty&#x7684;&#x96F6;&#x62F7;&#x8D1D;&#x5B9E;&#x73B0;&#xFF1F;">8.Netty&#x7684;&#x96F6;&#x62F7;&#x8D1D;&#x5B9E;&#x73B0;&#xFF1F;</h3>
+<ul>
+<li>Netty&#x7684;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;ByteBuffer&#x91C7;&#x7528;DIRECT BUFFERS&#xFF0C;&#x4F7F;&#x7528;&#x5806;&#x5916;&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x8FDB;&#x884C;Socket&#x8BFB;&#x5199;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5B57;&#x8282;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x4E8C;&#x6B21;&#x62F7;&#x8D1D;&#x3002;&#x5806;&#x5185;&#x5B58;&#x591A;&#x4E86;&#x4E00;&#x6B21;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#xFF0C;JVM&#x4F1A;&#x5C06;&#x5806;&#x5185;&#x5B58;Buffer&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x5230;&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x5199;&#x5165;Socket&#x4E2D;&#x3002;ByteBuffer&#x7531;ChannelConfig&#x5206;&#x914D;&#xFF0C;&#x800C;ChannelConfig&#x521B;&#x5EFA;ByteBufAllocator&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;Direct Buffer</li>
+<li>CompositeByteBuf &#x7C7B;&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A; ByteBuf &#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x4E0A;&#x7684; ByteBuf, &#x907F;&#x514D;&#x4E86;&#x4F20;&#x7EDF;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x51E0;&#x4E2A;&#x5C0F;Buffer&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x7684;Buffer&#x3002;addComponents&#x65B9;&#x6CD5;&#x5C06; header &#x4E0E; body &#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x4E0A;&#x7684; ByteBuf, &#x8FD9;&#x4E24;&#x4E2A; ByteBuf &#x5728;CompositeByteBuf &#x5185;&#x90E8;&#x90FD;&#x662F;&#x5355;&#x72EC;&#x5B58;&#x5728;&#x7684;, CompositeByteBuf &#x53EA;&#x662F;&#x903B;&#x8F91;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x4F53;</li>
+<li>&#x901A;&#x8FC7; FileRegion &#x5305;&#x88C5;&#x7684;FileChannel.tranferTo&#x65B9;&#x6CD5; &#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x4F20;&#x8F93;, &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x6587;&#x4EF6;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x76EE;&#x6807; Channel&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x4F20;&#x7EDF;&#x901A;&#x8FC7;&#x5FAA;&#x73AF;write&#x65B9;&#x5F0F;&#x5BFC;&#x81F4;&#x7684;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x901A;&#x8FC7; wrap&#x65B9;&#x6CD5;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06; byte[] &#x6570;&#x7EC4;&#x3001;ByteBuf&#x3001;ByteBuffer&#x7B49;&#x5305;&#x88C5;&#x6210;&#x4E00;&#x4E2A; Netty ByteBuf &#x5BF9;&#x8C61;, &#x8FDB;&#x800C;&#x907F;&#x514D;&#x4E86;&#x62F7;&#x8D1D;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>Selector BUG&#xFF1A;&#x82E5;Selector&#x7684;&#x8F6E;&#x8BE2;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;wakeup&#x6216;&#x65B0;&#x6D88;&#x606F;&#x5904;&#x7406;&#xFF0C;&#x5219;&#x53D1;&#x751F;&#x7A7A;&#x8F6E;&#x8BE2;&#xFF0C;CPU&#x4F7F;&#x7528;&#x7387;100%&#xFF0C;</li>
+<li>Netty&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5BF9;Selector&#x7684;select&#x64CD;&#x4F5C;&#x5468;&#x671F;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#xFF0C;&#x6BCF;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x7A7A;&#x7684;select&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x8BA1;&#x6570;&#xFF0C;&#x82E5;&#x5728;&#x67D0;&#x4E2A;&#x5468;&#x671F;&#x5185;&#x8FDE;&#x7EED;&#x53D1;&#x751F;N&#x6B21;&#x7A7A;&#x8F6E;&#x8BE2;&#xFF0C;&#x5219;&#x89E6;&#x53D1;&#x4E86;epoll&#x6B7B;&#x5FAA;&#x73AF;bug&#x3002;&#x91CD;&#x5EFA;Selector&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x53D1;&#x8D77;&#x7684;&#x91CD;&#x5EFA;&#x8BF7;&#x6C42;&#xFF0C;&#x82E5;&#x4E0D;&#x662F;&#x5219;&#x5C06;&#x539F;SocketChannel&#x4ECE;&#x65E7;&#x7684;Selector&#x4E0A;&#x53BB;&#x9664;&#x6CE8;&#x518C;&#xFF0C;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5230;&#x65B0;&#x7684;Selector&#x4E0A;&#xFF0C;&#x5E76;&#x5C06;&#x539F;&#x6765;&#x7684;Selector&#x5173;&#x95ED;&#x3002;</li>
+</ul>
+<h3 id="9netty&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x8868;&#x73B0;&#x5728;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#xFF1F;">9.Netty&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x8868;&#x73B0;&#x5728;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#xFF1F;</h3>
+<ul>
+<li><strong>&#x5FC3;&#x8DF3;</strong>&#xFF0C;&#x5BF9;&#x670D;&#x52A1;&#x7AEF;&#xFF1A;&#x4F1A;&#x5B9A;&#x65F6;&#x6E05;&#x9664;&#x95F2;&#x7F6E;&#x4F1A;&#x8BDD;inactive(netty5)&#xFF0C;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;:&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x4F1A;&#x8BDD;&#x662F;&#x5426;&#x65AD;&#x5F00;&#xFF0C;&#x662F;&#x5426;&#x91CD;&#x6765;&#xFF0C;&#x68C0;&#x6D4B;&#x7F51;&#x7EDC;&#x5EF6;&#x8FDF;&#xFF0C;&#x5176;&#x4E2D;idleStateHandler&#x7C7B; &#x7528;&#x6765;&#x68C0;&#x6D4B;&#x4F1A;&#x8BDD;&#x72B6;&#x6001;</li>
+<li><strong>&#x4E32;&#x884C;&#x65E0;&#x9501;&#x5316;&#x8BBE;&#x8BA1;</strong>&#xFF0C;&#x5373;&#x6D88;&#x606F;&#x7684;&#x5904;&#x7406;&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5185;&#x5B8C;&#x6210;&#xFF0C;&#x671F;&#x95F4;&#x4E0D;&#x8FDB;&#x884C;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x7ADE;&#x4E89;&#x548C;&#x540C;&#x6B65;&#x9501;&#x3002;&#x8868;&#x9762;&#x4E0A;&#x770B;&#xFF0C;&#x4E32;&#x884C;&#x5316;&#x8BBE;&#x8BA1;&#x4F3C;&#x4E4E;CPU&#x5229;&#x7528;&#x7387;&#x4E0D;&#x9AD8;&#xFF0C;&#x5E76;&#x53D1;&#x7A0B;&#x5EA6;&#x4E0D;&#x591F;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x6574;NIO&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7EBF;&#x7A0B;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x542F;&#x52A8;&#x591A;&#x4E2A;&#x4E32;&#x884C;&#x5316;&#x7684;&#x7EBF;&#x7A0B;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x79CD;&#x5C40;&#x90E8;&#x65E0;&#x9501;&#x5316;&#x7684;&#x4E32;&#x884C;&#x7EBF;&#x7A0B;&#x8BBE;&#x8BA1;&#x76F8;&#x6BD4;&#x4E00;&#x4E2A;&#x961F;&#x5217;-&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x6027;&#x80FD;&#x66F4;&#x4F18;&#x3002;</li>
+<li><strong>&#x53EF;&#x9760;&#x6027;</strong>&#xFF0C;&#x94FE;&#x8DEF;&#x6709;&#x6548;&#x6027;&#x68C0;&#x6D4B;&#xFF1A;&#x94FE;&#x8DEF;&#x7A7A;&#x95F2;&#x68C0;&#x6D4B;&#x673A;&#x5236;&#xFF0C;&#x8BFB;/&#x5199;&#x7A7A;&#x95F2;&#x8D85;&#x65F6;&#x673A;&#x5236;&#xFF1B;&#x5185;&#x5B58;&#x4FDD;&#x62A4;&#x673A;&#x5236;&#xFF1A;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x6C60;&#x91CD;&#x7528;ByteBuf;ByteBuf&#x7684;&#x89E3;&#x7801;&#x4FDD;&#x62A4;&#xFF1B;&#x4F18;&#x96C5;&#x505C;&#x673A;&#xFF1A;&#x4E0D;&#x518D;&#x63A5;&#x6536;&#x65B0;&#x6D88;&#x606F;&#x3001;&#x9000;&#x51FA;&#x524D;&#x7684;&#x9884;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x3001;&#x8D44;&#x6E90;&#x7684;&#x91CA;&#x653E;&#x64CD;&#x4F5C;&#x3002;</li>
+<li><strong>Netty&#x5B89;&#x5168;&#x6027;</strong>&#xFF1A;&#x652F;&#x6301;&#x7684;&#x5B89;&#x5168;&#x534F;&#x8BAE;&#xFF1A;SSL V2&#x548C;V3&#xFF0C;TLS&#xFF0C;SSL&#x5355;&#x5411;&#x8BA4;&#x8BC1;&#x3001;&#x53CC;&#x5411;&#x8BA4;&#x8BC1;&#x548C;&#x7B2C;&#x4E09;&#x65B9;CA&#x8BA4;&#x8BC1;&#x3002;</li>
+<li><strong>&#x9AD8;&#x6548;&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x7684;&#x4F53;&#x73B0;</strong>&#xFF1A;volatile&#x7684;&#x5927;&#x91CF;&#x3001;&#x6B63;&#x786E;&#x4F7F;&#x7528;&#xFF1B;CAS&#x548C;&#x539F;&#x5B50;&#x7C7B;&#x7684;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#xFF1B;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5BB9;&#x5668;&#x7684;&#x4F7F;&#x7528;&#xFF1B;&#x901A;&#x8FC7;&#x8BFB;&#x5199;&#x9501;&#x63D0;&#x5347;&#x5E76;&#x53D1;&#x6027;&#x80FD;&#x3002;IO&#x901A;&#x4FE1;&#x6027;&#x80FD;&#x4E09;&#x539F;&#x5219;&#xFF1A;&#x4F20;&#x8F93;&#xFF08;AIO&#xFF09;&#x3001;&#x534F;&#x8BAE;&#xFF08;Http&#xFF09;&#x3001;&#x7EBF;&#x7A0B;&#xFF08;&#x4E3B;&#x4ECE;&#x591A;&#x7EBF;&#x7A0B;&#xFF09;</li>
+<li><strong>&#x6D41;&#x91CF;&#x6574;&#x578B;</strong>&#x7684;&#x4F5C;&#x7528;&#xFF08;&#x53D8;&#x538B;&#x5668;&#xFF09;&#xFF1A;&#x9632;&#x6B62;&#x7531;&#x4E8E;&#x4E0A;&#x4E0B;&#x6E38;&#x7F51;&#x5143;&#x6027;&#x80FD;&#x4E0D;&#x5747;&#x8861;&#x5BFC;&#x81F4;&#x4E0B;&#x6E38;&#x7F51;&#x5143;&#x88AB;&#x538B;&#x57AE;&#xFF0C;&#x4E1A;&#x52A1;&#x6D41;&#x4E2D;&#x65AD;&#xFF1B;&#x9632;&#x6B62;&#x7531;&#x4E8E;&#x901A;&#x4FE1;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#x6D88;&#x606F;&#x8FC7;&#x5FEB;&#xFF0C;&#x540E;&#x7AEF;&#x4E1A;&#x52A1;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x4E0D;&#x53CA;&#x65F6;&#x5BFC;&#x81F4;&#x6491;&#x6B7B;&#x95EE;&#x9898;&#x3002;</li>
+<li><strong>TCP&#x53C2;&#x6570;&#x914D;&#x7F6E;</strong>&#xFF1A;SO_RCVBUF&#x548C;SO_SNDBUF&#xFF1A;&#x901A;&#x5E38;&#x5EFA;&#x8BAE;&#x503C;&#x4E3A;128K&#x6216;&#x8005;256K&#xFF1B;SO_TCPNODELAY&#xFF1A;NAGLE&#x7B97;&#x6CD5;&#x901A;&#x8FC7;&#x5C06;&#x7F13;&#x51B2;&#x533A;&#x5185;&#x7684;&#x5C0F;&#x5C01;&#x5305;&#x81EA;&#x52A8;&#x76F8;&#x8FDE;&#xFF0C;&#x7EC4;&#x6210;&#x8F83;&#x5927;&#x7684;&#x5C01;&#x5305;&#xFF0C;&#x963B;&#x6B62;&#x5927;&#x91CF;&#x5C0F;&#x5C01;&#x5305;&#x7684;&#x53D1;&#x9001;&#x963B;&#x585E;&#x7F51;&#x7EDC;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x6548;&#x7387;&#x3002;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x65F6;&#x5EF6;&#x654F;&#x611F;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x9700;&#x8981;&#x5173;&#x95ED;&#x8BE5;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF1B;</li>
+</ul>
+<h3 id="10nioeventloopgroup&#x6E90;&#x7801;&#xFF1F;">10.NIOEventLoopGroup&#x6E90;&#x7801;&#xFF1F;</h3>
+<p><img src="../image/20170804165726463.png" alt="&#x8FD9;&#x91CC;&#x5199;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<ul>
+<li>NioEventLoopGroup(&#x5176;&#x5B9E;&#x662F;MultithreadEventExecutorGroup) &#x5185;&#x90E8;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; EventExecutor children [], &#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x662F;&#x5904;&#x7406;&#x5668;&#x6838;&#x6570; * 2, &#x8FD9;&#x6837;&#x5C31;&#x6784;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x521D;&#x59CB;&#x5316;EventExecutor&#x65F6;NioEventLoopGroup&#x91CD;&#x8F7D;newChild&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;children&#x5143;&#x7D20;&#x7684;&#x5B9E;&#x9645;&#x7C7B;&#x578B;&#x4E3A;NioEventLoop&#x3002;</li>
+<li>&#x7EBF;&#x7A0B;&#x542F;&#x52A8;&#x65F6;&#x8C03;&#x7528;SingleThreadEventExecutor&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x6267;&#x884C;NioEventLoop&#x7C7B;&#x7684;run&#x65B9;&#x6CD5;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x8C03;&#x7528;hasTasks()&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x5F53;&#x524D;taskQueue&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;taskQueue&#x4E2D;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x6267;&#x884C; selectNow() &#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x7EC8;&#x6267;&#x884C;selector.selectNow()&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x3002;&#x5982;&#x679C;taskQueue&#x6CA1;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x6267;&#x884C; select(oldWakenUp) &#x65B9;&#x6CD5;</li>
+<li>select ( oldWakenUp) &#x65B9;&#x6CD5;&#x89E3;&#x51B3;&#x4E86; Nio &#x4E2D;&#x7684; bug&#xFF0C;selectCnt &#x7528;&#x6765;&#x8BB0;&#x5F55;selector.select&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x6B21;&#x6570;&#x548C;&#x6807;&#x8BC6;&#x662F;&#x5426;&#x6267;&#x884C;&#x8FC7;selector.selectNow()&#xFF0C;&#x82E5;&#x89E6;&#x53D1;&#x4E86;epoll&#x7684;&#x7A7A;&#x8F6E;&#x8BE2;bug&#xFF0C;&#x5219;&#x4F1A;&#x53CD;&#x590D;&#x6267;&#x884C;selector.select(timeoutMillis)&#xFF0C;&#x53D8;&#x91CF;selectCnt &#x4F1A;&#x9010;&#x6E10;&#x53D8;&#x5927;&#xFF0C;&#x5F53;selectCnt &#x8FBE;&#x5230;&#x9608;&#x503C;&#xFF08;&#x9ED8;&#x8BA4;512&#xFF09;&#xFF0C;&#x5219;&#x6267;&#x884C;rebuildSelector&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;selector&#x91CD;&#x5EFA;&#xFF0C;&#x89E3;&#x51B3;cpu&#x5360;&#x7528;100%&#x7684;bug&#x3002;</li>
+<li>rebuildSelector&#x65B9;&#x6CD5;&#x5148;&#x901A;&#x8FC7;openSelector&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;selector&#x3002;&#x7136;&#x540E;&#x5C06;old selector&#x7684;selectionKey&#x6267;&#x884C;cancel&#x3002;&#x6700;&#x540E;&#x5C06;old selector&#x7684;channel&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5230;&#x65B0;&#x7684;selector&#x4E2D;&#x3002;rebuild&#x540E;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x65B9;&#x6CD5;selectNow&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x5DF2;ready&#x7684;selectionKey&#x3002;</li>
+<li>&#x63A5;&#x4E0B;&#x6765;&#x8C03;&#x7528;processSelectedKeys &#x65B9;&#x6CD5;&#xFF08;&#x5904;&#x7406;I/O&#x4EFB;&#x52A1;&#xFF09;&#xFF0C;&#x5F53;selectedKeys != null&#x65F6;&#xFF0C;&#x8C03;&#x7528;processSelectedKeysOptimized&#x65B9;&#x6CD5;&#xFF0C;&#x8FED;&#x4EE3; selectedKeys &#x83B7;&#x53D6;&#x5C31;&#x7EEA;&#x7684; IO &#x4E8B;&#x4EF6;&#x7684;selectkey&#x5B58;&#x653E;&#x5728;&#x6570;&#x7EC4;selectedKeys&#x4E2D;, &#x7136;&#x540E;&#x4E3A;&#x6BCF;&#x4E2A;&#x4E8B;&#x4EF6;&#x90FD;&#x8C03;&#x7528; processSelectedKey &#x6765;&#x5904;&#x7406;&#x5B83;&#xFF0C;processSelectedKey &#x4E2D;&#x5206;&#x522B;&#x5904;&#x7406;OP_READ&#xFF1B;OP_WRITE&#xFF1B;OP_CONNECT&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x8C03;&#x7528;runAllTasks&#x65B9;&#x6CD5;&#xFF08;&#x975E;IO&#x4EFB;&#x52A1;&#xFF09;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x9996;&#x5148;&#x4F1A;&#x8C03;&#x7528;fetchFromScheduledTaskQueue&#x65B9;&#x6CD5;&#xFF0C;&#x628A;scheduledTaskQueue&#x4E2D;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x7684;&#x4EFB;&#x52A1;&#x79FB;&#x5230;taskQueue&#x4E2D;&#x7B49;&#x5F85;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x4F9D;&#x6B21;&#x4ECE;taskQueue&#x4E2D;&#x53D6;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#xFF0C;&#x6BCF;&#x6267;&#x884C;64&#x4E2A;&#x4EFB;&#x52A1;&#xFF0C;&#x8FDB;&#x884C;&#x8017;&#x65F6;&#x68C0;&#x67E5;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x9884;&#x5148;&#x8BBE;&#x5B9A;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x6267;&#x884C;&#x975E;IO&#x4EFB;&#x52A1;&#xFF0C;&#x907F;&#x514D;&#x975E;IO&#x4EFB;&#x52A1;&#x592A;&#x591A;&#xFF0C;&#x5F71;&#x54CD;IO&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A;NioEventLoop&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x548C;&#x4E00;&#x4E2A;Selector&#xFF0C;NioServerSocketChannel&#x4F1A;&#x4E3B;&#x52A8;&#x6CE8;&#x518C;&#x5230;&#x67D0;&#x4E00;&#x4E2A;NioEventLoop&#x7684;Selector&#x4E0A;&#xFF0C;NioEventLoop&#x8D1F;&#x8D23;&#x4E8B;&#x4EF6;&#x8F6E;&#x8BE2;&#x3002;</li>
+<li>Outbound &#x4E8B;&#x4EF6;&#x90FD;&#x662F;&#x8BF7;&#x6C42;&#x4E8B;&#x4EF6;, &#x53D1;&#x8D77;&#x8005;&#x662F; Channel&#xFF0C;&#x5904;&#x7406;&#x8005;&#x662F; unsafe&#xFF0C;&#x901A;&#x8FC7; Outbound &#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x901A;&#x77E5;&#xFF0C;&#x4F20;&#x64AD;&#x65B9;&#x5411;&#x662F; tail&#x5230;head&#x3002;Inbound &#x4E8B;&#x4EF6;&#x53D1;&#x8D77;&#x8005;&#x662F; unsafe&#xFF0C;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x8005;&#x662F; Channel, &#x662F;&#x901A;&#x77E5;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F20;&#x64AD;&#x65B9;&#x5411;&#x662F;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x3002;</li>
+<li>&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x673A;&#x5236;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x9884;&#x7533;&#x8BF7;&#x4E00;&#x5927;&#x5757;&#x5185;&#x5B58;Arena&#xFF0C;Arena&#x7531;&#x8BB8;&#x591A;Chunk&#x7EC4;&#x6210;&#xFF0C;&#x800C;&#x6BCF;&#x4E2A;Chunk&#x9ED8;&#x8BA4;&#x7531;2048&#x4E2A;page&#x7EC4;&#x6210;&#x3002;Chunk&#x901A;&#x8FC7;AVL&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x7EC4;&#x7EC7;Page&#xFF0C;&#x6BCF;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8868;&#x793A;&#x4E00;&#x4E2A;Page&#xFF0C;&#x800C;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x8868;&#x793A;&#x5185;&#x5B58;&#x533A;&#x57DF;&#xFF0C;&#x8282;&#x70B9;&#x81EA;&#x5DF1;&#x8BB0;&#x5F55;&#x5B83;&#x5728;&#x6574;&#x4E2A;Arena&#x4E2D;&#x7684;&#x504F;&#x79FB;&#x5730;&#x5740;&#x3002;&#x5F53;&#x533A;&#x57DF;&#x88AB;&#x5206;&#x914D;&#x51FA;&#x53BB;&#x540E;&#xFF0C;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x6807;&#x8BB0;&#x4F4D;&#x4F1A;&#x88AB;&#x6807;&#x8BB0;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x4EE5;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x5DF2;&#x88AB;&#x5206;&#x914D;&#x4E86;&#x3002;&#x5927;&#x4E8E;8k&#x7684;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5728;poolChunkList&#x4E2D;&#xFF0C;&#x800C;PoolSubpage&#x7528;&#x4E8E;&#x5206;&#x914D;&#x5C0F;&#x4E8E;8k&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x4E00;&#x4E2A;page&#x5206;&#x5272;&#x6210;&#x591A;&#x6BB5;&#xFF0C;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x5206;&#x914D;&#x3002;</li>
+<li>ByteBuf&#x7684;&#x7279;&#x70B9;&#xFF1A;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x6269;&#x5BB9;&#xFF08;4M&#xFF09;&#xFF0C;&#x4FDD;&#x8BC1;put&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3001;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x7684;&#x590D;&#x5408;&#x7F13;&#x51B2;&#x7C7B;&#x578B;&#xFF0C;&#x5B9E;&#x73B0;&#x96F6;&#x62F7;&#x8D1D;&#xFF08;zero-copy&#xFF09;&#xFF1B;&#x4E0D;&#x9700;&#x8981;&#x8C03;&#x7528;flip()&#x6765;&#x5207;&#x6362;&#x8BFB;/&#x5199;&#x6A21;&#x5F0F;&#xFF0C;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x7D22;&#x5F15;&#x5206;&#x5F00;&#xFF1B;&#x65B9;&#x6CD5;&#x94FE;&#xFF1B;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x57FA;&#x4E8E;AtomicIntegerFieldUpdater&#x7528;&#x4E8E;&#x5185;&#x5B58;&#x56DE;&#x6536;&#xFF1B;PooledByteBuf&#x91C7;&#x7528;&#x4E8C;&#x53C9;&#x6811;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x6C60;&#xFF0C;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#xFF0C;&#x4E0D;&#x7528;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x90FD;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x5BF9;&#x8C61;&#x3002;UnpooledHeapByteBuf&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>Netty &#x662F;&#x4E00;&#x4E2A; &#x5F02;&#x6B65; &#x4E8B;&#x4EF6;&#x9A71;&#x52A8; &#x7684;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x5F00;&#x53D1;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x534F;&#x8BAE;&#x7684;&#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;</p>
+<h2 id="reactor"><a href="https://www.infoq.cn/article/netty-threading-model" target="_blank">Reactor</a></h2>
+<p>&#x65E0;&#x8BBA;&#x662F; C++ &#x8FD8;&#x662F; Java &#x7F16;&#x5199;&#x7684;&#x7F51;&#x7EDC;&#x6846;&#x67B6;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x90FD;&#x662F;&#x57FA;&#x4E8E; Reactor &#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#x548C;&#x5F00;&#x53D1;&#xFF0C;Reactor &#x6A21;&#x5F0F;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#xFF0C;&#x7279;&#x522B;&#x9002;&#x5408;&#x5904;&#x7406;&#x6D77;&#x91CF;&#x7684; I/O &#x4E8B;&#x4EF6;&#x3002;</p>
+<p>&#x53CD;&#x5E94;&#x5668;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;(<code>Reactor pattern</code>)&#x662F;&#x4E00;&#x79CD;&#x4E3A;&#x5904;&#x7406;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x5E76;&#x53D1; &#x63D0;&#x4EA4;&#x5230;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x4E8B;&#x4EF6;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3002;&#x5F53;&#x8BF7;&#x6C42;&#x62B5;&#x8FBE;&#x540E;&#xFF0C;&#x670D;&#x52A1;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x89E3;&#x591A;&#x8DEF;&#x5206;&#x914D;&#x7B56;&#x7565;&#xFF0C;&#x7136;&#x540E;&#x540C;&#x6B65;&#x5730;&#x6D3E;&#x53D1;&#x8FD9;&#x4E9B;&#x8BF7;&#x6C42;&#x81F3;&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h3 id="&#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;">&#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;</h3>
+<p>Reactor &#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x6240;&#x6709;&#x7684; IO &#x64CD;&#x4F5C;&#x90FD;&#x5728;&#x540C;&#x4E00;&#x4E2A; NIO &#x7EBF;&#x7A0B;&#x4E0A;&#x9762;&#x5B8C;&#x6210;&#xFF0C;NIO &#x7EBF;&#x7A0B;&#x7684;&#x804C;&#x8D23;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x4F5C;&#x4E3A; NIO &#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x7684; TCP &#x8FDE;&#x63A5;&#xFF1B;</li>
+<li>&#x4F5C;&#x4E3A; NIO &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x8D77; TCP &#x8FDE;&#x63A5;&#xFF1B;</li>
+<li>&#x8BFB;&#x53D6;&#x901A;&#x4FE1;&#x5BF9;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x6216;&#x8005;&#x5E94;&#x7B54;&#x6D88;&#x606F;&#xFF1B;</li>
+<li>&#x5411;&#x901A;&#x4FE1;&#x5BF9;&#x7AEF;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x8BF7;&#x6C42;&#x6216;&#x8005;&#x5E94;&#x7B54;&#x6D88;&#x606F;&#x3002;</li>
+</ol>
+<p><img src="https://hadyang.github.io/interview/docs/fromwork/netty/images/dc7ff89d78fc63558bd02d4515e42f38.png" alt="image"></p>
+<p>&#x7531;&#x4E8E; <code>Reactor</code> &#x6A21;&#x5F0F;&#x4F7F;&#x7528;&#x7684;&#x662F;<code>&#x5F02;&#x6B65;&#x975E;&#x963B;&#x585E; IO</code>&#xFF0C;&#x6240;&#x6709;&#x7684; <code>IO</code> &#x64CD;&#x4F5C;&#x90FD;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x963B;&#x585E;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x5904;&#x7406;&#x6240;&#x6709; <code>IO</code> &#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4ECE;&#x67B6;&#x6784;&#x5C42;&#x9762;&#x770B;&#xFF0C;&#x4E00;&#x4E2A; <code>NIO</code> &#x7EBF;&#x7A0B;&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5176;&#x627F;&#x62C5;&#x7684;&#x804C;&#x8D23;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x901A;&#x8FC7; <code>Acceptor</code> &#x7C7B;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x7684; TCP &#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x6D88;&#x606F;&#xFF0C;&#x94FE;&#x8DEF;&#x5EFA;&#x7ACB;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7; <code>Dispatch</code> &#x5C06;&#x5BF9;&#x5E94;&#x7684; <code>ByteBuffer</code> &#x6D3E;&#x53D1;&#x5230;&#x6307;&#x5B9A;&#x7684; <code>Handler</code> &#x4E0A;&#x8FDB;&#x884C;&#x6D88;&#x606F;&#x89E3;&#x7801;&#x3002;&#x7528;&#x6237;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x7F16;&#x7801;&#x901A;&#x8FC7; <code>NIO</code> &#x7EBF;&#x7A0B;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x5C0F;&#x5BB9;&#x91CF;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x3002;&#x4F46;&#x662F; <strong>&#x5BF9;&#x4E8E;&#x9AD8;&#x8D1F;&#x8F7D;&#x3001;&#x5927;&#x5E76;&#x53D1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5374;&#x4E0D;&#x5408;&#x9002;</strong>&#x3002;</p>
+<h3 id="&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;">&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;</h3>
+<p>Rector &#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x4E0E;&#x5355;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x7EC4; NIO &#x7EBF;&#x7A0B;&#x5904;&#x7406; IO &#x64CD;&#x4F5C;&#xFF0C;&#x5B83;&#x7684;&#x539F;&#x7406;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://hadyang.github.io/interview/docs/fromwork/netty/images/2882a43ae27016cc885444b46a735801.png" alt="image"></p>
+<p>Reactor &#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x7684;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x6709;&#x4E13;&#x95E8;&#x4E00;&#x4E2A; <code>NIO</code> &#x7EBF;&#x7A0B; <code>Acceptor</code> &#x7EBF;&#x7A0B;&#x7528;&#x4E8E;&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x7684; <code>TCP</code> &#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#xFF1B;</li>
+<li>&#x7F51;&#x7EDC; <code>IO</code> &#x64CD;&#x4F5C; - &#x8BFB;&#x3001;&#x5199;&#x7B49;&#x7531;&#x4E00;&#x4E2A; <code>NIO</code> &#x7EBF;&#x7A0B;&#x6C60;&#x8D1F;&#x8D23;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x6807;&#x51C6;&#x7684; <code>JDK</code> &#x7EBF;&#x7A0B;&#x6C60;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x548C; <code>N</code> &#x4E2A;&#x53EF;&#x7528;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x7531;&#x8FD9;&#x4E9B; <code>NIO</code> &#x7EBF;&#x7A0B;&#x8D1F;&#x8D23;&#x6D88;&#x606F;&#x7684;&#x8BFB;&#x53D6;&#x3001;&#x89E3;&#x7801;&#x3001;&#x7F16;&#x7801;&#x548C;&#x53D1;&#x9001;&#xFF1B;</li>
+<li>1 &#x4E2A; <code>NIO</code> &#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5904;&#x7406; N &#x6761;&#x94FE;&#x8DEF;&#xFF0C;&#x4F46;&#x662F; 1 &#x4E2A;&#x94FE;&#x8DEF;&#x53EA;&#x5BF9;&#x5E94; 1 &#x4E2A; <code>NIO</code> &#x7EBF;&#x7A0B;&#xFF0C;&#x9632;&#x6B62;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x64CD;&#x4F5C;&#x95EE;&#x9898;&#x3002;</li>
+</ol>
+<h3 id="&#x4E3B;&#x4ECE;&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;">&#x4E3B;&#x4ECE;&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;</h3>
+<p>&#x4E3B;&#x4ECE; <code>Reactor</code> &#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x7684;&#x7279;&#x70B9;&#x662F;&#xFF1A;&#x670D;&#x52A1;&#x7AEF;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x7684;&#x4E0D;&#x518D;&#x662F;&#x4E2A; <code>1</code> &#x4E2A;&#x5355;&#x72EC;&#x7684; <code>NIO</code> &#x7EBF;&#x7A0B;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; <code>NIO</code> &#x7EBF;&#x7A0B;&#x6C60;&#x3002; <code>Acceptor</code> &#x63A5;&#x6536;&#x5230;&#x5BA2;&#x6237;&#x7AEF; <code>TCP</code> &#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#xFF08;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x63A5;&#x5165;&#x8BA4;&#x8BC1;&#x7B49;&#xFF09;&#xFF0C;&#x5C06;&#x65B0;&#x521B;&#x5EFA;&#x7684; <code>SocketChannel</code> &#x6CE8;&#x518C;&#x5230; IO &#x7EBF;&#x7A0B;&#x6C60;&#xFF08;<code>sub reactor</code> &#x7EBF;&#x7A0B;&#x6C60;&#xFF09;&#x7684;&#x67D0;&#x4E2A; IO &#x7EBF;&#x7A0B;&#x4E0A;&#xFF0C;&#x7531;&#x5B83;&#x8D1F;&#x8D23; <code>SocketChannel</code> &#x7684;&#x8BFB;&#x5199;&#x548C;&#x7F16;&#x89E3;&#x7801;&#x5DE5;&#x4F5C;&#x3002; <code>Acceptor</code> &#x7EBF;&#x7A0B;&#x6C60;&#x4EC5;&#x4EC5;&#x53EA;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x767B;&#x9646;&#x3001;&#x63E1;&#x624B;&#x548C;&#x5B89;&#x5168;&#x8BA4;&#x8BC1;&#xFF0C;&#x4E00;&#x65E6;&#x94FE;&#x8DEF;&#x5EFA;&#x7ACB;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x5C06;&#x94FE;&#x8DEF;&#x6CE8;&#x518C;&#x5230;&#x540E;&#x7AEF; <code>subReactor</code> &#x7EBF;&#x7A0B;&#x6C60;&#x7684; <code>IO</code> &#x7EBF;&#x7A0B;&#x4E0A;&#xFF0C;&#x7531; <code>IO</code> &#x7EBF;&#x7A0B;&#x8D1F;&#x8D23;&#x540E;&#x7EED;&#x7684; <code>IO</code> &#x64CD;&#x4F5C;&#x3002;</p>
+<p><img src="https://hadyang.github.io/interview/docs/fromwork/netty/images/8674352e3cb3638da5807ef88b8f225d.png" alt="image"></p>
+<p>&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x4ECE;&#x4E3B;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A; <code>Reactor</code> &#x7EBF;&#x7A0B;&#x4F5C;&#x4E3A; <code>Acceptor</code> &#x7EBF;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#xFF1B;</li>
+<li>Acceptor &#x7EBF;&#x7A0B;&#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#x521B;&#x5EFA;&#x65B0;&#x7684; <code>SocketChannel</code> &#xFF0C;&#x5C06;&#x5176;&#x6CE8;&#x518C;&#x5230;&#x4E3B;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5176;&#x5B83; Reactor &#x7EBF;&#x7A0B;&#x4E0A;&#xFF0C;&#x7531;&#x5176;&#x8D1F;&#x8D23;&#x63A5;&#x5165;&#x8BA4;&#x8BC1;&#x3001;IP &#x9ED1;&#x767D;&#x540D;&#x5355;&#x8FC7;&#x6EE4;&#x3001;&#x63E1;&#x624B;&#x7B49;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>&#x6B65;&#x9AA4; 2 &#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x4E1A;&#x52A1;&#x5C42;&#x7684;&#x94FE;&#x8DEF;&#x6B63;&#x5F0F;&#x5EFA;&#x7ACB;&#xFF0C;&#x5C06; <code>SocketChannel</code> &#x4ECE;&#x4E3B;&#x7EBF;&#x7A0B;&#x6C60;&#x7684; <code>Reactor</code> &#x7EBF;&#x7A0B;&#x7684;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#x4E0A;&#x6458;&#x9664;&#xFF0C;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5230; <code>Sub</code> &#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7EBF;&#x7A0B;&#x4E0A;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406; I/O &#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<h2 id="netty-&#x7684;&#x4F18;&#x52BF;">Netty &#x7684;&#x4F18;&#x52BF;</h2>
+<ul>
+<li>&#x591A;&#x8DEF;&#x590D;&#x7528;&#xFF0C;&#x5E76;&#x5728; NIO &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x62BD;&#x8C61;</li>
+<li>&#x4E8B;&#x4EF6;&#x673A;&#x5236;</li>
+<li>&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x9884;&#x7F6E;&#x4E86;&#x591A;&#x79CD;&#x7F16;&#x89E3;&#x7801;&#x529F;&#x80FD;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x4E3B;&#x6D41;&#x534F;&#x8BAE;</li>
+<li>&#x5B9A;&#x5236;&#x80FD;&#x529B;&#x5F3A;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;ChannelHandler&#x5BF9;&#x901A;&#x4FE1;&#x6846;&#x67B6;&#x8FDB;&#x884C;&#x7075;&#x6D3B;&#x7684;&#x6269;&#x5C55;</li>
+</ul>
+<h3 id="netty-&#x4E3A;&#x4EC0;&#x4E48;&#x6027;&#x80FD;&#x597D;&#xFF1F;">Netty &#x4E3A;&#x4EC0;&#x4E48;&#x6027;&#x80FD;&#x597D;&#xFF1F;</h3>
+<ol>
+<li>&#x7EAF;&#x5F02;&#x6B65;&#xFF1A;<code>Reactor</code> &#x7EBF;&#x7A0B;&#x6A21;&#x578B;</li>
+<li>IO &#x591A;&#x8DEF;&#x590D;&#x7528;</li>
+<li>GC &#x4F18;&#x5316;&#xFF1A;&#x66F4;&#x5C11;&#x7684;&#x5206;&#x914D;&#x5185;&#x5B58;&#x3001;&#x6C60;&#x5316;&#xFF08;Pooling&#xFF09;&#x3001;&#x590D;&#x7528;&#x3001;&#x9009;&#x62E9;&#x6027;&#x7684;&#x4F7F;&#x7528; <code>sun.misc.Unsafe</code></li>
+<li>&#x66F4;&#x591A;&#x7684;&#x786C;&#x4EF6;&#x76F8;&#x5173;&#x4F18;&#x5316;&#xFF08;mechanical sympathy&#xFF09;</li>
+<li>&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x68C0;&#x6D4B;</li>
+<li>&#x201C;Zero Copy&#x201D;</li>
+</ol>
+<h3 id="zero-copy">Zero Copy</h3>
+<p>Netty &#x7684; Zero-copy &#x4F53;&#x73B0;&#x5728;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x4E2A;&#x65B9;&#x9762;:</p>
+<ul>
+<li><code>Netty</code> &#x63D0;&#x4F9B;&#x4E86; <code>CompositeByteBuf</code> &#x7C7B;, &#x5B83;&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A; <code>ByteBuf</code> &#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x4E0A;&#x7684; <code>ByteBuf</code> , &#x907F;&#x514D;&#x4E86;&#x5404;&#x4E2A; <code>ByteBuf</code> &#x4E4B;&#x95F4;&#x7684;&#x62F7;&#x8D1D;.</li>
+<li>&#x901A;&#x8FC7; <code>wrap</code> &#x64CD;&#x4F5C;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06; <code>byte[]</code> <code>&#x6570;&#x7EC4;&#x3001;ByteBuf</code> &#x3001; <code>ByteBuffer</code> &#x7B49;&#x5305;&#x88C5;&#x6210;&#x4E00;&#x4E2A; <code>Netty ByteBuf</code> &#x5BF9;&#x8C61;, &#x8FDB;&#x800C;&#x907F;&#x514D;&#x4E86;&#x62F7;&#x8D1D;&#x64CD;&#x4F5C;.</li>
+<li><code>ByteBuf</code> &#x652F;&#x6301; <code>slice</code> &#x64CD;&#x4F5C;, &#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5C06; <code>ByteBuf</code> &#x5206;&#x89E3;&#x4E3A;&#x591A;&#x4E2A;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x533A;&#x57DF;&#x7684; <code>ByteBuf</code>, &#x907F;&#x514D;&#x4E86;&#x5185;&#x5B58;&#x7684;&#x62F7;&#x8D1D;.</li>
+<li>&#x901A;&#x8FC7; <code>FileRegion</code> &#x5305;&#x88C5;&#x7684; <code>FileChannel.tranferTo</code> &#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x4F20;&#x8F93;, &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x6587;&#x4EF6;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x76EE;&#x6807; <code>Channel</code> , &#x907F;&#x514D;&#x4E86;&#x4F20;&#x7EDF;&#x901A;&#x8FC7;&#x5FAA;&#x73AF; <code>write</code> &#x65B9;&#x5F0F;&#x5BFC;&#x81F4;&#x7684;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#x95EE;&#x9898;.</li>
+</ul>
+<h3 id="&#x5783;&#x573E;&#x56DE;&#x6536;">&#x5783;&#x573E;&#x56DE;&#x6536;</h3>
+<p>Netty &#x91CC; <code>HeapByteBuffer</code> &#x5E95;&#x4E0B;&#x7684; <code>byte[]</code> &#x80FD;&#x591F;&#x4F9D;&#x8D56;JVM GC&#x81EA;&#x7136;&#x56DE;&#x6536;&#xFF1B;&#x800C; DirectByteBuffer &#x5E95;&#x4E0B;&#x662F; Java &#x5806;&#x5916;&#x5185;&#x5B58;&#xFF0C;&#x9664;&#x4E86;&#x7B49;JVM GC&#xFF0C;&#x6700;&#x597D;&#x4E5F;&#x80FD;&#x4E3B;&#x52A8;&#x8FDB;&#x884C;&#x56DE;&#x6536;&#xFF1B;&#x6240;&#x4EE5;&#xFF0C;Netty ByteBuf&#x9700;&#x8981;&#x5728; JVM &#x7684; GC &#x673A;&#x5236;&#x4E4B;&#x5916;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5668;&#x548C;&#x56DE;&#x6536;&#x8FC7;&#x7A0B;&#x3002;</p>
+<blockquote>
+<p>&#x539F;&#x751F;&#x7684; JVM GC &#x5F88;&#x96BE;&#x56DE;&#x6536;&#x6389; DirectByteBuffer &#x6240;&#x5360;&#x7528;&#x7684; Native Memory</p>
+</blockquote>
+<p>Netty &#x4E2D;&#x91C7;&#x7528;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5BF9; DirectByteBuffer &#x8FDB;&#x884C;&#x5BF9;&#x8C61;&#x53EF;&#x8FBE;&#x6027;&#x68C0;&#x6D4B;&#xFF0C;&#x5F53; DirectByteBuffer &#x4E0A;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4E3A; 0 &#x65F6;&#x5C06;&#x5BF9;&#x8C61;&#x91CA;&#x653E;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">release</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (;;) {
+        <span class="hljs-keyword">int</span> refCnt = <span class="hljs-keyword">this</span>.refCnt;
+        <span class="hljs-keyword">if</span> (refCnt == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalReferenceCountException(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">if</span> (refCntUpdater.compareAndSet(<span class="hljs-keyword">this</span>, refCnt, refCnt - <span class="hljs-number">1</span>)) {
+            <span class="hljs-keyword">if</span> (refCnt == <span class="hljs-number">1</span>) {
+                deallocate();
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+    }
+}
+</code></pre>
+<p>Netty &#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x9488;&#x5BF9;&#x6C60;&#x5316;&#x7684; ByteBuf &#x3002; ByteBuf &#x5BF9;&#x8C61;&#x88AB; JVM GC &#x6389;&#x4E4B;&#x524D;&#xFF0C;&#x6CA1;&#x6709;&#x8C03;&#x7528; <code>release()</code> &#x628A;&#x5E95;&#x4E0B;&#x7684; <code>DirectByteBuffer</code> &#x6216;<code>byte[]</code> &#x5F52;&#x8FD8;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6C60;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#x3002;&#x800C;&#x975E;&#x6C60;&#x5316;&#x7684; ByteBuf &#xFF0C;&#x5373;&#x4F7F;&#x50CF; <code>DirectByteBuf</code> &#x90A3;&#x6837;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5230; <code>System.gc()</code> &#xFF0C;&#x4F46;&#x7EC8;&#x5F52;&#x4F1A;&#x88AB; release &#x6389;&#x7684;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x5927;&#x4E8B;&#x3002;&#x56E0;&#x6B64; Netty &#x9ED8;&#x8BA4;&#x4F1A;&#x4ECE;&#x5206;&#x914D;&#x7684; ByteBuf &#x91CC;&#x62BD;&#x6837;&#x51FA;&#x5927;&#x7EA6; 1% &#x7684;&#x6765;&#x8FDB;&#x884C;&#x8DDF;&#x8E2A;&#x3002;</p>
+<h2 id="&#x6E90;&#x7801;">&#x6E90;&#x7801;</h2>
+<h3 id="bytebuf">ByteBuf</h3>
+<ol>
+<li>ByteBuf &#x6269;&#x5BB9;&#x91C7;&#x7528;&#x5148;&#x500D;&#x589E;&#x540E;&#x6B65;&#x8FDB;&#x7684;&#x65B9;&#x5F0F;</li>
+</ol>
+<h4 id="directbuffer-vs-heapbuffer">DirectBuffer vs HeapBuffer</h4>
+<p>&#x5728;&#x6267;&#x884C;&#x7F51;&#x7EDC;IO&#x6216;&#x8005;&#x6587;&#x4EF6;IO&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528; <code>DirectBuffer</code> &#x5C31;&#x4F1A;&#x5C11;&#x4E00;&#x6B21;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#x3002;<strong>&#x5982;&#x679C;&#x662F;&#x975E; <code>DirectBuffer</code> &#xFF0C;JDK &#x4F1A;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>DirectBuffer</code> &#xFF0C;&#x518D;&#x53BB;&#x6267;&#x884C;&#x771F;&#x6B63;&#x7684;&#x5199;&#x64CD;&#x4F5C;</strong>&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x628A;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x901A;&#x8FC7; <code>JNI</code> &#x4F20;&#x9012;&#x7ED9;&#x5E95;&#x5C42;&#x7684;C&#x5E93;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x5931;&#x6548;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728; <code>GC</code> &#x7BA1;&#x7406;&#x4E0B;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4F1A;&#x5728; <code>Java</code> &#x5806;&#x4E2D;&#x79FB;&#x52A8;&#x7684;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x6211;&#x628A;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x4F20;&#x7ED9;&#x5E95;&#x5C42;&#x7684; <code>write</code> &#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6BB5;&#x5185;&#x5B58;&#x5374;&#x56E0;&#x4E3A; <code>GC</code> &#x6574;&#x7406;&#x5185;&#x5B58;&#x800C;&#x5931;&#x6548;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x5FC5;&#x987B;&#x8981;&#x628A;&#x5F85;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x653E;&#x5230;&#x4E00;&#x4E2A; <code>GC</code> &#x7BA1;&#x4E0D;&#x7740;&#x7684;&#x5730;&#x65B9;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x8C03;&#x7528; <code>native</code> &#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#xFF0C;&#x6570;&#x636E;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x5806;&#x5916;&#x5185;&#x5B58;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<h3 id="netty-&#x542F;&#x52A8;&#x4EE5;&#x53CA;&#x94FE;&#x63A5;&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;">Netty &#x542F;&#x52A8;&#x4EE5;&#x53CA;&#x94FE;&#x63A5;&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;</h3>
+<p><img src="../image/922e67970b6ac7bf78cd43ac61f7aec0-1583826279671.png" alt="image"></p>
+<h2 id="epoll-&#x89E6;&#x53D1;">Epoll &#x89E6;&#x53D1;</h2>
+<p>&#x6709;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x4E00;&#x662F;&#x6C34;&#x5E73;&#x89E6;&#x53D1;&#xFF08;LT&#xFF09;&#xFF0C;&#x4E8C;&#x662F;&#x8FB9;&#x7F18;&#x89E6;&#x53D1;&#xFF08;ET&#xFF09;&#x3002;</p>
+<p>&#x5728;LT&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x53EA;&#x8981;&#x67D0;&#x4E2A;fd&#x8FD8;&#x6709;&#x6570;&#x636E;&#x6CA1;&#x8BFB;&#x5B8C;&#xFF0C;&#x90A3;&#x4E48;&#x4E0B;&#x6B21;&#x8F6E;&#x8BE2;&#x8FD8;&#x4F1A;&#x88AB;&#x9009;&#x51FA;&#x3002;&#x800C;&#x5728;ET&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;fd&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x8BE5;fd&#x624D;&#x4F1A;&#x88AB;&#x518D;&#x6B21;&#x9009;&#x51FA;&#x3002;ET&#x6A21;&#x5F0F;&#x7684;&#x7279;&#x6B8A;&#x6027;&#xFF0C;&#x4F7F;&#x5728;ET&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x4E00;&#x6B21;&#x8F6E;&#x8BE2;&#x5FC5;&#x987B;&#x5904;&#x7406;&#x5B8C;&#x672C;&#x6B21;&#x8F6E;&#x8BE2;&#x51FA;&#x7684;fd&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x5426;&#x5219;&#x8BE5;fd&#x5C06;&#x4E0D;&#x4F1A;&#x5728;&#x4E0B;&#x6B21;&#x8F6E;&#x8BE2;&#x4E2D;&#x88AB;&#x9009;&#x51FA;&#x3002;</p>
+<ul>
+<li><code>NioChannel</code>&#xFF1A;&#x662F;&#x6C34;&#x5E73;&#x89E6;&#x53D1;</li>
+<li><code>EpollChannel</code>&#xFF1A;&#x662F;&#x8FB9;&#x7F18;&#x89E6;&#x53D1;&#xFF0C;Netty &#x4E3A;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x4F1A;&#x5728;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#x81EA;&#x5DF1;&#x89E6;&#x53D1; Epoll Event&#xFF0C;&#x6765;&#x8BFB;&#x53D6;&#x6570;&#x636E;</li>
+</ul>
+<h2 id="jdk-nio-bug"><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6403933" target="_blank">JDK NIO BUG</a></h2>
+<ul>
+<li>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>selector.select()</code> &#x64CD;&#x4F5C;&#x662F;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x88AB;&#x76D1;&#x542C;&#x7684; <code>fd</code> &#x6709;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x624D;&#x88AB;&#x5524;&#x9192;</li>
+<li>&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A; <code>bug</code> &#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55; <code>fd</code> &#x6709;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F; <code>select()</code> &#x64CD;&#x4F5C;&#x4F9D;&#x65E7;&#x88AB;&#x5524;&#x9192;</li>
+<li>&#x5F88;&#x663E;&#x7136;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>selectedKeys()</code> &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;</li>
+<li>&#x7136;&#x540E;&#x6309;&#x7167;&#x903B;&#x8F91;&#x6267;&#x884C;&#x5230; <code>while(true)</code> &#x5904;&#xFF0C;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</li>
+</ul>
+<p>Netty &#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">long</span> currentTimeNanos = System.nanoTime();
+<span class="hljs-keyword">for</span> (;;) {
+    <span class="hljs-comment">// 1.&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x622A;&#x6B62;&#x4E8B;&#x65F6;&#x95F4;&#x5FEB;&#x5230;&#x4E86;&#xFF0C;&#x4E2D;&#x65AD;&#x672C;&#x6B21;&#x8F6E;&#x8BE2;</span>
+    <span class="hljs-comment">//...</span>
+    <span class="hljs-comment">// 2.&#x8F6E;&#x8BE2;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x73B0;&#x6709;&#x4EFB;&#x52A1;&#x52A0;&#x5165;&#xFF0C;&#x4E2D;&#x65AD;&#x672C;&#x6B21;&#x8F6E;&#x8BE2;</span>
+    <span class="hljs-comment">//...</span>
+    <span class="hljs-comment">// 3.&#x963B;&#x585E;&#x5F0F;select&#x64CD;&#x4F5C;</span>
+    selector.select(timeoutMillis);
+    <span class="hljs-comment">// 4.&#x89E3;&#x51B3;jdk&#x7684;nio bug</span>
+    <span class="hljs-keyword">long</span> time = System.nanoTime();
+    <span class="hljs-keyword">if</span> (time - TimeUnit.MILLISECONDS.toNanos(timeoutMillis) &gt;= currentTimeNanos) {
+        selectCnt = <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (SELECTOR_AUTO_REBUILD_THRESHOLD &gt; <span class="hljs-number">0</span> &amp;&amp;
+            selectCnt &gt;= SELECTOR_AUTO_REBUILD_THRESHOLD) {
+
+        rebuildSelector();
+        selector = <span class="hljs-keyword">this</span>.selector;
+        selector.selectNow();
+        selectCnt = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+    currentTimeNanos = time;
+    <span class="hljs-comment">//...</span>
+ }
+</code></pre>
+<p>&#x200B;    netty<code>&#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;</code>selector.select(timeoutMillis)<code>&#x4E4B;&#x524D;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x5F00;&#x59CB;&#x65F6;&#x95F4;</code>currentTimeNanos<code>&#xFF0C;&#x5728;</code>select<code>&#x4E4B;&#x540E;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#xFF0C;**&#x5224;&#x65AD;</code>select<code>&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x81F3;&#x5C11;&#x6301;&#x7EED;&#x4E86;</code>timeoutMillis<code>&#x79D2;**&#x3002;&#x5982;&#x679C;&#x6301;&#x7EED;&#x7684;&#x65F6;&#x95F4;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</code>timeoutMillis<code>&#xFF0C;&#x8BF4;&#x660E;&#x5C31;&#x662F;&#x4E00;&#x6B21;&#x6709;&#x6548;&#x7684;&#x8F6E;&#x8BE2;&#xFF0C;&#x91CD;&#x7F6E;</code>selectCnt<code>&#x6807;&#x5FD7;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x8868;&#x660E;&#x8BE5;&#x963B;&#x585E;&#x65B9;&#x6CD5;&#x5E76;&#x6CA1;&#x6709;&#x963B;&#x585E;&#x8FD9;&#x4E48;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x80FD;&#x89E6;&#x53D1;&#x4E86;</code>jdk<code>&#x7684;&#x7A7A;&#x8F6E;&#x8BE2;</code>bug<code>&#xFF0C;&#x5F53;&#x7A7A;&#x8F6E;&#x8BE2;&#x7684;&#x6B21;&#x6570;&#x8D85;&#x8FC7;&#x4E00;&#x4E2A;&#x9600;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;</code>512<code>&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x91CD;&#x5EFA;</code>selector</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../mysql/面试题.html" class="navigation navigation-prev " aria-label="Previous page: 面试题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../nginx/基本命令.html" class="navigation navigation-next " aria-label="Next page: 基本命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"netty","level":"1.66","depth":1,"next":{"title":"基本命令","level":"1.67","depth":1,"path":"notes/nginx/基本命令.md","ref":"notes/nginx/基本命令.md","articles":[]},"previous":{"title":"面试题","level":"1.65","depth":1,"path":"notes/mysql/面试题.md","ref":"notes/mysql/面试题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/netty/netty.md","mtime":"2020-05-15T01:32:59.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T04:43:27.047Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2322 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>排序算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../最小生成树算法.html" />
+    
+    
+    <link rel="prev" href="../字符串匹配.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../dubbo/dubbo spi思想.html">
+            
+                <a href="../../../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../dubbo/dubbo工作原理.html">
+            
+                <a href="../../../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../dubbo/dubbo支持协议.html">
+            
+                <a href="../../../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../dubbo/dubbo组件扩展.html">
+            
+                <a href="../../../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../../../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../dubbo/为什么拆分系统.html">
+            
+                <a href="../../../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../dubbo/什么是RPC.html">
+            
+                <a href="../../../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../../../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../../../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../../../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../../../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../../java基础/Java基础.html">
+            
+                <a href="../../../java基础/Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../../java基础/jdk8新特性.html">
+            
+                <a href="../../../java基础/jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../../java基础/NIO.html">
+            
+                <a href="../../../java基础/NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../../java基础/string.html">
+            
+                <a href="../../../java基础/string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../../../java基础/反射.html">
+            
+                <a href="../../../java基础/反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../../../java基础/并发包/cas.html">
+            
+                <a href="../../../java基础/并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../../../java基础/并发包/countDownLatch.html">
+            
+                <a href="../../../java基础/并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../../../java基础/并发包/reentrantLock.html">
+            
+                <a href="../../../java基础/并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../../../java基础/并发包/Synchronized.html">
+            
+                <a href="../../../java基础/并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../../../java基础/并发包/threadLocal.html">
+            
+                <a href="../../../java基础/并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../../../java基础/并发包/原子变量类.html">
+            
+                <a href="../../../java基础/并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../../../java基础/并发包/线程中断处理.html">
+            
+                <a href="../../../java基础/并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../../../java基础/并发包/线程池.html">
+            
+                <a href="../../../java基础/并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../../../java基础/并发包/面试题.html">
+            
+                <a href="../../../java基础/并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../../../java基础/线程相关.html">
+            
+                <a href="../../../java基础/线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../../../java基础/集合/BlockingQueue.html">
+            
+                <a href="../../../java基础/集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../../../java基础/集合/ConcurrentHashmap.html">
+            
+                <a href="../../../java基础/集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../../../java基础/集合/hashMap.html">
+            
+                <a href="../../../java基础/集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../../../java基础/集合/面试题.html">
+            
+                <a href="../../../java基础/集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../../../jvm/gc过程.html">
+            
+                <a href="../../../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../../../jvm/JVM 架构.html">
+            
+                <a href="../../../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../../../jvm/JVM参数调优.html">
+            
+                <a href="../../../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../../../jvm/JVM相关基础.html">
+            
+                <a href="../../../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../../../jvm/内存分代.html">
+            
+                <a href="../../../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../../../jvm/内存模型.html">
+            
+                <a href="../../../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../../../jvm/垃圾回收.html">
+            
+                <a href="../../../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../../../jvm/字符串常量池.html">
+            
+                <a href="../../../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../../../jvm/对象生命周期.html">
+            
+                <a href="../../../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../../../jvm/引用类型.html">
+            
+                <a href="../../../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../../../jvm/类加载机制.html">
+            
+                <a href="../../../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="../../../kafka/kafka使用过程问题.html">
+            
+                <a href="../../../kafka/kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="../../../kafka/kafka基本概念.html">
+            
+                <a href="../../../kafka/kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="../../../kafka/kafka扩容.html">
+            
+                <a href="../../../kafka/kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="../../../kafka/kafka负载均衡.html">
+            
+                <a href="../../../kafka/kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="../../../kafka/leader选举.html">
+            
+                <a href="../../../kafka/leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="../../../kafka/MQ基本概念.html">
+            
+                <a href="../../../kafka/MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="../../../kafka/保证幂等性.html">
+            
+                <a href="../../../kafka/保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="../../../kafka/保证消费顺序性.html">
+            
+                <a href="../../../kafka/保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="../../../kafka/保证高可用性.html">
+            
+                <a href="../../../kafka/保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="../../../kafka/解决消息丢失问题.html">
+            
+                <a href="../../../kafka/解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="../../../kafka/设计一个消息队列.html">
+            
+                <a href="../../../kafka/设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="../../../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../../../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="../../../mybatis/缓存机制.html">
+            
+                <a href="../../../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="../../../mybatis/面试题.html">
+            
+                <a href="../../../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="../../../mysql/innoDB索引.html">
+            
+                <a href="../../../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="../../../mysql/MVCC.html">
+            
+                <a href="../../../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="../../../mysql/mysql架构.html">
+            
+                <a href="../../../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="../../../mysql/undo、redo.html">
+            
+                <a href="../../../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="../../../mysql/主从复制.html">
+            
+                <a href="../../../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="../../../mysql/事务隔离.html">
+            
+                <a href="../../../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="../../../mysql/分库分表策略.html">
+            
+                <a href="../../../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="../../../mysql/锁机制.html">
+            
+                <a href="../../../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="../../../mysql/面试题.html">
+            
+                <a href="../../../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="../../../netty/netty.html">
+            
+                <a href="../../../netty/netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="../../../nginx/基本命令.html">
+            
+                <a href="../../../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="../../../redis/redis 过期策略.html">
+            
+                <a href="../../../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="../../../redis/redis、memcached区别.html">
+            
+                <a href="../../../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="../../../redis/redis分布式锁.html">
+            
+                <a href="../../../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="../../../redis/redis哨兵保证高可用.html">
+            
+                <a href="../../../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="../../../redis/redis基本数据类型.html">
+            
+                <a href="../../../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="../../../redis/redis数据结构.html">
+            
+                <a href="../../../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="../../../redis/redis线程模型.html">
+            
+                <a href="../../../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="../../../redis/redis集群.html">
+            
+                <a href="../../../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="../../../redis/一致性Hash.html">
+            
+                <a href="../../../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="../../../redis/主从复制原理.html">
+            
+                <a href="../../../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="../../../redis/内存淘汰.html">
+            
+                <a href="../../../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="../../../redis/持久化方式.html">
+            
+                <a href="../../../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="../../../redis/雪崩、穿透、预热.html">
+            
+                <a href="../../../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="../../../redis/面试题.html">
+            
+                <a href="../../../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="../../../spring/IOC、AOP.html">
+            
+                <a href="../../../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="../../../spring/spring 事务隔离级别.html">
+            
+                <a href="../../../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="../../../spring/涉及的设计模式.html">
+            
+                <a href="../../../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="../../../springBoot/springBoot工作原理.html">
+            
+                <a href="../../../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="../../../springCloud/eureka.html">
+            
+                <a href="../../../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="../../../springCloud/hystrix.html">
+            
+                <a href="../../../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="../../../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../../../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="../../../springCloud/spring cloud相关组件.html">
+            
+                <a href="../../../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="../../../springCloud/微服务概念.html">
+            
+                <a href="../../../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="../../../springMVC/工作流程.html">
+            
+                <a href="../../../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="../../../tomcat/tomcat结构.html">
+            
+                <a href="../../../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="../../../zookeeper/zk工作流程.html">
+            
+                <a href="../../../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="../../../zookeeper/zk架构.html">
+            
+                <a href="../../../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="../../../zookeeper/zk缺点.html">
+            
+                <a href="../../../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="../../../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../../../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="../../../zookeeper/分布式锁实现.html">
+            
+                <a href="../../../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="../../../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../../../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="../../../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../../../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="../../../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../../../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="../../../分布式/分布式系统架构.html">
+            
+                <a href="../../../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="../../../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../../../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="../../../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../../../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.104" data-path="../../../分布式/短链接/短链接.html">
+            
+                <a href="../../../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.105" data-path="../../../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../../../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.106" data-path="../../../密码学/密码学加密.html">
+            
+                <a href="../../../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.107" data-path="../../../操作系统/IO.html">
+            
+                <a href="../../../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.108" data-path="../../../操作系统/内存管理.html">
+            
+                <a href="../../../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.109" data-path="../../../操作系统/操作系统基础.html">
+            
+                <a href="../../../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.110" data-path="../../../操作系统/磁盘与文件.html">
+            
+                <a href="../../../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.111" data-path="../../../操作系统/线程与进程.html">
+            
+                <a href="../../../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.112" data-path="../../../操作系统/设备管理.html">
+            
+                <a href="../../../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.113" data-path="../../总结.html">
+            
+                <a href="../../总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.114" data-path="../../数据结构/散列表/散列表.html">
+            
+                <a href="../../数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.115" data-path="../../数据结构/树/树.html">
+            
+                <a href="../../数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.116" data-path="../../数据结构/跳表/跳表.html">
+            
+                <a href="../../数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.117" data-path="../大数据算法.html">
+            
+                <a href="../大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.118" data-path="../字符串匹配.html">
+            
+                <a href="../字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.119" data-path="排序算法.html">
+            
+                <a href="排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.120" data-path="../最小生成树算法.html">
+            
+                <a href="../最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.121" data-path="../最短路径算法.html">
+            
+                <a href="../最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.122" data-path="../查找算法/查找算法.html">
+            
+                <a href="../查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.123" data-path="../../../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="../../../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.124" data-path="../../../计算机网络/HTTP/http原理.html">
+            
+                <a href="../../../计算机网络/HTTP/http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.125" data-path="../../../计算机网络/HTTP/一次http请求过程.html">
+            
+                <a href="../../../计算机网络/HTTP/一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.126" data-path="../../../计算机网络/HTTP/断点续传.html">
+            
+                <a href="../../../计算机网络/HTTP/断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.127" data-path="../../../计算机网络/HTTP/跨站攻击.html">
+            
+                <a href="../../../计算机网络/HTTP/跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.128" data-path="../../../计算机网络/HTTPS/https原理.html">
+            
+                <a href="../../../计算机网络/HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.129" data-path="../../../计算机网络/IP/IP协议相关.html">
+            
+                <a href="../../../计算机网络/IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.130" data-path="../../../计算机网络/TCP/TCP.html">
+            
+                <a href="../../../计算机网络/TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.131" data-path="../../../计算机网络/Websocket/Websocket.html">
+            
+                <a href="../../../计算机网络/Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.132" data-path="../../../计算机网络/协议.html">
+            
+                <a href="../../../计算机网络/协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.133" data-path="../../../设计模式/常用的设计模式.html">
+            
+                <a href="../../../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.134" data-path="../../../项目经验/设计一个高并发系统.html">
+            
+                <a href="../../../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >排序算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6392;&#x5E8F;&#x7B97;&#x6CD5;">&#x6392;&#x5E8F;&#x7B97;&#x6CD5;</h2>
+<h3 id="&#x5E38;&#x89C1;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;">&#x5E38;&#x89C1;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;</h3>
+<h4 id="&#x7A33;&#x5B9A;&#x6392;&#x5E8F;&#xFF1A;">&#x7A33;&#x5B9A;&#x6392;&#x5E8F;&#xFF1A;</h4>
+<ul>
+<li><code>&#x5192;&#x6CE1;&#x6392;&#x5E8F;</code> &#x2014; O(n&#xB2;)</li>
+<li><code>&#x63D2;&#x5165;&#x6392;&#x5E8F;</code> &#x2014; O(n&#xB2;)</li>
+<li><code>&#x6876;&#x6392;&#x5E8F;</code> &#x2014; O(n); &#x9700;&#x8981; O(k) &#x989D;&#x5916;&#x7A7A;&#x95F4;</li>
+<li><code>&#x5F52;&#x5E76;&#x6392;&#x5E8F;</code> &#x2014; O(nlogn); &#x9700;&#x8981; O(n) &#x989D;&#x5916;&#x7A7A;&#x95F4;</li>
+<li><code>&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x6392;&#x5E8F;</code> &#x2014; O(n log n) &#x671F;&#x671B;&#x65F6;&#x95F4;; O(n&#xB2;)&#x6700;&#x574F;&#x65F6;&#x95F4;; &#x9700;&#x8981; O(n) &#x989D;&#x5916;&#x7A7A;&#x95F4;</li>
+<li><code>&#x57FA;&#x6570;&#x6392;&#x5E8F;</code> &#x2014; O(n&#xB7;k); &#x9700;&#x8981; O(n) &#x989D;&#x5916;&#x7A7A;&#x95F4;</li>
+</ul>
+<h4 id="&#x4E0D;&#x7A33;&#x5B9A;&#x6392;&#x5E8F;">&#x4E0D;&#x7A33;&#x5B9A;&#x6392;&#x5E8F;</h4>
+<ul>
+<li><code>&#x9009;&#x62E9;&#x6392;&#x5E8F;</code> &#x2014; O(n&#xB2;)</li>
+<li><code>&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</code> &#x2014; O(nlogn)</li>
+<li><code>&#x5806;&#x6392;&#x5E8F;</code> &#x2014; O(nlogn)</li>
+<li><code>&#x5FEB;&#x901F;&#x6392;&#x5E8F;</code> &#x2014; O(nlogn) &#x671F;&#x671B;&#x65F6;&#x95F4;, O(n&#xB2;) &#x6700;&#x574F;&#x60C5;&#x51B5;; &#x5BF9;&#x4E8E;&#x5927;&#x7684;&#x3001;&#x4E71;&#x6570;&#x4E32;&#x884C;&#x4E00;&#x822C;&#x76F8;&#x4FE1;&#x662F;&#x6700;&#x5FEB;&#x7684;&#x5DF2;&#x77E5;&#x6392;&#x5E8F;</li>
+</ul>
+<h3 id="&#x4EA4;&#x6362;&#x6392;&#x5E8F;">&#x4EA4;&#x6362;&#x6392;&#x5E8F;</h3>
+<h4 id="&#x5192;&#x6CE1;&#x6392;&#x5E8F;">&#x5192;&#x6CE1;&#x6392;&#x5E8F;</h4>
+<p>&#x5B83;&#x91CD;&#x590D;&#x5730;&#x8D70;&#x8BBF;&#x8FC7;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x5217;&#xFF0C;&#x4E00;&#x6B21;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x7684;&#x987A;&#x5E8F;&#x9519;&#x8BEF;&#x5C31;&#x628A;&#x4ED6;&#x4EEC;&#x4EA4;&#x6362;&#x8FC7;&#x6765;&#x3002;&#x8D70;&#x8BBF;&#x6570;&#x5217;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x91CD;&#x590D;&#x5730;&#x8FDB;&#x884C;&#x76F4;&#x5230;&#x6CA1;&#x6709;&#x518D;&#x9700;&#x8981;&#x4EA4;&#x6362;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8BE5;&#x6570;&#x5217;&#x5DF2;&#x7ECF;&#x6392;&#x5E8F;&#x5B8C;&#x6210;&#x3002;<strong>&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x603B;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n^2)&#x3002;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x4E00;&#x79CD;&#x7A33;&#x5B9A;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;</strong></p>
+<ul>
+<li>&#x6BD4;&#x8F83;&#x76F8;&#x90BB;&#x7684;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x6BD4;&#x7B2C;&#x4E8C;&#x4E2A;&#x5927;&#xFF0C;&#x5C31;&#x4EA4;&#x6362;&#x4ED6;&#x4EEC;&#x4E24;&#x4E2A;&#x3002;</li>
+<li>&#x5BF9;&#x6BCF;&#x4E00;&#x5BF9;&#x76F8;&#x90BB;&#x5143;&#x7D20;&#x4F5C;&#x540C;&#x6837;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4ECE;&#x5F00;&#x59CB;&#x7B2C;&#x4E00;&#x5BF9;&#x5230;&#x7ED3;&#x5C3E;&#x7684;&#x6700;&#x540E;&#x4E00;&#x5BF9;&#x3002;&#x5728;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x4F1A;&#x662F;&#x6700;&#x5927;&#x7684;&#x6570;&#x3002;</li>
+<li>&#x9488;&#x5BF9;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x91CD;&#x590D;&#x4EE5;&#x4E0A;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3002;</li>
+<li>&#x6301;&#x7EED;&#x6BCF;&#x6B21;&#x5BF9;&#x8D8A;&#x6765;&#x8D8A;&#x5C11;&#x7684;&#x5143;&#x7D20;&#x91CD;&#x590D;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x76F4;&#x5230;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4E00;&#x5BF9;&#x6570;&#x5B57;&#x9700;&#x8981;&#x6BD4;&#x8F83;&#x3002;</li>
+</ul>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bubble_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> n)</span>
+</span>{
+    <span class="hljs-keyword">int</span> i, j, temp;
+    <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; n - <span class="hljs-number">1</span>; j++)
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">1</span> - j; i++)
+        {
+            <span class="hljs-keyword">if</span>(a[i] &gt; a[i + <span class="hljs-number">1</span>])
+            {
+                temp = a[i];
+                a[i] = a[i + <span class="hljs-number">1</span>];
+                a[i + <span class="hljs-number">1</span>] = temp;
+            }
+        }
+}
+</code></pre>
+<h4 id="&#x5FEB;&#x901F;&#x6392;&#x5E8F;">&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h4>
+<p>&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x662F;&#x4E00;&#x79CD; <strong>&#x4E0D;&#x7A33;&#x5B9A;</strong> &#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; <strong>O(nlogn)</strong>&#x3002;<strong>&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x4F7F;&#x7528;&#x5206;&#x6CBB;&#x6CD5;&#xFF08;Divide and conquer&#xFF09;&#x7B56;&#x7565;&#x6765;&#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#xFF08;list&#xFF09;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#xFF08;sub-lists&#xFF09;&#x3002;</strong> &#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>&#x4ECE;&#x6570;&#x5217;&#x4E2D;&#x6311;&#x51FA;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x79F0;&#x4E3A;&quot;&#x57FA;&#x51C6;&#x201D;&#xFF08;pivot&#xFF09;&#xFF0C;</li>
+<li>&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x6570;&#x5217;&#xFF0C;&#x6240;&#x6709;&#x5143;&#x7D20;&#x6BD4;&#x57FA;&#x51C6;&#x503C;&#x5C0F;&#x7684;&#x6446;&#x653E;&#x5728;&#x57FA;&#x51C6;&#x524D;&#x9762;&#xFF0C;&#x6240;&#x6709;&#x5143;&#x7D20;&#x6BD4;&#x57FA;&#x51C6;&#x503C;&#x5927;&#x7684;&#x6446;&#x5728;&#x57FA;&#x51C6;&#x7684;&#x540E;&#x9762;&#xFF08;&#x76F8;&#x540C;&#x7684;&#x6570;&#x53EF;&#x4EE5;&#x5230;&#x4EFB;&#x4E00;&#x8FB9;&#xFF09;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x5206;&#x533A;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;&#x57FA;&#x51C6;&#x5C31;&#x5904;&#x4E8E;&#x6570;&#x5217;&#x7684;&#x4E2D;&#x95F4;&#x4F4D;&#x7F6E;&#x3002;&#x8FD9;&#x4E2A;&#x79F0;&#x4E3A;&#x5206;&#x533A;&#xFF08;partition&#xFF09;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x9012;&#x5F52;&#x5730;&#xFF08;recursive&#xFF09;&#x628A;&#x5C0F;&#x4E8E;&#x57FA;&#x51C6;&#x503C;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x6570;&#x5217;&#x548C;&#x5927;&#x4E8E;&#x57FA;&#x51C6;&#x503C;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x6570;&#x5217;&#x6392;&#x5E8F;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5FEB;&#x6392;&#x7684;&#x65F6;&#x95F4;&#x82B1;&#x8D39;&#x4E3B;&#x8981;&#x5728;&#x5212;&#x5206;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;</p>
+<ul>
+<li>&#x6700;&#x574F;&#x60C5;&#x51B5;&#xFF1A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<code>O(n^2)</code>&#x3002;&#x56E0;&#x4E3A;&#x6700;&#x574F;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x5728;&#x6BCF;&#x6B21;&#x5212;&#x5206;&#x8FC7;&#x7A0B;&#x4EA7;&#x751F;&#x7684;&#x4E24;&#x4E2A;&#x533A;&#x95F4;&#x5206;&#x522B;&#x5305;&#x542B;<code>n-1</code>&#x4E2A;&#x5143;&#x7D20;&#x548C;<code>1</code>&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>&#x6700;&#x597D;&#x60C5;&#x51B5;&#xFF1A;&#x6BCF;&#x6B21;&#x5212;&#x5206;&#x9009;&#x53D6;&#x7684;&#x57FA;&#x51C6;&#x90FD;&#x662F;&#x5F53;&#x524D;&#x65E0;&#x5E8F;&#x533A;&#x7684;&#x4E2D;&#x503C;&#x3002;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x5212;&#x5206;&#x8FC7;&#x7A0B;&#x4EA7;&#x751F;&#x7684;&#x533A;&#x95F4;&#x5927;&#x5C0F;&#x90FD;&#x4E3A;n/2&#xFF0C;&#x5219;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6CD5;&#x8FD0;&#x884C;&#x5C31;&#x5FEB;&#x5F97;&#x591A;&#x4E86;&#x3002;</li>
+</ul>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> low, <span class="hljs-keyword">int</span> high)</span> </span>{
+    <span class="hljs-keyword">int</span> l = low;
+    <span class="hljs-keyword">int</span> h = high;
+    <span class="hljs-keyword">int</span> povit = arr[low];
+    <span class="hljs-keyword">while</span> (l &lt; h) {
+        <span class="hljs-keyword">while</span> (l &lt; h &amp;&amp; arr[h] &gt;= povit)
+            h--;
+        <span class="hljs-keyword">if</span> (l &lt; h) {
+            arr[l] = arr[h];
+            l++;
+        }
+        <span class="hljs-keyword">while</span> (l &lt; h &amp;&amp; arr[l] &lt;= povit)
+            l++;
+        <span class="hljs-keyword">if</span> (l &lt; h) {
+            arr[h] = arr[l];
+            h--;
+        }
+    }
+
+    arr[l] = povit;
+
+    System.out.print(<span class="hljs-string">&quot;l=&quot;</span> + (l + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;;h=&quot;</span> + (h + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;;povit=&quot;</span> + povit + <span class="hljs-string">&quot;\n&quot;</span>);
+    System.out.println(Arrays.toString(arr));
+    <span class="hljs-keyword">if</span> (l - <span class="hljs-number">1</span> &gt; low) sort(arr, low, l - <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (h + <span class="hljs-number">1</span> &lt; high) sort(arr, h + <span class="hljs-number">1</span>, high);
+}
+</code></pre>
+<h4 id="&#x5FEB;&#x6392;&#x7684;&#x4F18;&#x5316;">&#x5FEB;&#x6392;&#x7684;&#x4F18;&#x5316;</h4>
+<ol>
+<li>&#x5F53;&#x5F85;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x957F;&#x5EA6;&#x5206;&#x5272;&#x5230;&#x4E00;&#x5B9A;&#x5927;&#x5C0F;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x3002;</li>
+<li>&#x5FEB;&#x6392;&#x51FD;&#x6570;&#x5728;&#x51FD;&#x6570;&#x5C3E;&#x90E8;&#x6709;&#x4E24;&#x6B21;&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x5176;&#x4F7F;&#x7528;&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;&#x3002;&#x4F18;&#x5316;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x7F29;&#x51CF;&#x5806;&#x6808;&#x6DF1;&#x5EA6;&#xFF0C;&#x7531;&#x539F;&#x6765;&#x7684;O(n)&#x7F29;&#x51CF;&#x4E3A;O(logn)&#xFF0C;&#x5C06;&#x4F1A;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</li>
+<li>&#x4ECE;&#x5DE6;&#x3001;&#x4E2D;&#x3001;&#x53F3;&#x4E09;&#x4E2A;&#x6570;&#x4E2D;&#x53D6;&#x4E2D;&#x95F4;&#x503C;&#x3002;</li>
+</ol>
+<h3 id="&#x63D2;&#x5165;&#x6392;&#x5E8F;">&#x63D2;&#x5165;&#x6392;&#x5E8F;</h3>
+<h4 id="&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x6392;&#x5E8F;">&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x6392;&#x5E8F;</h4>
+<p>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x7ECF;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x6709;&#x5E8F;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x3001;&#x4E2A;&#x6570;&#x52A0;&#x4E00;&#x7684;&#x6709;&#x5E8F;&#x6570;&#x636E;&#xFF0C;&#x7B97;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x7684;&#x6392;&#x5E8F;&#xFF0C;<strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n^2)&#x3002;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#x3002;</strong> <strong>&#x63D2;&#x5165;&#x7B97;&#x6CD5;&#x628A;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x7EC4;&#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;</strong>&#xFF1A;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x5305;&#x542B;&#x4E86;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x5C06;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x9664;&#x5916;&#xFF08;&#x8BA9;&#x6570;&#x7EC4;&#x591A;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;&#x624D;&#x6709;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#xFF09;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x5C31;&#x53EA;&#x5305;&#x542B;&#x8FD9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x5373;&#x5F85;&#x63D2;&#x5165;&#x5143;&#x7D20;&#xFF09;&#x3002;&#x5728;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x6392;&#x5E8F;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x518D;&#x5C06;&#x8FD9;&#x4E2A;&#x6700;&#x540E;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insert_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>* a, <span class="hljs-keyword">int</span> len)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; len; ++i) {
+        <span class="hljs-keyword">int</span> j = i - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> temp = a[i];
+        <span class="hljs-keyword">while</span> (j &gt;= <span class="hljs-number">0</span> &amp;&amp; temp &lt; a[j]) {
+            a[j + <span class="hljs-number">1</span>] = a[j];
+            j--;
+        }
+        a[j + <span class="hljs-number">1</span>] = temp;
+    }
+}
+</code></pre>
+<h4 id="&#x5E0C;&#x5C14;&#x6392;&#x5E8F;">&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</h4>
+<p>&#x4E5F;&#x79F0;&#x7F29;&#x5C0F;&#x589E;&#x91CF;&#x6392;&#x5E8F;&#xFF0C;&#x662F;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x7684;&#x4E00;&#x79CD;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x6539;&#x8FDB;&#x7248;&#x672C;&#x3002;<strong>&#x5E0C;&#x5C14;&#x6392;&#x5E8F;&#x662F;&#x975E;&#x7A33;&#x5B9A;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;</strong></p>
+<p>&#x5E0C;&#x5C14;&#x6392;&#x5E8F;&#x662F;&#x628A;&#x8BB0;&#x5F55;&#x6309;&#x4E0B;&#x6807;&#x7684;&#x4E00;&#x5B9A;&#x589E;&#x91CF;&#x5206;&#x7EC4;&#xFF0C;&#x5BF9;&#x6BCF;&#x7EC4;&#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x6392;&#x5E8F;&#xFF1B;&#x968F;&#x7740;&#x589E;&#x91CF;&#x9010;&#x6E10;&#x51CF;&#x5C11;&#xFF0C;&#x6BCF;&#x7EC4;&#x5305;&#x542B;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x5F53;&#x589E;&#x91CF;&#x51CF;&#x81F3;1&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x6070;&#x88AB;&#x5206;&#x6210;&#x4E00;&#x7EC4;&#xFF0C;&#x7B97;&#x6CD5;&#x4FBF;&#x7EC8;&#x6B62;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">shell_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>* a, <span class="hljs-keyword">int</span> len)</span> </span>{
+    <span class="hljs-keyword">int</span> step = len / <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">int</span> temp;
+
+    <span class="hljs-keyword">while</span> (step &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = step; i &lt; len; ++i) {
+            temp = a[i];
+            <span class="hljs-keyword">int</span> j = i - step;
+            <span class="hljs-keyword">while</span> (j &gt;= <span class="hljs-number">0</span> &amp;&amp; temp &lt; a[j]) {
+                a[j + step] = a[j];
+                j -= step;
+            }
+            a[j + step] = temp;
+        }
+        step /= <span class="hljs-number">2</span>;
+    }
+}
+</code></pre>
+<h3 id="&#x9009;&#x62E9;&#x6392;&#x5E8F;">&#x9009;&#x62E9;&#x6392;&#x5E8F;</h3>
+<h4 id="&#x76F4;&#x63A5;&#x9009;&#x62E9;&#x6392;&#x5E8F;">&#x76F4;&#x63A5;&#x9009;&#x62E9;&#x6392;&#x5E8F;</h4>
+<p>&#x9996;&#x5148;&#x5728;&#x672A;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x5230;&#x6700;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x5143;&#x7D20;&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x518D;&#x4ECE;&#x5269;&#x4F59;&#x672A;&#x6392;&#x5E8F;&#x5143;&#x7D20;&#x4E2D;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x6700;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x653E;&#x5230;&#x5DF2;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x672B;&#x5C3E;&#x3002;<strong>&#x5B9E;&#x9645;&#x9002;&#x7528;&#x7684;&#x573A;&#x5408;&#x975E;&#x5E38;&#x7F55;&#x89C1;&#x3002;</strong></p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">selection_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> len)</span> </span>{
+    <span class="hljs-keyword">int</span> i, j, min, temp;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; len - <span class="hljs-number">1</span>; i++) {
+        min = i;
+        <span class="hljs-keyword">for</span> (j = i + <span class="hljs-number">1</span>; j &lt; len; j++)
+            <span class="hljs-keyword">if</span> (arr[min] &gt; arr[j])
+                min = j;
+           temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;
+    }
+}
+</code></pre>
+<h4 id="&#x5806;&#x6392;&#x5E8F;">&#x5806;&#x6392;&#x5E8F;</h4>
+<p>&#x5806;&#x6392;&#x5E8F;&#x5229;&#x7528;&#x4E86;&#x5927;&#x6839;&#x5806;&#xFF08;&#x6216;&#x5C0F;&#x6839;&#x5806;&#xFF09;&#x5806;&#x9876;&#x8BB0;&#x5F55;&#x7684;&#x5173;&#x952E;&#x5B57;&#x6700;&#x5927;&#xFF08;&#x6216;&#x6700;&#x5C0F;&#xFF09;&#x8FD9;&#x4E00;&#x7279;&#x5F81;&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x5F53;&#x524D;&#x65E0;&#x5E8F;&#x533A;&#x4E2D;&#x9009;&#x53D6;&#x6700;&#x5927;&#xFF08;&#x6216;&#x6700;&#x5C0F;&#xFF09;&#x5173;&#x952E;&#x5B57;&#x7684;&#x8BB0;&#x5F55;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;</p>
+<ol>
+<li>&#x5C06;&#x6570;&#x7EC4;&#x5206;&#x4E3A;&#x6709;&#x5E8F;&#x533A;&#x548C;&#x65E0;&#x5E8F;&#x533A;&#xFF0C;&#x5728;&#x65E0;&#x5E8F;&#x533A;&#x4E2D;&#x5EFA;&#x7ACB;&#x6700;&#x5927;&#x5806;</li>
+<li>&#x5C06;&#x5806;&#x9876;&#x7684;&#x6570;&#x636E;&#x4E0E;&#x65E0;&#x5E8F;&#x533A;&#x672B;&#x5C3E;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;</li>
+<li>&#x4ECE;&#x540E;&#x5F80;&#x524D;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x6570;&#x636E;&#x6392;&#x5E8F;&#x5B8C;&#x6210;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">heapSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = nums.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        maxHeap(nums, <span class="hljs-number">0</span>, i);
+
+        swap(nums, <span class="hljs-number">0</span>, i);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">maxHeap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] heap, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+    <span class="hljs-keyword">if</span> (start == end) {
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">int</span> parent = start;
+    <span class="hljs-keyword">int</span> childLeft = start * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> childRight = childLeft + <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">if</span> (childLeft &lt;= end) {
+        maxHeap(heap, childLeft, end);
+
+        <span class="hljs-keyword">if</span> (heap[childLeft] &gt; heap[parent]) {
+            swap(heap, parent, childLeft);
+        }
+    }
+
+    <span class="hljs-keyword">if</span> (childRight &lt;= end) {
+        maxHeap(heap, childRight, end);
+
+        <span class="hljs-keyword">if</span> (heap[childRight] &gt; heap[parent]) {
+            swap(heap, parent, childRight);
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>{
+    <span class="hljs-keyword">int</span> t = nums[a];
+    nums[a] = nums[b];
+    nums[b] = t;
+}
+</code></pre>
+<h3 id="&#x5F52;&#x5E76;&#x6392;&#x5E8F;">&#x5F52;&#x5E76;&#x6392;&#x5E8F;</h3>
+<p>&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x91C7;&#x7528;&#x5206;&#x6CBB;&#x7684;&#x601D;&#x60F3;&#xFF1A;</p>
+<ul>
+<li>Divide&#xFF1A;&#x5C06;n&#x4E2A;&#x5143;&#x7D20;&#x5E73;&#x5747;&#x5212;&#x5206;&#x4E3A;&#x5404;&#x542B;n/2&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#xFF1B;</li>
+<li>Conquer&#xFF1A;&#x9012;&#x5F52;&#x7684;&#x89E3;&#x51B3;&#x4FE9;&#x4E2A;&#x89C4;&#x6A21;&#x4E3A;n/2&#x7684;&#x5B50;&#x95EE;&#x9898;&#xFF1B;</li>
+<li>Combine&#xFF1A;&#x5408;&#x5E76;&#x4FE9;&#x4E2A;&#x5DF2;&#x6392;&#x5E8F;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x3002;</li>
+</ul>
+<p>&#x6027;&#x80FD;&#xFF1A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x662F;&#x4E3A;O(NlogN)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E5F;&#x603B;&#x4E3A;&#x4E3A;O(N)&#xFF0C;&#x7B97;&#x6CD5;&#x4E0E;&#x521D;&#x59CB;&#x5E8F;&#x5217;&#x65E0;&#x5173;&#xFF0C;&#x6392;&#x5E8F;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">mergeSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, <span class="hljs-keyword">int</span>[] temp)</span> </span>{
+    <span class="hljs-keyword">if</span> (start &gt;= end) {
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">int</span> mid = (start + end) / <span class="hljs-number">2</span>;
+
+    mergeSort(array, start, mid, temp);
+    mergeSort(array, mid + <span class="hljs-number">1</span>, end, temp);
+
+    <span class="hljs-keyword">int</span> f = start, s = mid + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> t = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (f &lt;= mid &amp;&amp; s &lt;= end) {
+        <span class="hljs-keyword">if</span> (array[f] &lt; array[s]) {
+            temp[t++] = array[f++];
+        } <span class="hljs-keyword">else</span> {
+            temp[t++] = array[s++];
+        }
+    }
+
+    <span class="hljs-keyword">while</span> (f &lt;= mid) {
+        temp[t++] = array[f++];
+    }
+
+    <span class="hljs-keyword">while</span> (s &lt;= end) {
+        temp[t++] = array[s++];
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = start; i &lt; t; i++) {
+        array[j++] = temp[i];
+    }
+}
+</code></pre>
+<h3 id="&#x6876;&#x6392;&#x5E8F;">&#x6876;&#x6392;&#x5E8F;</h3>
+<p>&#x6876;&#x6392;&#x5E8F;&#x5DE5;&#x4F5C;&#x7684;&#x539F;&#x7406;&#x662F;&#x5C06; <strong>&#x6570;&#x7EC4;&#x5206;&#x5230;&#x6709;&#x9650;&#x6570;&#x91CF;&#x7684;&#x6876;</strong> &#x91CC;&#x3002;&#x6BCF;&#x4E2A;&#x6876;&#x518D;&#x4E2A;&#x522B;&#x6392;&#x5E8F;&#xFF08;&#x6709;&#x53EF;&#x80FD;&#x518D;&#x4F7F;&#x7528;&#x522B;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x6216;&#x662F;&#x4EE5;&#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x6876;&#x6392;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF09;&#x3002;&#x5F53;&#x8981;&#x88AB;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x7EC4;&#x5185;&#x7684;&#x6570;&#x503C;&#x662F;&#x5747;&#x5300;&#x5206;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6876;&#x6392;&#x5E8F;&#x4F7F;&#x7528;&#x7EBF;&#x6027;&#x65F6;&#x95F4; O(n)<em>O</em>(<em>n</em>) &#x3002;&#x7531;&#x4E8E;&#x6876;&#x6392;&#x5E8F;&#x4E0D;&#x662F;&#x6BD4;&#x8F83;&#x6392;&#x5E8F;&#xFF0C;&#x4ED6;&#x4E0D;&#x53D7;&#x5230; O(n\log n)<em>O</em>(<em>n</em>log<em>n</em>) &#x4E0B;&#x9650;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x6876;&#x6392;&#x5E8F;&#x4EE5;&#x4E0B;&#x5217;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#xFF1A;</p>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5B9A;&#x91CF;&#x7684;&#x6570;&#x7EC4;&#x5F53;&#x4F5C;&#x7A7A;&#x6876;&#x5B50;&#x3002;</li>
+<li>&#x5BFB;&#x8BBF;&#x5E8F;&#x5217;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x9879;&#x76EE;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x653E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6876;&#x5B50;&#x53BB;&#x3002;</li>
+<li>&#x5BF9;&#x6BCF;&#x4E2A;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#x6876;&#x5B50;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;</li>
+<li>&#x4ECE;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#x6876;&#x5B50;&#x91CC;&#x628A;&#x9879;&#x76EE;&#x518D;&#x653E;&#x56DE;&#x539F;&#x6765;&#x7684;&#x5E8F;&#x5217;&#x4E2D;&#x3002;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">indexFor</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> min, <span class="hljs-keyword">int</span> step)</span> </span>{
+    <span class="hljs-keyword">return</span> (a - min) / step;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bucketSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>{
+    <span class="hljs-keyword">int</span> max = arr[<span class="hljs-number">0</span>], min = arr[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> a : arr) {
+        <span class="hljs-keyword">if</span> (max &lt; a)
+            max = a;
+        <span class="hljs-keyword">if</span> (min &gt; a)
+            min = a;
+    }
+    <span class="hljs-comment">// &#x8BE5;&#x503C;&#x53EF;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x9009;&#x62E9;</span>
+    <span class="hljs-keyword">int</span> bucketNum = max / <span class="hljs-number">10</span> - min / <span class="hljs-number">10</span> + <span class="hljs-number">1</span>;
+    List buckList = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+    <span class="hljs-comment">// create bucket</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= bucketNum; i++) {
+        buckList.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;());
+    }
+    <span class="hljs-comment">// push into the bucket</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+        <span class="hljs-keyword">int</span> index = indexFor(arr[i], min, <span class="hljs-number">10</span>);
+        ((ArrayList&lt;Integer&gt;) buckList.get(index)).add(arr[i]);
+    }
+    ArrayList&lt;Integer&gt; bucket = <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; bucketNum; i++) {
+        bucket = (ArrayList&lt;Integer&gt;) buckList.get(i);
+        insertSort(bucket);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k : bucket) {
+            arr[index++] = k;
+        }
+    }
+}
+
+<span class="hljs-comment">// &#x628A;&#x6876;&#x5167;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x6392;&#x5E8F;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertSort</span><span class="hljs-params">(List&lt;Integer&gt; bucket)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; bucket.size(); i++) {
+        <span class="hljs-keyword">int</span> temp = bucket.get(i);
+        <span class="hljs-keyword">int</span> j = i - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (; j &gt;= <span class="hljs-number">0</span> &amp;&amp; bucket.get(j) &gt; temp; j--) {
+            bucket.set(j + <span class="hljs-number">1</span>, bucket.get(j));
+        }
+        bucket.set(j + <span class="hljs-number">1</span>, temp);
+    }
+}
+</code></pre>
+<h3 id="&#x57FA;&#x6570;&#x6392;&#x5E8F;">&#x57FA;&#x6570;&#x6392;&#x5E8F;</h3>
+<p>&#x5BF9;&#x4E8E;&#x6709;d&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x6309;&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x6709;&#x4FE9;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>MSD&#xFF1A;&#x5148;&#x4ECE;&#x9AD8;&#x4F4D;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x4E0A;&#xFF0C;&#x53EF;&#x91C7;&#x7528;&#x57FA;&#x6570;&#x6392;&#x5E8F;</li>
+<li>LSD&#xFF1A;&#x5148;&#x4ECE;&#x4F4E;&#x4F4D;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x4E0A;&#xFF0C;&#x53EF;&#x91C7;&#x7528;&#x6876;&#x6392;&#x5E8F;</li>
+</ul>
+<blockquote>
+<p>&#x5373;&#x901A;&#x8FC7;&#x6BCF;&#x4E2A;&#x6570;&#x7684;&#x6BCF;&#x4F4D;&#x6570;&#x5B57;&#x7684;&#x5927;&#x5C0F;&#x6765;&#x6BD4;&#x8F83;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x627E;&#x51FA;&#x6700;&#x5927;&#x6570;&#x5B57;&#x7684;&#x4F4D;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxNum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> len)</span> </span>{
+    <span class="hljs-keyword">int</span> _max = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; ++i) {
+        <span class="hljs-keyword">int</span> d = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> a = arr[i];
+
+        <span class="hljs-keyword">while</span> (a) {
+            a /= <span class="hljs-number">10</span>;
+            d++;
+        }
+
+        <span class="hljs-keyword">if</span> (_max &lt; d) {
+            _max = d;
+        }
+    }
+    <span class="hljs-keyword">return</span> _max;
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">radixSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *arr, <span class="hljs-keyword">int</span> len)</span> </span>{
+    <span class="hljs-keyword">int</span> d = maxNum(arr, len);
+    <span class="hljs-keyword">int</span> *temp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[len];
+    <span class="hljs-keyword">int</span> count[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">int</span> radix = <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; d; ++i) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">10</span>; ++j) {
+            count[j] = <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; len; ++k) {
+            count[(arr[k] / radix) % <span class="hljs-number">10</span>]++;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> l = <span class="hljs-number">1</span>; l &lt; <span class="hljs-number">10</span>; ++l) {
+            count[l] += count[l - <span class="hljs-number">1</span>];
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> m = <span class="hljs-number">0</span>; m &lt; len; ++m) {
+            <span class="hljs-keyword">int</span> index = (arr[m] / radix) % <span class="hljs-number">10</span>;
+            temp[count[index] - <span class="hljs-number">1</span>] = arr[m];
+            count[index]--;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> n = <span class="hljs-number">0</span>; n &lt; len; ++n) {
+            arr[n] = temp[n];
+        }
+        radix *= <span class="hljs-number">10</span>;
+
+    }
+
+    delete (temp);
+}
+</code></pre>
+<h3 id="&#x62D3;&#x6251;&#x6392;&#x5E8F;">&#x62D3;&#x6251;&#x6392;&#x5E8F;</h3>
+<p>&#x200B;    &#x5728;&#x6709;&#x5411;&#x56FE;&#x4E2D;&#x627E;&#x62D3;&#x6251;&#x5E8F;&#x5217;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5C31;&#x662F;&#x62D3;&#x6251;&#x6392;&#x5E8F;&#x3002;<strong>&#x62D3;&#x6251;&#x5E8F;&#x5217;&#x5E38;&#x5E38;&#x7528;&#x4E8E;&#x5224;&#x5B9A;&#x56FE;&#x662F;&#x5426;&#x6709;&#x73AF;</strong>&#x3002;</p>
+<ul>
+<li>&#x4ECE;&#x6709;&#x5411;&#x56FE;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5165;&#x5EA6;&#x4E3A;0&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x8F93;&#x51FA;&#x5B83;&#x3002;</li>
+<li>&#x5C06;&#x8FD9;&#x4E2A;&#x7ED3;&#x70B9;&#x4EE5;&#x53CA;&#x8BE5;&#x7ED3;&#x70B9;&#x51FA;&#x53D1;&#x7684;&#x6240;&#x6709;&#x8FB9;&#x4ECE;&#x56FE;&#x4E2D;&#x5220;&#x9664;&#x3002;</li>
+<li>&#x91CD;&#x590D;&#x524D;&#x4E24;&#x6B65;&#xFF0C;&#x76F4;&#x5230;&#x6CA1;&#x6709;&#x5165;&#x5EA6;&#x4E3A;0&#x7684;&#x70B9;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6240;&#x6709;&#x70B9;&#x90FD;&#x88AB;&#x8F93;&#x51FA;&#xFF0C;&#x5373;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x62D3;&#x6251;&#x5E8F;&#x5217;&#xFF0C;&#x5219;&#x56FE;&#x6CA1;&#x6709;&#x73AF;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../字符串匹配.html" class="navigation navigation-prev " aria-label="Previous page: 字符串匹配">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../最小生成树算法.html" class="navigation navigation-next " aria-label="Next page: 最小生成树算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"排序算法","level":"1.119","depth":1,"next":{"title":"最小生成树算法","level":"1.120","depth":1,"path":"notes/数据结构与算法/算法/最小生成树算法.md","ref":"notes/数据结构与算法/算法/最小生成树算法.md","articles":[]},"previous":{"title":"字符串匹配","level":"1.118","depth":1,"path":"notes/数据结构与算法/算法/字符串匹配.md","ref":"notes/数据结构与算法/算法/字符串匹配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/数据结构与算法/算法/排序算法/排序算法.md","mtime":"2020-05-15T01:32:59.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T04:43:27.047Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

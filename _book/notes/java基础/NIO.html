@@ -1,0 +1,2086 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NIO · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="string.html" />
+    
+    
+    <link rel="prev" href="jdk8新特性.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dubbo/dubbo spi思想.html">
+            
+                <a href="../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dubbo/dubbo工作原理.html">
+            
+                <a href="../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../dubbo/dubbo支持协议.html">
+            
+                <a href="../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dubbo/dubbo组件扩展.html">
+            
+                <a href="../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dubbo/为什么拆分系统.html">
+            
+                <a href="../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../dubbo/什么是RPC.html">
+            
+                <a href="../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="jdk8新特性.html">
+            
+                <a href="jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="NIO.html">
+            
+                <a href="NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="反射.html">
+            
+                <a href="反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="并发包/cas.html">
+            
+                <a href="并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="并发包/countDownLatch.html">
+            
+                <a href="并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="并发包/reentrantLock.html">
+            
+                <a href="并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="并发包/Synchronized.html">
+            
+                <a href="并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="并发包/threadLocal.html">
+            
+                <a href="并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="并发包/原子变量类.html">
+            
+                <a href="并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="并发包/线程中断处理.html">
+            
+                <a href="并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="并发包/线程池.html">
+            
+                <a href="并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="并发包/面试题.html">
+            
+                <a href="并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="线程相关.html">
+            
+                <a href="线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="集合/BlockingQueue.html">
+            
+                <a href="集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="集合/ConcurrentHashmap.html">
+            
+                <a href="集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="集合/hashMap.html">
+            
+                <a href="集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="集合/面试题.html">
+            
+                <a href="集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../jvm/gc过程.html">
+            
+                <a href="../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../jvm/JVM 架构.html">
+            
+                <a href="../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../jvm/JVM参数调优.html">
+            
+                <a href="../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../jvm/JVM相关基础.html">
+            
+                <a href="../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../jvm/内存分代.html">
+            
+                <a href="../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../jvm/内存模型.html">
+            
+                <a href="../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../jvm/垃圾回收.html">
+            
+                <a href="../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../jvm/字符串常量池.html">
+            
+                <a href="../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../jvm/对象生命周期.html">
+            
+                <a href="../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../jvm/引用类型.html">
+            
+                <a href="../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../jvm/类加载机制.html">
+            
+                <a href="../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="../kafka/kafka使用过程问题.html">
+            
+                <a href="../kafka/kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="../kafka/kafka基本概念.html">
+            
+                <a href="../kafka/kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="../kafka/kafka扩容.html">
+            
+                <a href="../kafka/kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="../kafka/kafka负载均衡.html">
+            
+                <a href="../kafka/kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="../kafka/leader选举.html">
+            
+                <a href="../kafka/leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="../kafka/MQ基本概念.html">
+            
+                <a href="../kafka/MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="../kafka/保证幂等性.html">
+            
+                <a href="../kafka/保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="../kafka/保证消费顺序性.html">
+            
+                <a href="../kafka/保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="../kafka/保证高可用性.html">
+            
+                <a href="../kafka/保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="../kafka/解决消息丢失问题.html">
+            
+                <a href="../kafka/解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="../kafka/设计一个消息队列.html">
+            
+                <a href="../kafka/设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="../mybatis/缓存机制.html">
+            
+                <a href="../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="../mybatis/面试题.html">
+            
+                <a href="../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="../mysql/innoDB索引.html">
+            
+                <a href="../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="../mysql/MVCC.html">
+            
+                <a href="../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="../mysql/mysql架构.html">
+            
+                <a href="../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="../mysql/undo、redo.html">
+            
+                <a href="../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="../mysql/主从复制.html">
+            
+                <a href="../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="../mysql/事务隔离.html">
+            
+                <a href="../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="../mysql/分库分表策略.html">
+            
+                <a href="../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="../mysql/锁机制.html">
+            
+                <a href="../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="../mysql/面试题.html">
+            
+                <a href="../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="../netty/netty.html">
+            
+                <a href="../netty/netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="../nginx/基本命令.html">
+            
+                <a href="../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="../redis/redis 过期策略.html">
+            
+                <a href="../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="../redis/redis、memcached区别.html">
+            
+                <a href="../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="../redis/redis分布式锁.html">
+            
+                <a href="../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="../redis/redis哨兵保证高可用.html">
+            
+                <a href="../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="../redis/redis基本数据类型.html">
+            
+                <a href="../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="../redis/redis数据结构.html">
+            
+                <a href="../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="../redis/redis线程模型.html">
+            
+                <a href="../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="../redis/redis集群.html">
+            
+                <a href="../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="../redis/一致性Hash.html">
+            
+                <a href="../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="../redis/主从复制原理.html">
+            
+                <a href="../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="../redis/内存淘汰.html">
+            
+                <a href="../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="../redis/持久化方式.html">
+            
+                <a href="../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="../redis/雪崩、穿透、预热.html">
+            
+                <a href="../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="../redis/面试题.html">
+            
+                <a href="../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="../spring/IOC、AOP.html">
+            
+                <a href="../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="../spring/spring 事务隔离级别.html">
+            
+                <a href="../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="../spring/涉及的设计模式.html">
+            
+                <a href="../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="../springBoot/springBoot工作原理.html">
+            
+                <a href="../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="../springCloud/eureka.html">
+            
+                <a href="../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="../springCloud/hystrix.html">
+            
+                <a href="../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="../springCloud/spring cloud相关组件.html">
+            
+                <a href="../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="../springCloud/微服务概念.html">
+            
+                <a href="../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="../springMVC/工作流程.html">
+            
+                <a href="../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="../tomcat/tomcat结构.html">
+            
+                <a href="../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="../zookeeper/zk工作流程.html">
+            
+                <a href="../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="../zookeeper/zk架构.html">
+            
+                <a href="../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="../zookeeper/zk缺点.html">
+            
+                <a href="../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="../zookeeper/分布式锁实现.html">
+            
+                <a href="../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="../分布式/分布式系统架构.html">
+            
+                <a href="../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.104" data-path="../分布式/短链接/短链接.html">
+            
+                <a href="../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.105" data-path="../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.106" data-path="../密码学/密码学加密.html">
+            
+                <a href="../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.107" data-path="../操作系统/IO.html">
+            
+                <a href="../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.108" data-path="../操作系统/内存管理.html">
+            
+                <a href="../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.109" data-path="../操作系统/操作系统基础.html">
+            
+                <a href="../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.110" data-path="../操作系统/磁盘与文件.html">
+            
+                <a href="../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.111" data-path="../操作系统/线程与进程.html">
+            
+                <a href="../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.112" data-path="../操作系统/设备管理.html">
+            
+                <a href="../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.113" data-path="../数据结构与算法/总结.html">
+            
+                <a href="../数据结构与算法/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.114" data-path="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                <a href="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.115" data-path="../数据结构与算法/数据结构/树/树.html">
+            
+                <a href="../数据结构与算法/数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.116" data-path="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                <a href="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.117" data-path="../数据结构与算法/算法/大数据算法.html">
+            
+                <a href="../数据结构与算法/算法/大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.118" data-path="../数据结构与算法/算法/字符串匹配.html">
+            
+                <a href="../数据结构与算法/算法/字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.119" data-path="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                <a href="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.120" data-path="../数据结构与算法/算法/最小生成树算法.html">
+            
+                <a href="../数据结构与算法/算法/最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.121" data-path="../数据结构与算法/算法/最短路径算法.html">
+            
+                <a href="../数据结构与算法/算法/最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.122" data-path="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                <a href="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.123" data-path="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.124" data-path="../计算机网络/HTTP/http原理.html">
+            
+                <a href="../计算机网络/HTTP/http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.125" data-path="../计算机网络/HTTP/一次http请求过程.html">
+            
+                <a href="../计算机网络/HTTP/一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.126" data-path="../计算机网络/HTTP/断点续传.html">
+            
+                <a href="../计算机网络/HTTP/断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.127" data-path="../计算机网络/HTTP/跨站攻击.html">
+            
+                <a href="../计算机网络/HTTP/跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.128" data-path="../计算机网络/HTTPS/https原理.html">
+            
+                <a href="../计算机网络/HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.129" data-path="../计算机网络/IP/IP协议相关.html">
+            
+                <a href="../计算机网络/IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.130" data-path="../计算机网络/TCP/TCP.html">
+            
+                <a href="../计算机网络/TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.131" data-path="../计算机网络/Websocket/Websocket.html">
+            
+                <a href="../计算机网络/Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.132" data-path="../计算机网络/协议.html">
+            
+                <a href="../计算机网络/协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.133" data-path="../设计模式/常用的设计模式.html">
+            
+                <a href="../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.134" data-path="../项目经验/设计一个高并发系统.html">
+            
+                <a href="../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >NIO</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="channel">Channel</h2>
+<p>Java NIO&#x7684;&#x901A;&#x9053;&#x7C7B;&#x4F3C;&#x6D41;&#xFF0C;&#x4F46;&#x53C8;&#x6709;&#x4E9B;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ol>
+<li>&#x65E2;&#x53EF;&#x4EE5;&#x4ECE;&#x901A;&#x9053;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x53C8;&#x53EF;&#x4EE5;&#x5199;&#x6570;&#x636E;&#x5230;&#x901A;&#x9053;&#x3002;&#x4F46;&#x6D41;&#x7684;&#x8BFB;&#x5199;&#x901A;&#x5E38;&#x662F;&#x5355;&#x5411;&#x7684;&#x3002;</li>
+<li>&#x901A;&#x9053;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x5730;&#x8BFB;&#x5199;&#x3002;</li>
+<li>&#x901A;&#x9053;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x603B;&#x662F;&#x8981;&#x5148;&#x8BFB;&#x5230;&#x4E00;&#x4E2A;Buffer&#xFF0C;&#x6216;&#x8005;&#x603B;&#x662F;&#x8981;&#x4ECE;&#x4E00;&#x4E2A;Buffer&#x4E2D;&#x5199;&#x5165;&#x3002;</li>
+</ol>
+<h2 id="selector">Selector</h2>
+<p>Selector&#xFF08;&#x9009;&#x62E9;&#x5668;&#xFF09;&#x662F;Java NIO&#x4E2D;&#x80FD;&#x591F;&#x68C0;&#x6D4B;&#x4E00;&#x5230;&#x591A;&#x4E2A;NIO&#x901A;&#x9053;&#xFF0C;&#x5E76;&#x80FD;&#x591F;&#x77E5;&#x6653;&#x901A;&#x9053;&#x662F;&#x5426;&#x4E3A;&#x8BF8;&#x5982;&#x8BFB;&#x5199;&#x4E8B;&#x4EF6;&#x505A;&#x597D;&#x51C6;&#x5907;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x591A;&#x4E2A;channel&#xFF0C;&#x4ECE;&#x800C;&#x7BA1;&#x7406;&#x591A;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x3002; Channel &#x53EF;&#x4EE5;&#x5411; Selector &#x6CE8;&#x518C;&#x76D1;&#x542C;&#x56DB;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<ol>
+<li>Connect</li>
+<li>Accept</li>
+<li>Read</li>
+<li>Write</li>
+</ol>
+<p>&#x4E00;&#x65E6;&#x5411; Selector &#x6CE8;&#x518C;&#x4E86;&#x4E00;&#x6216;&#x591A;&#x4E2A;&#x901A;&#x9053;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x51E0;&#x4E2A;&#x91CD;&#x8F7D;&#x7684; <code>select()</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4F60;&#x6240;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x4E8B;&#x4EF6;&#xFF08;&#x5982;&#x8FDE;&#x63A5;&#x3001;&#x63A5;&#x53D7;&#x3001;&#x8BFB;&#x6216;&#x5199;&#xFF09;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&#x7684;&#x90A3;&#x4E9B;&#x901A;&#x9053;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x201C;&#x8BFB;&#x5C31;&#x7EEA;&#x201D;&#x7684;&#x901A;&#x9053;&#x611F;&#x5174;&#x8DA3;&#xFF0C; <code>select()</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x8BFB;&#x4E8B;&#x4EF6;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x7684;&#x90A3;&#x4E9B;&#x901A;&#x9053;&#x3002;</p>
+<h3 id="select-&#x65B9;&#x6CD5;&#x7A7A;&#x8F6C;">select &#x65B9;&#x6CD5;&#x7A7A;&#x8F6C;</h3>
+<p>&#x82E5; Selector &#x7684;&#x8F6E;&#x8BE2;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709; wakeup &#x6216;&#x65B0;&#x6D88;&#x606F;&#x5904;&#x7406;&#xFF0C;&#x5219;&#x53D1;&#x751F;&#x7A7A;&#x8F6E;&#x8BE2;&#xFF0C;CPU&#x4F7F;&#x7528;&#x7387; 100%&#xFF0C;Netty&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5BF9; Selector &#x7684; select &#x64CD;&#x4F5C;&#x5468;&#x671F;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#xFF0C;&#x6BCF;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x7A7A;&#x7684; select &#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x8BA1;&#x6570;&#x3002;&#x82E5;&#x5728;&#x67D0;&#x4E2A;&#x5468;&#x671F;&#x5185;&#x8FDE;&#x7EED;&#x53D1;&#x751F;N&#x6B21;&#x7A7A;&#x8F6E;&#x8BE2;&#xFF0C;&#x5219;&#x89E6;&#x53D1;&#x4E86; epoll &#x6B7B;&#x5FAA;&#x73AF; bug &#x3002;<strong>&#x91CD;&#x5EFA; Selector</strong> &#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x53D1;&#x8D77;&#x7684;&#x91CD;&#x5EFA;&#x8BF7;&#x6C42;&#xFF0C;&#x82E5;&#x4E0D;&#x662F;&#x5219;&#x5C06;&#x539F; SocketChannel &#x4ECE;&#x65E7;&#x7684; Selector &#x4E0A;&#x53BB;&#x9664;&#x6CE8;&#x518C;&#xFF0C;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5230;&#x65B0;&#x7684; Selector &#x4E0A;&#xFF0C;&#x5E76;&#x5C06;&#x539F;&#x6765;&#x7684; Selector &#x5173;&#x95ED;&#x3002;</p>
+<h2 id="selectionkey">SelectionKey</h2>
+<p>&#x5F53;&#x5411; Selector &#x6CE8;&#x518C; Channel &#x65F6;&#xFF0C;<code>Channel.register()</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; SelectionKey &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x4E86;&#x6CE8;&#x518C;&#x5230;&#x8BE5; Selector &#x548C; Channel &#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x65B9;&#x6CD5;&#x6765;&#x64CD;&#x4F5C;&#x3002;&#x5F53; Channel &#x6CE8;&#x518C;&#x7684;&#x4E8B;&#x4EF6;&#x6765;&#x5230;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4F1A;&#x5728; <code>Selector.selectedKeys()</code> &#x4E2D;&#x8FD4;&#x56DE;&#xFF0C;&#x76F4;&#x5230; Channel &#x6216;&#x8005; Selector &#x88AB;&#x5173;&#x95ED;&#x3002;</p>
+<ol>
+<li>isAcceptable</li>
+<li>isReadable</li>
+<li>channel</li>
+<li>selector</li>
+</ol>
+<pre><code class="lang-java">Set&lt;SelectionKey&gt; selectedKeys = selector.selectedKeys();
+Iterator&lt;SelectionKey&gt; keyIterator = selectedKeys.iterator();
+<span class="hljs-keyword">while</span>(keyIterator.hasNext()) {
+    SelectionKey key = keyIterator.next();
+    <span class="hljs-keyword">if</span>(key.isAcceptable()) {
+        <span class="hljs-comment">// a connection was accepted by a ServerSocketChannel.</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key.isConnectable()) {
+        <span class="hljs-comment">// a connection was established with a remote server.</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key.isReadable()) {
+        <span class="hljs-comment">// a channel is ready for reading</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key.isWritable()) {
+        <span class="hljs-comment">// a channel is ready for writing</span>
+    }
+    keyIterator.remove();
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x672B;&#x5C3E;&#x7684; <code>keyIterator.remove()</code> &#x8C03;&#x7528;&#x3002;Selector &#x4E0D;&#x4F1A;&#x81EA;&#x5DF1;&#x4ECE;&#x5DF2;&#x9009;&#x62E9;&#x952E;&#x96C6;&#x4E2D;&#x79FB;&#x9664; SelectionKey &#x5B9E;&#x4F8B;&#x3002;&#x5FC5;&#x987B;&#x5728;&#x5904;&#x7406;&#x5B8C;&#x901A;&#x9053;&#x65F6;&#x81EA;&#x5DF1;&#x79FB;&#x9664;&#x3002;&#x4E0B;&#x6B21;&#x8BE5;&#x901A;&#x9053;&#x53D8;&#x6210;&#x5C31;&#x7EEA;&#x65F6;&#xFF0C; Selector &#x4F1A;&#x518D;&#x6B21;&#x5C06;&#x5176;&#x653E;&#x5165;&#x5DF2;&#x9009;&#x62E9;&#x952E;&#x96C6;&#x4E2D;&#x3002;</p>
+<h2 id="buffer">Buffer</h2>
+<p>&#x7F13;&#x51B2;&#x533A;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x5757;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x4ECE;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x5185;&#x5B58;&#x3002;&#x8FD9;&#x5757;&#x5185;&#x5B58;&#x88AB;&#x5305;&#x88C5;&#x6210; NIO Buffer &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x6765;&#x65B9;&#x4FBF;&#x7684;&#x8BBF;&#x95EE;&#x8BE5;&#x5757;&#x5185;&#x5B58;&#x3002;&#x4E3A;&#x4E86;&#x7406;&#x89E3;Buffer&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x719F;&#x6089;&#x5B83;&#x7684;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A; <code>capacity</code> &#x3001; <code>position</code> &#x3001; <code>limit</code>&#x3002;</p>
+<p><code>position</code> &#x548C; <code>limit</code> &#x7684;&#x542B;&#x4E49;&#x53D6;&#x51B3;&#x4E8E; Buffer &#x5904;&#x5728;&#x8BFB;&#x6A21;&#x5F0F;&#x8FD8;&#x662F;&#x5199;&#x6A21;&#x5F0F;&#x3002;&#x4E0D;&#x7BA1; Buffer &#x5904;&#x5728;&#x4EC0;&#x4E48;&#x6A21;&#x5F0F;&#xFF0C; <code>capacity</code> &#x7684;&#x542B;&#x4E49;&#x603B;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p><img src="../../image/buffers-modes.png" alt="img"></p>
+<p><strong>capacity</strong>&#xFF1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x5757;&#xFF0C;Buffer&#x6709;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x503C;&#x3002;&#x4F60;&#x53EA;&#x80FD;&#x5F80;&#x91CC;&#x5199; capacity &#x4E2A;byte&#x3001;long&#xFF0C;char&#x7B49;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x65E6; Buffer &#x6EE1;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5176;&#x6E05;&#x7A7A;&#xFF08;&#x901A;&#x8FC7;&#x8BFB;&#x6570;&#x636E;&#x6216;&#x8005;&#x6E05;&#x9664;&#x6570;&#x636E;&#xFF09;&#x624D;&#x80FD;&#x7EE7;&#x7EED;&#x5199;&#x6570;&#x636E;&#x5F80;&#x91CC;&#x5199;&#x6570;&#x636E;&#x3002;</p>
+<ul>
+<li><code>flip()</code>&#xFF1A;&#x65B9;&#x6CD5;&#x5C06; Buffer <strong>&#x4ECE;&#x5199;&#x6A21;&#x5F0F;&#x5207;&#x6362;&#x5230;&#x8BFB;&#x6A21;&#x5F0F;</strong>&#x3002;&#x8C03;&#x7528; <code>flip()</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5C06; <code>position</code> &#x8BBE;&#x56DE; 0 &#xFF0C;&#x5E76;&#x5C06; <code>limit</code> &#x8BBE;&#x7F6E;&#x6210;&#x4E4B;&#x524D; <code>position</code> &#x7684;&#x503C;&#x3002;</li>
+<li><code>clear()</code>&#xFF1A; <code>position</code> &#x5C06;&#x88AB;&#x8BBE;&#x56DE;0&#xFF0C; <code>limit</code> &#x88AB;&#x8BBE;&#x7F6E;&#x6210; <code>capacity</code> &#x7684;&#x503C;</li>
+<li><code>compact()</code>&#xFF1A;&#x5C06;&#x6240;&#x6709;&#x672A;&#x8BFB;&#x7684;&#x6570;&#x636E;&#x62F7;&#x8D1D;&#x5230; Buffer &#x8D77;&#x59CB;&#x5904;&#x3002;&#x7136;&#x540E;&#x5C06; <code>position</code> &#x8BBE;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x672A;&#x8BFB;&#x5143;&#x7D20;&#x6B63;&#x540E;&#x9762;&#x3002; <code>limit</code> &#x5C5E;&#x6027;&#x4F9D;&#x7136;&#x50CF; <code>clear()</code> &#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x8BBE;&#x7F6E;&#x6210; <code>capacity</code> &#x3002;</li>
+<li><code>rewind()</code>&#xFF1A;&#x5C06; position &#x8BBE;&#x56DE;0&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x8BFB; Buffer &#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;limit&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</li>
+</ul>
+<h3 id="&#x5806;&#x5185;&#x5185;&#x5B58;&#xFF08;heapbytebuffer&#xFF09;">&#x5806;&#x5185;&#x5185;&#x5B58;&#xFF08;HeapByteBuffer&#xFF09;</h3>
+<p>HeapByteBuffer &#x662F;&#x5728; Java Heap &#x4E0A;&#x5206;&#x914D;&#x7684;&#xFF0C;&#x4F46;&#x662F;Java NIO&#x5728;&#x8BFB;&#x5199;&#x5230;&#x76F8;&#x5E94;&#x7684; Channel &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5148;&#x5C06; Java Heap &#x7684; buffer &#x5185;&#x5BB9;&#x62F7;&#x8D1D;&#x81F3;&#x76F4;&#x63A5;&#x5185;&#x5B58; &#x2014;&#x2014; Direct Memory&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x65E0;&#x7591; DirectByteBuffer &#x7684; IO &#x6027;&#x80FD;&#x80AF;&#x5B9A;&#x5F3A;&#x4E8E;&#x4F7F;&#x7528; HeapByteBuffer &#xFF0C;&#x5B83;&#x7701;&#x53BB;&#x4E86;&#x4E34;&#x65F6; buffer &#x7684;&#x62F7;&#x8D1D;&#x5F00;&#x9500;&#x3002;</p>
+<h3 id="&#x5806;&#x5916;&#x5185;&#x5B58;&#xFF08;directbytebuffer&#xFF09;">&#x5806;&#x5916;&#x5185;&#x5B58;&#xFF08;DirectByteBuffer&#xFF09;</h3>
+<p>DirectByteBuffer &#x5E95;&#x5C42;&#x7684;&#x6570;&#x636E;&#x5176;&#x5B9E;&#x662F;&#x7EF4;&#x62A4;&#x5728; JVM &#x5806;&#x5916;&#x7684;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C; DirectByteBuffer &#x91CC;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;&#x5F15;&#x7528; address &#x6307;&#x5411;&#x4E86;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x800C;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x3002;&#x867D;&#x7136; GC &#x4ECD;&#x7136;&#x7BA1;&#x7406;&#x7740; DirectBuffer &#x7684;&#x56DE;&#x6536;&#xFF0C;&#x4F46;&#x5B83;&#x662F;&#x4F7F;&#x7528; <code>PhantomReference</code> &#x6765;&#x8FBE;&#x5230;&#x7684;&#xFF0C;&#x5728;&#x5E73;&#x5E38;&#x7684; Young GC &#x6216;&#x8005; mark and compact &#x7684;&#x65F6;&#x5019;&#x5374;&#x4E0D;&#x4F1A;&#x5728;&#x5185;&#x5B58;&#x91CC;&#x642C;&#x52A8;&#x3002;&#x5982;&#x679C;IO&#x7684;&#x6570;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x7F51;&#x7EDC;&#x53D1;&#x9001;&#x5F88;&#x5927;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48; GC &#x7684;&#x538B;&#x529B;&#x4E0B;&#x964D;&#x5C31;&#x4F1A;&#x5F88;&#x660E;&#x663E;&#x3002;<strong>&#x53EA;&#x6709;&#x5728; Full GC &#x4EE5;&#x53CA;&#x8C03;&#x7528; <code>System.gc</code> &#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x8FDB;&#x884C;&#x56DE;&#x6536;&#x3002;</strong></p>
+<p>DirectByteBuffer Java &#x5806;&#x5185;&#x53EA;&#x4F1A;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#x5F15;&#x7528;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5806;&#x5916;&#x7684;&#x7684;&#x7A7A;&#x95F4;&#x53EA;&#x6709;&#x5F53; java &#x5BF9;&#x8C61;&#x88AB;&#x56DE;&#x6536;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x88AB;&#x56DE;&#x6536;&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x660E;&#x663E;&#x7684;&#x4E0D;&#x5BF9;&#x79F0;&#x73B0;&#x8C61;&#xFF0C;&#x5C31;&#x662F;&#x5806;&#x5916;&#x53EF;&#x80FD;&#x5360;&#x7528;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x800C;&#x5806;&#x5185;&#x6CA1;&#x5360;&#x7528;&#x591A;&#x5C11;&#xFF0C;&#x5BFC;&#x81F4;&#x8FD8;&#x6CA1;&#x89E6;&#x53D1; GC &#xFF0C;&#x90A3;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x73B0; Direct Memory &#x9020;&#x6210;&#x7269;&#x7406;&#x5185;&#x5B58;&#x8017;&#x5149;&#x3002;</p>
+<h2 id="echonioserver">EchoNIOServer</h2>
+<pre><code class="lang-java"><span class="hljs-meta">@Slf</span>4j
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NIOServer</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> ByteBuffer buffer = ByteBuffer.allocate(<span class="hljs-number">32</span>);
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+    serverSocketChannel.bind(<span class="hljs-keyword">new</span> InetSocketAddress(<span class="hljs-number">8080</span>));
+    serverSocketChannel.configureBlocking(<span class="hljs-keyword">false</span>);
+
+    Selector selector = Selector.open();
+    serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+      <span class="hljs-keyword">if</span> (selector.select() == <span class="hljs-number">0</span>) {
+        log.warn(<span class="hljs-string">&quot;selector.select() == 0&quot;</span>);
+        TimeUnit.MILLISECONDS.sleep(<span class="hljs-number">100</span>);
+        <span class="hljs-keyword">continue</span>;
+      }
+
+      Iterator&lt;SelectionKey&gt; iterator = selector.selectedKeys().iterator();
+      <span class="hljs-keyword">while</span> (iterator.hasNext()) {
+        SelectionKey selectedKey = iterator.next();
+        <span class="hljs-keyword">if</span> (selectedKey.isAcceptable()) {
+          handleAccept(selectedKey);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (selectedKey.isReadable()) {
+          handleRead(selectedKey);
+        } <span class="hljs-keyword">else</span> {
+          log.warn(<span class="hljs-string">&quot;{}&quot;</span>, selectedKey);
+        }
+        iterator.remove();
+      }
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleRead</span><span class="hljs-params">(SelectionKey selectedKey)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    SocketChannel channel = (SocketChannel) selectedKey.channel();
+
+    <span class="hljs-keyword">int</span> readSize = channel.read(buffer);
+    <span class="hljs-keyword">if</span> (readSize == -<span class="hljs-number">1</span>) {
+      channel.close();
+      <span class="hljs-keyword">return</span>;
+    }
+
+    buffer.flip();
+    <span class="hljs-keyword">byte</span>[] readed = Arrays.copyOf(buffer.array(), readSize);
+    log.info(<span class="hljs-string">&quot;from:{} read data:{}&quot;</span>, channel, <span class="hljs-keyword">new</span> String(readed));
+    buffer.clear();
+
+    buffer.put(<span class="hljs-string">&quot;echo:&quot;</span>.getBytes());
+    buffer.put(readed);
+    buffer.flip();
+    channel.write(buffer);
+    buffer.compact();
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleAccept</span><span class="hljs-params">(SelectionKey selectionKey)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    ServerSocketChannel serverSocketChannel = (ServerSocketChannel) selectionKey.channel();
+    SocketChannel socketChannel = serverSocketChannel.accept();
+    socketChannel.configureBlocking(<span class="hljs-keyword">false</span>);
+    socketChannel.register(selectionKey.selector(), SelectionKey.OP_READ);
+
+    log.info(<span class="hljs-string">&quot;handleAccept from:{}&quot;</span>, socketChannel);
+  }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jdk8新特性.html" class="navigation navigation-prev " aria-label="Previous page: jdk8新特性">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="string.html" class="navigation navigation-next " aria-label="Next page: string">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NIO","level":"1.15","depth":1,"next":{"title":"string","level":"1.16","depth":1,"path":"notes/java基础/string.md","ref":"notes/java基础/string.md","articles":[]},"previous":{"title":"jdk8新特性","level":"1.14","depth":1,"path":"notes/java基础/jdk8新特性.md","ref":"notes/java基础/jdk8新特性.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/java基础/NIO.md","mtime":"2020-05-15T01:32:59.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T04:43:27.047Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
