@@ -1,0 +1,2389 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>jdk8新特性 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="NIO.html" />
+    
+    
+    <link rel="prev" href="Java基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dubbo/dubbo spi思想.html">
+            
+                <a href="../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dubbo/dubbo工作原理.html">
+            
+                <a href="../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../dubbo/dubbo支持协议.html">
+            
+                <a href="../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dubbo/dubbo组件扩展.html">
+            
+                <a href="../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dubbo/为什么拆分系统.html">
+            
+                <a href="../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../dubbo/什么是RPC.html">
+            
+                <a href="../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="jdk8新特性.html">
+            
+                <a href="jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="NIO.html">
+            
+                <a href="NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="反射.html">
+            
+                <a href="反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="并发包/cas.html">
+            
+                <a href="并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="并发包/countDownLatch.html">
+            
+                <a href="并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="并发包/reentrantLock.html">
+            
+                <a href="并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="并发包/Synchronized.html">
+            
+                <a href="并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="并发包/threadLocal.html">
+            
+                <a href="并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="并发包/原子变量类.html">
+            
+                <a href="并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="并发包/线程中断处理.html">
+            
+                <a href="并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="并发包/线程池.html">
+            
+                <a href="并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="并发包/面试题.html">
+            
+                <a href="并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="线程相关.html">
+            
+                <a href="线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="集合/BlockingQueue.html">
+            
+                <a href="集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="集合/ConcurrentHashmap.html">
+            
+                <a href="集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="集合/hashMap.html">
+            
+                <a href="集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="集合/面试题.html">
+            
+                <a href="集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../jvm/gc过程.html">
+            
+                <a href="../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../jvm/JVM 架构.html">
+            
+                <a href="../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../jvm/JVM参数调优.html">
+            
+                <a href="../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../jvm/JVM相关基础.html">
+            
+                <a href="../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../jvm/内存分代.html">
+            
+                <a href="../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../jvm/内存模型.html">
+            
+                <a href="../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../jvm/垃圾回收.html">
+            
+                <a href="../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../jvm/字符串常量池.html">
+            
+                <a href="../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../jvm/对象生命周期.html">
+            
+                <a href="../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../jvm/引用类型.html">
+            
+                <a href="../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../jvm/类加载机制.html">
+            
+                <a href="../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="../kafka/kafka使用过程问题.html">
+            
+                <a href="../kafka/kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="../kafka/kafka基本概念.html">
+            
+                <a href="../kafka/kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="../kafka/kafka扩容.html">
+            
+                <a href="../kafka/kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="../kafka/kafka负载均衡.html">
+            
+                <a href="../kafka/kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="../kafka/leader选举.html">
+            
+                <a href="../kafka/leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="../kafka/MQ基本概念.html">
+            
+                <a href="../kafka/MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="../kafka/保证幂等性.html">
+            
+                <a href="../kafka/保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="../kafka/保证消费顺序性.html">
+            
+                <a href="../kafka/保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="../kafka/保证高可用性.html">
+            
+                <a href="../kafka/保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="../kafka/解决消息丢失问题.html">
+            
+                <a href="../kafka/解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="../kafka/设计一个消息队列.html">
+            
+                <a href="../kafka/设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="../mybatis/缓存机制.html">
+            
+                <a href="../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="../mybatis/面试题.html">
+            
+                <a href="../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="../mysql/innoDB索引.html">
+            
+                <a href="../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="../mysql/MVCC.html">
+            
+                <a href="../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="../mysql/mysql架构.html">
+            
+                <a href="../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="../mysql/undo、redo.html">
+            
+                <a href="../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="../mysql/主从复制.html">
+            
+                <a href="../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="../mysql/事务隔离.html">
+            
+                <a href="../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="../mysql/分库分表策略.html">
+            
+                <a href="../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="../mysql/锁机制.html">
+            
+                <a href="../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="../mysql/面试题.html">
+            
+                <a href="../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="../netty/netty.html">
+            
+                <a href="../netty/netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="../nginx/基本命令.html">
+            
+                <a href="../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="../redis/redis 过期策略.html">
+            
+                <a href="../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="../redis/redis、memcached区别.html">
+            
+                <a href="../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="../redis/redis分布式锁.html">
+            
+                <a href="../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="../redis/redis哨兵保证高可用.html">
+            
+                <a href="../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="../redis/redis基本数据类型.html">
+            
+                <a href="../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="../redis/redis数据结构.html">
+            
+                <a href="../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="../redis/redis线程模型.html">
+            
+                <a href="../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="../redis/redis集群.html">
+            
+                <a href="../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="../redis/一致性Hash.html">
+            
+                <a href="../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="../redis/主从复制原理.html">
+            
+                <a href="../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="../redis/内存淘汰.html">
+            
+                <a href="../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="../redis/持久化方式.html">
+            
+                <a href="../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="../redis/雪崩、穿透、预热.html">
+            
+                <a href="../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="../redis/面试题.html">
+            
+                <a href="../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="../spring/IOC、AOP.html">
+            
+                <a href="../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="../spring/spring 事务隔离级别.html">
+            
+                <a href="../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="../spring/涉及的设计模式.html">
+            
+                <a href="../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="../springBoot/springBoot工作原理.html">
+            
+                <a href="../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="../springCloud/eureka.html">
+            
+                <a href="../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="../springCloud/hystrix.html">
+            
+                <a href="../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="../springCloud/spring cloud相关组件.html">
+            
+                <a href="../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="../springCloud/微服务概念.html">
+            
+                <a href="../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="../springMVC/工作流程.html">
+            
+                <a href="../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="../tomcat/tomcat结构.html">
+            
+                <a href="../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="../zookeeper/zk工作流程.html">
+            
+                <a href="../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="../zookeeper/zk架构.html">
+            
+                <a href="../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="../zookeeper/zk缺点.html">
+            
+                <a href="../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="../zookeeper/分布式锁实现.html">
+            
+                <a href="../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="../分布式/分布式系统架构.html">
+            
+                <a href="../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.104" data-path="../分布式/短链接/短链接.html">
+            
+                <a href="../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.105" data-path="../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.106" data-path="../密码学/密码学加密.html">
+            
+                <a href="../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.107" data-path="../操作系统/IO.html">
+            
+                <a href="../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.108" data-path="../操作系统/内存管理.html">
+            
+                <a href="../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.109" data-path="../操作系统/操作系统基础.html">
+            
+                <a href="../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.110" data-path="../操作系统/磁盘与文件.html">
+            
+                <a href="../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.111" data-path="../操作系统/线程与进程.html">
+            
+                <a href="../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.112" data-path="../操作系统/设备管理.html">
+            
+                <a href="../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.113" data-path="../数据结构与算法/总结.html">
+            
+                <a href="../数据结构与算法/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.114" data-path="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                <a href="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.115" data-path="../数据结构与算法/数据结构/树/树.html">
+            
+                <a href="../数据结构与算法/数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.116" data-path="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                <a href="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.117" data-path="../数据结构与算法/算法/大数据算法.html">
+            
+                <a href="../数据结构与算法/算法/大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.118" data-path="../数据结构与算法/算法/字符串匹配.html">
+            
+                <a href="../数据结构与算法/算法/字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.119" data-path="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                <a href="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.120" data-path="../数据结构与算法/算法/最小生成树算法.html">
+            
+                <a href="../数据结构与算法/算法/最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.121" data-path="../数据结构与算法/算法/最短路径算法.html">
+            
+                <a href="../数据结构与算法/算法/最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.122" data-path="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                <a href="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.123" data-path="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.124" data-path="../计算机网络/HTTP/http原理.html">
+            
+                <a href="../计算机网络/HTTP/http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.125" data-path="../计算机网络/HTTP/一次http请求过程.html">
+            
+                <a href="../计算机网络/HTTP/一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.126" data-path="../计算机网络/HTTP/断点续传.html">
+            
+                <a href="../计算机网络/HTTP/断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.127" data-path="../计算机网络/HTTP/跨站攻击.html">
+            
+                <a href="../计算机网络/HTTP/跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.128" data-path="../计算机网络/HTTPS/https原理.html">
+            
+                <a href="../计算机网络/HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.129" data-path="../计算机网络/IP/IP协议相关.html">
+            
+                <a href="../计算机网络/IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.130" data-path="../计算机网络/TCP/TCP.html">
+            
+                <a href="../计算机网络/TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.131" data-path="../计算机网络/Websocket/Websocket.html">
+            
+                <a href="../计算机网络/Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.132" data-path="../计算机网络/协议.html">
+            
+                <a href="../计算机网络/协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.133" data-path="../设计模式/常用的设计模式.html">
+            
+                <a href="../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.134" data-path="../项目经验/设计一个高并发系统.html">
+            
+                <a href="../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >jdk8新特性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="1jdk7&#x8BED;&#x6CD5;&#x4E0A;">1.jdk7&#x8BED;&#x6CD5;&#x4E0A;</h1>
+<h3 id="11-&#x4E8C;&#x8FDB;&#x5236;&#x53D8;&#x91CF;&#x7684;&#x8868;&#x793A;&#x652F;&#x6301;&#x5C06;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x7528;0b&#x5F00;&#x5934;&#x3002;">1.1 &#x4E8C;&#x8FDB;&#x5236;&#x53D8;&#x91CF;&#x7684;&#x8868;&#x793A;,&#x652F;&#x6301;&#x5C06;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x7528;0b&#x5F00;&#x5934;&#x3002;</h3>
+<pre><code class="lang-java">  <span class="hljs-comment">// &#x6240;&#x6709;&#x6574;&#x6570; int&#xFF0C; short&#xFF0C;long&#xFF0C;byte&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;</span>
+  <span class="hljs-comment">// An 8-bit &apos;byte&apos; value:</span>
+  <span class="hljs-keyword">byte</span> aByte = (<span class="hljs-keyword">byte</span>) <span class="hljs-number">0b00100001</span>;
+  <span class="hljs-comment">// A 16-bit &apos;short&apos; value:</span>
+  <span class="hljs-keyword">short</span> aShort = (<span class="hljs-keyword">short</span>) <span class="hljs-number">0b1010000101000101</span>;
+  <span class="hljs-comment">// Some 32-bit &apos;int&apos; values:</span>
+  intanInt1 = <span class="hljs-number">0b10100001010001011010000101000101</span>;
+  intanInt2 = <span class="hljs-number">0b101</span>;
+  intanInt3 = <span class="hljs-number">0B101</span>; <span class="hljs-comment">// The B can be upper or lower case.</span>
+  <span class="hljs-comment">// A 64-bit &apos;long&apos; value. Note the &quot;L&quot; suffix:</span>
+  <span class="hljs-keyword">long</span> aLong = <span class="hljs-number">0b1010000101000101101000010100010110100001010001011010000101000101L</span>;
+  <span class="hljs-comment">// &#x4E8C;&#x8FDB;&#x5236;&#x5728;&#x6570;&#x7EC4;&#x7B49;&#x7684;&#x4F7F;&#x7528;</span>
+  <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span>[] phases = { <span class="hljs-number">0b00110001</span>, <span class="hljs-number">0b01100010</span>, <span class="hljs-number">0b11000100</span>, <span class="hljs-number">0b10001001</span>,
+  <span class="hljs-number">0b00010011</span>, <span class="hljs-number">0b00100110</span>, <span class="hljs-number">0b01001100</span>, <span class="hljs-number">0b10011000</span> };
+</code></pre>
+<h3 id="12-switch&#x8BED;&#x53E5;&#x652F;&#x6301;string&#x7C7B;&#x578B;">1.2 Switch&#x8BED;&#x53E5;&#x652F;&#x6301;string&#x7C7B;&#x578B;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getTypeOfDayWithSwitchStatement</span><span class="hljs-params">(String dayOfWeekArg)</span> </span>{
+     String typeOfDay;
+     <span class="hljs-keyword">switch</span> (dayOfWeekArg) {
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Monday&quot;</span>:
+         typeOfDay = <span class="hljs-string">&quot;Start of work week&quot;</span>;
+         <span class="hljs-keyword">break</span>;
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Tuesday&quot;</span>:
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Wednesday&quot;</span>:
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Thursday&quot;</span>:
+         typeOfDay = <span class="hljs-string">&quot;Midweek&quot;</span>;
+         <span class="hljs-keyword">break</span>;
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Friday&quot;</span>:
+         typeOfDay = <span class="hljs-string">&quot;End of work week&quot;</span>;
+         <span class="hljs-keyword">break</span>;
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Saturday&quot;</span>:
+       <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Sunday&quot;</span>:
+         typeOfDay = <span class="hljs-string">&quot;Weekend&quot;</span>;
+         <span class="hljs-keyword">break</span>;
+       <span class="hljs-keyword">default</span>:
+         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;Invalid day of the week: &quot;</span> + dayOfWeekArg);
+     }
+     <span class="hljs-keyword">return</span> typeOfDay;
+  }
+</code></pre>
+<h3 id="13-try-with-resource&#x8BED;&#x53E5;"><img src="https://oscimg.oschina.net/oscnet/up-a12aab2c023a0f1eecba80c78bc756a5600.gif" alt="">1.3 Try-with-resource&#x8BED;&#x53E5;</h3>
+<p>&#x200B;    &#x6CE8;&#x610F;&#xFF1A;&#x5B9E;&#x73B0;java.lang.AutoCloseable&#x63A5;&#x53E3;&#x7684;&#x8D44;&#x6E90;&#x90FD;&#x53EF;&#x4EE5;&#x653E;&#x5230;try&#x4E2D;&#xFF0C;&#x8DDF; final &#x91CC;&#x9762;&#x7684;&#x5173;&#x95ED;&#x8D44;&#x6E90;&#x7C7B;&#x4F3C;&#xFF1B;</p>
+<p>&#x200B;    &#x6309;&#x7167;&#x58F0;&#x660E;&#x9006;&#x5E8F;&#x5173;&#x95ED;&#x8D44;&#x6E90; ;</p>
+<p>&#x200B;    Try&#x5757;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x901A;&#x8FC7;Throwable.getSuppressed&#x83B7;&#x53D6;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">try</span> (
+  java.util.zip.ZipFile zf = <span class="hljs-keyword">new</span> java.util.zip.ZipFile(zipFileName);
+  java.io.BufferedWriter writer = java.nio.file.Files.newBufferedWriter(outputFilePath, charset)
+) {
+  <span class="hljs-comment">// Enumerate each entry</span>
+  <span class="hljs-keyword">for</span> (java.util.Enumeration entries = zf.entries(); entries.hasMoreElements();) {
+    <span class="hljs-comment">// Get the entry name and write it to the output file</span>
+    String newLine = System.getProperty(<span class="hljs-string">&quot;line.separator&quot;</span>);
+    String zipEntryName = ((java.util.zip.ZipEntry) entries.nextElement()).getName() + newLine;
+    writer.write(zipEntryName, <span class="hljs-number">0</span>, zipEntryName.length());
+  }
+}
+</code></pre>
+<h3 id="14-catch&#x591A;&#x4E2A;&#x5F02;&#x5E38;"><img src="https://oscimg.oschina.net/oscnet/up-519d4337d1875975d7da2d71e63f86415c3.gif" alt=""><img src="https://oscimg.oschina.net/oscnet/up-2becdc8d13c442aa9389763a358d23f1f85.gif" alt="">1.4 Catch&#x591A;&#x4E2A;&#x5F02;&#x5E38;</h3>
+<p>&#x200B;    &#x8BF4;&#x660E;&#xFF1A;Catch&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#x4E3A; final ;&#x751F;&#x6210;Bytecode &#x4F1A;&#x6BD4;&#x591A;&#x4E2A;<code>catch</code>&#x5C0F;; Rethrow&#x65F6;&#x4FDD;&#x6301;&#x5F02;&#x5E38;&#x7C7B;&#x578B;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    <span class="hljs-keyword">try</span> {
+        testthrows();
+    } <span class="hljs-keyword">catch</span> (IOException | SQLException ex) {
+        <span class="hljs-keyword">throw</span> ex;
+    }
+ }
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testthrows</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, SQLException </span>{
+
+}
+</code></pre>
+<h3 id="15-&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x7684;&#x4E0B;&#x5212;&#x7EBF;&#x8868;&#x793A;"><img src="https://oscimg.oschina.net/oscnet/up-82355047f16471735c05b785a435e8692ee.gif" alt="">1.5 &#x6570;&#x5B57;&#x7C7B;&#x578B;&#x7684;&#x4E0B;&#x5212;&#x7EBF;&#x8868;&#x793A;</h3>
+<p>&#x200B;    &#x66F4;&#x53CB;&#x597D;&#x7684;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x8FC7;&#x8981;&#x6CE8;&#x610F;&#x4E0B;&#x5212;&#x7EBF;&#x6DFB;&#x52A0;&#x7684;&#x4E00;&#x4E9B;&#x6807;&#x51C6;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java">  <span class="hljs-keyword">long</span> creditCardNumber = <span class="hljs-number">1234_5678_9012_3456L</span>;
+  <span class="hljs-keyword">long</span> socialSecurityNumber = <span class="hljs-number">999_99_9999L</span>;
+  <span class="hljs-keyword">float</span> pi = <span class="hljs-number">3.14_15F</span>;
+  <span class="hljs-keyword">long</span> hexBytes = <span class="hljs-number">0xFF_EC_DE_5E</span>;
+  <span class="hljs-keyword">long</span> hexWords = <span class="hljs-number">0xCAFE_BABE</span>;
+  <span class="hljs-keyword">long</span> maxLong = <span class="hljs-number">0x7fff_ffff_ffff_ffffL</span>;
+  <span class="hljs-keyword">byte</span> nybbles = <span class="hljs-number">0b0010_0101</span>;
+  <span class="hljs-keyword">long</span> bytes = <span class="hljs-number">0b11010010_01101001_10010100_10010010</span>; 
+  <span class="hljs-comment">//float pi1 = 3_.1415F;   // Invalid; cannot put underscores adjacent to a decimal point</span>
+  <span class="hljs-comment">//float pi2 = 3._1415F;   // Invalid; cannot put underscores adjacent to a decimal point</span>
+  <span class="hljs-comment">//long socialSecurityNumber1= 999_99_9999_L;     // Invalid; cannot put underscores prior to an L suffix </span>
+  <span class="hljs-comment">//int x1 = _52;       // This is an identifier, not a numeric literal</span>
+  <span class="hljs-keyword">int</span> x2 = <span class="hljs-number">5_2</span>;       <span class="hljs-comment">// OK (decimal literal)</span>
+  <span class="hljs-comment">//int x3 = 52_;       // Invalid; cannot put underscores at the end of a literal</span>
+  <span class="hljs-keyword">int</span> x4 = <span class="hljs-number">5_______2</span>;    <span class="hljs-comment">// OK (decimal literal) </span>
+  <span class="hljs-comment">//int x5 = 0_x52;      // Invalid; cannot put underscores in the 0x radix prefix</span>
+  <span class="hljs-comment">//int x6 = 0x_52;      // Invalid; cannot put underscores at the beginning of a number</span>
+  <span class="hljs-keyword">int</span> x7 = <span class="hljs-number">0x5_2</span>;      <span class="hljs-comment">// OK (hexadecimal literal)</span>
+  <span class="hljs-comment">//int x8 = 0x52_;      // Invalid; cannot put underscores at the end of a number </span>
+  <span class="hljs-keyword">int</span> x9 = <span class="hljs-number">0_52</span>;       <span class="hljs-comment">// OK (octal literal)</span>
+  <span class="hljs-keyword">int</span> x10 = <span class="hljs-number">05_2</span>;      <span class="hljs-comment">// OK (octal literal)</span>
+  <span class="hljs-comment">//int x11 = 052_;      // Invalid; cannot put underscores at the end of a number</span>
+</code></pre>
+<h3 id="16-&#x6CDB;&#x578B;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x6765;&#x7B80;&#x5316;"><img src="https://oscimg.oschina.net/oscnet/up-101b415b1fec5024224da76865a4c293850.gif" alt="">1.6 &#x6CDB;&#x578B;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x6765;&#x7B80;&#x5316;</h3>
+<p>&#x200B;    &#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x540E;&#x9762;<code>new</code>&#x90E8;&#x5206;&#x7684;&#x6CDB;&#x578B;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x7528;&lt;&gt;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<pre><code class="lang-java">    <span class="hljs-comment">//&#x4F7F;&#x7528;&#x6CDB;&#x578B;&#x524D; </span>
+    List strList = <span class="hljs-keyword">new</span> ArrayList(); 
+    List strList4 = <span class="hljs-keyword">new</span> ArrayList(); 
+    List&gt;&gt; strList5 = <span class="hljs-keyword">new</span> ArrayList&gt;&gt;();
+
+    <span class="hljs-comment">//&#x7F16;&#x8BD1;&#x5668;&#x4F7F;&#x7528;&#x5C16;&#x62EC;&#x53F7; (&lt;&gt;) &#x63A8;&#x65AD;&#x7C7B;&#x578B; </span>
+    List strList0 = <span class="hljs-keyword">new</span> ArrayList(); 
+    List&gt;&gt; strList1 = <span class="hljs-keyword">new</span> ArrayList&gt;&gt;(); 
+    List strList2 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); 
+    List&gt;&gt; strList3 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+    List list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+    list.add(<span class="hljs-string">&quot;A&quot;</span>);
+    <span class="hljs-comment">// The following statement should fail since addAll expects</span>
+    <span class="hljs-comment">// Collection</span>
+    <span class="hljs-comment">//list.addAll(new ArrayList&lt;&gt;());</span>
+</code></pre>
+<h3 id="17-&#x5728;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x9012;&#x975E;&#x5177;&#x4F53;&#x5316;&#x53C2;&#x6570;&#x6539;&#x8FDB;&#x7F16;&#x8BD1;&#x8B66;&#x544A;&#x548C;&#x9519;&#x8BEF;"><img src="https://oscimg.oschina.net/oscnet/up-c3bf94aeb31607e953b885b0fc7094c9a9e.gif" alt="">1.7 &#x5728;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x9012;&#x975E;&#x5177;&#x4F53;&#x5316;&#x53C2;&#x6570;,&#x6539;&#x8FDB;&#x7F16;&#x8BD1;&#x8B66;&#x544A;&#x548C;&#x9519;&#x8BEF;.</h3>
+<p>&#x200B;    Heap pollution &#x6307;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x88AB;&#x6307;&#x5411;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4E0D;&#x662F;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x200B;    JDK7&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-java">        List l = <span class="hljs-keyword">new</span> ArrayList&lt;Number&gt;();
+        List&lt;String&gt; ls = l;       <span class="hljs-comment">// unchecked warning</span>
+        l.add(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> Integer(<span class="hljs-number">42</span>)); <span class="hljs-comment">// another unchecked warning</span>
+        String s = ls.get(<span class="hljs-number">0</span>);      <span class="hljs-comment">// ClassCastException is thrown</span>
+
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T &gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addToList</span> <span class="hljs-params">(List &lt; T &gt; listArg, T...elements)</span></span>{
+            <span class="hljs-keyword">for</span> (T x : elements) {
+                listArg.add(x);
+            }
+        }
+</code></pre>
+<p><img src="https://oscimg.oschina.net/oscnet/up-d116f33c89bae48c39dfac6a8a669b70a34.gif" alt=""><img src="https://oscimg.oschina.net/oscnet/up-c89d218c15ffd2fb507b62c202b76265ded.gif" alt="">    &#x4F60;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;warning:</p>
+<p>&#x200B;    [varargs] Possible heap pollution from parameterized vararg type</p>
+<p>&#x200B;    &#x8981;&#x6D88;&#x9664;&#x8B66;&#x544A;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;:</p>
+<blockquote>
+<pre><code>    1.&#x52A0; annotation @SafeVarargs
+
+    2.&#x52A0; annotation @SuppressWarnings({&quot;unchecked&quot;, &quot;varargs&quot;})
+
+    3.&#x4F7F;&#x7528;&#x7F16;&#x8BD1;&#x5668;&#x53C2;&#x6570; &#x2013;Xlint:varargs;
+</code></pre></blockquote>
+<h3 id="18-&#x4FE1;&#x606F;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x56DE;&#x6EAF;&#x8FFD;&#x8E2A;">1.8 &#x4FE1;&#x606F;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x56DE;&#x6EAF;&#x8FFD;&#x8E2A;</h3>
+<p>&#x200B;    &#x4E0A;&#x9762;try&#x4E2D;try&#x8BED;&#x53E5;&#x548C;&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x540C;&#x65F6;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x5F02;&#x5E38;&#x6808;&#x7684;&#x4FE1;&#x606F;</p>
+<p><img src="https://oscimg.oschina.net/oscnet/up-ad83e973b09f6f19e3afac4fbfae16a2856.png" alt=""></p>
+<h1 id="2-nio2&#x7684;&#x4E00;&#x4E9B;&#x65B0;&#x7279;&#x6027;">2. NIO2&#x7684;&#x4E00;&#x4E9B;&#x65B0;&#x7279;&#x6027;</h1>
+<h3 id="1javaniofile-&#x548C;javaniofileattribute&#x5305;-&#x652F;&#x6301;&#x66F4;&#x8BE6;&#x7EC6;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;&#x6743;&#x9650;&#xFF0C;&#x6240;&#x6709;&#x8005;">1.java.nio.file &#x548C;java.nio.file.attribute&#x5305; &#x652F;&#x6301;&#x66F4;&#x8BE6;&#x7EC6;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;&#x6743;&#x9650;&#xFF0C;&#x6240;&#x6709;&#x8005;</h3>
+<h3 id="2symbolic-and-hard-links&#x652F;&#x6301;">2.symbolic and hard links&#x652F;&#x6301;</h3>
+<h3 id="3path&#x8BBF;&#x95EE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;files&#x652F;&#x6301;&#x5404;&#x79CD;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;">3.Path&#x8BBF;&#x95EE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;Files&#x652F;&#x6301;&#x5404;&#x79CD;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h3>
+<h3 id="4&#x9AD8;&#x6548;&#x7684;&#x8BBF;&#x95EE;metadata&#x4FE1;&#x606F;">4.&#x9AD8;&#x6548;&#x7684;&#x8BBF;&#x95EE;metadata&#x4FE1;&#x606F;</h3>
+<h3 id="5&#x9012;&#x5F52;&#x67E5;&#x627E;&#x6587;&#x4EF6;&#x6811;&#xFF0C;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x641C;&#x7D22;">5.&#x9012;&#x5F52;&#x67E5;&#x627E;&#x6587;&#x4EF6;&#x6811;&#xFF0C;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x641C;&#x7D22;</h3>
+<h3 id="6&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FEE;&#x6539;&#x901A;&#x77E5;&#x673A;&#x5236;">6.&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FEE;&#x6539;&#x901A;&#x77E5;&#x673A;&#x5236;</h3>
+<h3 id="7file&#x7C7B;&#x64CD;&#x4F5C;api&#x517C;&#x5BB9;">7.File&#x7C7B;&#x64CD;&#x4F5C;API&#x517C;&#x5BB9;</h3>
+<h3 id="8&#x6587;&#x4EF6;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x589E;&#x5F3A;-mapping-a-regionlocl-a-region&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x8BFB;&#x53D6;">8.&#x6587;&#x4EF6;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x589E;&#x5F3A; mapping a region,locl a region,&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x8BFB;&#x53D6;</h3>
+<h3 id="9aio-reactor&#xFF08;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#xFF09;&#x548C;proactor">9.AIO Reactor&#xFF08;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#xFF09;&#x548C;Proactor</h3>
+<p>&#x4E0B;&#x9762;&#x5217;&#x4E00;&#x4E9B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<h3 id="21-io-and-new-io-&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53D8;&#x5316;&#x901A;&#x77E5;">2.1 IO and New IO &#x76D1;&#x542C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53D8;&#x5316;&#x901A;&#x77E5;</h3>
+<p>&#x200B;    &#x901A;&#x8FC7;FileSystems.getDefault().newWatchService()&#x83B7;&#x53D6;watchService&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x9700;&#x8981;&#x76D1;&#x542C;&#x7684;path&#x76EE;&#x5F55;&#x6CE8;&#x518C;&#x5230;&#x8FD9;&#x4E2A;watchservice&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#xFF0C;&#x65B0;&#x589E;&#xFF0C;&#x5220;&#x9664;&#x7B49;&#x5B9E;&#x8DF5;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x81EA;&#x52A8;&#x80FD;&#x76D1;&#x542C;&#x5230;&#x54CD;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-keyword">private</span> WatchService watcher;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TestWatcherService</span><span class="hljs-params">(Path path)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        watcher = FileSystems.getDefault().newWatchService();
+        path.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleEvents</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> InterruptedException </span>{
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+            WatchKey key = watcher.take();
+            <span class="hljs-keyword">for</span> (WatchEvent event : key.pollEvents()) {
+                WatchEvent.Kind kind = event.kind();
+                <span class="hljs-keyword">if</span> (kind == OVERFLOW) {<span class="hljs-comment">// &#x4E8B;&#x4EF6;&#x53EF;&#x80FD;lost or discarded</span>
+                    <span class="hljs-keyword">continue</span>;
+                }
+                WatchEvent e = (WatchEvent) event;
+                Path fileName = e.context();
+                System.out.printf(<span class="hljs-string">&quot;Event %s has happened,which fileName is %s%n&quot;</span>, kind.name(), fileName);
+            }
+            <span class="hljs-keyword">if</span> (!key.reset()) {
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+    }
+</code></pre>
+<h3 id="22-io-and-new-io&#x904D;&#x5386;&#x6587;&#x4EF6;&#x6811;-&#xFF0C;&#x901A;&#x8FC7;&#x7EE7;&#x627F;simplefilevisitor&#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E8B;&#x4EF6;&#x904D;&#x5386;&#x76EE;&#x5F55;&#x6811;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;fileswalkfiletreelistdir-opts-integermaxvalue-walk&#x8FD9;&#x4E2A;api&#x6765;&#x904D;&#x5386;&#x76EE;&#x5F55;&#x6811;">2.2 IO and New IO&#x904D;&#x5386;&#x6587;&#x4EF6;&#x6811; &#xFF0C;&#x901A;&#x8FC7;&#x7EE7;&#x627F;SimpleFileVisitor&#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E8B;&#x4EF6;&#x904D;&#x5386;&#x76EE;&#x5F55;&#x6811;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;Files.walkFileTree(listDir, opts, Integer.MAX_VALUE, walk);&#x8FD9;&#x4E2A;API&#x6765;&#x904D;&#x5386;&#x76EE;&#x5F55;&#x6811;</h3>
+<pre><code class="lang-java">   <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">workFilePath</span><span class="hljs-params">()</span> </span>{
+        Path listDir = Paths.get(<span class="hljs-string">&quot;/tmp&quot;</span>); <span class="hljs-comment">// define the starting file </span>
+        ListTree walk = <span class="hljs-keyword">new</span> ListTree();
+        Files.walkFileTree(listDir, walk);
+        <span class="hljs-comment">// &#x904D;&#x5386;&#x7684;&#x65F6;&#x5019;&#x8DDF;&#x8E2A;&#x94FE;&#x63A5;</span>
+        EnumSet opts = EnumSet.of(FileVisitOption.FOLLOW_LINKS);
+        <span class="hljs-keyword">try</span> {
+            Files.walkFileTree(listDir, opts, Integer.MAX_VALUE, walk);
+        } <span class="hljs-keyword">catch</span> (IOException e) {
+            System.err.println(e);
+        }
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListTree</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SimpleFileVisitor</span> </span>{<span class="hljs-comment">// NIO2 &#x9012;&#x5F52;&#x904D;&#x5386;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x7684;&#x63A5;&#x53E3; </span>
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> FileVisitResult <span class="hljs-title">postVisitDirectory</span><span class="hljs-params">(Path dir, IOException exc)</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;Visited directory: &quot;</span> + dir.toString());
+                <span class="hljs-keyword">return</span> FileVisitResult.CONTINUE;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> FileVisitResult <span class="hljs-title">visitFileFailed</span><span class="hljs-params">(Path file, IOException exc)</span> </span>{
+                System.out.println(exc);
+                <span class="hljs-keyword">return</span> FileVisitResult.CONTINUE;
+            }
+        }
+    }
+</code></pre>
+<h3 id="23-aio&#x5F02;&#x6B65;io-&#x6587;&#x4EF6;&#x548C;&#x7F51;&#x7EDC;-&#x5F02;&#x6B65;io&#x5728;java-nio2&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x90FD;&#x662F;&#x7528;asynchronousfilechannel&#xFF0C;asynchronoussocketchanne&#x7B49;&#x5B9E;&#x73B0;&#x3002;">2.3 AIO&#x5F02;&#x6B65;IO &#x6587;&#x4EF6;&#x548C;&#x7F51;&#x7EDC; &#x5F02;&#x6B65;IO&#x5728;java NIO2&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x90FD;&#x662F;&#x7528;AsynchronousFileChannel&#xFF0C;AsynchronousSocketChanne&#x7B49;&#x5B9E;&#x73B0;&#x3002;</h3>
+<p>&#x200B;    Java NIO2&#x4E2D;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5F02;&#x6B65;&#x975E;&#x963B;&#x585E;IO&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-comment">// &#x4F7F;&#x7528;AsynchronousFileChannel.open(path, withOptions(), </span>
+    <span class="hljs-comment">// taskExecutor))&#x8FD9;&#x4E2A;API&#x5BF9;&#x5F02;&#x6B65;&#x6587;&#x4EF6;IO&#x7684;&#x5904;&#x7406; </span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">asyFileChannel2</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> THREADS = <span class="hljs-number">5</span>;
+        ExecutorService taskExecutor = Executors.newFixedThreadPool(THREADS);
+        String encoding = System.getProperty(<span class="hljs-string">&quot;file.encoding&quot;</span>);
+        List&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">int</span> sheeps = <span class="hljs-number">0</span>;
+        Path path = Paths.get(<span class="hljs-string">&quot;/tmp&quot;</span>,
+                <span class="hljs-string">&quot;store.txt&quot;</span>);
+        <span class="hljs-keyword">try</span> (AsynchronousFileChannel asynchronousFileChannel = AsynchronousFileChannel
+                .open(path, withOptions(), taskExecutor)) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) {
+                Callable worker = <span class="hljs-keyword">new</span> Callable() {
+                    <span class="hljs-meta">@Override</span>
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> ByteBuffer <span class="hljs-title">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+                        ByteBuffer buffer = ByteBuffer
+                                .allocateDirect(ThreadLocalRandom.current()
+                                        .nextInt(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>));
+                        asynchronousFileChannel.read(buffer, ThreadLocalRandom);
+                    }
+                }
+            }
+        }
+    }
+</code></pre>
+<h1 id="3-jdbc-41">3. JDBC 4.1</h1>
+<h3 id="31-try-with-resources&#x81EA;&#x52A8;&#x5173;&#x95ED;connection-resultset-&#x548C;-statement&#x8D44;&#x6E90;&#x5BF9;&#x8C61;">3.1 try-with-resources&#x81EA;&#x52A8;&#x5173;&#x95ED;Connection, ResultSet, &#x548C; Statement&#x8D44;&#x6E90;&#x5BF9;&#x8C61;</h3>
+<h3 id="32-rowset-11&#xFF1A;&#x5F15;&#x5165;rowsetfactory&#x63A5;&#x53E3;&#x548C;rowsetprovider&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;jdbc-driver&#x652F;&#x6301;&#x7684;&#x5404;&#x79CD;-row-sets&#xFF0C;&#x8FD9;&#x91CC;&#x7684;rowset&#x5B9E;&#x73B0;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5C06;sql&#x8BED;&#x53E5;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x8F6C;&#x4E3A;&#x65B9;&#x6CD5;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x3002;">3.2 RowSet 1.1&#xFF1A;&#x5F15;&#x5165;RowSetFactory&#x63A5;&#x53E3;&#x548C;RowSetProvider&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;JDBC driver&#x652F;&#x6301;&#x7684;&#x5404;&#x79CD; row sets&#xFF0C;&#x8FD9;&#x91CC;&#x7684;rowset&#x5B9E;&#x73B0;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5C06;sql&#x8BED;&#x53E5;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x8F6C;&#x4E3A;&#x65B9;&#x6CD5;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x3002;</h3>
+<h3 id="33-jdbc-odbc&#x9A71;&#x52A8;&#x4F1A;&#x5728;jdk8&#x4E2D;&#x5220;&#x9664;">3.3. JDBC-ODBC&#x9A71;&#x52A8;&#x4F1A;&#x5728;jdk8&#x4E2D;&#x5220;&#x9664;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">try</span> (Statement stmt = con.createStatement()) { 
+    RowSetFactory aFactory = RowSetProvider.newFactory();
+    CachedRowSet crs = aFactory.createCachedRowSet();
+    RowSetFactory rsf = RowSetProvider.newFactory(<span class="hljs-string">&quot;com.sun.rowset.RowSetFactoryImpl&quot;</span>, <span class="hljs-keyword">null</span>);
+    WebRowSet wrs = rsf.createWebRowSet();
+
+    createCachedRowSet 
+    createFilteredRowSet 
+    createJdbcRowSet 
+    createJoinRowSet 
+    createWebRowSet
+</code></pre>
+<h1 id="4-&#x5E76;&#x53D1;&#x5DE5;&#x5177;&#x589E;&#x5F3A;">4. &#x5E76;&#x53D1;&#x5DE5;&#x5177;&#x589E;&#x5F3A;</h1>
+<h3 id="41-fork-join&#x6700;&#x5927;&#x7684;&#x589E;&#x5F3A;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x591A;&#x6838;&#x7279;&#x6027;&#xFF0C;&#x5C06;&#x5927;&#x95EE;&#x9898;&#x5206;&#x89E3;&#x6210;&#x5404;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x7531;&#x591A;&#x4E2A;cpu&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x6700;&#x540E;&#x5408;&#x5E76;&#x7ED3;&#x679C;&#xFF0C;&#x7EE7;&#x627F;recursivetask&#xFF0C;&#x5B9E;&#x73B0;compute&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;fork&#x8BA1;&#x7B97;&#xFF0C;&#x6700;&#x540E;&#x7528;join&#x5408;&#x5E76;&#x7ED3;&#x679C;&#x3002;">4.1 fork-join&#x6700;&#x5927;&#x7684;&#x589E;&#x5F3A;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x591A;&#x6838;&#x7279;&#x6027;&#xFF0C;&#x5C06;&#x5927;&#x95EE;&#x9898;&#x5206;&#x89E3;&#x6210;&#x5404;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x7531;&#x591A;&#x4E2A;cpu&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x6700;&#x540E;&#x5408;&#x5E76;&#x7ED3;&#x679C;&#xFF0C;&#x7EE7;&#x627F;RecursiveTask&#xFF0C;&#x5B9E;&#x73B0;compute&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;fork&#x8BA1;&#x7B97;&#xFF0C;&#x6700;&#x540E;&#x7528;join&#x5408;&#x5E76;&#x7ED3;&#x679C;&#x3002;</h3>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fibonacci</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">RecursiveTask</span> </span>{
+    <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> n;
+
+    Fibonacci(<span class="hljs-keyword">int</span> n) {
+        <span class="hljs-keyword">this</span>.n = n;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compute</span><span class="hljs-params">(<span class="hljs-keyword">int</span> small)</span> </span>{
+        <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span>[] results = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">21</span>, <span class="hljs-number">34</span>, <span class="hljs-number">55</span>, <span class="hljs-number">89</span>};
+        <span class="hljs-keyword">return</span> results[small];
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">compute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">10</span>) {
+            <span class="hljs-keyword">return</span> compute(n);
+        }
+        Fibonacci f1 = <span class="hljs-keyword">new</span> Fibonacci(n - <span class="hljs-number">1</span>);
+        Fibonacci f2 = <span class="hljs-keyword">new</span> Fibonacci(n - <span class="hljs-number">2</span>);
+        System.out.println(<span class="hljs-string">&quot;fork new thread for &quot;</span> + (n - <span class="hljs-number">1</span>));
+        f1.fork();
+        System.out.println(<span class="hljs-string">&quot;fork new thread for &quot;</span> + (n - <span class="hljs-number">2</span>));
+        f2.fork();
+        <span class="hljs-keyword">return</span> f1.join() + f2.join();
+    }
+}
+</code></pre>
+<h3 id="42-threadlocalrandon-&#x5E76;&#x53D1;&#x4E0B;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x7C7B;&#xFF0C;&#x4FDD;&#x8BC1;&#x5E76;&#x53D1;&#x4E0B;&#x7684;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4F7F;&#x7528;threadlocal">4.2 ThreadLocalRandon &#x5E76;&#x53D1;&#x4E0B;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x7C7B;&#xFF0C;&#x4FDD;&#x8BC1;&#x5E76;&#x53D1;&#x4E0B;&#x7684;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4F7F;&#x7528;threadlocal</h3>
+<pre><code class="lang-java">        <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX = <span class="hljs-number">100000</span>;
+        ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
+        <span class="hljs-keyword">long</span> start = System.nanoTime();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; MAX; i++) {
+            threadLocalRandom.nextDouble();
+        }
+        <span class="hljs-keyword">long</span> end = System.nanoTime() - start;
+        System.out.println(<span class="hljs-string">&quot;use time1 : &quot;</span> + end);
+        <span class="hljs-keyword">long</span> start2 = System.nanoTime();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; MAX; i++) {
+            Math.random();
+        }
+        <span class="hljs-keyword">long</span> end2 = System.nanoTime() - start2;
+        System.out.println(<span class="hljs-string">&quot;use time2 : &quot;</span> + end2);
+</code></pre>
+<h3 id="43-phaser-&#x7C7B;&#x4F3C;cyclebarrier&#x548C;countdownlatch&#xFF0C;&#x4E0D;&#x8FC7;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x8D44;&#x6E90;&#x51CF;&#x5C11;&#x8D44;&#x6E90;">4.3 phaser &#x7C7B;&#x4F3C;cyclebarrier&#x548C;countdownlatch&#xFF0C;&#x4E0D;&#x8FC7;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x8D44;&#x6E90;&#x51CF;&#x5C11;&#x8D44;&#x6E90;</h3>
+<pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">runTasks</span><span class="hljs-params">(List tasks)</span> </span>{
+        <span class="hljs-keyword">final</span> Phaser phaser = <span class="hljs-keyword">new</span> Phaser(<span class="hljs-number">1</span>); <span class="hljs-comment">// &quot;1&quot; to register self</span>
+        <span class="hljs-comment">// create and start threads</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">final</span> Runnable task : tasks) {
+            phaser.register();
+            <span class="hljs-keyword">new</span> Thread() {
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                    phaser.arriveAndAwaitAdvance(); <span class="hljs-comment">// await all creation</span>
+                    task.run();
+                }
+            }.start();
+        }
+        <span class="hljs-comment">// allow threads to start and deregister self</span>
+        phaser.arriveAndDeregister();
+    }
+</code></pre>
+<h1 id="5-networking&#x589E;&#x5F3A;">5. Networking&#x589E;&#x5F3A;</h1>
+<p>&#x200B;    &#x65B0;&#x589E;URLClassLoader close&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x53CA;&#x65F6;&#x5173;&#x95ED;&#x8D44;&#x6E90;&#xFF0C;&#x540E;&#x7EED;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;<code>class</code>&#x6587;&#x4EF6;&#x65F6;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x8D44;&#x6E90;&#x88AB;&#x5360;&#x7528;&#x6216;&#x8005;&#x65E0;&#x6CD5;&#x91CA;&#x653E;&#x95EE;&#x9898; URLClassLoader.newInstance(<code>new</code> URL[]{}).close(); &#x65B0;&#x589E;Sockets Direct Protocol &#x7ED5;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x62F7;&#x8D1D;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x7684;&#x5185;&#x5B58;&#x6570;&#x636E;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x76F4;&#x63A5;&#x4F20;&#x8F93;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x7684;&#x5185;&#x5B58;&#x4E2D;</p>
+<h1 id="6-multithreaded-custom-class-loaders">6. Multithreaded Custom Class Loaders</h1>
+<p>&#x200B;    &#x89E3;&#x51B3;&#x5E76;&#x53D1;&#x4E0B;&#x52A0;&#x8F7D;class&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7684;&#x6B7B;&#x9501;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;jdk1.6``&#x7684;&#x4E00;&#x4E9B;&#x65B0;&#x7248;&#x672C;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;jdk7&#x4E5F;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4F18;&#x5316;</p>
+<p>&#x200B;    jdk7&#x524D;&#xFF1A;</p>
+<blockquote>
+<pre><code>&#x7C7B;&#x5C42;&#x6B21;&#x7ED3;&#x6784;:        
+    class A extends B  
+    class C extends D
+
+ClassLoader&#x59D4;&#x6258;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF1A;
+
+&#x81EA;&#x5B9A;&#x4E49;ClassLoader CL1:  
+   &#x76F4;&#x63A5;&#x52A0;&#x8F7D;A&#x7C7B;   
+   &#x59D4;&#x6258;&#x7ED9;&#x7C7B;B&#x7684;&#x81EA;&#x5B9A;&#x4E49;ClassLoader CL2
+
+&#x81EA;&#x5B9A;&#x4E49;ClassLoader CL2:  
+    &#x76F4;&#x63A5;&#x52A0;&#x8F7D;C&#x7C7B;  
+    &#x59D4;&#x6258;&#x7ED9;&#x7C7B;D&#x7684;&#x81EA;&#x5B9A;&#x4E49;ClassLoader CL1
+
+Thread 1:  
+    &#x4F7F;&#x7528;CL1&#x52A0;&#x8F7D;A&#x7C7B;&#xFF08;&#x9501;&#x5B9A;CL1&#xFF09;  
+    defineClass A&#x89E6;&#x53D1;&#x5668;  
+    loadClass B&#xFF08;&#x5C1D;&#x8BD5;&#x9501;&#x5B9A;CL2&#xFF09;
+
+Thread 2:  
+    &#x4F7F;&#x7528;CL2&#x52A0;&#x8F7D;C&#x7C7B;&#xFF08;&#x9501;&#x5B9A;CL2&#xFF09;  
+    defineClass C&#x89E6;&#x53D1;&#x5668;  
+    loadClass D&#xFF08;&#x5C1D;&#x8BD5;&#x9501;&#x5B9A;CL1&#xFF09;
+</code></pre></blockquote>
+<p>&#x200B;    jdk7</p>
+<blockquote>
+<p>  Thread 1:<br>    &#x4F7F;&#x7528;CL1&#x52A0;&#x8F7D;A&#x7C7B;&#xFF08;&#x9501;&#x5B9A;CL1 + A&#xFF09;<br>    defineClass A&#x89E6;&#x53D1;&#x5668;<br>    loadClass B&#xFF08;&#x9501;CL2 + B&#xFF09;</p>
+<p>  Thread 2:<br>    &#x4F7F;&#x7528;CL2&#x52A0;&#x8F7D;C&#x7C7B;&#xFF08;&#x9501;&#x5B9A;CL2 + C&#xFF09;<br>    defineClass C&#x89E6;&#x53D1;&#x5668;<br>    loadClass D&#xFF08;&#x9501;CL1 + D&#xFF09;</p>
+</blockquote>
+<h1 id="7-security-&#x589E;&#x5F3A;">7. Security &#x589E;&#x5F3A;</h1>
+<p>&#x200B;    7.1 &#x63D0;&#x4F9B;&#x51E0;&#x79CD; ECC-based algorithms (ECDSA/ECDH) Elliptic Curve Cryptography (ECC)</p>
+<p>&#x200B;    7.2 &#x7981;&#x7528;CertPath Algorithm Disabling</p>
+<p>&#x200B;    7.3 JSSE (SSL/TLS)&#x7684;&#x4E00;&#x4E9B;&#x589E;&#x5F3A;</p>
+<h1 id="8-internationalization-&#x589E;&#x5F3A;-&#x589E;&#x52A0;&#x4E86;&#x5BF9;&#x4E00;&#x4E9B;&#x7F16;&#x7801;&#x7684;&#x652F;&#x6301;&#x548C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x663E;&#x793A;&#x65B9;&#x9762;&#x7684;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x7B49;">8. Internationalization &#x589E;&#x5F3A; &#x589E;&#x52A0;&#x4E86;&#x5BF9;&#x4E00;&#x4E9B;&#x7F16;&#x7801;&#x7684;&#x652F;&#x6301;&#x548C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x663E;&#x793A;&#x65B9;&#x9762;&#x7684;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x7B49;</h1>
+<p>&#x200B;    1.New Scripts and Characters from Unicode 6.0.0</p>
+<p>&#x200B;    2.Extensible Support for ISO 4217 Currency Codes</p>
+<p>&#x200B;    3.Currency&#x7C7B;&#x6DFB;&#x52A0;&#xFF1A;<br>&#x200B;      getAvailableCurrencies<br>&#x200B;      getNumericCode<br>&#x200B;      getDisplayName<br>&#x200B;      getDisplayName(Locale)</p>
+<p>&#x200B;    4.Category Locale Support  getDefault(Locale.Category)FORMAT DISPLAY</p>
+<p>&#x200B;    5.Locale Class Supports BCP47 and UTR35  UNICODE_LOCALE_EXTENSION  PRIVATE_USE_EXTENSION  Locale.Builder getExtensionKeys()  getExtension(char)  getUnicodeLocaleType(String  &#x2026;&#x2026;</p>
+<p>&#x200B;    6.New NumericShaper Methods</p>
+<p>&#x200B;        NumericShaper.Range<br>&#x200B;        getShaper(NumericShaper.Range)<br>&#x200B;        getContextualShaper(Set)&#x2026;&#x2026; </p>
+<h1 id="9jvm&#x65B9;&#x9762;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x589E;&#x5F3A;&#xFF0C;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x6709;&#x4E9B;&#x5728;jdk6&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4F18;&#x5316;&#x548C;&#x589E;&#x5F3A;&#x3002;">9.jvm&#x65B9;&#x9762;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x589E;&#x5F3A;&#xFF0C;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x6709;&#x4E9B;&#x5728;jdk6&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4F18;&#x5316;&#x548C;&#x589E;&#x5F3A;&#x3002;</h1>
+<p>&#x200B;    1.Jvm&#x652F;&#x6301;&#x975E;java&#x7684;&#x8BED;&#x8A00; invokedynamic &#x6307;&#x4EE4;</p>
+<p>&#x200B;    2. Garbage-First Collector &#x9002;&#x5408;server&#x7AEF;&#xFF0C;&#x591A;&#x5904;&#x7406;&#x5668;&#x4E0B;&#x5927;&#x5185;&#x5B58;&#xFF0C;&#x5C06;heap&#x5206;&#x6210;&#x5927;&#x5C0F;&#x76F8;&#x7B49;&#x7684;&#x591A;&#x4E2A;&#x533A;&#x57DF;&#xFF0C;mark&#x9636;&#x6BB5;&#x68C0;&#x6D4B;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#x7684;&#x5B58;&#x6D3B;&#x5BF9;&#x8C61;&#xFF0C;compress&#x9636;&#x6BB5;&#x5C06;&#x5B58;&#x6D3B;&#x5BF9;&#x8C61;&#x6700;&#x5C0F;&#x7684;&#x5148;&#x505A;&#x56DE;&#x6536;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x817E;&#x51FA;&#x5F88;&#x591A;&#x7A7A;&#x95F2;&#x533A;&#x57DF;&#xFF0C;&#x8FD9;&#x6837;&#x5E76;&#x53D1;&#x56DE;&#x6536;&#x5176;&#x4ED6;&#x533A;&#x57DF;&#x5C31;&#x80FD;&#x51CF;&#x5C11;&#x505C;&#x6B62;&#x65F6;&#x95F4;&#xFF0C;&#x63D0;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x3002;</p>
+<p>&#x200B;    3. HotSpot&#x6027;&#x80FD;&#x589E;&#x5F3A; Tiered Compilation -XX:+UseTieredCompilation &#x591A;&#x5C42;&#x7F16;&#x8BD1;&#xFF0C;&#x5BF9;&#x4E8E;&#x7ECF;&#x5E38;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x76F4;&#x63A5;&#x7F16;&#x8BD1;&#x7A0B;&#x672C;&#x5730;&#x4EE3;&#x7801;&#xFF0C;&#x63D0;&#x9AD8;&#x6548;&#x7387; Compressed Oops &#x538B;&#x7F29;&#x5BF9;&#x8C61;&#x6307;&#x9488;&#xFF0C;&#x51CF;&#x5C11;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;Zero-Based Compressed Ordinary Object Pointers (oops)&#x8FDB;&#x4E00;&#x6B65;&#x4F18;&#x5316;&#x96F6;&#x57FA;&#x538B;&#x7F29;&#x5BF9;&#x8C61;&#x6307;&#x9488;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x538B;&#x7F29;&#x7A7A;&#x95F4;</p>
+<p>&#x200B;    4. Escape Analysis &#x9003;&#x9038;&#x5206;&#x6790;&#xFF0C;&#x5BF9;&#x4E8E;&#x53EA;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x5BF9;&#x8C61;&#x5206;&#x914D;&#x5230;&#x6808;&#x4E0A;&#xFF0C;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x901A;&#x8FC7;&#x6808;&#x7684;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x5F15;&#x7528;&#x5806;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x7684;&#x56DE;&#x6536;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x53CA;&#x65F6;&#x3002;</p>
+<p>&#x200B;    5. NUMA Collector Enhancements</p>
+<p>&#x200B;        NUMA(Non Uniform Memory Access),NUMA&#x5728;&#x591A;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x4E2D;&#x90FD;&#x5F97;&#x5230;&#x5B9E;&#x73B0;,&#x7B80;&#x800C;&#x8A00;&#x4E4B;,&#x5C31;&#x662F;&#x5C06;&#x5185;&#x5B58;&#x5206;&#x6BB5;&#x8BBF;&#x95EE;,&#x7C7B;&#x4F3C;&#x4E8E;&#x786C;&#x76D8;&#x7684;RAID,Oracle&#x4E2D;&#x7684;&#x5206;&#x7C07;</p>
+<h1 id="10-java-2d-enhancements">10. Java 2D Enhancements</h1>
+<blockquote>
+<ol>
+<li><p>XRender-Based Rendering Pipeline -Dsun.java2d.xrender=True</p>
+</li>
+<li><p>Support for OpenType/CFF Fonts GraphicsEnvironment.getAvailableFontFamilyNames</p>
+</li>
+<li><p>TextLayout Support for Tibetan Script</p>
+</li>
+<li><p>Support for Linux Fonts</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="11-swing-enhancements">11. Swing Enhancements</h1>
+<blockquote>
+<ol>
+<li><p>JLayer</p>
+</li>
+<li><p>Nimbus Look &amp; Feel</p>
+</li>
+<li><p>Heavyweight and Lightweight Components</p>
+</li>
+<li><p>Shaped and Translucent Windows</p>
+</li>
+<li><p>Hue-Saturation-Luminance (HSL) Color Selection in JColorChooser Class</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="12-jdk8-lambda&#x8868;&#x8FBE;&#x5F0F;-&#x6700;&#x5927;&#x7684;&#x65B0;&#x589E;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x5F88;&#x591A;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x4E2D;&#x90FD;&#x5DF2;&#x7ECF;&#x539F;&#x751F;&#x652F;&#x6301;&#x3002;">12. Jdk8 lambda&#x8868;&#x8FBE;&#x5F0F; &#x6700;&#x5927;&#x7684;&#x65B0;&#x589E;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x5F88;&#x591A;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x4E2D;&#x90FD;&#x5DF2;&#x7ECF;&#x539F;&#x751F;&#x652F;&#x6301;&#x3002;</h1>
+<p>&#x200B;    &#x539F;&#x6765;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-java">        btn.setOnAction(<span class="hljs-keyword">new</span> EventHandler() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handle</span><span class="hljs-params">(ActionEvent event)</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+            }
+        });
+</code></pre>
+<p>&#x200B;    jdk8&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-java">btn.setOnAction(event -&gt; System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span>));
+</code></pre>
+<p>&#x200B;    &#x66F4;&#x591A;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utils</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compareByLength</span><span class="hljs-params">(String in, String out)</span></span>{
+            <span class="hljs-keyword">return</span> in.length() - out.length();
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doSomething</span><span class="hljs-params">()</span> </span>{
+            String[] args = <span class="hljs-keyword">new</span> String[] {<span class="hljs-string">&quot;microsoft&quot;</span>,<span class="hljs-string">&quot;apple&quot;</span>,<span class="hljs-string">&quot;linux&quot;</span>,<span class="hljs-string">&quot;oracle&quot;</span>}
+            Arrays.sort(args, Utils::compareByLength);
+        }
+    }
+</code></pre>
+<h1 id="13jdk8&#x7684;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7279;&#x6027;&#xFF0C;&#x5F53;&#x7136;jdk8&#x7684;&#x589E;&#x5F3A;&#x529F;&#x80FD;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53C2;&#x8003;-httpswwworaclecomtechnetworkjavajavase8-whats-new-2157071html">13.jdk8&#x7684;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7279;&#x6027;&#xFF0C;&#x5F53;&#x7136;jdk8&#x7684;&#x589E;&#x5F3A;&#x529F;&#x80FD;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html" target="_blank">https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html</a></h1>
+<p>&#x200B;    &#x7528;Metaspace&#x4EE3;&#x66FF;PermGen &#x52A8;&#x6001;&#x6269;&#x5C55;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x9650;&#x5236;&#x4E8E;&#x672C;&#x5730;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;</p>
+<p>&#x200B;    Parallel array sorting &#x65B0;APIArrays#parallelSort.</p>
+<p>&#x200B;    New Date &amp; Time API</p>
+<pre><code class="lang-java">Clock clock = Clock.systemUTC(); <span class="hljs-comment">//return the current time based on your system clock and set to UTC.</span>
+Clock clock = Clock.systemDefaultZone(); <span class="hljs-comment">//return time based on system clock zone</span>
+<span class="hljs-keyword">long</span> time = clock.millis(); <span class="hljs-comment">//time in milliseconds from January 1st, 1970</span>
+&#x200B;```xxxxxxxxxx Clock clock = Clock.systemUTC(); <span class="hljs-comment">//return the current time based on your system clock and set to UTC.Clock clock = Clock.systemDefaultZone(); //return time based on system clock zonelong time = clock.millis(); //time in milliseconds from January 1st, 1970</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java基础.html" class="navigation navigation-prev " aria-label="Previous page: Java基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="NIO.html" class="navigation navigation-next " aria-label="Next page: NIO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"jdk8新特性","level":"1.14","depth":1,"next":{"title":"NIO","level":"1.15","depth":1,"path":"notes/java基础/NIO.md","ref":"notes/java基础/NIO.md","articles":[]},"previous":{"title":"Java基础","level":"1.13","depth":1,"path":"notes/java基础/Java基础.md","ref":"notes/java基础/Java基础.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/java基础/jdk8新特性.md","mtime":"2020-05-15T01:32:59.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T05:26:26.548Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

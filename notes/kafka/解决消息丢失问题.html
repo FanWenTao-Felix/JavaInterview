@@ -1,0 +1,2074 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>解决消息丢失问题 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="设计一个消息队列.html" />
+    
+    
+    <link rel="prev" href="保证高可用性.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dubbo/dubbo spi思想.html">
+            
+                <a href="../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dubbo/dubbo工作原理.html">
+            
+                <a href="../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../dubbo/dubbo支持协议.html">
+            
+                <a href="../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dubbo/dubbo组件扩展.html">
+            
+                <a href="../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dubbo/为什么拆分系统.html">
+            
+                <a href="../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../dubbo/什么是RPC.html">
+            
+                <a href="../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../java基础/Java基础.html">
+            
+                <a href="../java基础/Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../java基础/jdk8新特性.html">
+            
+                <a href="../java基础/jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../java基础/NIO.html">
+            
+                <a href="../java基础/NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../java基础/string.html">
+            
+                <a href="../java基础/string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../java基础/反射.html">
+            
+                <a href="../java基础/反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../java基础/并发包/cas.html">
+            
+                <a href="../java基础/并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../java基础/并发包/countDownLatch.html">
+            
+                <a href="../java基础/并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../java基础/并发包/reentrantLock.html">
+            
+                <a href="../java基础/并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../java基础/并发包/Synchronized.html">
+            
+                <a href="../java基础/并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../java基础/并发包/threadLocal.html">
+            
+                <a href="../java基础/并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../java基础/并发包/原子变量类.html">
+            
+                <a href="../java基础/并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../java基础/并发包/线程中断处理.html">
+            
+                <a href="../java基础/并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../java基础/并发包/线程池.html">
+            
+                <a href="../java基础/并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../java基础/并发包/面试题.html">
+            
+                <a href="../java基础/并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../java基础/线程相关.html">
+            
+                <a href="../java基础/线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../java基础/集合/BlockingQueue.html">
+            
+                <a href="../java基础/集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../java基础/集合/ConcurrentHashmap.html">
+            
+                <a href="../java基础/集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../java基础/集合/hashMap.html">
+            
+                <a href="../java基础/集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../java基础/集合/面试题.html">
+            
+                <a href="../java基础/集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../jvm/gc过程.html">
+            
+                <a href="../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../jvm/JVM 架构.html">
+            
+                <a href="../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../jvm/JVM参数调优.html">
+            
+                <a href="../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../jvm/JVM相关基础.html">
+            
+                <a href="../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../jvm/内存分代.html">
+            
+                <a href="../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../jvm/内存模型.html">
+            
+                <a href="../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../jvm/垃圾回收.html">
+            
+                <a href="../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../jvm/字符串常量池.html">
+            
+                <a href="../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../jvm/对象生命周期.html">
+            
+                <a href="../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../jvm/引用类型.html">
+            
+                <a href="../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../jvm/类加载机制.html">
+            
+                <a href="../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="kafka使用过程问题.html">
+            
+                <a href="kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="kafka基本概念.html">
+            
+                <a href="kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="kafka扩容.html">
+            
+                <a href="kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="kafka负载均衡.html">
+            
+                <a href="kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="leader选举.html">
+            
+                <a href="leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="MQ基本概念.html">
+            
+                <a href="MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="保证幂等性.html">
+            
+                <a href="保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="保证消费顺序性.html">
+            
+                <a href="保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="保证高可用性.html">
+            
+                <a href="保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.52" data-path="解决消息丢失问题.html">
+            
+                <a href="解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="设计一个消息队列.html">
+            
+                <a href="设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="../mybatis/缓存机制.html">
+            
+                <a href="../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="../mybatis/面试题.html">
+            
+                <a href="../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="../mysql/innoDB索引.html">
+            
+                <a href="../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="../mysql/MVCC.html">
+            
+                <a href="../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="../mysql/mysql架构.html">
+            
+                <a href="../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="../mysql/undo、redo.html">
+            
+                <a href="../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="../mysql/主从复制.html">
+            
+                <a href="../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="../mysql/事务隔离.html">
+            
+                <a href="../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="../mysql/分库分表策略.html">
+            
+                <a href="../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="../mysql/锁机制.html">
+            
+                <a href="../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="../mysql/面试题.html">
+            
+                <a href="../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="../netty/netty.html">
+            
+                <a href="../netty/netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="../nginx/基本命令.html">
+            
+                <a href="../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="../redis/redis 过期策略.html">
+            
+                <a href="../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="../redis/redis、memcached区别.html">
+            
+                <a href="../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="../redis/redis分布式锁.html">
+            
+                <a href="../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="../redis/redis哨兵保证高可用.html">
+            
+                <a href="../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="../redis/redis基本数据类型.html">
+            
+                <a href="../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="../redis/redis数据结构.html">
+            
+                <a href="../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="../redis/redis线程模型.html">
+            
+                <a href="../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="../redis/redis集群.html">
+            
+                <a href="../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="../redis/一致性Hash.html">
+            
+                <a href="../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="../redis/主从复制原理.html">
+            
+                <a href="../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="../redis/内存淘汰.html">
+            
+                <a href="../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="../redis/持久化方式.html">
+            
+                <a href="../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="../redis/雪崩、穿透、预热.html">
+            
+                <a href="../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="../redis/面试题.html">
+            
+                <a href="../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="../spring/IOC、AOP.html">
+            
+                <a href="../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="../spring/spring 事务隔离级别.html">
+            
+                <a href="../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="../spring/涉及的设计模式.html">
+            
+                <a href="../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="../springBoot/springBoot工作原理.html">
+            
+                <a href="../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="../springCloud/eureka.html">
+            
+                <a href="../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="../springCloud/hystrix.html">
+            
+                <a href="../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="../springCloud/spring cloud相关组件.html">
+            
+                <a href="../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="../springCloud/微服务概念.html">
+            
+                <a href="../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="../springMVC/工作流程.html">
+            
+                <a href="../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="../tomcat/tomcat结构.html">
+            
+                <a href="../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="../zookeeper/zk工作流程.html">
+            
+                <a href="../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="../zookeeper/zk架构.html">
+            
+                <a href="../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="../zookeeper/zk缺点.html">
+            
+                <a href="../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="../zookeeper/分布式锁实现.html">
+            
+                <a href="../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="../分布式/分布式系统架构.html">
+            
+                <a href="../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.104" data-path="../分布式/短链接/短链接.html">
+            
+                <a href="../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.105" data-path="../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.106" data-path="../密码学/密码学加密.html">
+            
+                <a href="../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.107" data-path="../操作系统/IO.html">
+            
+                <a href="../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.108" data-path="../操作系统/内存管理.html">
+            
+                <a href="../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.109" data-path="../操作系统/操作系统基础.html">
+            
+                <a href="../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.110" data-path="../操作系统/磁盘与文件.html">
+            
+                <a href="../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.111" data-path="../操作系统/线程与进程.html">
+            
+                <a href="../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.112" data-path="../操作系统/设备管理.html">
+            
+                <a href="../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.113" data-path="../数据结构与算法/总结.html">
+            
+                <a href="../数据结构与算法/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.114" data-path="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                <a href="../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.115" data-path="../数据结构与算法/数据结构/树/树.html">
+            
+                <a href="../数据结构与算法/数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.116" data-path="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                <a href="../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.117" data-path="../数据结构与算法/算法/大数据算法.html">
+            
+                <a href="../数据结构与算法/算法/大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.118" data-path="../数据结构与算法/算法/字符串匹配.html">
+            
+                <a href="../数据结构与算法/算法/字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.119" data-path="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                <a href="../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.120" data-path="../数据结构与算法/算法/最小生成树算法.html">
+            
+                <a href="../数据结构与算法/算法/最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.121" data-path="../数据结构与算法/算法/最短路径算法.html">
+            
+                <a href="../数据结构与算法/算法/最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.122" data-path="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                <a href="../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.123" data-path="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="../计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.124" data-path="../计算机网络/HTTP/http原理.html">
+            
+                <a href="../计算机网络/HTTP/http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.125" data-path="../计算机网络/HTTP/一次http请求过程.html">
+            
+                <a href="../计算机网络/HTTP/一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.126" data-path="../计算机网络/HTTP/断点续传.html">
+            
+                <a href="../计算机网络/HTTP/断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.127" data-path="../计算机网络/HTTP/跨站攻击.html">
+            
+                <a href="../计算机网络/HTTP/跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.128" data-path="../计算机网络/HTTPS/https原理.html">
+            
+                <a href="../计算机网络/HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.129" data-path="../计算机网络/IP/IP协议相关.html">
+            
+                <a href="../计算机网络/IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.130" data-path="../计算机网络/TCP/TCP.html">
+            
+                <a href="../计算机网络/TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.131" data-path="../计算机网络/Websocket/Websocket.html">
+            
+                <a href="../计算机网络/Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.132" data-path="../计算机网络/协议.html">
+            
+                <a href="../计算机网络/协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.133" data-path="../设计模式/常用的设计模式.html">
+            
+                <a href="../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.134" data-path="../项目经验/设计一个高并发系统.html">
+            
+                <a href="../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >解决消息丢失问题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x95EE;&#x9898;">&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x95EE;&#x9898;</h3>
+<blockquote>
+<p> &#x600E;&#x4E48;&#x6837;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x4E0D;&#x4E22;&#x5931;&#xFF0C;&#x4ECE;&#x751F;&#x4EA7;&#x8005;&#x751F;&#x4EA7;&#x51FA;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x76F4;&#x5230;&#x6D88;&#x8D39;&#x8005;&#x6210;&#x529F;&#x6D88;&#x8D39;&#x8BE5;&#x6D88;&#x606F;&#xFF0C;&#x4E2D;&#x95F4;&#x4E0D;&#x80FD;&#x4E22;&#x5931;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E5F;&#x662F;&#x4F7F;&#x7528;MQ&#x5FC5;&#x987B;&#x8981;&#x8003;&#x8651;&#x7684;&#x3002; </p>
+<p> RabbitMQ&#x51FA;&#x73B0;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x7684;&#x60C5;&#x51B5;&#x53CA;&#x5176;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</p>
+<p> <img src="../image/image-20200108215206333.png" alt="image-20200108215206333"></p>
+<p> &#x200B;    RabbitMQ&#x4E22;&#x5931;&#x6D88;&#x606F;&#x7684;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</p>
+<p> 1.&#x751F;&#x4EA7;&#x8005;&#x6CA1;&#x6709;&#x6210;&#x529F;&#x628A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;MQ</p>
+<p> &#x200B;    &#x4E22;&#x5931;&#x7684;&#x539F;&#x56E0;&#xFF1A;&#x56E0;&#x4E3A;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x7684;&#x4E0D;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x5F53;&#x751F;&#x4EA7;&#x8005;&#x5728;&#x5411;MQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;MQ&#x6CA1;&#x6709;&#x6210;&#x529F;&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x751F;&#x4EA7;&#x8005;&#x5374;&#x4EE5;&#x4E3A;MQ&#x6210;&#x529F;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x6D88;&#x606F;&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x91CD;&#x590D;&#x53D1;&#x9001;&#x8BE5;&#x6D88;&#x606F;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x6D88;&#x606F;&#x7684;&#x4E22;&#x5931;&#x3002;</p>
+<p> &#x200B;    &#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A; &#x6709;&#x4E24;&#x4E2A;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x4E8B;&#x52A1;&#x673A;&#x5236;&#x548C;confirm&#x673A;&#x5236;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F;confirm&#x673A;&#x5236;&#x3002;</p>
+<p> <strong>&#x4E8B;&#x52A1;&#x673A;&#x5236;</strong>&#xFF1A;</p>
+<p> &#x200B;    RabbitMQ &#x63D0;&#x4F9B;&#x4E86;&#x4E8B;&#x52A1;&#x529F;&#x80FD;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E4B;&#x524D;&#x5F00;&#x542F; RabbitMQ &#x4E8B;&#x52A1;channel.txSelect&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x6210;&#x529F;&#x88AB; RabbitMQ &#x63A5;&#x6536;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x6536;&#x5230;&#x5F02;&#x5E38;&#x62A5;&#x9519;&#xFF0C;&#x6B64;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x56DE;&#x6EDA;&#x4E8B;&#x52A1;channel.txRollback&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x8BD5;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF1B;&#x5982;&#x679C;&#x6536;&#x5230;&#x4E86;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;channel.txCommit&#x3002;&#x4F2A;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java"> <span class="hljs-comment">// &#x5F00;&#x542F;&#x4E8B;&#x52A1;</span>
+ channel.txSelect
+ <span class="hljs-keyword">try</span> {
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x53D1;&#x9001;&#x6D88;&#x606F;</span>
+ } <span class="hljs-keyword">catch</span> (Exception e) {
+  channel.txRollback
+     <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x518D;&#x6B21;&#x91CD;&#x53D1;&#x8FD9;&#x6761;&#x6D88;&#x606F;</span>
+ }
+ <span class="hljs-comment">// &#x63D0;&#x4EA4;&#x4E8B;&#x52A1;</span>
+ channel.txCommit
+</code></pre>
+<p> <strong>confirm&#x673A;&#x5236;</strong>&#xFF1A;</p>
+<p> &#x200B;    RabbitMQ&#x53EF;&#x4EE5;&#x5F00;&#x542F; confirm &#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x90A3;&#x91CC;&#x8BBE;&#x7F6E;&#x5F00;&#x542F; confirm &#x6A21;&#x5F0F;&#x4E4B;&#x540E;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x6BCF;&#x6B21;&#x5199;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684; id&#xFF0C;&#x5982;&#x679C;&#x6D88;&#x606F;&#x6210;&#x529F;&#x5199;&#x5165; RabbitMQ &#x4E2D;&#xFF0C;RabbitMQ &#x4F1A;&#x7ED9;&#x751F;&#x4EA7;&#x8005;&#x56DE;&#x4F20;&#x4E00;&#x4E2A; ack &#x6D88;&#x606F;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x8BF4;&#x8FD9;&#x4E2A;&#x6D88;&#x606F; ok &#x4E86;&#x3002;&#x5982;&#x679C; RabbitMQ &#x6CA1;&#x80FD;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x4F60;&#x7684;&#x4E00;&#x4E2A; nack &#x63A5;&#x53E3;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x5931;&#x8D25;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x3002;&#x800C;&#x4E14;&#x4F60;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x81EA;&#x5DF1;&#x5728;&#x5185;&#x5B58;&#x91CC;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;&#x6D88;&#x606F; id &#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x8FD8;&#x6CA1;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x91CD;&#x53D1;&#x3002;</p>
+<p> &#x200B;    &#x6CE8;&#x610F;&#xFF1A;RabbitMQ&#x7684;&#x4E8B;&#x52A1;&#x673A;&#x5236;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x5F88;&#x8017;&#x578B;&#x80FD;&#xFF0C;&#x4F1A;&#x964D;&#x4F4E;RabbitMQ&#x7684;&#x541E;&#x5410;&#x91CF;&#x3002;confirm&#x673A;&#x5236;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x751F;&#x6210;&#x8005;&#x53D1;&#x9001;&#x5B8C;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7B49;&#x5F85;RabbitMQ&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E0B;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x5F53;RabbitMQ&#x6210;&#x529F;&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x5F02;&#x6B65;&#x7684;&#x56DE;&#x8C03;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x4E0E;&#x5426;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<p> 2.RabbitMQ&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#x4E22;&#x5931;&#x4E86;&#x6D88;&#x606F;</p>
+<p> &#x200B;    &#x4E22;&#x5931;&#x7684;&#x539F;&#x56E0;&#xFF1A;RabbitMQ&#x63A5;&#x6536;&#x5230;&#x751F;&#x4EA7;&#x8005;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x662F;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x6D88;&#x8D39;&#x5B8C;&#xFF0C;&#x6B64;&#x65F6;RabbitMQ&#x5B95;&#x673A;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x518D;&#x6B21;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x539F;&#x6765;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x90A3;&#x4E9B;&#x6D88;&#x606F;&#x90FD;&#x4E22;&#x5931;&#x4E86;&#x3002;</p>
+<p> &#x200B;    &#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5F00;&#x542F;RabbitMQ&#x7684;&#x6301;&#x4E45;&#x5316;&#x3002;&#x5F53;&#x751F;&#x4EA7;&#x8005;&#x628A;&#x6D88;&#x606F;&#x6210;&#x529F;&#x5199;&#x5165;RabbitMQ&#x4E4B;&#x540E;&#xFF0C;RabbitMQ&#x5C31;&#x628A;&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x3002;&#x7ED3;&#x5408;&#x4E0A;&#x9762;&#x7684;&#x8BF4;&#x5230;&#x7684;confirm&#x673A;&#x5236;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x6D88;&#x606F;&#x6210;&#x529F;&#x6301;&#x4E45;&#x5316;&#x78C1;&#x76D8;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x56DE;&#x8C03;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;ack&#x6D88;&#x606F;&#xFF0C;&#x5426;&#x5219;&#x90FD;&#x7B97;&#x5931;&#x8D25;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x91CD;&#x65B0;&#x53D1;&#x9001;&#x3002;&#x5B58;&#x5165;&#x78C1;&#x76D8;&#x7684;&#x6D88;&#x606F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;&#x5C31;&#x7B97;RabbitMQ&#x6302;&#x6389;&#x4E86;&#xFF0C;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x4ED6;&#x4F1A;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x6D88;&#x606F;&#x7684;&#x4E22;&#x5931;&#x3002;</p>
+<p> &#x200B;    &#x6301;&#x4E45;&#x5316;&#x7684;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p> &#x200B;    &#x7B2C;&#x4E00;&#x70B9;&#x662F;&#x521B;&#x5EFA; queue &#x7684;&#x65F6;&#x5019;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1; RabbitMQ &#x6301;&#x4E45;&#x5316; queue &#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x662F;&#x4E0D;&#x4F1A;&#x6301;&#x4E45;&#x5316; queue &#x91CC;&#x7684;&#x6570;&#x636E;&#x7684;&#x3002;</p>
+<p> &#x200B;    &#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x6D88;&#x606F;&#x7684; deliveryMode &#x8BBE;&#x7F6E;&#x4E3A; 2&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x6D88;&#x606F;&#x8BBE;&#x7F6E;&#x4E3A;&#x6301;&#x4E45;&#x5316;&#x7684;&#xFF0C;&#x6B64;&#x65F6; RabbitMQ &#x5C31;&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x53BB;&#x3002;</p>
+<p> &#x200B;    &#x6CE8;&#x610F;&#xFF1A;&#x6301;&#x4E45;&#x5316;&#x8981;&#x8D77;&#x4F5C;&#x7528;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E24;&#x4E2A;&#x6301;&#x4E45;&#x5316;&#x624D;&#x884C;&#xFF0C;RabbitMQ &#x54EA;&#x6015;&#x662F;&#x6302;&#x4E86;&#xFF0C;&#x518D;&#x6B21;&#x91CD;&#x542F;&#xFF0C;&#x4E5F;&#x4F1A;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;&#x91CD;&#x542F;&#x6062;&#x590D; queue&#xFF0C;&#x6062;&#x590D;&#x8FD9;&#x4E2A; queue &#x91CC;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p> 3 &#x6D88;&#x8D39;&#x8005;&#x5F04;&#x4E22;&#x4E86;&#x6D88;&#x606F;</p>
+<p> &#x200B;    &#x4E22;&#x5931;&#x7684;&#x539F;&#x56E0;&#xFF1A;&#x5982;&#x679C;RabbitMQ&#x6210;&#x529F;&#x7684;&#x628A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x4E86;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x90A3;&#x4E48;RabbitMQ&#x7684;ack&#x673A;&#x5236;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#xFF0C;&#x8868;&#x660E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x6210;&#x529F;&#xFF0C;&#x4E0B;&#x6B21;&#x5C31;&#x4E0D;&#x4F1A;&#x53D1;&#x9001;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x3002;&#x4F46;&#x5982;&#x679C;&#x5C31;&#x5728;&#x6B64;&#x65F6;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#x8BE5;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x5B95;&#x673A;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x5C31;&#x4E22;&#x5931;&#x4E86;&#x3002;</p>
+<p> &#x200B;    &#x89E3;&#x51B3;&#x7684;&#x529E;&#x6CD5;&#xFF1A;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x5FC5;&#x987B;&#x5173;&#x95ED; RabbitMQ &#x7684;&#x81EA;&#x52A8; ack&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; api &#x6765;&#x8C03;&#x7528;&#x5C31;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x6B21;&#x5728;&#x81EA;&#x5DF1;&#x4EE3;&#x7801;&#x91CC;&#x786E;&#x4FDD;&#x5904;&#x7406;&#x5B8C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x5728;&#x7A0B;&#x5E8F;&#x91CC; ack &#x4E00;&#x628A;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x4E0D;&#x5C31;&#x6CA1;&#x6709; ack&#x4E86;&#xFF1F;&#x90A3; RabbitMQ &#x5C31;&#x8BA4;&#x4E3A;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019; RabbitMQ &#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x6D88;&#x8D39;&#x5206;&#x914D;&#x7ED9;&#x522B;&#x7684; consumer &#x53BB;&#x5904;&#x7406;&#xFF0C;&#x6D88;&#x606F;&#x662F;&#x4E0D;&#x4F1A;&#x4E22;&#x7684;&#x3002;</p>
+<hr>
+<p> Kafka&#x51FA;&#x73B0;&#x4E22;&#x5931;&#x7684;&#x60C5;&#x51B5;</p>
+<p> 1 &#x6D88;&#x8D39;&#x8005;&#x7AEF;&#x4E22;&#x5931;&#x6D88;&#x606F;</p>
+<p> &#x4E22;&#x5931;&#x7684;&#x539F;&#x56E0;&#xFF1A;</p>
+<p> &#x200B;    &#x552F;&#x4E00;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6D88;&#x8D39;&#x8005;&#x5F04;&#x4E22;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F60;&#x6D88;&#x8D39;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x6D88;&#x8D39;&#x8005;&#x90A3;&#x8FB9;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x4E86; offset&#xFF0C;&#x8BA9; Kafka &#x4EE5;&#x4E3A;&#x4F60;&#x5DF2;&#x7ECF;&#x6D88;&#x8D39;&#x4E86;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x4F60;&#x624D;&#x521A;&#x51C6;&#x5907;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#xFF0C;&#x4F60;&#x81EA;&#x5DF1;&#x5C31;&#x6302;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x5C31;&#x4E22;&#x54AF;&#x3002;</p>
+<p> &#x89E3;&#x51B3;&#x7684;&#x529E;&#x6CD5;&#xFF1A;</p>
+<p> &#x200B;    &#x8DDF; RabbitMQ &#x5DEE;&#x4E0D;&#x591A;&#x5417;&#xFF0C;&#x5927;&#x5BB6;&#x90FD;&#x77E5;&#x9053; Kafka &#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4; offset&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x8981;&#x5173;&#x95ED;&#x81EA;&#x52A8;&#x63D0;&#x4EA4; offset&#xFF0C;&#x5728;&#x5904;&#x7406;&#x5B8C;&#x4E4B;&#x540E;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x63D0;&#x4EA4; offset&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x4E22;&#x3002;&#x4F46;&#x662F;&#x6B64;&#x65F6;&#x786E;&#x5B9E;&#x8FD8;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x91CD;&#x590D;&#x6D88;&#x8D39;&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x521A;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x8FD8;&#x6CA1;&#x63D0;&#x4EA4; offset&#xFF0C;&#x7ED3;&#x679C;&#x81EA;&#x5DF1;&#x6302;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x80AF;&#x5B9A;&#x4F1A;&#x91CD;&#x590D;&#x6D88;&#x8D39;&#x4E00;&#x6B21;&#xFF0C;&#x81EA;&#x5DF1;&#x4FDD;&#x8BC1;&#x5E42;&#x7B49;&#x6027;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<p> &#x200B;    &#x6CE8;&#x610F;&#xFF1A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x78B0;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x7684; Kafka &#x6D88;&#x8D39;&#x8005;&#x6D88;&#x8D39;&#x5230;&#x4E86;&#x6570;&#x636E;&#x4E4B;&#x540E;&#x662F;&#x5199;&#x5230;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x7684; queue &#x91CC;&#x5148;&#x7F13;&#x51B2;&#x4E00;&#x4E0B;&#xFF0C;&#x7ED3;&#x679C;&#x6709;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x521A;&#x628A;&#x6D88;&#x606F;&#x5199;&#x5165;&#x5185;&#x5B58; queue&#xFF0C;&#x7136;&#x540E;&#x6D88;&#x8D39;&#x8005;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4; offset&#x3002;&#x7136;&#x540E;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x91CD;&#x542F;&#x4E86;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58; queue &#x91CC;&#x8FD8;&#x6CA1;&#x6765;&#x5F97;&#x53CA;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x5C31;&#x4E22;&#x5931;&#x4E86;&#x3002;</p>
+<p> 2.Kafka&#x4E22;&#x5931;&#x6D88;&#x606F;</p>
+<p> &#x200B;    &#x4E22;&#x5931;&#x7684;&#x539F;&#x56E0;&#xFF1A;</p>
+<p> &#x200B;    &#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x5728;Kafka&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x90FD;&#x662F;&#x8DDF;leader&#x8282;&#x70B9;&#x4EA4;&#x6D41;&#x7684;&#xFF0C;leader&#x63A5;&#x6536;&#x5230;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x540C;&#x6B65;&#x5230;&#x5176;&#x4ED6;&#x7684;follower&#x4E2D;&#x3002;&#x5982;&#x679C;leader&#x5728;&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x540C;&#x6B65;&#x6D88;&#x606F;&#x5230;follower&#x7684;&#x64CD;&#x4F5C;&#x8FD8;&#x6CA1;&#x5B8C;&#x6210;&#xFF0C;&#x6B64;&#x65F6;leader&#x5C31;&#x5B95;&#x673A;&#x4E86;&#x3002;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x4ECE;follower&#x4E2D;&#x9009;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;leader&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;leader&#x4E2D;&#x5C31;&#x4F1A;&#x7F3A;&#x5C11;&#x6CA1;&#x6709;&#x540C;&#x6B65;&#x7684;&#x90A3;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x4E5F;&#x5C31;&#x65E0;&#x6CD5;&#x6D88;&#x8D39;&#x5230;&#xFF0C;&#x8FD9;&#x5C31;&#x9020;&#x6210;&#x4E86;&#x6D88;&#x606F;&#x7684;&#x4E22;&#x5931;&#x3002;</p>
+<p> &#x200B;    &#x89E3;&#x51B3;&#x7684;&#x529E;&#x6CD5;&#xFF1A;</p>
+<p> &#x200B;    &#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5177;&#x4F53;&#x89E3;&#x91CA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x7ED9; topic &#x8BBE;&#x7F6E; replication.factor &#x53C2;&#x6570;&#xFF1A;&#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x5927;&#x4E8E; 1&#xFF0C;&#x8981;&#x6C42;&#x6BCF;&#x4E2A; partition &#x5FC5;&#x987B;&#x6709;&#x81F3;&#x5C11; 2 &#x4E2A;&#x526F;&#x672C;&#x3002;</li>
+<li>&#x5728; Kafka &#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E; min.insync.replicas &#x53C2;&#x6570;&#xFF1A;&#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x5927;&#x4E8E; 1&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x8981;&#x6C42;&#x4E00;&#x4E2A; leader &#x81F3;&#x5C11;&#x611F;&#x77E5;&#x5230;&#x6709;&#x81F3;&#x5C11;&#x4E00;&#x4E2A; follower &#x8FD8;&#x8DDF;&#x81EA;&#x5DF1;&#x4FDD;&#x6301;&#x8054;&#x7CFB;&#xFF0C;&#x6CA1;&#x6389;&#x961F;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x786E;&#x4FDD; leader &#x6302;&#x4E86;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; follower &#x5427;&#x3002;</li>
+<li>&#x5728; producer &#x7AEF;&#x8BBE;&#x7F6E; acks=all&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;&#x8981;&#x6C42;&#x6BCF;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x5199;&#x5165;&#x6240;&#x6709; replica &#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8BA4;&#x4E3A;&#x662F;&#x5199;&#x6210;&#x529F;&#x4E86;&#x3002;</li>
+<li><p>&#x5728; producer &#x7AEF;&#x8BBE;&#x7F6E; retries=MAX&#xFF08;&#x5F88;&#x5927;&#x5F88;&#x5927;&#x5F88;&#x5927;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x65E0;&#x9650;&#x6B21;&#x91CD;&#x8BD5;&#x7684;&#x610F;&#x601D;&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;&#x8981;&#x6C42;&#x4E00;&#x65E6;&#x5199;&#x5165;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x65E0;&#x9650;&#x91CD;&#x8BD5;&#xFF0C;&#x5361;&#x5728;&#x8FD9;&#x91CC;&#x4E86;&#x3002;</p>
+<p>3.&#x751F;&#x6210;&#x8005;&#x4E22;&#x5931;&#x6D88;&#x606F;</p>
+<p>&#x200B;    &#x751F;&#x6210;&#x8005;&#x4E22;&#x5931;&#x6D88;&#x606F;&#x8DDF;RabbitMQ&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x628A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x4E86;Kafka&#xFF0C;&#x4F46;&#x662F;Kafka&#x8FD8;&#x6CA1;&#x4FDD;&#x5B58;&#x5230;&#x6D88;&#x606F;&#xFF0C;&#x5C31;&#x5B95;&#x673A;&#x4E86;&#xFF0C;&#x5BFC;&#x81F4;&#x4E86;&#x6D88;&#x606F;&#x7684;&#x4E22;&#x5931;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9;Kafka&#x4E22;&#x5931;&#x6D88;&#x606F;&#xFF0C;&#x8FDB;&#x884C;&#x4E86;&#x4E0A;&#x9762;&#x8FD9;&#x6837;4&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x751F;&#x4EA7;&#x8005;&#x4E22;&#x5931;&#x6D88;&#x606F;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x6D88;&#x606F;&#x4E00;&#x5B9A;&#x8981;&#x5B58;&#x5230;&#x4E86;&#x526F;&#x672C;&#x4E0A;&#x624D;&#x4F1A;&#x8BC1;&#x660E;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x6210;&#x529F;&#xFF0C;&#x5426;&#x5219;&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x4E00;&#x76F4;&#x91CD;&#x8BD5;&#x3002;</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x7684;&#x53EF;&#x9760;&#x6027;&#x4F20;&#x8F93;&#xFF1F;&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x5982;&#x4F55;&#x5904;&#x7406;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x7684;&#x95EE;&#x9898;&#xFF1F;">&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x7684;&#x53EF;&#x9760;&#x6027;&#x4F20;&#x8F93;&#xFF1F;&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x5982;&#x4F55;&#x5904;&#x7406;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x7684;&#x95EE;&#x9898;&#xFF1F;</h3>
+<p>&#x200B;    &#x6570;&#x636E;&#x7684;&#x4E22;&#x5931;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x3001;MQ&#x3001;&#x6D88;&#x8D39;&#x8005;&#x4E2D;&#xFF0C;&#x54B1;&#x4EEC;&#x4ECE; RabbitMQ &#x548C; Kafka &#x5206;&#x522B;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5427;&#x3002;</p>
+<h6 id="rabbitmq">RabbitMQ</h6>
+<p><img src="../image/rabbitmq-message-lose.png" alt="rabbitmq-message-lose"></p>
+<h6 id="&#x751F;&#x4EA7;&#x8005;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;">&#x751F;&#x4EA7;&#x8005;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;</h6>
+<p>&#x200B;    &#x751F;&#x4EA7;&#x8005;&#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230; RabbitMQ &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x80FD;&#x6570;&#x636E;&#x5C31;&#x5728;&#x534A;&#x8DEF;&#x7ED9;&#x641E;&#x4E22;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#x5565;&#x7684;&#xFF0C;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x3002;</p>
+<p>&#x200B;    &#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7528; RabbitMQ &#x63D0;&#x4F9B;&#x7684;&#x4E8B;&#x52A1;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x662F;&#x751F;&#x4EA7;&#x8005;<strong>&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E4B;&#x524D;</strong>&#x5F00;&#x542F; RabbitMQ &#x4E8B;&#x52A1;<code>channel.txSelect</code>&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x6210;&#x529F;&#x88AB; RabbitMQ &#x63A5;&#x6536;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x6536;&#x5230;&#x5F02;&#x5E38;&#x62A5;&#x9519;&#xFF0C;&#x6B64;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x56DE;&#x6EDA;&#x4E8B;&#x52A1;<code>channel.txRollback</code>&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x8BD5;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF1B;&#x5982;&#x679C;&#x6536;&#x5230;&#x4E86;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;<code>channel.txCommit</code>&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x5F00;&#x542F;&#x4E8B;&#x52A1;</span>
+channel.txSelect
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x53D1;&#x9001;&#x6D88;&#x606F;</span>
+} <span class="hljs-keyword">catch</span> (Exception e) {
+    channel.txRollback
+
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x518D;&#x6B21;&#x91CD;&#x53D1;&#x8FD9;&#x6761;&#x6D88;&#x606F;</span>
+}
+
+<span class="hljs-comment">// &#x63D0;&#x4EA4;&#x4E8B;&#x52A1;</span>
+channel.txCommitCopy to clipboardErrorCopied
+</code></pre>
+<p>&#x200B;    &#x4F46;&#x662F;&#x95EE;&#x9898;&#x662F;&#xFF0C;RabbitMQ &#x4E8B;&#x52A1;&#x673A;&#x5236;&#xFF08;&#x540C;&#x6B65;&#xFF09;&#x4E00;&#x641E;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;<strong>&#x541E;&#x5410;&#x91CF;&#x4F1A;&#x4E0B;&#x6765;&#xFF0C;&#x56E0;&#x4E3A;&#x592A;&#x8017;&#x6027;&#x80FD;</strong>&#x3002;</p>
+<p>&#x200B;    &#x6240;&#x4EE5;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8981;&#x786E;&#x4FDD;&#x8BF4;&#x5199; RabbitMQ &#x7684;&#x6D88;&#x606F;&#x522B;&#x4E22;&#xFF0C;&#x53EF;&#x4EE5;&#x5F00;&#x542F; <code>confirm</code> &#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x90A3;&#x91CC;&#x8BBE;&#x7F6E;&#x5F00;&#x542F; <code>confirm</code> &#x6A21;&#x5F0F;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x6BCF;&#x6B21;&#x5199;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684; id&#xFF0C;&#x7136;&#x540E;&#x5982;&#x679C;&#x5199;&#x5165;&#x4E86; RabbitMQ &#x4E2D;&#xFF0C;RabbitMQ &#x4F1A;&#x7ED9;&#x4F60;&#x56DE;&#x4F20;&#x4E00;&#x4E2A; <code>ack</code> &#x6D88;&#x606F;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x8BF4;&#x8FD9;&#x4E2A;&#x6D88;&#x606F; ok &#x4E86;&#x3002;&#x5982;&#x679C; RabbitMQ &#x6CA1;&#x80FD;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x4F60;&#x7684;&#x4E00;&#x4E2A; <code>nack</code> &#x63A5;&#x53E3;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x5931;&#x8D25;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x8BD5;&#x3002;&#x800C;&#x4E14;&#x4F60;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x81EA;&#x5DF1;&#x5728;&#x5185;&#x5B58;&#x91CC;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;&#x6D88;&#x606F; id &#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x8FD8;&#x6CA1;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x53D1;&#x3002;</p>
+<p>&#x200B;    &#x4E8B;&#x52A1;&#x673A;&#x5236;&#x548C; <code>confirm</code> &#x673A;&#x5236;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x5728;&#x4E8E;&#xFF0C;<strong>&#x4E8B;&#x52A1;&#x673A;&#x5236;&#x662F;&#x540C;&#x6B65;&#x7684;</strong>&#xFF0C;&#x4F60;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E4B;&#x540E;&#x4F1A;<strong>&#x963B;&#x585E;</strong>&#x5728;&#x90A3;&#x513F;&#xFF0C;&#x4F46;&#x662F; <code>confirm</code> &#x673A;&#x5236;&#x662F;<strong>&#x5F02;&#x6B65;</strong>&#x7684;&#xFF0C;&#x4F60;&#x53D1;&#x9001;&#x4E2A;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E0B;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x90A3;&#x4E2A;&#x6D88;&#x606F; RabbitMQ &#x63A5;&#x6536;&#x4E86;&#x4E4B;&#x540E;&#x4F1A;&#x5F02;&#x6B65;&#x56DE;&#x8C03;&#x4F60;&#x7684;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x901A;&#x77E5;&#x4F60;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x3002;</p>
+<p>&#x200B;    &#x6240;&#x4EE5;&#x4E00;&#x822C;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x8FD9;&#x5757;<strong>&#x907F;&#x514D;&#x6570;&#x636E;&#x4E22;&#x5931;</strong>&#xFF0C;&#x90FD;&#x662F;&#x7528; <code>confirm</code> &#x673A;&#x5236;&#x7684;&#x3002;</p>
+<h6 id="rabbitmq-&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;">RabbitMQ &#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;</h6>
+<p>&#x200B;    &#x5C31;&#x662F; RabbitMQ &#x81EA;&#x5DF1;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F60;&#x5FC5;&#x987B;<strong>&#x5F00;&#x542F; RabbitMQ &#x7684;&#x6301;&#x4E45;&#x5316;</strong>&#xFF0C;&#x5C31;&#x662F;&#x6D88;&#x606F;&#x5199;&#x5165;&#x4E4B;&#x540E;&#x4F1A;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x54EA;&#x6015;&#x662F; RabbitMQ &#x81EA;&#x5DF1;&#x6302;&#x4E86;&#xFF0C;<strong>&#x6062;&#x590D;&#x4E4B;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x8BFB;&#x53D6;&#x4E4B;&#x524D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;</strong>&#xFF0C;&#x4E00;&#x822C;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x4E22;&#x3002;&#x9664;&#x975E;&#x6781;&#x5176;&#x7F55;&#x89C1;&#x7684;&#x662F;&#xFF0C;RabbitMQ &#x8FD8;&#x6CA1;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x81EA;&#x5DF1;&#x5C31;&#x6302;&#x4E86;&#xFF0C;<strong>&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x4E22;&#x5931;</strong>&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x6982;&#x7387;&#x8F83;&#x5C0F;&#x3002;</p>
+<p>&#x200B;    &#x8BBE;&#x7F6E;&#x6301;&#x4E45;&#x5316;&#x6709;<strong>&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA; queue &#x7684;&#x65F6;&#x5019;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x6301;&#x4E45;&#x5316;
+&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1; RabbitMQ &#x6301;&#x4E45;&#x5316; queue &#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x662F;&#x4E0D;&#x4F1A;&#x6301;&#x4E45;&#x5316; queue &#x91CC;&#x7684;&#x6570;&#x636E;&#x7684;&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x6D88;&#x606F;&#x7684; <code>deliveryMode</code> &#x8BBE;&#x7F6E;&#x4E3A; 2
+&#x5C31;&#x662F;&#x5C06;&#x6D88;&#x606F;&#x8BBE;&#x7F6E;&#x4E3A;&#x6301;&#x4E45;&#x5316;&#x7684;&#xFF0C;&#x6B64;&#x65F6; RabbitMQ &#x5C31;&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x53BB;&#x3002;</li>
+</ul>
+<p>&#x200B;    &#x5FC5;&#x987B;&#x8981;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E24;&#x4E2A;&#x6301;&#x4E45;&#x5316;&#x624D;&#x884C;&#xFF0C;RabbitMQ &#x54EA;&#x6015;&#x662F;&#x6302;&#x4E86;&#xFF0C;&#x518D;&#x6B21;&#x91CD;&#x542F;&#xFF0C;&#x4E5F;&#x4F1A;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;&#x91CD;&#x542F;&#x6062;&#x590D; queue&#xFF0C;&#x6062;&#x590D;&#x8FD9;&#x4E2A; queue &#x91CC;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x200B;    &#x6CE8;&#x610F;&#xFF0C;&#x54EA;&#x6015;&#x662F;&#x4F60;&#x7ED9; RabbitMQ &#x5F00;&#x542F;&#x4E86;&#x6301;&#x4E45;&#x5316;&#x673A;&#x5236;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x79CD;&#x53EF;&#x80FD;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x5199;&#x5230;&#x4E86; RabbitMQ &#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x6765;&#x5F97;&#x53CA;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x7ED3;&#x679C;&#x4E0D;&#x5DE7;&#xFF0C;&#x6B64;&#x65F6; RabbitMQ &#x6302;&#x4E86;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x91CC;&#x7684;&#x4E00;&#x70B9;&#x70B9;&#x6570;&#x636E;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x200B;    &#x6240;&#x4EE5;&#xFF0C;&#x6301;&#x4E45;&#x5316;&#x53EF;&#x4EE5;&#x8DDF;&#x751F;&#x4EA7;&#x8005;&#x90A3;&#x8FB9;&#x7684; <code>confirm</code> &#x673A;&#x5236;&#x914D;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x53EA;&#x6709;&#x6D88;&#x606F;&#x88AB;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x901A;&#x77E5;&#x751F;&#x4EA7;&#x8005; <code>ack</code> &#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x54EA;&#x6015;&#x662F;&#x5728;&#x6301;&#x4E45;&#x5316;&#x5230;&#x78C1;&#x76D8;&#x4E4B;&#x524D;&#xFF0C;RabbitMQ &#x6302;&#x4E86;&#xFF0C;&#x6570;&#x636E;&#x4E22;&#x4E86;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x6536;&#x4E0D;&#x5230; <code>ack</code>&#xFF0C;&#x4F60;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x91CD;&#x53D1;&#x7684;&#x3002;</p>
+<h6 id="&#x6D88;&#x8D39;&#x7AEF;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;">&#x6D88;&#x8D39;&#x7AEF;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;</h6>
+<p>&#x200B;    RabbitMQ &#x5982;&#x679C;&#x4E22;&#x5931;&#x4E86;&#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x6D88;&#x8D39;&#x7684;&#x65F6;&#x5019;&#xFF0C;<strong>&#x521A;&#x6D88;&#x8D39;&#x5230;&#xFF0C;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#xFF0C;&#x7ED3;&#x679C;&#x8FDB;&#x7A0B;&#x6302;&#x4E86;</strong>&#xFF0C;&#x6BD4;&#x5982;&#x91CD;&#x542F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5C34;&#x5C2C;&#x4E86;&#xFF0C;RabbitMQ &#x8BA4;&#x4E3A;&#x4F60;&#x90FD;&#x6D88;&#x8D39;&#x4E86;&#xFF0C;&#x8FD9;&#x6570;&#x636E;&#x5C31;&#x4E22;&#x4E86;&#x3002;</p>
+<p>&#x200B;    &#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5F97;&#x7528; RabbitMQ &#x63D0;&#x4F9B;&#x7684; <code>ack</code> &#x673A;&#x5236;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x4F60;&#x5FC5;&#x987B;&#x5173;&#x95ED; RabbitMQ &#x7684;&#x81EA;&#x52A8; <code>ack</code>&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; api &#x6765;&#x8C03;&#x7528;&#x5C31;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x6B21;&#x4F60;&#x81EA;&#x5DF1;&#x4EE3;&#x7801;&#x91CC;&#x786E;&#x4FDD;&#x5904;&#x7406;&#x5B8C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x5728;&#x7A0B;&#x5E8F;&#x91CC; <code>ack</code> &#x4E00;&#x628A;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x4E0D;&#x5C31;&#x6CA1;&#x6709; <code>ack</code> &#x4E86;&#xFF1F;&#x90A3; RabbitMQ &#x5C31;&#x8BA4;&#x4E3A;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019; RabbitMQ &#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x6D88;&#x8D39;&#x5206;&#x914D;&#x7ED9;&#x522B;&#x7684; consumer &#x53BB;&#x5904;&#x7406;&#xFF0C;&#x6D88;&#x606F;&#x662F;&#x4E0D;&#x4F1A;&#x4E22;&#x7684;&#x3002;</p>
+<p><img src="../image/rabbitmq-message-lose-solution.png" alt="rabbitmq-message-lose-solution"></p>
+<h5 id="kafka">Kafka</h5>
+<h6 id="&#x6D88;&#x8D39;&#x7AEF;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;">&#x6D88;&#x8D39;&#x7AEF;&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;</h6>
+<p>&#x200B;    &#x552F;&#x4E00;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6D88;&#x8D39;&#x8005;&#x5F04;&#x4E22;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F60;&#x6D88;&#x8D39;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x6D88;&#x8D39;&#x8005;&#x90A3;&#x8FB9;<strong>&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x4E86; offset</strong>&#xFF0C;&#x8BA9; Kafka &#x4EE5;&#x4E3A;&#x4F60;&#x5DF2;&#x7ECF;&#x6D88;&#x8D39;&#x597D;&#x4E86;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x4F60;&#x624D;&#x521A;&#x51C6;&#x5907;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x4F60;&#x8FD8;&#x6CA1;&#x5904;&#x7406;&#xFF0C;&#x4F60;&#x81EA;&#x5DF1;&#x5C31;&#x6302;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x5C31;&#x4E22;&#x54AF;&#x3002;</p>
+<p>&#x200B;    &#x8FD9;&#x4E0D;&#x662F;&#x8DDF; RabbitMQ &#x5DEE;&#x4E0D;&#x591A;&#x5417;&#xFF0C;&#x5927;&#x5BB6;&#x90FD;&#x77E5;&#x9053; Kafka &#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4; offset&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x8981;<strong>&#x5173;&#x95ED;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;</strong> offset&#xFF0C;&#x5728;&#x5904;&#x7406;&#x5B8C;&#x4E4B;&#x540E;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x63D0;&#x4EA4; offset&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x4E22;&#x3002;&#x4F46;&#x662F;&#x6B64;&#x65F6;&#x786E;&#x5B9E;&#x8FD8;&#x662F;<strong>&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x91CD;&#x590D;&#x6D88;&#x8D39;</strong>&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x521A;&#x5904;&#x7406;&#x5B8C;&#xFF0C;&#x8FD8;&#x6CA1;&#x63D0;&#x4EA4; offset&#xFF0C;&#x7ED3;&#x679C;&#x81EA;&#x5DF1;&#x6302;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x80AF;&#x5B9A;&#x4F1A;&#x91CD;&#x590D;&#x6D88;&#x8D39;&#x4E00;&#x6B21;&#xFF0C;&#x81EA;&#x5DF1;&#x4FDD;&#x8BC1;&#x5E42;&#x7B49;&#x6027;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<p>&#x200B;    &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x78B0;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x7684; Kafka &#x6D88;&#x8D39;&#x8005;&#x6D88;&#x8D39;&#x5230;&#x4E86;&#x6570;&#x636E;&#x4E4B;&#x540E;&#x662F;&#x5199;&#x5230;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x7684; queue &#x91CC;&#x5148;&#x7F13;&#x51B2;&#x4E00;&#x4E0B;&#xFF0C;&#x7ED3;&#x679C;&#x6709;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x521A;&#x628A;&#x6D88;&#x606F;&#x5199;&#x5165;&#x5185;&#x5B58; queue&#xFF0C;&#x7136;&#x540E;&#x6D88;&#x8D39;&#x8005;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4; offset&#x3002;&#x7136;&#x540E;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x91CD;&#x542F;&#x4E86;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58; queue &#x91CC;&#x8FD8;&#x6CA1;&#x6765;&#x5F97;&#x53CA;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x5C31;&#x4E22;&#x5931;&#x4E86;&#x3002;</p>
+<h6 id="kafka-&#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;">Kafka &#x5F04;&#x4E22;&#x4E86;&#x6570;&#x636E;</h6>
+<p>&#x200B;    &#x8FD9;&#x5757;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#xFF0C;&#x5C31;&#x662F; Kafka &#x67D0;&#x4E2A; broker &#x5B95;&#x673A;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x9009;&#x4E3E; partition &#x7684; leader&#x3002;&#x5927;&#x5BB6;&#x60F3;&#x60F3;&#xFF0C;&#x8981;&#x662F;&#x6B64;&#x65F6;&#x5176;&#x4ED6;&#x7684; follower &#x521A;&#x597D;&#x8FD8;&#x6709;&#x4E9B;&#x6570;&#x636E;&#x6CA1;&#x6709;&#x540C;&#x6B65;&#xFF0C;&#x7ED3;&#x679C;&#x6B64;&#x65F6; leader &#x6302;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x4E3E;&#x67D0;&#x4E2A; follower &#x6210; leader &#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x5C31;&#x5C11;&#x4E86;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF1F;&#x8FD9;&#x5C31;&#x4E22;&#x4E86;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x554A;&#x3002;</p>
+<p>&#x200B;    &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E5F;&#x9047;&#x5230;&#x8FC7;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x662F;&#xFF0C;&#x4E4B;&#x524D; Kafka &#x7684; leader &#x673A;&#x5668;&#x5B95;&#x673A;&#x4E86;&#xFF0C;&#x5C06; follower &#x5207;&#x6362;&#x4E3A; leader &#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x8BF4;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5C31;&#x4E22;&#x4E86;&#x3002;</p>
+<p>&#x200B;    &#x6240;&#x4EE5;&#x6B64;&#x65F6;&#x4E00;&#x822C;&#x662F;&#x8981;&#x6C42;&#x8D77;&#x7801;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B; 4 &#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x7ED9; topic &#x8BBE;&#x7F6E; <code>replication.factor</code> &#x53C2;&#x6570;&#xFF1A;&#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x5927;&#x4E8E; 1&#xFF0C;&#x8981;&#x6C42;&#x6BCF;&#x4E2A; partition &#x5FC5;&#x987B;&#x6709;&#x81F3;&#x5C11; 2 &#x4E2A;&#x526F;&#x672C;&#x3002;</li>
+<li>&#x5728; Kafka &#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E; <code>min.insync.replicas</code> &#x53C2;&#x6570;&#xFF1A;&#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x5927;&#x4E8E; 1&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x8981;&#x6C42;&#x4E00;&#x4E2A; leader &#x81F3;&#x5C11;&#x611F;&#x77E5;&#x5230;&#x6709;&#x81F3;&#x5C11;&#x4E00;&#x4E2A; follower &#x8FD8;&#x8DDF;&#x81EA;&#x5DF1;&#x4FDD;&#x6301;&#x8054;&#x7CFB;&#xFF0C;&#x6CA1;&#x6389;&#x961F;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x786E;&#x4FDD; leader &#x6302;&#x4E86;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; follower &#x5427;&#x3002;</li>
+<li>&#x5728; producer &#x7AEF;&#x8BBE;&#x7F6E; <code>acks=all</code>&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;&#x8981;&#x6C42;&#x6BCF;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5FC5;&#x987B;&#x662F;<strong>&#x5199;&#x5165;&#x6240;&#x6709; replica &#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8BA4;&#x4E3A;&#x662F;&#x5199;&#x6210;&#x529F;&#x4E86;</strong>&#x3002;</li>
+<li>&#x5728; producer &#x7AEF;&#x8BBE;&#x7F6E; <code>retries=MAX</code>&#xFF08;&#x5F88;&#x5927;&#x5F88;&#x5927;&#x5F88;&#x5927;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x65E0;&#x9650;&#x6B21;&#x91CD;&#x8BD5;&#x7684;&#x610F;&#x601D;&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;<strong>&#x8981;&#x6C42;&#x4E00;&#x65E6;&#x5199;&#x5165;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x65E0;&#x9650;&#x91CD;&#x8BD5;</strong>&#xFF0C;&#x5361;&#x5728;&#x8FD9;&#x91CC;&#x4E86;&#x3002;</li>
+</ul>
+<p>&#x200B;    &#x6211;&#x4EEC;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5C31;&#x662F;&#x6309;&#x7167;&#x4E0A;&#x8FF0;&#x8981;&#x6C42;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x914D;&#x7F6E;&#x4E4B;&#x540E;&#xFF0C;&#x81F3;&#x5C11;&#x5728; Kafka broker &#x7AEF;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728; leader &#x6240;&#x5728; broker &#x53D1;&#x751F;&#x6545;&#x969C;&#xFF0C;&#x8FDB;&#x884C; leader &#x5207;&#x6362;&#x65F6;&#xFF0C;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;</p>
+<h6 id="&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x4E0D;&#x4F1A;&#x5F04;&#x4E22;&#x6570;&#x636E;&#xFF1F;">&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x4E0D;&#x4F1A;&#x5F04;&#x4E22;&#x6570;&#x636E;&#xFF1F;</h6>
+<p>&#x200B;    &#x5982;&#x679C;&#x6309;&#x7167;&#x4E0A;&#x8FF0;&#x7684;&#x601D;&#x8DEF;&#x8BBE;&#x7F6E;&#x4E86; <code>acks=all</code>&#xFF0C;&#x4E00;&#x5B9A;&#x4E0D;&#x4F1A;&#x4E22;&#xFF0C;&#x8981;&#x6C42;&#x662F;&#xFF0C;&#x4F60;&#x7684; leader &#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#xFF0C;&#x6240;&#x6709;&#x7684; follower &#x90FD;&#x540C;&#x6B65;&#x5230;&#x4E86;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x8BA4;&#x4E3A;&#x672C;&#x6B21;&#x5199;&#x6210;&#x529F;&#x4E86;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x4F1A;&#x81EA;&#x52A8;&#x4E0D;&#x65AD;&#x7684;&#x91CD;&#x8BD5;&#xFF0C;&#x91CD;&#x8BD5;&#x65E0;&#x9650;&#x6B21;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="保证高可用性.html" class="navigation navigation-prev " aria-label="Previous page: 保证高可用性">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="设计一个消息队列.html" class="navigation navigation-next " aria-label="Next page: 设计一个消息队列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"解决消息丢失问题","level":"1.52","depth":1,"next":{"title":"设计一个消息队列","level":"1.53","depth":1,"path":"notes/kafka/设计一个消息队列.md","ref":"notes/kafka/设计一个消息队列.md","articles":[]},"previous":{"title":"保证高可用性","level":"1.51","depth":1,"path":"notes/kafka/保证高可用性.md","ref":"notes/kafka/保证高可用性.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/kafka/解决消息丢失问题.md","mtime":"2020-05-15T01:32:59.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T05:26:26.548Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
