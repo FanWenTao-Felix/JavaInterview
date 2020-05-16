@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+如何将一个 md  的 git 项目 利用 gitbook 变成一个静态网站呢？
 
-You can use the [editor on GitHub](https://github.com/naiveKid/JavaInterview/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1.安装nodejs：[https://nodejs.org/en/download/]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+2.执行命令：npm install -g gitbook-cli
 
-### Markdown
+3.在 git 项目根目录下，执行：
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+gitbook init
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+​	执行完后，你会看到多了两个文件 —— [README.md](http://readme.md/) 和 [SUMMARY.md](http://summary.md/)，它们的作用如下：
 
-### Jekyll Themes
+> - [README.md](http://readme.md/) —— 书籍的介绍写在这个文件里
+> - [SUMMARY.md](http://summary.md/) —— 书籍的目录结构在这里配置
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/naiveKid/JavaInterview/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+​	编辑 SUMMARY.md 文件，内容修改为：
 
-### Support or Contact
+![image-20200515142359412](notes/image/image-20200515142359412.png)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+​	再次执行 `gitbook init` 命令。GitBook 会查找 [SUMMARY.md](http://summary.md/) 文件中描述的目录和文件，如果没有则会将其创建。
+
+4.执行 `gitbook build` 命令构建书籍，默认将生成的静态网站输出到 _book 目录
