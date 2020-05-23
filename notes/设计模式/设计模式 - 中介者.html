@@ -2958,7 +2958,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4E2D;&#x4ECB;&#x8005;&#xFF08;mediator&#xFF09;">&#x4E2D;&#x4ECB;&#x8005;&#xFF08;Mediator&#xFF09;</h2>
+                                <ul>
+<li><h2 id="&#x4E2D;&#x4ECB;&#x8005;&#xFF08;mediator&#xFF09;">&#x4E2D;&#x4ECB;&#x8005;&#xFF08;Mediator&#xFF09;</h2>
 <h3 id="intent">Intent</h3>
 <p>&#x96C6;&#x4E2D;&#x76F8;&#x5173;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x590D;&#x6742;&#x7684;&#x6C9F;&#x901A;&#x548C;&#x63A7;&#x5236;&#x65B9;&#x5F0F;&#x3002;</p>
 <h3 id="class-diagram">Class Diagram</h3>
@@ -2966,12 +2967,12 @@
 <li>Mediator&#xFF1A;&#x4E2D;&#x4ECB;&#x8005;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x4E0E;&#x5404;&#x540C;&#x4E8B;&#xFF08;Colleague&#xFF09;&#x5BF9;&#x8C61;&#x901A;&#x4FE1;&#x3002;</li>
 <li>Colleague&#xFF1A;&#x540C;&#x4E8B;&#xFF0C;&#x76F8;&#x5173;&#x5BF9;&#x8C61;</li>
 </ul>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/30d6e95c-2e3c-4d32-bf4f-68128a70bc05.png"> </div><br></p>
+<p><img src="../image/30d6e95c-2e3c-4d32-bf4f-68128a70bc05-1590215186239.png" alt="image"></p>
 <h3 id="implementation">Implementation</h3>
 <p>Alarm&#xFF08;&#x95F9;&#x949F;&#xFF09;&#x3001;CoffeePot&#xFF08;&#x5496;&#x5561;&#x58F6;&#xFF09;&#x3001;Calendar&#xFF08;&#x65E5;&#x5386;&#xFF09;&#x3001;Sprinkler&#xFF08;&#x55B7;&#x5934;&#xFF09;&#x662F;&#x4E00;&#x7EC4;&#x76F8;&#x5173;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x65F6;&#x9700;&#x8981;&#x53BB;&#x64CD;&#x4F5C;&#x5176;&#x5B83;&#x5BF9;&#x8C61;&#xFF0C;&#x5F62;&#x6210;&#x4E86;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x4F9D;&#x8D56;&#x7ED3;&#x6784;&#xFF1A;</p>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/82cfda3b-b53b-4c89-9fdb-26dd2db0cd02.jpg"> </div><br>
-&#x4F7F;&#x7528;&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x7684;&#x4F9D;&#x8D56;&#x7ED3;&#x6784;&#x53D8;&#x6210;&#x661F;&#x5F62;&#x7ED3;&#x6784;&#xFF1A;</p>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/5359cbf5-5a79-4874-9b17-f23c53c2cb80.jpg"> </div><br></p>
+<p><img src="../image/82cfda3b-b53b-4c89-9fdb-26dd2db0cd02-1590215187870.jpg" alt="image"></p>
+<p>&#x4F7F;&#x7528;&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x7684;&#x4F9D;&#x8D56;&#x7ED3;&#x6784;&#x53D8;&#x6210;&#x661F;&#x5F62;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="../image/5359cbf5-5a79-4874-9b17-f23c53c2cb80-1590215189347.jpg" alt="image"></p>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Colleague</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Mediator mediator)</span></span>;
 }
@@ -3100,6 +3101,8 @@ doSprinkler()
 <li>scheduleXXX() methods of <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" target="_blank">java.util.concurrent.ScheduledExecutorService</a></li>
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-" target="_blank">java.lang.reflect.Method#invoke()</a></li>
 </ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -3143,7 +3146,7 @@ doSprinkler()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"中介者","level":"1.20.4.5","depth":3,"next":{"title":"备忘录","level":"1.20.4.6","depth":3,"path":"notes/设计模式/设计模式 - 备忘录.md","ref":"notes/设计模式/设计模式 - 备忘录.md","articles":[]},"previous":{"title":"迭代器","level":"1.20.4.4","depth":3,"path":"notes/设计模式/设计模式 - 迭代器.md","ref":"notes/设计模式/设计模式 - 迭代器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 中介者.md","mtime":"2020-05-17T02:46:04.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T02:35:31.182Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"中介者","level":"1.20.4.5","depth":3,"next":{"title":"备忘录","level":"1.20.4.6","depth":3,"path":"notes/设计模式/设计模式 - 备忘录.md","ref":"notes/设计模式/设计模式 - 备忘录.md","articles":[]},"previous":{"title":"迭代器","level":"1.20.4.4","depth":3,"path":"notes/设计模式/设计模式 - 迭代器.md","ref":"notes/设计模式/设计模式 - 迭代器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 中介者.md","mtime":"2020-05-23T06:26:30.340Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T06:37:36.794Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

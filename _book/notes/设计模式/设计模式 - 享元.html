@@ -2958,59 +2958,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4EAB;&#x5143;&#xFF08;flyweight&#xFF09;">&#x4EAB;&#x5143;&#xFF08;Flyweight&#xFF09;</h2>
+                                <ul>
+<li><h2 id="&#x4EAB;&#x5143;&#xFF08;flyweight&#xFF09;">&#x4EAB;&#x5143;&#xFF08;Flyweight&#xFF09;</h2>
 <h3 id="intent">Intent</h3>
-<p>&#x5229;&#x7528;&#x5171;&#x4EAB;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x652F;&#x6301;&#x5927;&#x91CF;&#x7EC6;&#x7C92;&#x5EA6;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+</li>
+</ul>
+<p>  &#x5229;&#x7528;&#x5171;&#x4EAB;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x652F;&#x6301;&#x5927;&#x91CF;&#x7EC6;&#x7C92;&#x5EA6;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
 <h3 id="class-diagram">Class Diagram</h3>
 <ul>
 <li>Flyweight&#xFF1A;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;</li>
 <li>IntrinsicState&#xFF1A;&#x5185;&#x90E8;&#x72B6;&#x6001;&#xFF0C;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x5171;&#x4EAB;&#x5185;&#x90E8;&#x72B6;&#x6001;</li>
-<li>ExtrinsicState&#xFF1A;&#x5916;&#x90E8;&#x72B6;&#x6001;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x7684;&#x5916;&#x90E8;&#x72B6;&#x6001;&#x4E0D;&#x540C;</li>
-</ul>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/5f5c22d5-9c0e-49e1-b5b0-6cc7032724d4.png"> </div><br></p>
+<li><p>ExtrinsicState&#xFF1A;&#x5916;&#x90E8;&#x72B6;&#x6001;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x7684;&#x5916;&#x90E8;&#x72B6;&#x6001;&#x4E0D;&#x540C;</p>
+<p><img src="../image/5f5c22d5-9c0e-49e1-b5b0-6cc7032724d4-1590215665802.png" alt="image"></p>
 <h3 id="implementation">Implementation</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Flyweight</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">doOperation</span><span class="hljs-params">(String extrinsicState)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">doOperation</span><span class="hljs-params">(String extrinsicState)</span></span>;
 }
 </code></pre>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ConcreteFlyweight</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Flyweight</span> </span>{
 
-    <span class="hljs-keyword">private</span> String intrinsicState;
+  <span class="hljs-keyword">private</span> String intrinsicState;
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ConcreteFlyweight</span><span class="hljs-params">(String intrinsicState)</span> </span>{
-        <span class="hljs-keyword">this</span>.intrinsicState = intrinsicState;
-    }
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ConcreteFlyweight</span><span class="hljs-params">(String intrinsicState)</span> </span>{
+      <span class="hljs-keyword">this</span>.intrinsicState = intrinsicState;
+  }
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doOperation</span><span class="hljs-params">(String extrinsicState)</span> </span>{
-        System.out.println(<span class="hljs-string">&quot;Object address: &quot;</span> + System.identityHashCode(<span class="hljs-keyword">this</span>));
-        System.out.println(<span class="hljs-string">&quot;IntrinsicState: &quot;</span> + intrinsicState);
-        System.out.println(<span class="hljs-string">&quot;ExtrinsicState: &quot;</span> + extrinsicState);
-    }
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doOperation</span><span class="hljs-params">(String extrinsicState)</span> </span>{
+      System.out.println(<span class="hljs-string">&quot;Object address: &quot;</span> + System.identityHashCode(<span class="hljs-keyword">this</span>));
+      System.out.println(<span class="hljs-string">&quot;IntrinsicState: &quot;</span> + intrinsicState);
+      System.out.println(<span class="hljs-string">&quot;ExtrinsicState: &quot;</span> + extrinsicState);
+  }
 }
 </code></pre>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FlyweightFactory</span> </span>{
 
-    <span class="hljs-keyword">private</span> HashMap&lt;String, Flyweight&gt; flyweights = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+  <span class="hljs-keyword">private</span> HashMap&lt;String, Flyweight&gt; flyweights = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
 
-    <span class="hljs-function">Flyweight <span class="hljs-title">getFlyweight</span><span class="hljs-params">(String intrinsicState)</span> </span>{
-        <span class="hljs-keyword">if</span> (!flyweights.containsKey(intrinsicState)) {
-            Flyweight flyweight = <span class="hljs-keyword">new</span> ConcreteFlyweight(intrinsicState);
-            flyweights.put(intrinsicState, flyweight);
-        }
-        <span class="hljs-keyword">return</span> flyweights.get(intrinsicState);
-    }
+  <span class="hljs-function">Flyweight <span class="hljs-title">getFlyweight</span><span class="hljs-params">(String intrinsicState)</span> </span>{
+      <span class="hljs-keyword">if</span> (!flyweights.containsKey(intrinsicState)) {
+          Flyweight flyweight = <span class="hljs-keyword">new</span> ConcreteFlyweight(intrinsicState);
+          flyweights.put(intrinsicState, flyweight);
+      }
+      <span class="hljs-keyword">return</span> flyweights.get(intrinsicState);
+  }
 }
 </code></pre>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        FlyweightFactory factory = <span class="hljs-keyword">new</span> FlyweightFactory();
-        Flyweight flyweight1 = factory.getFlyweight(<span class="hljs-string">&quot;aa&quot;</span>);
-        Flyweight flyweight2 = factory.getFlyweight(<span class="hljs-string">&quot;aa&quot;</span>);
-        flyweight1.doOperation(<span class="hljs-string">&quot;x&quot;</span>);
-        flyweight2.doOperation(<span class="hljs-string">&quot;y&quot;</span>);
-    }
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      FlyweightFactory factory = <span class="hljs-keyword">new</span> FlyweightFactory();
+      Flyweight flyweight1 = factory.getFlyweight(<span class="hljs-string">&quot;aa&quot;</span>);
+      Flyweight flyweight2 = factory.getFlyweight(<span class="hljs-string">&quot;aa&quot;</span>);
+      flyweight1.doOperation(<span class="hljs-string">&quot;x&quot;</span>);
+      flyweight2.doOperation(<span class="hljs-string">&quot;y&quot;</span>);
+  }
 }
 </code></pre>
 <pre><code class="lang-html">Object address: 1163157884
@@ -3022,8 +3024,9 @@ ExtrinsicState: y
 </code></pre>
 <h3 id="jdk">JDK</h3>
 <p>Java &#x5229;&#x7528;&#x7F13;&#x5B58;&#x6765;&#x52A0;&#x901F;&#x5927;&#x91CF;&#x5C0F;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#x3002;</p>
-<ul>
-<li>java.lang.Integer#valueOf(int)</li>
+</li>
+<li><p>java.lang.Integer#valueOf(int)</p>
+</li>
 <li>java.lang.Boolean#valueOf(boolean)</li>
 <li>java.lang.Byte#valueOf(byte)</li>
 <li>java.lang.Character#valueOf(char)</li>
@@ -3071,7 +3074,7 @@ ExtrinsicState: y
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"享元","level":"1.20.5.6","depth":3,"next":{"title":"代理","level":"1.20.5.7","depth":3,"path":"notes/设计模式/设计模式 - 代理.md","ref":"notes/设计模式/设计模式 - 代理.md","articles":[]},"previous":{"title":"外观","level":"1.20.5.5","depth":3,"path":"notes/设计模式/设计模式 - 外观.md","ref":"notes/设计模式/设计模式 - 外观.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 享元.md","mtime":"2020-05-17T02:46:04.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T02:35:31.182Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"享元","level":"1.20.5.6","depth":3,"next":{"title":"代理","level":"1.20.5.7","depth":3,"path":"notes/设计模式/设计模式 - 代理.md","ref":"notes/设计模式/设计模式 - 代理.md","articles":[]},"previous":{"title":"外观","level":"1.20.5.5","depth":3,"path":"notes/设计模式/设计模式 - 外观.md","ref":"notes/设计模式/设计模式 - 外观.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 享元.md","mtime":"2020-05-23T06:34:26.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T06:37:36.794Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

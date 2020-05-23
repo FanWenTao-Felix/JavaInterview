@@ -19,7 +19,7 @@
 
 ​	在大型分布式系统中，有两件事情非常常见，一是不同服务之间的可能拥有相同的名字，另一个是同一个服务可能会在集群中部署很多的节点，Zookeeper 就可以通过文件系统和顺序节点解决这两个问题。
 
-![image](https://hadyang.github.io/interview/docs/architecture/distributed/zk/images/72025ab7142520ce9e59193eb956b900.png)
+![image](../image/72025ab7142520ce9e59193eb956b900-1590205900595.png)
 
 ### 协调分布式事务
 

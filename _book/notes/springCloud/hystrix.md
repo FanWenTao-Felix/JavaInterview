@@ -56,7 +56,7 @@
 
 ​	小型电商网站的页面展示采用页面全量静态化的思想。数据库中存放了所有的商品信息，页面静态化系统，将数据填充进静态模板中，形成静态化页面，推入 Nginx 服务器。用户浏览网站页面时，取用一个已经静态化好的 html 页面，直接返回回去，不涉及任何的业务逻辑处理。
 
-![e-commerce-website-detail-page-architecture-1](https://doocs.github.io/advanced-java/docs/high-availability/images/e-commerce-website-detail-page-architecture-1.png)
+![e-commerce-website-detail-page-architecture-1](../image/e-commerce-website-detail-page-architecture-1-1590202937701.png)
 
 ​	下面是页面模板的简单 Demo 。
 
@@ -82,7 +82,7 @@
 
 ​	用户浏览网页时，动态将 Nginx 本地数据渲染到本地 html 模板并返回给用户。
 
-![e-commerce-website-detail-page-architecture-2](https://doocs.github.io/advanced-java/docs/high-availability/images/e-commerce-website-detail-page-architecture-2.png)
+![e-commerce-website-detail-page-architecture-2](../image/e-commerce-website-detail-page-architecture-2-1590202941830.png)
 
 ​	虽然没有直接返回 html 页面那么快，但是因为数据在本地缓存，所以也很快，其实耗费的也就是动态渲染一个 html 页面的性能。如果 html 模板发生了变更，不需要将所有的页面重新静态化，也不需要发送请求，没有网络请求的开销，直接将数据渲染进最新的 html 页面模板后响应即可。
 
@@ -467,7 +467,7 @@ HystrixCommandProperties.Setter().withExecutionIsolationSemaphoreMaxConcurrentRe
 
   这里是整个 8 大步骤的流程图，我会对每个步骤进行细致的讲解。学习的过程中，对照着这个流程图，相信思路会比较清晰。
 
-![hystrix-process](https://doocs.github.io/advanced-java/docs/high-availability/images/new-hystrix-process.jpg)
+![hystrix-process](../image/new-hystrix-process.jpg)
 
 ​	**步骤一**：创建 command
 
@@ -647,7 +647,7 @@ observable.subscribe(new Observer<ProductInfo>() {
 
 ​	举个栗子。比如说我们在一次请求上下文中，请求获取 productId 为 1 的数据，第一次缓存中没有，那么会从商品服务中获取数据，返回最新数据结果，同时将数据缓存在内存中。后续同一次请求上下文中，如果还有获取 productId 为 1 的数据的请求，直接从缓存中取就好了。
 
-![hystrix-request-cache](https://doocs.github.io/advanced-java/docs/high-availability/images/hystrix-request-cache.png)
+![hystrix-request-cache](../image/hystrix-request-cache.png)
 
 ​	HystrixCommand 和 HystrixObservableCommand 都可以指定一个缓存 key，然后 Hystrix 会自动进行缓存，接着在同一个 request context 内，再次访问的话，就会直接取用缓存。
 
@@ -985,11 +985,11 @@ public class CacheController {
 
 ​	Hystrix 断路器有三种状态，分别是关闭（Closed）、打开（Open）与半开（Half-Open），三种状态转化关系如下：
 
-![image-20191104211642271](https://doocs.github.io/advanced-java/docs/high-availability/images/hystrix-circuit-breaker-state-machine.png)
+![image-20191104211642271](../image/hystrix-circuit-breaker-state-machine.png)
 
 1. `Closed` 断路器关闭：调用下游的请求正常通过
 2. `Open` 断路器打开：阻断对下游服务的调用，直接走 Fallback 逻辑
-3. `Half-Open` 断路器处于半开状态：[SleepWindowInMilliseconds](https://doocs.github.io/advanced-java/#/./docs/high-availability/hystrix-circuit-breaker?id=circuitbreaker.sleepwindowinmilliseconds)
+3. `Half-Open` 断路器处于半开状态：SleepWindowInMilliseconds
 
 **Enabled**
 
@@ -1183,7 +1183,7 @@ ProductInfo(id=1, name=iphone7手机, price=5599.0, pictureList=a.jpg,b.jpg, spe
 
 ​	前面讲了 Hystrix 的 request cache 请求缓存、fallback 优雅降级、circuit breaker 断路器快速熔断，这一讲，我们来详细说说 Hystrix 的线程池隔离与接口限流。
 
-![hystrix-process](https://doocs.github.io/advanced-java/docs/high-availability/images/hystrix-process.png)
+![hystrix-process](../image/hystrix-process.png)
 
 ​	Hystrix 通过判断线程池或者信号量是否已满，超出容量的请求，直接 Reject 走降级，从而达到限流的作用。
 
@@ -1195,7 +1195,7 @@ ProductInfo(id=1, name=iphone7手机, price=5599.0, pictureList=a.jpg,b.jpg, spe
 
 ​	**舱壁隔离**，是说将船体内部空间区隔划分成若干个隔舱，一旦某几个隔舱发生破损进水，水流不会在其间相互流动，如此一来船舶在受损时，依然能具有足够的浮力和稳定性，进而减低立即沉船的危险。
 
-![bulkhead-partition](https://doocs.github.io/advanced-java/docs/high-availability/images/bulkhead-partition.jpg)
+![bulkhead-partition](../image/bulkhead-partition.jpg)
 
 ​	Hystrix 对每个外部依赖用一个单独的线程池，这样的话，如果对那个外部依赖调用延迟很严重，最多就是耗尽那个依赖自己的线程池而已，不会影响其他的依赖调用。
 
@@ -1370,7 +1370,7 @@ ProductInfo(id=null, name=降级商品, price=null, pictureList=null, specificat
 
 ​	Peter Steiner 说过，"[On the Internet, nobody knows you're a dog](https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you're_a_dog)"，也就是说在互联网的另外一头，你都不知道甚至坐着一条狗。
 
-![220px-Internet_dog.jpg](https://doocs.github.io/advanced-java/docs/high-availability/images/220px-Internet_dog.jpg)
+![220px-Internet_dog.jpg](../image/220px-Internet_dog-1590203006698.jpg)
 
 ​	像特别复杂的分布式系统，特别是在大公司里，多个团队、大型协作，你可能都不知道服务是谁的，很可能说开发服务的那个哥儿们甚至是一个实习生。依赖服务的接口性能可能很不稳定，有时候 2ms，有时候 200ms，甚至 2s，都有可能。
 

@@ -2958,7 +2958,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x8FED;&#x4EE3;&#x5668;&#xFF08;iterator&#xFF09;">&#x8FED;&#x4EE3;&#x5668;&#xFF08;Iterator&#xFF09;</h2>
+                                <ul>
+<li><h2 id="&#x8FED;&#x4EE3;&#x5668;&#xFF08;iterator&#xFF09;">&#x8FED;&#x4EE3;&#x5668;&#xFF08;Iterator&#xFF09;</h2>
 <h3 id="intent">Intent</h3>
 <p>&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x987A;&#x5E8F;&#x8BBF;&#x95EE;&#x805A;&#x5408;&#x5BF9;&#x8C61;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x66B4;&#x9732;&#x805A;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x90E8;&#x8868;&#x793A;&#x3002;</p>
 <h3 id="class-diagram">Class Diagram</h3>
@@ -2967,7 +2968,7 @@
 <li>Iterator &#x4E3B;&#x8981;&#x5B9A;&#x4E49;&#x4E86; hasNext() &#x548C; next() &#x65B9;&#x6CD5;&#x3002;</li>
 <li>Client &#x7EC4;&#x5408;&#x4E86; Aggregate&#xFF0C;&#x4E3A;&#x4E86;&#x8FED;&#x4EE3;&#x904D;&#x5386; Aggregate&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x7EC4;&#x5408; Iterator&#x3002;</li>
 </ul>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/89292ae1-5f13-44dc-b508-3f035e80bf89.png"> </div><br></p>
+<p><img src="../image/89292ae1-5f13-44dc-b508-3f035e80bf89-1590215471786.png" alt="image"></p>
 <h3 id="implementation">Implementation</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Aggregate</span> </span>{
     <span class="hljs-function">Iterator <span class="hljs-title">createIterator</span><span class="hljs-params">()</span></span>;
@@ -3033,6 +3034,8 @@
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html" target="_blank">java.util.Iterator</a></li>
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Enumeration.html" target="_blank">java.util.Enumeration</a></li>
 </ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -3076,7 +3079,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"迭代器","level":"1.20.4.4","depth":3,"next":{"title":"中介者","level":"1.20.4.5","depth":3,"path":"notes/设计模式/设计模式 - 中介者.md","ref":"notes/设计模式/设计模式 - 中介者.md","articles":[]},"previous":{"title":"解释器","level":"1.20.4.3","depth":3,"path":"notes/设计模式/设计模式 - 解释器.md","ref":"notes/设计模式/设计模式 - 解释器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 迭代器.md","mtime":"2020-05-17T02:46:04.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T02:35:31.182Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"迭代器","level":"1.20.4.4","depth":3,"next":{"title":"中介者","level":"1.20.4.5","depth":3,"path":"notes/设计模式/设计模式 - 中介者.md","ref":"notes/设计模式/设计模式 - 中介者.md","articles":[]},"previous":{"title":"解释器","level":"1.20.4.3","depth":3,"path":"notes/设计模式/设计模式 - 解释器.md","ref":"notes/设计模式/设计模式 - 解释器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 迭代器.md","mtime":"2020-05-23T06:31:12.360Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T06:37:36.794Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

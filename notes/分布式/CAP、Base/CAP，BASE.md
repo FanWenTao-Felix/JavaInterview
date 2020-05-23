@@ -64,7 +64,7 @@
 
 #### 线性一致性和顺序一致性。
 
-![img](https://hadyang.github.io/interview/docs/architecture/distributed/consensus/assists/consenus_linearizability_sequential.png)
+![img](../../image/consenus_linearizability_sequential.png)
 
 1. 图1 是顺序一致性：从这两个进程的角度来看，顺序应该是这样的 `write(y,2) -> read(x,0) -> write(x,4) -> read(y,2)` ，每个进程内部的读写顺序都是合理的，但是这个顺序与全局时钟下看到的顺序并不一样，`write(x,4)` 先于 `read(x,0)` 执行，但是 read 却没有读到最新值。
 2. 图2 是线性一致性：每个读操作都读到了该变量的最新写的结果，同时 **两个进程看到的操作顺序与全局时钟的顺序一样**，都是 `write(y,2) -> write(x,4) -> read(x,4) -> read(y,2)`。
@@ -74,7 +74,7 @@
 
 因果一致性，被认为是比 顺序一致性 更弱的一致性，在因果一致性中，只对有因果关系的事件有顺序要求。
 
-![img](https://hadyang.github.io/interview/docs/architecture/distributed/consensus/assists/causal_consistency.png)
+![img](../../image/causal_consistency.png)
 
 对于 `P1` 和 `P2` 的操作是没有先后关系的，因此谁先发生都是可以的。
 
@@ -193,7 +193,7 @@ Basic Paxos 是 Paxos 中最为基础的协议，每一个 Basic Paxos 的协议
 
 Paxos 的运行过程分为两个阶段，分别是准备阶段（Prepare）和接受阶段（Accept），当 Proposer 接收到来自客户端的请求时，就会进入如下流程：
 
-![img](https://hadyang.github.io/interview/docs/architecture/distributed/consensus/assists/basic-paxos-phases.png)
+![img](../../image/basic-paxos-phases.png)
 
 在整个共识算法运行的过程中，Proposer 负责提出提案并向 Acceptor 分别发出两次 RPC 请求，Prepare 和 Accept；Acceptor 会根据其持有的信息 `minProposal`、`acceptedProposal` 和 `acceptedValue` 选择接受或者拒绝当前的提案，当某一个提案被过半数的 Acceptor 接受之后，我们就认为当前提案被整个集群接受了。
 
@@ -201,7 +201,7 @@ Paxos 的运行过程分为两个阶段，分别是准备阶段（Prepare）和�
 
 由于大多数的分布式集群都需要接受一系列的值，如果使用 Basic Paxos 来处理数据流，那么就会导致非常明显的性能损失，而 Multi-Paxos 是前者的加强版，如果集群中的 Leader 是非常稳定的，那么我们往往不需要准备阶段的工作，这样就能够将 RPC 的数量减少一半。
 
-![img](https://hadyang.github.io/interview/docs/architecture/distributed/consensus/assists/multi-paxos-example.png)
+![img](../../image/multi-paxos-example.png)
 
 上述图片中描述的就是稳定阶段 Multi-Paxos 的处理过程，S1 是整个集群的 Leader，当其他的服务器接收到来自客户端的请求时，都会将请求转发给 Leader 进行处理。
 

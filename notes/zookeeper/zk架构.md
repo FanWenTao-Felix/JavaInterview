@@ -58,7 +58,7 @@ ZooKeeper 的客户端程序会选择和集群中的任意一台服务器创建�
 
 ### 数据模型
 
-![image](https://hadyang.github.io/interview/docs/architecture/distributed/zk/images/944a3ed0ab807a87b5c562c58a31ea2b.png)
+![image](../image/944a3ed0ab807a87b5c562c58a31ea2b.png)
 
 到znode是一个标准的文件系统，层次结构很像一棵树。 需要注意的一些要点如下：
 

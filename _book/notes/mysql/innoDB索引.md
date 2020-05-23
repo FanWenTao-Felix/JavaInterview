@@ -10,7 +10,7 @@
 
 ​	两种行记录格式 `Compact` 和 `Redundant` 在磁盘上按照以下方式存储：
 
-![image-20200308231338803](../../image/image-20200308231338803.png)
+![image-20200308231338803](../image/image-20200308231338803.png)
 
 `Compact` 和 `Redundant` 格式最大的不同就是记录格式的第一个部分；在 `Compact` 中，行记录的第一部分倒序存放了一行数据中列的长度（Length），而 `Redundant` 中存的是每一列的偏移量（Offset），从总体上上看， `Compact` 行记录格式相比 `Redundant` 格式能够减少 `20%` 的存储空间。
 

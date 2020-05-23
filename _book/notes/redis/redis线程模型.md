@@ -17,7 +17,7 @@ Redis 内部使用文件事件处理器 `file event handler`，**这个文件事
 
 客户端与 Redis 的一次通信过程：
 
-![image](../../image/f0dacdd3779b836ad75fe6b886af1fff-1583983205980.png)
+![image](../image/f0dacdd3779b836ad75fe6b886af1fff-1583983205980.png)
 
 ### 为啥 Redis 单线程模型也能效率这么高？
 

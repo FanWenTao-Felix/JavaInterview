@@ -60,7 +60,7 @@
 - 服务器节点收到其他广播消息后，跟自己的优先级对比，自己优先级低，则变更当前节点投票的优先级`(sid，zxid)` ，并广播变更后的结果
 - 当任意一个服务器节点收到的投票数，超过了法定数量(`quorum`)，则，升级为 Leader，并广播结果。
 
-![image](https://hadyang.github.io/interview/docs/architecture/distributed/zk/images/7ca755dfe9b16f9c130f5de492549a86.png)
+![image](../image/7ca755dfe9b16f9c130f5de492549a86.png)
 
 > - 由于网络延时，节点得不到足够多广播信息时，会做出错误的投票判断，纠正过程更耗时
 > - 选举过程中，服务器节点会等待一定时间，再广播投票信息，时间间隔一般设定为 200 ms

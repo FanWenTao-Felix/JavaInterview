@@ -2956,13 +2956,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5355;&#x4F8B;&#xFF08;singleton&#xFF09;">&#x5355;&#x4F8B;&#xFF08;Singleton&#xFF09;</h2>
+                                <ul>
+<li><h2 id="&#x5355;&#x4F8B;&#xFF08;singleton&#xFF09;">&#x5355;&#x4F8B;&#xFF08;Singleton&#xFF09;</h2>
 <h3 id="intent">Intent</h3>
 <p>&#x786E;&#x4FDD;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x8BE5;&#x5B9E;&#x4F8B;&#x7684;&#x5168;&#x5C40;&#x8BBF;&#x95EE;&#x70B9;&#x3002;</p>
 <h3 id="class-diagram">Class Diagram</h3>
 <p>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x516C;&#x6709;&#x9759;&#x6001;&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
 <p>&#x79C1;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4FDD;&#x8BC1;&#x4E86;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x516C;&#x6709;&#x9759;&#x6001;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x552F;&#x4E00;&#x7684;&#x79C1;&#x6709;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x3002;</p>
-<p><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/eca1f422-8381-409b-ad04-98ef39ae38ba.png"> </div><br></p>
+<p><img src="../image/eca1f422-8381-409b-ad04-98ef39ae38ba-1590215357960.png" alt="image"></p>
 <h3 id="implementation">Implementation</h3>
 <h4 id="&#x2170;-&#x61D2;&#x6C49;&#x5F0F;-&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;">&#x2160; &#x61D2;&#x6C49;&#x5F0F;-&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;</h4>
 <p>&#x4EE5;&#x4E0B;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x79C1;&#x6709;&#x9759;&#x6001;&#x53D8;&#x91CF; uniqueInstance &#x88AB;&#x5EF6;&#x8FDF;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x8BE5;&#x7C7B;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316; uniqueInstance&#xFF0C;&#x4ECE;&#x800C;&#x8282;&#x7EA6;&#x8D44;&#x6E90;&#x3002;</p>
@@ -3052,63 +3053,63 @@
 }
 </code></pre>
 <h4 id="&#x2175;-&#x679A;&#x4E3E;&#x5B9E;&#x73B0;">&#x2165; &#x679A;&#x4E3E;&#x5B9E;&#x73B0;</h4>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Singleton {
+<p>```java
+public enum Singleton {</p>
+<pre><code>INSTANCE;
 
-    INSTANCE;
-
-    <span class="hljs-keyword">private</span> String objName;
-
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getObjName</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> objName;
-    }
-
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setObjName</span><span class="hljs-params">(String objName)</span> </span>{
-        <span class="hljs-keyword">this</span>.objName = objName;
-    }
+private String objName;
+</code></pre></li>
+</ul>
+<pre><code>  public String getObjName() {
+      return objName;
+  }
 
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+  public void setObjName(String objName) {
+      this.objName = objName;
+  }
 
-        <span class="hljs-comment">// &#x5355;&#x4F8B;&#x6D4B;&#x8BD5;</span>
-        Singleton firstSingleton = Singleton.INSTANCE;
-        firstSingleton.setObjName(<span class="hljs-string">&quot;firstName&quot;</span>);
-        System.out.println(firstSingleton.getObjName());
-        Singleton secondSingleton = Singleton.INSTANCE;
-        secondSingleton.setObjName(<span class="hljs-string">&quot;secondName&quot;</span>);
-        System.out.println(firstSingleton.getObjName());
-        System.out.println(secondSingleton.getObjName());
 
-        <span class="hljs-comment">// &#x53CD;&#x5C04;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x6D4B;&#x8BD5;</span>
-        <span class="hljs-keyword">try</span> {
-            Singleton[] enumConstants = Singleton.class.getEnumConstants();
-            <span class="hljs-keyword">for</span> (Singleton enumConstant : enumConstants) {
-                System.out.println(enumConstant.getObjName());
-            }
-        } <span class="hljs-keyword">catch</span> (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
-<pre><code class="lang-html">firstName
-secondName
-secondName
-secondName
-</code></pre>
-<p>&#x8BE5;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x53CD;&#x5C04;&#x653B;&#x51FB;&#x3002;&#x5728;&#x5176;&#x5B83;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7; setAccessible() &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x79C1;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x8BBF;&#x95EE;&#x7EA7;&#x522B;&#x8BBE;&#x7F6E;&#x4E3A; public&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4ECE;&#x800C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x9632;&#x6B62;&#x8FD9;&#x79CD;&#x653B;&#x51FB;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0;&#x9632;&#x6B62;&#x591A;&#x6B21;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x8BE5;&#x5B9E;&#x73B0;&#x662F;&#x7531; JVM &#x4FDD;&#x8BC1;&#x53EA;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4E0A;&#x8FF0;&#x7684;&#x53CD;&#x5C04;&#x653B;&#x51FB;&#x3002;</p>
-<p>&#x8BE5;&#x5B9E;&#x73B0;&#x5728;&#x591A;&#x6B21;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x5E8F;&#x5217;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F97;&#x5230;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x800C;&#x5176;&#x5B83;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x4F7F;&#x7528; transient &#x4FEE;&#x9970;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x73B0;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+  public static void main(String[] args) {
+
+      // &#x5355;&#x4F8B;&#x6D4B;&#x8BD5;
+      Singleton firstSingleton = Singleton.INSTANCE;
+      firstSingleton.setObjName(&quot;firstName&quot;);
+      System.out.println(firstSingleton.getObjName());
+      Singleton secondSingleton = Singleton.INSTANCE;
+      secondSingleton.setObjName(&quot;secondName&quot;);
+      System.out.println(firstSingleton.getObjName());
+      System.out.println(secondSingleton.getObjName());
+
+      // &#x53CD;&#x5C04;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x6D4B;&#x8BD5;
+      try {
+          Singleton[] enumConstants = Singleton.class.getEnumConstants();
+          for (Singleton enumConstant : enumConstants) {
+              System.out.println(enumConstant.getObjName());
+          }
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+  }
+</code></pre><p>  }</p>
+<pre><code>
+  ```html
+  firstName
+  secondName
+  secondName
+  secondName
+</code></pre><p>  &#x8BE5;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x53CD;&#x5C04;&#x653B;&#x51FB;&#x3002;&#x5728;&#x5176;&#x5B83;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7; setAccessible() &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x79C1;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x8BBF;&#x95EE;&#x7EA7;&#x522B;&#x8BBE;&#x7F6E;&#x4E3A; public&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4ECE;&#x800C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x9632;&#x6B62;&#x8FD9;&#x79CD;&#x653B;&#x51FB;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0;&#x9632;&#x6B62;&#x591A;&#x6B21;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x8BE5;&#x5B9E;&#x73B0;&#x662F;&#x7531; JVM &#x4FDD;&#x8BC1;&#x53EA;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4E0A;&#x8FF0;&#x7684;&#x53CD;&#x5C04;&#x653B;&#x51FB;&#x3002;</p>
+<p>  &#x8BE5;&#x5B9E;&#x73B0;&#x5728;&#x591A;&#x6B21;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x5E8F;&#x5217;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F97;&#x5230;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x800C;&#x5176;&#x5B83;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x4F7F;&#x7528; transient &#x4FEE;&#x9970;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x73B0;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>Logger Classes</li>
 <li>Configuration Classes</li>
 <li>Accesing resources in shared mode</li>
-<li>Factories implemented as Singletons</li>
-</ul>
+<li><p>Factories implemented as Singletons</p>
 <h3 id="jdk">JDK</h3>
-<ul>
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runtime.html#getRuntime%28%29" target="_blank">java.lang.Runtime#getRuntime()</a></li>
+</li>
+<li><p><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runtime.html#getRuntime%28%29" target="_blank">java.lang.Runtime#getRuntime()</a></p>
+</li>
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Desktop.html#getDesktop--" target="_blank">java.awt.Desktop#getDesktop()</a></li>
 <li>[java.lang.System#getSecurityManager()]</li>
 </ul>
@@ -3151,7 +3152,7 @@ secondName
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"单例","level":"1.20.3.1","depth":3,"next":{"title":"简单工厂","level":"1.20.3.2","depth":3,"path":"notes/设计模式/设计模式 - 简单工厂.md","ref":"notes/设计模式/设计模式 - 简单工厂.md","articles":[]},"previous":{"title":"创建型","level":"1.20.3","depth":2,"ref":"","articles":[{"title":"单例","level":"1.20.3.1","depth":3,"path":"notes/设计模式/设计模式 - 单例.md","ref":"notes/设计模式/设计模式 - 单例.md","articles":[]},{"title":"简单工厂","level":"1.20.3.2","depth":3,"path":"notes/设计模式/设计模式 - 简单工厂.md","ref":"notes/设计模式/设计模式 - 简单工厂.md","articles":[]},{"title":"工厂方法","level":"1.20.3.3","depth":3,"path":"notes/设计模式/设计模式 - 工厂方法.md","ref":"notes/设计模式/设计模式 - 工厂方法.md","articles":[]},{"title":"抽象工厂","level":"1.20.3.4","depth":3,"path":"notes/设计模式/设计模式 - 抽象工厂.md","ref":"notes/设计模式/设计模式 - 抽象工厂.md","articles":[]},{"title":"生成器","level":"1.20.3.5","depth":3,"path":"notes/设计模式/设计模式 - 生成器.md","ref":"notes/设计模式/设计模式 - 生成器.md","articles":[]},{"title":"原型模式","level":"1.20.3.6","depth":3,"path":"notes/设计模式/设计模式 - 原型模式.md","ref":"notes/设计模式/设计模式 - 原型模式.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 单例.md","mtime":"2020-05-17T02:46:04.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T02:35:31.182Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"单例","level":"1.20.3.1","depth":3,"next":{"title":"简单工厂","level":"1.20.3.2","depth":3,"path":"notes/设计模式/设计模式 - 简单工厂.md","ref":"notes/设计模式/设计模式 - 简单工厂.md","articles":[]},"previous":{"title":"创建型","level":"1.20.3","depth":2,"ref":"","articles":[{"title":"单例","level":"1.20.3.1","depth":3,"path":"notes/设计模式/设计模式 - 单例.md","ref":"notes/设计模式/设计模式 - 单例.md","articles":[]},{"title":"简单工厂","level":"1.20.3.2","depth":3,"path":"notes/设计模式/设计模式 - 简单工厂.md","ref":"notes/设计模式/设计模式 - 简单工厂.md","articles":[]},{"title":"工厂方法","level":"1.20.3.3","depth":3,"path":"notes/设计模式/设计模式 - 工厂方法.md","ref":"notes/设计模式/设计模式 - 工厂方法.md","articles":[]},{"title":"抽象工厂","level":"1.20.3.4","depth":3,"path":"notes/设计模式/设计模式 - 抽象工厂.md","ref":"notes/设计模式/设计模式 - 抽象工厂.md","articles":[]},{"title":"生成器","level":"1.20.3.5","depth":3,"path":"notes/设计模式/设计模式 - 生成器.md","ref":"notes/设计模式/设计模式 - 生成器.md","articles":[]},{"title":"原型模式","level":"1.20.3.6","depth":3,"path":"notes/设计模式/设计模式 - 原型模式.md","ref":"notes/设计模式/设计模式 - 原型模式.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/设计模式/设计模式 - 单例.md","mtime":"2020-05-23T06:29:19.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-23T06:37:36.794Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
