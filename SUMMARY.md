@@ -40,12 +40,14 @@
     * [spring 事务隔离级别](notes/spring/spring 事务隔离级别.md)
     * [涉及的设计模式](notes/spring/涉及的设计模式.md)
 * springMVC
+    
     * [工作流程](notes/springMVC/工作流程.md)
 * mybatis
     * [Mybatis 动态代理](notes/mybatis/Mybatis 动态代理.md)
     * [缓存机制](notes/mybatis/缓存机制.md)
     * [面试题](notes/mybatis/面试题.md)
 * springBoot
+    
     * [springBoot工作原理](notes/springBoot/springBoot工作原理.md)
 * springCloud
     * [eureka](notes/springCloud/eureka.md)
@@ -76,6 +78,19 @@
     * [锁机制](notes/mysql/锁机制.md)
     * [面试题](notes/mysql/面试题.md)
     * [打造扛得住的MySQL](notes/mysql/打造扛得住的MySQL.md)
+* kafka
+    *  [MQ基本概念](MQ基本概念.md)
+    *  [kafka负载均衡](kafka负载均衡.md)
+    *  [kafka基本概念](kafka基本概念.md)
+    *  [保证高可用性](保证高可用性.md)
+    *  [保证幂等性](保证幂等性.md)
+    *  [保证消费顺序性](保证消费顺序性.md)
+    *  [解决消息丢失问题](解决消息丢失问题.md)
+    *  [kafka使用过程问题](kafka使用过程问题.md)
+    *  [leader选举](leader选举.md)
+    *  [kafka扩容](kafka扩容.md)
+    *  [设计一个消息队列](设计一个消息队列.md)
+    
 * redis
     * [redis 过期策略](notes/redis/redis 过期策略.md)
     * [redis、memcached区别](notes/redis/redis、memcached区别.md)
@@ -92,10 +107,13 @@
     * [雪崩、穿透、预热](notes/redis/雪崩、穿透、预热.md)
     * [面试题](notes/redis/面试题.md)
 * netty
+    
     * [netty](notes/netty/netty.md)
 * nginx
+    
     * [基本命令](notes/nginx/基本命令.md)
 * tomcat
+    
     * [tomcat结构](notes/tomcat/tomcat结构.md)
 * zookeeper
     * [zk工作流程](notes/zookeeper/zk工作流程.md)
@@ -193,7 +211,9 @@
       * [享元](notes/设计模式/设计模式 - 享元.md)
       * [代理](notes/设计模式/设计模式 - 代理.md)
 * 密码学
+    
     * [密码学加密](notes/密码学/密码学加密.md)
 * 项目经验
+    
     * [设计一个高并发系统](notes/项目经验/设计一个高并发系统.md)
 
