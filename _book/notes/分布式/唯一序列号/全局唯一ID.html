@@ -3191,6 +3191,247 @@ String s = UUID.randomUUID().toString();
 <p>&#x767E;&#x5EA6; UidGenerator    <a href="https://github.com/baidu/uid-generator" target="_blank">https://github.com/baidu/uid-generator</a></p>
 <p>&#x7F8E;&#x56E2; Leaf    <a href="https://github.com/zhuzhong/idleaf" target="_blank">https://github.com/zhuzhong/idleaf</a></p>
 </blockquote>
+<h3 id="&#x552F;&#x4E00;id&#x7B80;&#x4ECB;"><strong>&#x552F;&#x4E00;ID&#x7B80;&#x4ECB;</strong></h3>
+<p>&#x5728;&#x590D;&#x6742;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x5BF9;&#x5927;&#x91CF;&#x7684;&#x6570;&#x636E;&#x548C;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x3002;&#x5982;&#x5728;&#x7F8E;&#x56E2;&#x70B9;&#x8BC4;&#x7684;&#x91D1;&#x878D;&#x3001;&#x652F;&#x4ED8;&#x3001;&#x9910;&#x996E;&#x3001;&#x9152;&#x5E97;&#x3001;&#x732B;&#x773C;&#x7535;&#x5F71;&#x7B49;&#x4EA7;&#x54C1;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x65E5;&#x6E10;&#x589E;&#x957F;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x5206;&#x5E93;&#x5206;&#x8868;&#x540E;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;ID&#x6765;&#x6807;&#x8BC6;&#x4E00;&#x6761;&#x6570;&#x636E;&#x6216;&#x6D88;&#x606F;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x81EA;&#x589E;ID&#x663E;&#x7136;&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x9700;&#x6C42;&#xFF1B;&#x7279;&#x522B;&#x4E00;&#x70B9;&#x7684;&#x5982;&#x8BA2;&#x5355;&#x3001;&#x9A91;&#x624B;&#x3001;&#x4F18;&#x60E0;&#x5238;&#x4E5F;&#x90FD;&#x9700;&#x8981;&#x6709;&#x552F;&#x4E00;ID&#x505A;&#x6807;&#x8BC6;&#x3002;&#x6B64;&#x65F6;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x751F;&#x6210;&#x5168;&#x5C40;&#x552F;&#x4E00;ID&#x7684;&#x7CFB;&#x7EDF;&#x662F;&#x975E;&#x5E38;&#x5FC5;&#x8981;&#x7684;&#x3002;</p>
+<h4 id="&#x5168;&#x5C40;&#x552F;&#x4E00;id&#x7684;&#x7279;&#x70B9;"><strong>&#x5168;&#x5C40;&#x552F;&#x4E00;ID&#x7684;&#x7279;&#x70B9;</strong></h4>
+<p><img src="../../image/up-c82ac24c751fbbb0f25f499e379bd5ec132.png" alt=""></p>
+<p>&#x5168;&#x5C40;&#x552F;&#x4E00;&#x6027;&#xFF1A;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x7684;ID&#x53F7;&#xFF0C;&#x65E2;&#x7136;&#x662F;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x8FD9;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x8981;&#x6C42;</p>
+<p>&#x8D8B;&#x52BF;&#x9012;&#x589E;&#xFF1A;&#x5728;MySQL InnoDB&#x5F15;&#x64CE;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x805A;&#x96C6;&#x7D22;&#x5F15;&#xFF0C;&#x7531;&#x4E8E;&#x591A;&#x6570;RDBMS&#x4F7F;&#x7528;B-tree&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x5B58;&#x50A8;&#x7D22;&#x5F15;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x4E3B;&#x952E;&#x7684;&#x9009;&#x62E9;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x6709;&#x5E8F;&#x7684;&#x4E3B;&#x952E;&#x4FDD;&#x8BC1;&#x5199;&#x5165;&#x6027;&#x80FD;</p>
+<p>&#x5355;&#x8C03;&#x9012;&#x589E;&#xFF1A;&#x4FDD;&#x8BC1;&#x4E0B;&#x4E00;&#x4E2A;ID&#x4E00;&#x5B9A;&#x5927;&#x4E8E;&#x4E0A;&#x4E00;&#x4E2A;ID&#xFF0C;&#x4F8B;&#x5982;&#x4E8B;&#x52A1;&#x7248;&#x672C;&#x53F7;&#x3001;IM&#x589E;&#x91CF;&#x6D88;&#x606F;&#x3001;&#x6392;&#x5E8F;&#x7B49;&#x7279;&#x6B8A;&#x9700;&#x6C42;</p>
+<p>&#x4FE1;&#x606F;&#x5B89;&#x5168;&#xFF1A;&#x5982;&#x679C;ID&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x6076;&#x610F;&#x7528;&#x6237;&#x7684;&#x6252;&#x53D6;&#x5DE5;&#x4F5C;&#x5C31;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x505A;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;URL&#x5373;&#x53EF;&#xFF1B;&#x5982;&#x679C;&#x662F;&#x8BA2;&#x5355;&#x53F7;&#x5C31;&#x66F4;&#x5371;&#x9669;&#x4E86;&#xFF0C;&#x7ADE;&#x5BF9;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x4E00;&#x5929;&#x7684;&#x5355;&#x91CF;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x4F1A;&#x9700;&#x8981;ID&#x65E0;&#x89C4;&#x5219;&#x3001;&#x4E0D;&#x89C4;&#x5219;</p>
+<p>&#x9AD8;&#x53EF;&#x7528;&#x6027;&#xFF1A;&#x540C;&#x65F6;&#x9664;&#x4E86;&#x5BF9;ID&#x53F7;&#x7801;&#x81EA;&#x8EAB;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x4E1A;&#x52A1;&#x8FD8;&#x5BF9;ID&#x53F7;&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x7528;&#x6027;&#x8981;&#x6C42;&#x6781;&#x9AD8;&#xFF0C;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;ID&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#x762B;&#x75EA;&#xFF0C;&#x8FD9;&#x5C31;&#x4F1A;&#x5E26;&#x6765;&#x4E00;&#x573A;&#x707E;&#x96BE;&#x3002;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x6709;&#x5355;&#x70B9;&#x6545;&#x969C;</p>
+<p>&#x5206;&#x7247;&#x652F;&#x6301;&#xFF1A;&#x53EF;&#x4EE5;&#x63A7;&#x5236;ShardingId&#x3002;&#x6BD4;&#x5982;&#x67D0;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x6587;&#x7AE0;&#x8981;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5206;&#x7247;&#x5185;&#xFF0C;&#x8FD9;&#x6837;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x9AD8;&#xFF0C;&#x4FEE;&#x6539;&#x4E5F;&#x5BB9;&#x6613;</p>
+<p>&#x957F;&#x5EA6;&#x9002;&#x4E2D;</p>
+<p>&#x7531;&#x6B64;&#x603B;&#x7ED3;&#x4E0B;&#x4E00;&#x4E2A;ID&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#x5E94;&#x8BE5;&#x505A;&#x5230;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<p>1.&#x5E73;&#x5747;&#x5EF6;&#x8FDF;&#x548C;TP999&#x5EF6;&#x8FDF;&#x90FD;&#x8981;&#x5C3D;&#x53EF;&#x80FD;&#x4F4E;&#xFF1B;</p>
+<p>2.&#x53EF;&#x7528;&#x6027;5&#x4E2A;9&#xFF1B;</p>
+<p>3.&#x9AD8;QPS&#x3002;</p>
+<h3 id="&#x5168;&#x5C40;id&#x5E38;&#x89C1;&#x751F;&#x6210;&#x65B9;&#x6848;"><strong>&#x5168;&#x5C40;ID&#x5E38;&#x89C1;&#x751F;&#x6210;&#x65B9;&#x6848;</strong></h3>
+<p><img src="../../image/up-8afbaa7fb9904f074a8745e7ef8ad7c0af7.png" alt=""></p>
+<h4 id="uuid&#x751F;&#x6210;"><strong>UUID&#x751F;&#x6210;</strong></h4>
+<p>UUID (Universally Unique Identifier) &#x7684;&#x76EE;&#x7684;&#xFF0C;&#x662F;&#x8BA9;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x90FD;&#x80FD;&#x6709;&#x552F;&#x4E00;&#x7684;&#x8FA8;&#x8BC6;&#x8D44;&#x8BAF;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x900F;&#x8FC7;&#x4E2D;&#x592E;&#x63A7;&#x5236;&#x7AEF;&#x6765;&#x505A;&#x8FA8;&#x8BC6;&#x8D44;&#x8BAF;&#x7684;&#x6307;&#x5B9A;&#x3002;&#x5982;&#x6B64;&#x4E00;&#x6765;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x4E0D;&#x4E0E;&#x5176;&#x5B83;&#x4EBA;&#x51B2;&#x7A81;&#x7684; UUID&#x3002;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8003;&#x8651;&#x6570;&#x636E;&#x5E93;&#x5EFA;&#x7ACB;&#x65F6;&#x7684;&#x540D;&#x79F0;&#x91CD;&#x590D;&#x95EE;&#x9898;&#x3002;</p>
+<p>UUID&#x7684;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#x5305;&#x542B;32&#x4E2A;16&#x8FDB;&#x5236;&#x6570;&#x5B57;&#xFF0C;&#x4EE5;&#x8FDE;&#x5B57;&#x53F7;&#x5206;&#x4E3A;&#x4E94;&#x6BB5;&#xFF0C;&#x5F62;&#x5F0F;&#x4E3A;8-4-4-4-12&#x7684;36&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;550e8400-e29b-41d4-a716-446655440000&#xFF0C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x4E1A;&#x754C;&#x4E00;&#x5171;&#x6709;5&#x79CD;&#x65B9;&#x5F0F;&#x751F;&#x6210;UUID&#xFF0C;&#x8BE6;&#x60C5;&#x89C1;IETF&#x53D1;&#x5E03;&#x7684;UUID&#x89C4;&#x8303; A Universally Unique IDentifier (UUID) URN Namespace&#x3002;</p>
+<p>&#x5728;Java&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;API&#x751F;&#x6210;UUID&#x3002;</p>
+<pre><code class="lang-java">UUID uuid  =  UUID.randomUUID(); 
+String s = UUID.randomUUID().toString();
+</code></pre>
+<p>&#x4F18;&#x70B9;&#xFF1A;&#x6027;&#x80FD;&#x975E;&#x5E38;&#x9AD8;&#xFF1A;&#x672C;&#x5730;&#x751F;&#x6210;&#xFF0C;API&#x8C03;&#x7528;&#x65B9;&#x4FBF;&#xFF0C;&#x6CA1;&#x6709;&#x7F51;&#x7EDC;&#x6D88;&#x8017;&#x3002;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    &#x5B58;&#x50A8;&#x6210;&#x672C;&#x9AD8;&#xFF1A;UUID&#x592A;&#x957F;&#xFF0C;16&#x5B57;&#x8282;128&#x4F4D;&#xFF0C;&#x901A;&#x5E38;&#x4EE5;36&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;&#xFF0C;&#x5F88;&#x591A;&#x573A;&#x666F;&#x4E0D;&#x9002;&#x7528;&#x3002;</p>
+<p>&#x4FE1;&#x606F;&#x4E0D;&#x5B89;&#x5168;&#xFF1A;&#x57FA;&#x4E8E;MAC&#x5730;&#x5740;&#x751F;&#x6210;UUID&#x7684;&#x7B97;&#x6CD5;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;MAC&#x5730;&#x5740;&#x6CC4;&#x9732;&#xFF0C;&#x8FD9;&#x4E2A;&#x6F0F;&#x6D1E;&#x66FE;&#x88AB;&#x7528;&#x4E8E;&#x5BFB;&#x627E;&#x6885;&#x4E3D;&#x838E;&#x75C5;&#x6BD2;&#x7684;&#x5236;&#x4F5C;&#x8005;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>ID&#x4F5C;&#x4E3A;&#x4E3B;&#x952E;&#x65F6;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x73AF;&#x5883;&#x4F1A;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x6BD4;&#x5982;&#x505A;DB&#x4E3B;&#x952E;&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C;UUID&#x5C31;&#x975E;&#x5E38;&#x4E0D;&#x9002;&#x7528;&#x3002;UUID&#x4E0D;&#x662F;&#x8D8B;&#x52BF;&#x9012;&#x589E;&#x7684;&#xFF0C;&#x800C;&#x73B0;&#x9636;&#x6BB5;&#x4E3B;&#x6D41;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E3B;&#x952E;&#x7D22;&#x5F15;&#x90FD;&#x662F;&#x9009;&#x7528;&#x7684;B+&#x6811;&#x7D22;&#x5F15;&#xFF0C;&#x5BF9;&#x4E8E;&#x65E0;&#x5E8F;&#x957F;&#x5EA6;&#x8FC7;&#x957F;&#x7684;&#x4E3B;&#x952E;&#x63D2;&#x5165;&#x6548;&#x7387;&#x6BD4;&#x8F83;&#x4F4E;&#x3002;</p>
+<h4 id="&#x6570;&#x636E;&#x5E93;&#x751F;&#x6210;"><strong>&#x6570;&#x636E;&#x5E93;&#x751F;&#x6210;</strong></h4>
+<p>&#x4EE5;MySQL&#x4E3E;&#x4F8B;&#xFF0C;&#x5229;&#x7528;&#x7ED9;&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E; auto_increment_increment &#x548C; auto_increment_offset &#x6765;&#x4FDD;&#x8BC1;ID&#x81EA;&#x589E;&#xFF0C;&#x6BCF;&#x6B21;&#x4E1A;&#x52A1;&#x4F7F;&#x7528;&#x4E0B;&#x5217;SQL&#x8BFB;&#x5199;MySQL&#x5F97;&#x5230;ID&#x53F7;&#x3002;</p>
+<p><img src="../../image/up-dff2e62ad1c5c61b8eab33d41a8071d525c.png" alt=""></p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x7684;&#x4F18;&#x7F3A;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    &#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5229;&#x7528;&#x73B0;&#x6709;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;&#x6210;&#x672C;&#x5C0F;&#xFF0C;&#x6709;DBA&#x4E13;&#x4E1A;&#x7EF4;&#x62A4;&#x3002;</p>
+<p>&#x200B;    ID&#x53F7;&#x5355;&#x8C03;&#x81EA;&#x589E;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x5BF9;ID&#x6709;&#x7279;&#x6B8A;&#x8981;&#x6C42;&#x7684;&#x4E1A;&#x52A1;&#x3002;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    &#x5F3A;&#x4F9D;&#x8D56;DB&#xFF0C;&#x5F53;DB&#x5F02;&#x5E38;&#x65F6;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5C5E;&#x4E8E;&#x81F4;&#x547D;&#x95EE;&#x9898;&#x3002;&#x914D;&#x7F6E;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x53EF;&#x4EE5;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x589E;&#x52A0;&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x5728;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x4E0B;&#x96BE;&#x4EE5;&#x4FDD;&#x8BC1;&#x3002;&#x4E3B;&#x4ECE;&#x5207;&#x6362;&#x65F6;&#x7684;&#x4E0D;&#x4E00;&#x81F4;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x91CD;&#x590D;&#x53D1;&#x53F7;&#x3002;</p>
+<p>ID&#x53D1;&#x53F7;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x9650;&#x5236;&#x5728;&#x5355;&#x53F0;MySQL&#x7684;&#x8BFB;&#x5199;&#x6027;&#x80FD;&#x3002;</p>
+<h4 id="redis&#x751F;&#x6210;"><strong>Redis&#x751F;&#x6210;</strong></h4>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x6765;&#x751F;&#x6210;ID&#x6027;&#x80FD;&#x4E0D;&#x591F;&#x8981;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;Redis&#x6765;&#x751F;&#x6210;ID&#x3002;&#x8FD9;&#x4E3B;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;Redis&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x751F;&#x6210;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;ID&#x3002;&#x53EF;&#x4EE5;&#x7528;Redis&#x7684;&#x539F;&#x5B50;&#x64CD;&#x4F5C; INCR&#x548C;INCRBY&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x4F7F;&#x7528;Redis&#x6765;&#x751F;&#x6210;&#x65E5;&#x5207;&#x6D41;&#x6C34;&#x53F7;&#x3002;&#x6BD4;&#x5982;&#x8BA2;&#x5355;&#x53F7;=&#x65E5;&#x671F;+&#x5F53;&#x65E5;&#x81EA;&#x589E;&#x957F;&#x53F7;&#x3002;&#x53EF;&#x4EE5;&#x6BCF;&#x5929;&#x5728;Redis&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;Key&#xFF0C;&#x4F7F;&#x7528;INCR&#x8FDB;&#x884C;&#x7D2F;&#x52A0;&#x3002;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<p>&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7075;&#x6D3B;&#x65B9;&#x4FBF;&#xFF0C;&#x4E14;&#x6027;&#x80FD;&#x4F18;&#x4E8E;&#x6570;&#x636E;&#x5E93;</p>
+<p>&#x6570;&#x5B57;ID&#x5929;&#x7136;&#x6392;&#x5E8F;&#xFF0C;&#x5BF9;&#x5206;&#x9875;&#x6216;&#x8005;&#x9700;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x7ED3;&#x679C;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#x3002;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x4E2D;&#x6CA1;&#x6709;Redis&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5F15;&#x5165;&#x65B0;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x589E;&#x52A0;&#x7CFB;&#x7EDF;&#x590D;&#x6742;&#x5EA6;</p>
+<p>&#x9700;&#x8981;&#x7F16;&#x7801;&#x548C;&#x914D;&#x7F6E;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#x6BD4;&#x8F83;&#x5927;</p>
+<p>Redis&#x5355;&#x70B9;&#x6545;&#x969C;&#xFF0C;&#x5F71;&#x54CD;&#x5E8F;&#x5217;&#x670D;&#x52A1;&#x7684;&#x53EF;&#x7528;&#x6027;&#x3002;</p>
+<h4 id="&#x5229;&#x7528;zookeeper&#x751F;&#x6210;"><strong>&#x5229;&#x7528;zookeeper&#x751F;&#x6210;</strong></h4>
+<p>zookeeper&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x5176;znode&#x6570;&#x636E;&#x7248;&#x672C;&#x6765;&#x751F;&#x6210;&#x5E8F;&#x5217;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x751F;&#x6210;32&#x4F4D;&#x548C;64&#x4F4D;&#x7684;&#x6570;&#x636E;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#x6765;&#x4F5C;&#x4E3A;&#x552F;&#x4E00;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#x3002;</p>
+<p>&#x5F88;&#x5C11;&#x4F1A;&#x4F7F;&#x7528;zookeeper&#x6765;&#x751F;&#x6210;&#x552F;&#x4E00;ID&#x3002;&#x4E3B;&#x8981;&#x662F;&#x7531;&#x4E8E;&#x9700;&#x8981;&#x4F9D;&#x8D56;zookeeper&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x591A;&#x6B65;&#x8C03;&#x7528;API&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7ADE;&#x4E89;&#x8F83;&#x5927;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x5206;&#x5E03;&#x5F0F;&#x9501;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6027;&#x80FD;&#x5728;&#x9AD8;&#x5E76;&#x53D1;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x4E5F;&#x4E0D;&#x751A;&#x7406;&#x60F3;&#x3002;</p>
+<h4 id="&#x96EA;&#x82B1;&#x7B97;&#x6CD5;&#x751F;&#x6210;"><strong>&#x96EA;&#x82B1;&#x7B97;&#x6CD5;&#x751F;&#x6210;</strong></h4>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x5927;&#x81F4;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x79CD;&#x4EE5;&#x5212;&#x5206;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF08;UUID&#x4E5F;&#x7B97;&#xFF0C;&#x7531;&#x4E8E;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#xFF0C;&#x6240;&#x4EE5;&#x5355;&#x72EC;&#x5206;&#x6790;&#xFF09;&#x6765;&#x751F;&#x6210;ID&#x7684;&#x4E00;&#x79CD;&#x7B97;&#x6CD5;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x628A;64-bit&#x5206;&#x522B;&#x5212;&#x5206;&#x6210;&#x591A;&#x6BB5;&#xFF0C;&#x5206;&#x5F00;&#x6765;&#x6807;&#x793A;&#x673A;&#x5668;&#x3001;&#x65F6;&#x95F4;&#x7B49;&#xFF0C;&#x6BD4;&#x5982;&#x5728;snowflake&#x4E2D;&#x7684;64-bit&#x5206;&#x522B;&#x8868;&#x793A;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="../../image/up-50ee4794f30b7fe913e91bf65dbc2a35350.png" alt=""><img src="../../image/up-cb30e423bf795d18f9a14856c2f2648a675.png" alt=""></p>
+<p>1-bit&#x7684;&#x65F6;&#x95F4;&#x53EF;&#x4EE5;&#x8868;&#x793A;<code>&#xFF08;1L&lt;&lt;41/(1000L360024*365)=69</code>&#x5E74;&#x7684;&#x65F6;&#x95F4;&#xFF0C;10-bit&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x8868;&#x793A;1024&#x53F0;&#x673A;&#x5668;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5BF9;IDC&#x5212;&#x5206;&#x6709;&#x9700;&#x6C42;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;10-bit&#x5206;5-bit&#x7ED9;IDC&#xFF0C;&#x5206;5-bit&#x7ED9;&#x5DE5;&#x4F5C;&#x673A;&#x5668;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x8868;&#x793A;32&#x4E2A;IDC&#xFF0C;&#x6BCF;&#x4E2A;IDC&#x4E0B;&#x53EF;&#x4EE5;&#x6709;32&#x53F0;&#x673A;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x9700;&#x6C42;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>12&#x4E2A;&#x81EA;&#x589E;&#x5E8F;&#x5217;&#x53F7;&#x53EF;&#x4EE5;&#x8868;&#x793A;2^12&#x4E2A;ID&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;snowflake&#x65B9;&#x6848;&#x7684;QPS&#x7EA6;&#x4E3A;409.6w/s&#xFF0C;&#x8FD9;&#x79CD;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;IDC&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x5728;&#x4EFB;&#x610F;&#x6BEB;&#x79D2;&#x5185;&#x751F;&#x6210;&#x7684;ID&#x90FD;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    &#x6BEB;&#x79D2;&#x6570;&#x5728;&#x9AD8;&#x4F4D;&#xFF0C;&#x81EA;&#x589E;&#x5E8F;&#x5217;&#x5728;&#x4F4E;&#x4F4D;&#xFF0C;&#x6574;&#x4E2A;ID&#x90FD;&#x662F;&#x8D8B;&#x52BF;&#x9012;&#x589E;&#x7684;&#x3002;</p>
+<p>&#x4E0D;&#x4F9D;&#x8D56;&#x6570;&#x636E;&#x5E93;&#x7B49;&#x7B2C;&#x4E09;&#x65B9;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE5;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#xFF0C;&#x7A33;&#x5B9A;&#x6027;&#x66F4;&#x9AD8;&#xFF0C;&#x751F;&#x6210;ID&#x7684;&#x6027;&#x80FD;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x9AD8;&#x7684;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x4E1A;&#x52A1;&#x7279;&#x6027;&#x5206;&#x914D;bit&#x4F4D;&#xFF0C;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x3002;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<p>&#x5F3A;&#x4F9D;&#x8D56;&#x673A;&#x5668;&#x65F6;&#x949F;&#xFF0C;&#x5982;&#x679C;&#x673A;&#x5668;&#x4E0A;&#x65F6;&#x949F;&#x56DE;&#x62E8;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x53D1;&#x53F7;&#x91CD;&#x590D;&#x6216;&#x8005;&#x670D;&#x52A1;&#x4F1A;&#x5904;&#x4E8E;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#x3002;</p>
+<p><strong>snowflake &#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x89E3;&#x6790;</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * Twitter_Snowflake
+ * SnowFlake&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;(&#x6BCF;&#x90E8;&#x5206;&#x7528;-&#x5206;&#x5F00;):
+ * 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000 &lt;br&gt;
+ * 1&#x4F4D;&#x6807;&#x8BC6;&#xFF0C;&#x7531;&#x4E8E;long&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x5728;Java&#x4E2D;&#x662F;&#x5E26;&#x7B26;&#x53F7;&#x7684;&#xFF0C;&#x6700;&#x9AD8;&#x4F4D;&#x662F;&#x7B26;&#x53F7;&#x4F4D;&#xFF0C;&#x6B63;&#x6570;&#x662F;0&#xFF0C;&#x8D1F;&#x6570;&#x662F;1&#xFF0C;&#x6240;&#x4EE5;id&#x4E00;&#x822C;&#x662F;&#x6B63;&#x6570;&#xFF0C;&#x6700;&#x9AD8;&#x4F4D;&#x662F;0&lt;br&gt;
+ * 41&#x4F4D;&#x65F6;&#x95F4;&#x622A;(&#x6BEB;&#x79D2;&#x7EA7;)&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;41&#x4F4D;&#x65F6;&#x95F4;&#x622A;&#x4E0D;&#x662F;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x622A;&#xFF0C;&#x800C;&#x662F;&#x5B58;&#x50A8;&#x65F6;&#x95F4;&#x622A;&#x7684;&#x5DEE;&#x503C;&#xFF08;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x622A; - &#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x622A;)
+ * &#x5F97;&#x5230;&#x7684;&#x503C;&#xFF09;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x7684;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x622A;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x6211;&#x4EEC;&#x7684;id&#x751F;&#x6210;&#x5668;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x7531;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x6765;&#x6307;&#x5B9A;&#x7684;&#xFF08;&#x5982;&#x4E0B;&#x4E0B;&#x9762;&#x7A0B;&#x5E8F;IdWorker&#x7C7B;&#x7684;
+ startTime&#x5C5E;&#x6027;&#xFF09;&#x3002;41&#x4F4D;&#x7684;&#x65F6;&#x95F4;&#x622A;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;69&#x5E74;&#xFF0C;&#x5E74;T = (1L &lt;&lt; 41) / (1000L * 60 * 60 * 24 * 365) = 69&lt;br&gt;
+ * 10&#x4F4D;&#x7684;&#x6570;&#x636E;&#x673A;&#x5668;&#x4F4D;&#xFF0C;&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x5728;1024&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5305;&#x62EC;5&#x4F4D;datacenterId&#x548C;5&#x4F4D;workerId&lt;br&gt;
+ * 12&#x4F4D;&#x5E8F;&#x5217;&#xFF0C;&#x6BEB;&#x79D2;&#x5185;&#x7684;&#x8BA1;&#x6570;&#xFF0C;12&#x4F4D;&#x7684;&#x8BA1;&#x6570;&#x987A;&#x5E8F;&#x53F7;&#x652F;&#x6301;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6BCF;&#x6BEB;&#x79D2;(&#x540C;&#x4E00;&#x673A;&#x5668;&#xFF0C;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x622A;)&#x4EA7;&#x751F;4096&#x4E2A;ID&#x5E8F;&#x53F7;&lt;br&gt;
+ * &#x52A0;&#x8D77;&#x6765;&#x521A;&#x597D;64&#x4F4D;&#xFF0C;&#x4E3A;&#x4E00;&#x4E2A;Long&#x578B;&#x3002;&lt;br&gt;
+ * SnowFlake&#x7684;&#x4F18;&#x70B9;&#x662F;&#xFF0C;&#x6574;&#x4F53;&#x4E0A;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x81EA;&#x589E;&#x6392;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x6574;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x5185;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;ID&#x78B0;&#x649E;(&#x7531;&#x6570;&#x636E;&#x4E2D;&#x5FC3;ID&#x548C;&#x673A;&#x5668;ID&#x4F5C;&#x533A;&#x5206;)&#xFF0C;&#x5E76;&#x4E14;&#x6548;&#x7387;&#x8F83;&#x9AD8;&#xFF0C;&#x7ECF;&#x6D4B;&#x8BD5;&#xFF0C;SnowFlake&#x6BCF;&#x79D2;&#x80FD;&#x591F;&#x4EA7;&#x751F;26&#x4E07;ID&#x5DE6;&#x53F3;&#x3002;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnowflakeIdWorker</span> </span>{
+
+    <span class="hljs-comment">// ==============================Fields===========================================</span>
+    <span class="hljs-comment">/** &#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x622A; (2015-01-01) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> twepoch = <span class="hljs-number">1420041600000L</span>;
+
+    <span class="hljs-comment">/** &#x673A;&#x5668;id&#x6240;&#x5360;&#x7684;&#x4F4D;&#x6570; */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> workerIdBits = <span class="hljs-number">5L</span>;
+
+    <span class="hljs-comment">/** &#x6570;&#x636E;&#x6807;&#x8BC6;id&#x6240;&#x5360;&#x7684;&#x4F4D;&#x6570; */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> datacenterIdBits = <span class="hljs-number">5L</span>;
+
+    <span class="hljs-comment">/** &#x652F;&#x6301;&#x7684;&#x6700;&#x5927;&#x673A;&#x5668;id&#xFF0C;&#x7ED3;&#x679C;&#x662F;31 (&#x8FD9;&#x4E2A;&#x79FB;&#x4F4D;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x7684;&#x8BA1;&#x7B97;&#x51FA;&#x51E0;&#x4F4D;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x6240;&#x80FD;&#x8868;&#x793A;&#x7684;&#x6700;&#x5927;&#x5341;&#x8FDB;&#x5236;&#x6570;) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> maxWorkerId = -<span class="hljs-number">1L</span> ^ (-<span class="hljs-number">1L</span> &lt;&lt; workerIdBits);
+
+    <span class="hljs-comment">/** &#x652F;&#x6301;&#x7684;&#x6700;&#x5927;&#x6570;&#x636E;&#x6807;&#x8BC6;id&#xFF0C;&#x7ED3;&#x679C;&#x662F;31 */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> maxDatacenterId = -<span class="hljs-number">1L</span> ^ (-<span class="hljs-number">1L</span> &lt;&lt; datacenterIdBits);
+
+    <span class="hljs-comment">/** &#x5E8F;&#x5217;&#x5728;id&#x4E2D;&#x5360;&#x7684;&#x4F4D;&#x6570; */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> sequenceBits = <span class="hljs-number">12L</span>;
+
+    <span class="hljs-comment">/** &#x673A;&#x5668;ID&#x5411;&#x5DE6;&#x79FB;12&#x4F4D; */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> workerIdShift = sequenceBits;
+
+    <span class="hljs-comment">/** &#x6570;&#x636E;&#x6807;&#x8BC6;id&#x5411;&#x5DE6;&#x79FB;17&#x4F4D;(12+5) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> datacenterIdShift = sequenceBits + workerIdBits;
+
+    <span class="hljs-comment">/** &#x65F6;&#x95F4;&#x622A;&#x5411;&#x5DE6;&#x79FB;22&#x4F4D;(5+5+12) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> timestampLeftShift = sequenceBits + workerIdBits + datacenterIdBits;
+
+    <span class="hljs-comment">/** &#x751F;&#x6210;&#x5E8F;&#x5217;&#x7684;&#x63A9;&#x7801;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3A;4095 (0b111111111111=0xfff=4095) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> sequenceMask = -<span class="hljs-number">1L</span> ^ (-<span class="hljs-number">1L</span> &lt;&lt; sequenceBits);
+
+    <span class="hljs-comment">/** &#x5DE5;&#x4F5C;&#x673A;&#x5668;ID(0~31) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">long</span> workerId;
+
+    <span class="hljs-comment">/** &#x6570;&#x636E;&#x4E2D;&#x5FC3;ID(0~31) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">long</span> datacenterId;
+
+    <span class="hljs-comment">/** &#x6BEB;&#x79D2;&#x5185;&#x5E8F;&#x5217;(0~4095) */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">long</span> sequence = <span class="hljs-number">0L</span>;
+
+    <span class="hljs-comment">/** &#x4E0A;&#x6B21;&#x751F;&#x6210;ID&#x7684;&#x65F6;&#x95F4;&#x622A; */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">long</span> lastTimestamp = -<span class="hljs-number">1L</span>;
+
+    <span class="hljs-comment">//==============================Constructors=====================================</span>
+    <span class="hljs-comment">/**
+     * &#x6784;&#x9020;&#x51FD;&#x6570;
+     * <span class="hljs-doctag">@param</span> workerId &#x5DE5;&#x4F5C;ID (0~31)
+     * <span class="hljs-doctag">@param</span> datacenterId &#x6570;&#x636E;&#x4E2D;&#x5FC3;ID (0~31)
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SnowflakeIdWorker</span><span class="hljs-params">(<span class="hljs-keyword">long</span> workerId, <span class="hljs-keyword">long</span> datacenterId)</span> </span>{
+        <span class="hljs-keyword">if</span> (workerId &gt; maxWorkerId || workerId &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(String.format(<span class="hljs-string">&quot;worker Id can&apos;t be greater than %d or less than 0&quot;</span>, maxWorkerId));
+        }
+        <span class="hljs-keyword">if</span> (datacenterId &gt; maxDatacenterId || datacenterId &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(String.format(<span class="hljs-string">&quot;datacenter Id can&apos;t be greater than %d or less than 0&quot;</span>, maxDatacenterId));
+        }
+        <span class="hljs-keyword">this</span>.workerId = workerId;
+        <span class="hljs-keyword">this</span>.datacenterId = datacenterId;
+    }
+
+    <span class="hljs-comment">// ==============================Methods==========================================</span>
+    <span class="hljs-comment">/**
+     * &#x83B7;&#x5F97;&#x4E0B;&#x4E00;&#x4E2A;ID (&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;)
+     * <span class="hljs-doctag">@return</span> SnowflakeId
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">long</span> <span class="hljs-title">nextId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">long</span> timestamp = timeGen();
+
+        <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x5C0F;&#x4E8E;&#x4E0A;&#x4E00;&#x6B21;ID&#x751F;&#x6210;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x8BF4;&#x660E;&#x7CFB;&#x7EDF;&#x65F6;&#x949F;&#x56DE;&#x9000;&#x8FC7;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5E94;&#x5F53;&#x629B;&#x51FA;&#x5F02;&#x5E38;</span>
+        <span class="hljs-keyword">if</span> (timestamp &lt; lastTimestamp) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(
+                    String.format(<span class="hljs-string">&quot;Clock moved backwards.  Refusing to generate id for %d milliseconds&quot;</span>, lastTimestamp - timestamp));
+        }
+
+        <span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x751F;&#x6210;&#x7684;&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x6BEB;&#x79D2;&#x5185;&#x5E8F;&#x5217;</span>
+        <span class="hljs-keyword">if</span> (lastTimestamp == timestamp) {
+            sequence = (sequence + <span class="hljs-number">1</span>) &amp; sequenceMask;
+            <span class="hljs-comment">//&#x6BEB;&#x79D2;&#x5185;&#x5E8F;&#x5217;&#x6EA2;&#x51FA;</span>
+            <span class="hljs-keyword">if</span> (sequence == <span class="hljs-number">0</span>) {
+                <span class="hljs-comment">//&#x963B;&#x585E;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6BEB;&#x79D2;,&#x83B7;&#x5F97;&#x65B0;&#x7684;&#x65F6;&#x95F4;&#x6233;</span>
+                timestamp = tilNextMillis(lastTimestamp);
+            }
+        }
+        <span class="hljs-comment">//&#x65F6;&#x95F4;&#x6233;&#x6539;&#x53D8;&#xFF0C;&#x6BEB;&#x79D2;&#x5185;&#x5E8F;&#x5217;&#x91CD;&#x7F6E;</span>
+        <span class="hljs-keyword">else</span> {
+            sequence = <span class="hljs-number">0L</span>;
+        }
+
+        <span class="hljs-comment">//&#x4E0A;&#x6B21;&#x751F;&#x6210;ID&#x7684;&#x65F6;&#x95F4;&#x622A;</span>
+        lastTimestamp = timestamp;
+
+        <span class="hljs-comment">//&#x79FB;&#x4F4D;&#x5E76;&#x901A;&#x8FC7;&#x6216;&#x8FD0;&#x7B97;&#x62FC;&#x5230;&#x4E00;&#x8D77;&#x7EC4;&#x6210;64&#x4F4D;&#x7684;ID</span>
+        <span class="hljs-keyword">return</span> ((timestamp - twepoch) &lt;&lt; timestampLeftShift) <span class="hljs-comment">//</span>
+                | (datacenterId &lt;&lt; datacenterIdShift) <span class="hljs-comment">//</span>
+                | (workerId &lt;&lt; workerIdShift) <span class="hljs-comment">//</span>
+                | sequence;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x963B;&#x585E;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6BEB;&#x79D2;&#xFF0C;&#x76F4;&#x5230;&#x83B7;&#x5F97;&#x65B0;&#x7684;&#x65F6;&#x95F4;&#x6233;
+     * <span class="hljs-doctag">@param</span> lastTimestamp &#x4E0A;&#x6B21;&#x751F;&#x6210;ID&#x7684;&#x65F6;&#x95F4;&#x622A;
+     * <span class="hljs-doctag">@return</span> &#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">long</span> <span class="hljs-title">tilNextMillis</span><span class="hljs-params">(<span class="hljs-keyword">long</span> lastTimestamp)</span> </span>{
+        <span class="hljs-keyword">long</span> timestamp = timeGen();
+        <span class="hljs-keyword">while</span> (timestamp &lt;= lastTimestamp) {
+            timestamp = timeGen();
+        }
+        <span class="hljs-keyword">return</span> timestamp;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x8FD4;&#x56DE;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;
+     * <span class="hljs-doctag">@return</span> &#x5F53;&#x524D;&#x65F6;&#x95F4;(&#x6BEB;&#x79D2;)
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">long</span> <span class="hljs-title">timeGen</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> System.currentTimeMillis();
+    }
+
+    <span class="hljs-comment">//==============================Test=============================================</span>
+    <span class="hljs-comment">/** &#x6D4B;&#x8BD5; */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+<span class="hljs-comment">//      System.out.println(Long.toBinaryString(5));</span>
+        SnowflakeIdWorker idWorker = <span class="hljs-keyword">new</span> SnowflakeIdWorker(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1000</span>; i++) {
+            <span class="hljs-keyword">long</span> id = idWorker.nextId();
+            System.out.println(Long.toBinaryString(id));
+            System.out.println(id);
+        }
+    }
+}
+</code></pre>
+<h4 id="&#x6EF4;&#x6EF4;-tinyid"><strong>&#x6EF4;&#x6EF4; Tinyid</strong></h4>
+<p>Tinyid&#x662F;&#x7528;Java&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x6B3E;&#x5206;&#x5E03;&#x5F0F;id&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#xFF0C;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x53F7;&#x6BB5;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>Tinyid&#x6269;&#x5C55;&#x4E86;leaf-segment&#x7B97;&#x6CD5;&#xFF0C;&#x652F;&#x6301;&#x4E86;&#x591A;db(master)&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x4E86;java-client(sdk)&#x4F7F;id&#x751F;&#x6210;&#x672C;&#x5730;&#x5316;&#xFF0C;&#x83B7;&#x5F97;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x4E0E;&#x53EF;&#x7528;&#x6027;&#x3002;</p>
+<p>Tinyid&#x5728;&#x6EF4;&#x6EF4;&#x5BA2;&#x670D;&#x90E8;&#x95E8;&#x4F7F;&#x7528;&#xFF0C;&#x5747;&#x901A;&#x8FC7;tinyid-client&#x65B9;&#x5F0F;&#x63A5;&#x5165;&#xFF0C;&#x6BCF;&#x5929;&#x751F;&#x6210;&#x4EBF;&#x7EA7;&#x522B;&#x7684;id&#x3002;</p>
+<p>Tinyid&#x7684;&#x7279;&#x6027;:</p>
+<p>&#x200B;    1.&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;long&#x578B;id</p>
+<p>&#x200B;    2.&#x8D8B;&#x52BF;&#x9012;&#x589E;&#x7684;id&#xFF0C;&#x5373;&#x4E0D;&#x4FDD;&#x8BC1;&#x4E0B;&#x4E00;&#x4E2A;id&#x4E00;&#x5B9A;&#x6BD4;&#x4E0A;&#x4E00;&#x4E2A;&#x5927;</p>
+<p>&#x200B;    3.&#x975E;&#x8FDE;&#x7EED;&#x6027;</p>
+<p>&#x200B;    4.&#x63D0;&#x4F9B;http&#x548C;java client&#x65B9;&#x5F0F;&#x63A5;&#x5165;</p>
+<p>&#x200B;    5.&#x652F;&#x6301;&#x6279;&#x91CF;&#x83B7;&#x53D6;id</p>
+<p>&#x200B;    6.&#x652F;&#x6301;&#x751F;&#x6210;1,3,5,7,9...&#x5E8F;&#x5217;&#x7684;id</p>
+<p>&#x200B;    7.&#x652F;&#x6301;&#x591A;&#x4E2A;db&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x65E0;&#x5355;&#x70B9;</p>
+<p>tinyid&#x7684;&#x539F;&#x7406;</p>
+<p>tinyid&#x662F;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x53D1;&#x53F7;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x662F;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4FDD;&#x5B58;&#x4E86;&#x53EF;&#x7528;&#x7684;id&#x53F7;&#x6BB5;&#xFF0C;tinyid&#x4F1A;&#x5C06;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x4E4B;&#x540E;&#x751F;&#x6210;id&#x4F1A;&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x4E2D;&#x4EA7;&#x751F;&#x3002;</p>
+<p>&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x83B7;&#x53D6;id&#x65F6;&#x52A0;&#x8F7D;&#xFF0C;&#x5982;&#x5F53;&#x524D;&#x53F7;&#x6BB5;&#x4F7F;&#x7528;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x91CF;&#x65F6;&#xFF0C;&#x4F1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x4E0B;&#x4E00;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#xFF0C;&#x4FDD;&#x8BC1;&#x5185;&#x5B58;&#x4E2D;&#x59CB;&#x7EC8;&#x6709;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#x3002;</p>
+<p>&#x5982;&#x53EF;&#x7528;&#x53F7;&#x6BB5;11000&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5219;&#x83B7;&#x53D6;id&#x65F6;&#xFF0C;&#x4F1A;&#x4ECE;1&#x5F00;&#x59CB;&#x9012;&#x589E;&#x83B7;&#x53D6;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;&#x5230;&#x4E00;&#x5B9A;&#x767E;&#x5206;&#x6BD4;&#x65F6;&#xFF0C;&#x5982;20%(&#x9ED8;&#x8BA4;)&#xFF0C;&#x5373;200&#x65F6;&#xFF0C;&#x4F1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x4E0B;&#x4E00;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5047;&#x8BBE;&#x65B0;&#x52A0;&#x8F7D;&#x7684;&#x53F7;&#x6BB5;&#x662F;10012000,&#x5219;&#x6B64;&#x65F6;&#x5185;&#x5B58;&#x4E2D;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#x4E3A;2001000,10012000&#xFF0C;&#x5F53;id&#x9012;&#x589E;&#x5230;1000&#x65F6;&#xFF0C;&#x5F53;&#x524D;&#x53F7;&#x6BB5;&#x4F7F;&#x7528;&#x5B8C;&#x6BD5;&#xFF0C;&#x4E0B;&#x4E00;&#x53F7;&#x6BB5;&#x4F1A;&#x66FF;&#x6362;&#x4E3A;&#x5F53;&#x524D;&#x53F7;&#x6BB5;&#x3002;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#x3002;</p>
+<p><strong>tinyid&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x56FE;</strong></p>
+<p><img src="../../image/up-e0382f2541df6ba1dab1dce705b99f13b37.png" alt=""></p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x67B6;&#x6784;&#x56FE;&#x7684;&#x8BF4;&#x660E;:</p>
+<p>nextId&#x548C;getNextSegmentId&#x662F;tinyid-server&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x7684;&#x4E24;&#x4E2A;http&#x63A5;&#x53E3;</p>
+<p>nextId&#x662F;&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x4E2A;id&#xFF0C;&#x5F53;&#x8C03;&#x7528;nextId&#x65F6;&#xFF0C;&#x4F1A;&#x4F20;&#x5165;bizType&#xFF0C;&#x6BCF;&#x4E2A;bizType&#x7684;id&#x6570;&#x636E;&#x662F;&#x9694;&#x79BB;&#x7684;&#xFF0C;&#x751F;&#x6210;id&#x4F1A;&#x4F7F;&#x7528;&#x8BE5;bizType&#x7C7B;&#x578B;&#x751F;&#x6210;&#x7684;IdGenerator&#x3002;</p>
+<p>getNextSegmentId&#x662F;&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x53F7;&#x6BB5;&#xFF0C;tinyid-client&#x4F1A;&#x901A;&#x8FC7;&#x6B64;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;&#x53EF;&#x7528;&#x53F7;&#x6BB5;</p>
+<p>IdGenerator&#x662F;id&#x751F;&#x6210;&#x7684;&#x63A5;&#x53E3;</p>
+<p>IdGeneratorFactory&#x662F;&#x751F;&#x4EA7;&#x5177;&#x4F53;IdGenerator&#x7684;&#x5DE5;&#x5382;&#xFF0C;&#x6BCF;&#x4E2A;biz_type&#x751F;&#x6210;&#x4E00;&#x4E2A;IdGenerator&#x5B9E;&#x4F8B;&#x3002;&#x901A;&#x8FC7;&#x5DE5;&#x5382;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x5728;db&#x4E2D;&#x65B0;&#x589E;biz_type&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x91CD;&#x542F;&#x670D;&#x52A1;</p>
+<p>IdGeneratorFactory&#x5B9E;&#x9645;&#x4E0A;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x7C7B;IdGeneratorFactoryServer&#x548C;IdGeneratorFactoryClient&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;getNextSegmentId&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;DbGet,&#x4E00;&#x4E2A;&#x662F;HttpGet</p>
+<p>CachedIdGenerator&#x5219;&#x662F;&#x5177;&#x4F53;&#x7684;id&#x751F;&#x6210;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x6301;&#x6709;currentSegmentId&#x548C;nextSegmentId&#x5BF9;&#x8C61;&#xFF0C;&#x8D1F;&#x8D23;nextId&#x7684;&#x6838;&#x5FC3;&#x6D41;&#x7A0B;&#x3002;nextId&#x6700;&#x7EC8;&#x901A;&#x8FC7;AtomicLong.andAndGet(delta)&#x65B9;&#x6CD5;&#x4EA7;&#x751F;&#x3002;</p>
+<h4 id="---&#x5176;&#x4ED6;&#x751F;&#x6210;&#x65B9;&#x5F0F;"><strong>    &#x5176;&#x4ED6;&#x751F;&#x6210;&#x65B9;&#x5F0F;</strong></h4>
+<p>&#x767E;&#x5EA6; UidGenerator    <a href="https://github.com/baidu/uid-generator" target="_blank">https://github.com/baidu/uid-generator</a></p>
+<p>&#x7F8E;&#x56E2; Leaf    <a href="https://github.com/zhuzhong/idleaf" target="_blank">https://github.com/zhuzhong/idleaf</a></p>
 
                                 
                                 </section>
@@ -3226,7 +3467,7 @@ String s = UUID.randomUUID().toString();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"全局唯一ID","level":"1.17.6.1","depth":3,"next":{"title":"短链接","level":"1.17.7","depth":2,"ref":"","articles":[{"title":"短链接","level":"1.17.7.1","depth":3,"path":"notes/分布式/短链接/短链接.md","ref":"notes/分布式/短链接/短链接.md","articles":[]}]},"previous":{"title":"唯一序列号","level":"1.17.6","depth":2,"ref":"","articles":[{"title":"全局唯一ID","level":"1.17.6.1","depth":3,"path":"notes/分布式/唯一序列号/全局唯一ID.md","ref":"notes/分布式/唯一序列号/全局唯一ID.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/分布式/唯一序列号/全局唯一ID.md","mtime":"2020-06-04T04:28:09.420Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T04:33:28.103Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"全局唯一ID","level":"1.17.6.1","depth":3,"next":{"title":"短链接","level":"1.17.7","depth":2,"ref":"","articles":[{"title":"短链接","level":"1.17.7.1","depth":3,"path":"notes/分布式/短链接/短链接.md","ref":"notes/分布式/短链接/短链接.md","articles":[]}]},"previous":{"title":"唯一序列号","level":"1.17.6","depth":2,"ref":"","articles":[{"title":"全局唯一ID","level":"1.17.6.1","depth":3,"path":"notes/分布式/唯一序列号/全局唯一ID.md","ref":"notes/分布式/唯一序列号/全局唯一ID.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/分布式/唯一序列号/全局唯一ID.md","mtime":"2020-06-07T08:49:06.085Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-07T10:15:34.210Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

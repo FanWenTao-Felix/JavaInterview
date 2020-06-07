@@ -3159,6 +3159,148 @@ hessian=com.alibaba.dubbo.rpc.protocol.hessian.HessianProtocolCopy to clipboardE
 <p>&#x200B;    &#x6240;&#x4EE5;&#x8BF4;&#xFF0C;&#x8FD9;&#x5C31;&#x770B;&#x5230;&#x4E86; dubbo &#x7684; spi &#x673A;&#x5236;&#x9ED8;&#x8BA4;&#x662F;&#x600E;&#x4E48;&#x73A9;&#x513F;&#x7684;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F; Protocol &#x63A5;&#x53E3;&#xFF0C;<code>@SPI(&quot;dubbo&quot;)</code> &#x8BF4;&#x7684;&#x662F;&#xFF0C;&#x901A;&#x8FC7; SPI &#x673A;&#x5236;&#x6765;&#x63D0;&#x4F9B;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x7C7B;&#x662F;&#x901A;&#x8FC7; dubbo &#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4; key &#x53BB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x627E;&#x5230;&#x7684;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E0E;&#x63A5;&#x53E3;&#x5168;&#x9650;&#x5B9A;&#x540D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x901A;&#x8FC7; dubbo &#x4F5C;&#x4E3A; key &#x53EF;&#x4EE5;&#x627E;&#x5230;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x5C31;&#x662F; <code>com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol</code>&#x3002;</p>
 <p>&#x200B;    &#x5982;&#x679C;&#x60F3;&#x8981;&#x52A8;&#x6001;&#x66FF;&#x6362;&#x6389;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>@Adaptive</code> &#x63A5;&#x53E3;&#xFF0C;Protocol &#x63A5;&#x53E3;&#x4E2D;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x52A0;&#x4E86; <code>@Adaptive</code> &#x6CE8;&#x89E3;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x90A3;&#x4FE9;&#x63A5;&#x53E3;&#x4F1A;&#x88AB;&#x4EE3;&#x7406;&#x5B9E;&#x73B0;&#x3002;</p>
 <p>&#x200B;    &#x6BD4;&#x5982;&#x8FD9;&#x4E2A; Protocol &#x63A5;&#x53E3;&#x641E;&#x4E86;&#x4FE9; <code>@Adaptive</code> &#x6CE8;&#x89E3;&#x6807;&#x6CE8;&#x4E86;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x9488;&#x5BF9; Protocol &#x751F;&#x6210;&#x4EE3;&#x7406;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EE3;&#x7406;&#x7C7B;&#x7684;&#x90A3;&#x4FE9;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x4F1A;&#x6709;&#x4EE3;&#x7406;&#x4EE3;&#x7801;&#xFF0C;&#x4EE3;&#x7406;&#x4EE3;&#x7801;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x52A8;&#x6001;&#x6839;&#x636E; url &#x4E2D;&#x7684; protocol &#x6765;&#x83B7;&#x53D6;&#x90A3;&#x4E2A; key&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; dubbo&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x6307;&#x5B9A;&#xFF0C;&#x4F60;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x522B;&#x7684; key&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x83B7;&#x53D6;&#x522B;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4E86;&#x3002;</p>
+<h1 id="1-spi&#x673A;&#x5236;&#x7B80;&#x4ECB;">1 SPI&#x673A;&#x5236;&#x7B80;&#x4ECB;</h1>
+<p>SPI&#x7684;&#x5168;&#x540D;&#x4E3A;Service Provider Interface&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x9488;&#x5BF9;&#x5382;&#x5546;&#x6216;&#x8005;&#x63D2;&#x4EF6;&#x7684;&#x3002;&#x5728;java.util.ServiceLoader&#x7684;&#x6587;&#x6863;&#x91CC;&#x6709;&#x6BD4;&#x8F83;&#x8BE6;&#x7EC6;&#x7684;&#x4ECB;&#x7ECD;&#x3002;&#x7B80;&#x5355;&#x7684;&#x603B;&#x7ED3;&#x4E0B;java spi&#x673A;&#x5236;&#x7684;&#x601D;&#x60F3;&#x3002;</p>
+<p>&#x7CFB;&#x7EDF;&#x91CC;&#x62BD;&#x8C61;&#x7684;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x5F80;&#x5F80;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#xFF0C;&#x6BD4;&#x5982;&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7684;&#x65B9;&#x6848;&#xFF0C;xml&#x89E3;&#x6790;&#x6A21;&#x5757;&#x3001;jdbc&#x6A21;&#x5757;&#x7684;&#x65B9;&#x6848;&#x7B49;&#x3002;</p>
+<p>&#x9762;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x8BBE;&#x8BA1;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x63A8;&#x8350;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x57FA;&#x4E8E;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;&#xFF0C;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x4E0D;&#x5BF9;&#x5B9E;&#x73B0;&#x7C7B;&#x8FDB;&#x884C;&#x786C;&#x7F16;&#x7801;&#x3002;&#x4E00;&#x65E6;&#x4EE3;&#x7801;&#x91CC;&#x6D89;&#x53CA;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5C31;&#x8FDD;&#x53CD;&#x4E86;&#x53EF;&#x62D4;&#x63D2;&#x7684;&#x539F;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x66FF;&#x6362;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x5728;&#x6A21;&#x5757;&#x88C5;&#x914D;&#x7684;&#x65F6;&#x5019;&#x80FD;&#x4E0D;&#x5728;&#x7A0B;&#x5E8F;&#x91CC;&#x52A8;&#x6001;&#x6307;&#x660E;&#xFF0C;&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x673A;&#x5236;&#x3002; java spi&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#xFF1A;&#x4E3A;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x5BFB;&#x627E;&#x670D;&#x52A1;&#x5B9E;&#x73B0;&#x7684;&#x673A;&#x5236;&#x3002;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;IOC&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x88C5;&#x914D;&#x7684;&#x63A7;&#x5236;&#x6743;&#x79FB;&#x5230;&#x7A0B;&#x5E8F;&#x4E4B;&#x5916;&#xFF0C;&#x5728;&#x6A21;&#x5757;&#x5316;&#x8BBE;&#x8BA1;&#x4E2D;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x5C24;&#x5176;&#x91CD;&#x8981;&#x3002;</p>
+<h1 id="2-spi&#x5177;&#x4F53;&#x7EA6;&#x5B9A;">2 SPI&#x5177;&#x4F53;&#x7EA6;&#x5B9A;</h1>
+<p>java spi&#x7684;&#x5177;&#x4F53;&#x7EA6;&#x5B9A;&#x4E3A;:</p>
+<p>&#x200B;    &#x5F53;&#x670D;&#x52A1;&#x7684;&#x63D0;&#x4F9B;&#x8005;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x7684;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x4E4B;&#x540E;&#xFF0C;&#x5728;jar&#x5305;&#x7684;META-INF/services/&#x76EE;&#x5F55;&#x91CC;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4EE5;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x91CC;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x8BE5;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x7C7B;&#x3002;&#x800C;&#x5F53;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;&#x88C5;&#x914D;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x80FD;&#x901A;&#x8FC7;&#x8BE5;jar&#x5305;META-INF/services/&#x91CC;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x627E;&#x5230;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x540D;&#xFF0C;&#x5E76;&#x88C5;&#x8F7D;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x5B8C;&#x6210;&#x6A21;&#x5757;&#x7684;&#x6CE8;&#x5165;&#x3002; &#x57FA;&#x4E8E;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7EA6;&#x5B9A;&#x5C31;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x627E;&#x5230;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x4EE3;&#x7801;&#x91CC;&#x5236;&#x5B9A;&#x3002;</p>
+<p>jdk&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x5B9E;&#x73B0;&#x67E5;&#x627E;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x7C7B;&#xFF1A;java.util.ServiceLoader</p>
+<p><img src="../image/ba17b6447be46911c35316e672c2c5a33d5.jpg" alt=""></p>
+<h1 id="3-&#x5E94;&#x7528;&#x573A;&#x666F;">3 &#x5E94;&#x7528;&#x573A;&#x666F;</h1>
+<p>common-logging &#xFF1A;Jakarta  Commons-logging&#xFF08;JCL&#xFF09;&#x662F;apache&#x6700;&#x65E9;&#x63D0;&#x4F9B;&#x7684;&#x65E5;&#x5FD7;&#x7684;&#x95E8;&#x9762;&#x63A5;&#x53E3;&#x3002;&#x53EA;&#x6709;&#x63A5;&#x53E3;&#xFF0C;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x3002;&#x5177;&#x4F53;&#x65B9;&#x6848;&#x7531;&#x5404;&#x63D0;&#x4F9B;&#x5546;&#x5B9E;&#x73B0;&#xFF0C;&#x63D0;&#x4F9B;&#x7B80;&#x5355;&#x7684;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x4EE5;&#x53CA;&#x65E5;&#x5FD7;&#x89E3;&#x8026;&#x529F;&#x80FD;&#x3002;</p>
+<p>JCL&#x80FD;&#x591F;&#x9009;&#x62E9;&#x4F7F;&#x7528;Log4j&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5982;slf4j&#x7B49;&#xFF09;&#x8FD8;&#x662F;JDK Logging&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x4E0D;&#x4F9D;&#x8D56;Log4j&#xFF0C;JDK Logging&#x7684;API&#x3002;&#x5982;&#x679C;&#x9879;&#x76EE;&#x7684;classpath&#x4E2D;&#x5305;&#x542B;&#x4E86;log4j&#x7684;&#x7C7B;&#x5E93;&#xFF0C;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;log4j&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4F7F;&#x7528;JDK Logging&#x3002;&#x4F7F;&#x7528;commons-logging&#x80FD;&#x591F;&#x7075;&#x6D3B;&#x7684;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x90A3;&#x4E9B;&#x65E5;&#x5FD7;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x6E90;&#x4EE3;&#x7801;&#x3002;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;JDBC&#x7684;API&#x63A5;&#x53E3;&#xFF09;</p>
+<p>&#x539F;&#x7406;&#xFF1A;<br>    JCL&#x6709;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#xFF1A; Log( &#x57FA;&#x672C;&#x8BB0;&#x5F55;&#x5668; ) &#x548C; LogFactory( &#x8D1F;&#x8D23;&#x521B;&#x5EFA; Log &#x5B9E;&#x4F8B; ) &#x3002;&#x5F53; commons-logging.jar &#x88AB;&#x52A0;&#x5165;&#x5230; CLASSPATH&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x5408;&#x7406;&#x5730;&#x731C;&#x6D4B;&#x4F60;&#x60F3;&#x7528;&#x7684;&#x65E5;&#x5FD7;&#x5DE5;&#x5177;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x81EA;&#x6211;&#x8BBE;&#x7F6E;&#xFF0C;&#x7528;&#x6237;&#x6839;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x8BBE;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x7684; LogFactory &#x662F;&#x6309;&#x7167;&#x4E0B;&#x5217;&#x7684;&#x6B65;&#x9AA4;&#x53BB;&#x53D1;&#x73B0;&#x5E76;&#x51B3;&#x5B9A;&#x90A3;&#x4E2A;&#x65E5;&#x5FD7;&#x5DE5;&#x5177;&#x5C06;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#xFF08;&#x6309;&#x7167;&#x987A;&#x5E8F;&#xFF0C;&#x5BFB;&#x627E;&#x8FC7;&#x7A0B;&#x4F1A;&#x5728;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x65F6;&#x4E2D;&#x6B62;&#xFF09; :</p>
+<p>&#x200B;    &#x2460;&#x9996;&#x5148;&#x5728;classpath&#x4E0B;&#x5BFB;&#x627E;commons-logging.properties&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;Log&#x5B9E;&#x73B0;&#x7C7B;&#xFF1B;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x5219;&#x5728;&#x67E5;&#x627E;&#x662F;&#x5426;&#x5DF2;&#x5B9A;&#x4E49;&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x53D8;&#x91CF;org.apache.commons.logging.Log&#xFF0C;&#x627E;&#x5230;&#x5219;&#x4F7F;&#x7528;&#x5176;&#x5B9A;&#x4E49;&#x7684;Log&#x5B9E;&#x73B0;&#x7C7B;&#xFF1B;</p>
+<p>&#x200B;    &#x2461;&#x67E5;&#x770B;classpath&#x4E2D;&#x662F;&#x5426;&#x6709;Log4j&#x7684;&#x5305;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x4F7F;&#x7528;Log4j&#x4F5C;&#x4E3A;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;&#xFF1B;</p>
+<p>&#x200B;    &#x2462;&#x5426;&#x5219;&#xFF0C;&#x4F7F;&#x7528;JDK&#x81EA;&#x8EAB;&#x7684;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;&#xFF08;JDK1.4&#x4EE5;&#x540E;&#x624D;&#x6709;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;&#xFF09;&#xFF1B;</p>
+<p>&#x200B;    &#x2463;&#x5426;&#x5219;&#xFF0C;&#x4F7F;&#x7528;commons-logging&#x81EA;&#x5DF1;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;SimpleLog&#xFF1B;</p>
+<p>org.apache.commons.logging.Log &#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x6709;&#x5982;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<pre><code>---org.apache.commons.logging.impl.Jdk14Logger &#x3000;&#x4F7F;&#x7528; JDK1.4 &#x3002;
+
+---org.apache.commons.logging.impl.Log4JLogger &#x3000;&#x4F7F;&#x7528; Log4J &#x3002;
+
+---org.apache.commons.logging.impl.LogKitLogger    &#x4F7F;&#x7528; avalon-Logkit &#x3002;
+
+---org.apache.commons.logging.impl.SimpleLog &#x3000;    common-logging &#x81EA;&#x5E26;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;&#x3002;
+
+---org.apache.commons.logging.impl.NoOpLog          common-logging &#x81EA;&#x5E26;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#x7C7B;&#x3002;&#x5B83;&#x5B9E;&#x73B0;&#x4E86; Log &#x63A5;&#x53E3;&#x3002; &#x5176;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;
+</code></pre></blockquote>
+<p>Maven&#x4F9D;&#x8D56;&#xFF1A;</p>
+<blockquote>
+<dependency>  
+ <groupid>commons-logging</groupid>  
+ <artifactid>commons-logging</artifactid>  
+ <version>1.2</version>  
+</dependency>
+
+</blockquote>
+<p>&#x4E00;&#x3001;Commons-logging&#x7B80;&#x5355;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#xFF1A;<br>    &#x2460;&#x65B0;&#x5EFA;commons-logging.properties&#x6587;&#x4EF6;&#xFF0C;&#x653E;&#x7F6E;&#x5728;classpath&#x6839;&#x8DEF;&#x5F84;&#x4E0B;&#xFF1A;</p>
+<p><img src="../image/up-58ba52fa0f1c5cdccbb40c6cba0357afa5e.png" alt=""></p>
+<blockquote>
+<p>org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog</p>
+</blockquote>
+<p>&#x200B;    &#x2461;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;</p>
+<blockquote>
+<p>import org.apache.commons.logging.Log;<br>import org.apache.commons.logging.LogFactory;  </p>
+<p>public class CommonsTest {<br> private final static Log logger = LogFactory.getLog(CommonsTest.class);  </p>
+<p> public static void main(String[] args) {<br>     logger.debug(&quot;DEBUG ...&quot;);<br>     logger.info(&quot;INFO ...&quot;);<br>     logger.error(&quot;ERROR ...&quot;);<br> }<br>}</p>
+</blockquote>
+<p>&#x200B;    &#x8F93;&#x51FA;&#xFF1A;</p>
+<p><img src="../image/up-11f3968538859b0f54db59c4c56115a7b48.png" alt=""></p>
+<p>&#x4E8C;&#x3001;Commons-logging&#x7684;&#x89E3;&#x8026;&#x529F;&#x80FD;&#xFF1A;</p>
+<p>commons-logging&#x6700;&#x6838;&#x5FC3;&#x6709;&#x7528;&#x7684;&#x529F;&#x80FD;&#x662F;&#x89E3;&#x8026;&#xFF0C;&#x5B83;&#x7684;SimpleLog&#x5B9E;&#x73B0;&#x6027;&#x80FD;&#x6BD4;&#x4E0D;&#x4E0A;&#x5176;&#x4ED6;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;log4j&#x7B49;&#x3002; </p>
+<p>&#x200B;    &#x2460;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</p>
+<blockquote>
+<dependency>  
+ <groupid>commons-logging</groupid>  
+ <artifactid>commons-logging</artifactid>  
+ <version>1.2</version>  
+</dependency>  
+<dependency>  
+ <groupid>log4j</groupid>  
+ <artifactid>log4j</artifactid>  
+ <version>1.2.17</version>  
+</dependency>
+
+</blockquote>
+<p>&#x200B;    &#x2461;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p>&#x200B;    &#x4FEE;&#x6539;commons-logging.properties&#x6587;&#x4EF6;&#xFF1A;&#x663E;&#x793A;&#x5730;&#x6307;&#x5B9A;log4j</p>
+<p><img src="../image/up-35fdbd4f41402bbf87a4becec9afa1f180f.png" alt=""></p>
+<blockquote>
+<p>org.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger</p>
+</blockquote>
+<p>&#x200B;    &#x5E76;&#x6DFB;&#x52A0;log4j.properties&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<blockquote>
+<p>log4j.rootLogger=DEBUG,console</p>
+<p># &#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;<br>log4j.appender.console=org.apache.log4j.ConsoleAppender<br># &#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x6837;&#x5F0F;<br>log4j.appender.console.layout=org.apache.log4j.PatternLayout<br># &#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x683C;&#x5F0F;&#x4E3A;<br>log4j.appender.console.layout.ConversionPattern=[%-d{yyyy-MM-dd HH:mm:ss}]-[%t-%5p]-[%C-%M(%L)]: %m%n</p>
+</blockquote>
+<p>&#x200B;    &#x2462;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;</p>
+<blockquote>
+<p>import org.apache.commons.logging.Log;<br>import org.apache.commons.logging.LogFactory;  </p>
+<p>public class CommonsTest {<br> private final static Log logger = LogFactory.getLog(CommonsTest.class);  </p>
+<p> public static void main(String[] args) {<br>     logger.debug(&quot;DEBUG ...&quot;);<br>     logger.info(&quot;INFO ...&quot;);<br>     logger.error(&quot;ERROR ...&quot;);<br> }<br>}</p>
+</blockquote>
+<p>&#x200B;    &#x8F93;&#x51FA;&#xFF1A;</p>
+<p><img src="../image/up-40a332cf135409d48a1104fd91c9690709e.png" alt=""></p>
+<h1 id="4-&#x6848;&#x4F8B;&#x8BF4;&#x660E;">4 &#x6848;&#x4F8B;&#x8BF4;&#x660E;</h1>
+<p>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-comment">/**
+ * &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;dog&#x7684;&#x63A5;&#x53E3;
+ *
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DogService</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>&#x200B;    A&#x516C;&#x53F8;&#x5B9E;&#x73B0;&#x7684;&#x7C7B;  BlackDogServiceImpl </p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.ming.spi.service.DogService;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BlackDogServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DogService</span></span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x9ED1;&#x8272;dog&#x3002;&#x3002;&#x3002;&#x6C6A;&#x6C6A;&#x53EB;&#xFF0C;&#x4E0D;&#x7761;&#x89C9;...&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x200B;    B&#x516C;&#x53F8;&#x5B9E;&#x73B0;&#x7684;&#x7C7B; WhilteDogServiceImpl </p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.ming.spi.service.DogService;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WhilteDogServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DogService</span></span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x767D;&#x8272;dog&#x3002;&#x3002;&#x3002;&#x547C;&#x547C;&#x5927;&#x7761;&#x89C9;...&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;A&#x516C;&#x53F8;&#x53D1;&#x5E03; &#x5B9E;&#x73B0;jar&#x5305;&#x65F6;&#xFF0C;&#x5219;&#x8981;&#x5728;jar&#x5305;&#x4E2D;META-INF/services/my.xyz.spi.Search&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x4E0B;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p>com.ming.spi.service.imp.BlackDogServiceImpl</p>
+<p>&#x90A3;&#x4E48;B&#x516C;&#x53F8;&#x53D1;&#x5E03; &#x5B9E;&#x73B0;jar&#x5305;&#x65F6;&#xFF0C;&#x5219;&#x8981;&#x5728;jar&#x5305;&#x4E2D;META-INF/services/my.xyz.spi.Search&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x4E0B;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p>com.ming.spi.service.imp.WhilteDogServiceImpl</p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.ServiceLoader;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        ServiceLoader&lt;DogService&gt; loaders = ServiceLoader.load(DogService.class);
+        <span class="hljs-keyword">for</span> (DogService d : loaders) {
+            d.sleep();
+        }
+    }
+}
+</code></pre>
+<h4 id="serviceloader&#x7F3A;&#x70B9;&#x5206;&#x6790;"><strong>ServiceLoader&#x7F3A;&#x70B9;&#x5206;&#x6790;</strong></h4>
+<ul>
+<li><p>&#x867D;&#x7136;ServiceLoader&#x4E5F;&#x7B97;&#x662F;&#x4F7F;&#x7528;&#x7684;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x4F46;&#x662F;&#x57FA;&#x672C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x904D;&#x5386;&#x5168;&#x90E8;&#x83B7;&#x53D6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x5168;&#x90E8;&#x52A0;&#x8F7D;&#x5E76;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x904D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5E76;&#x4E0D;&#x60F3;&#x7528;&#x67D0;&#x4E9B;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5B83;&#x4E5F;&#x88AB;&#x52A0;&#x8F7D;&#x5E76;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#xFF0C;&#x8FD9;&#x5C31;&#x9020;&#x6210;&#x4E86;&#x6D6A;&#x8D39;&#x3002;</p>
+</li>
+<li><p>&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x591F;&#x7075;&#x6D3B;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;Iterator&#x5F62;&#x5F0F;&#x83B7;&#x53D6;&#xFF0C;&#x4E0D;&#x80FD;&#x6839;&#x636E;&#x67D0;&#x4E2A;&#x53C2;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -3198,7 +3340,7 @@ hessian=com.alibaba.dubbo.rpc.protocol.hessian.HessianProtocolCopy to clipboardE
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dubbo spi思想","level":"1.9.1","depth":2,"next":{"title":"dubbo工作原理","level":"1.9.2","depth":2,"path":"notes/dubbo/dubbo工作原理.md","ref":"notes/dubbo/dubbo工作原理.md","articles":[]},"previous":{"title":"dubbo","level":"1.9","depth":1,"ref":"","articles":[{"title":"dubbo spi思想","level":"1.9.1","depth":2,"path":"notes/dubbo/dubbo spi思想.md","ref":"notes/dubbo/dubbo spi思想.md","articles":[]},{"title":"dubbo工作原理","level":"1.9.2","depth":2,"path":"notes/dubbo/dubbo工作原理.md","ref":"notes/dubbo/dubbo工作原理.md","articles":[]},{"title":"dubbo支持协议","level":"1.9.3","depth":2,"path":"notes/dubbo/dubbo支持协议.md","ref":"notes/dubbo/dubbo支持协议.md","articles":[]},{"title":"dubbo组件扩展","level":"1.9.4","depth":2,"path":"notes/dubbo/dubbo组件扩展.md","ref":"notes/dubbo/dubbo组件扩展.md","articles":[]},{"title":"dubbo负载均衡策略","level":"1.9.5","depth":2,"path":"notes/dubbo/dubbo负载均衡策略.md","ref":"notes/dubbo/dubbo负载均衡策略.md","articles":[]},{"title":"为什么拆分系统","level":"1.9.6","depth":2,"path":"notes/dubbo/为什么拆分系统.md","ref":"notes/dubbo/为什么拆分系统.md","articles":[]},{"title":"什么是RPC","level":"1.9.7","depth":2,"path":"notes/dubbo/什么是RPC.md","ref":"notes/dubbo/什么是RPC.md","articles":[]},{"title":"从服务服务到服务调用","level":"1.9.8","depth":2,"path":"notes/dubbo/从服务服务到服务调用.md","ref":"notes/dubbo/从服务服务到服务调用.md","articles":[]},{"title":"保证幂等性、顺序性","level":"1.9.9","depth":2,"path":"notes/dubbo/保证幂等性、顺序性.md","ref":"notes/dubbo/保证幂等性、顺序性.md","articles":[]},{"title":"如何设计一个RPC框架","level":"1.9.10","depth":2,"path":"notes/dubbo/如何设计一个RPC框架.md","ref":"notes/dubbo/如何设计一个RPC框架.md","articles":[]},{"title":"服务治理、服务降级、失败超时重试","level":"1.9.11","depth":2,"path":"notes/dubbo/服务治理、服务降级、失败超时重试.md","ref":"notes/dubbo/服务治理、服务降级、失败超时重试.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/dubbo/dubbo spi思想.md","mtime":"2020-06-04T04:28:08.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T04:33:28.103Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dubbo spi思想","level":"1.9.1","depth":2,"next":{"title":"dubbo工作原理","level":"1.9.2","depth":2,"path":"notes/dubbo/dubbo工作原理.md","ref":"notes/dubbo/dubbo工作原理.md","articles":[]},"previous":{"title":"dubbo","level":"1.9","depth":1,"ref":"","articles":[{"title":"dubbo spi思想","level":"1.9.1","depth":2,"path":"notes/dubbo/dubbo spi思想.md","ref":"notes/dubbo/dubbo spi思想.md","articles":[]},{"title":"dubbo工作原理","level":"1.9.2","depth":2,"path":"notes/dubbo/dubbo工作原理.md","ref":"notes/dubbo/dubbo工作原理.md","articles":[]},{"title":"dubbo支持协议","level":"1.9.3","depth":2,"path":"notes/dubbo/dubbo支持协议.md","ref":"notes/dubbo/dubbo支持协议.md","articles":[]},{"title":"dubbo组件扩展","level":"1.9.4","depth":2,"path":"notes/dubbo/dubbo组件扩展.md","ref":"notes/dubbo/dubbo组件扩展.md","articles":[]},{"title":"dubbo负载均衡策略","level":"1.9.5","depth":2,"path":"notes/dubbo/dubbo负载均衡策略.md","ref":"notes/dubbo/dubbo负载均衡策略.md","articles":[]},{"title":"为什么拆分系统","level":"1.9.6","depth":2,"path":"notes/dubbo/为什么拆分系统.md","ref":"notes/dubbo/为什么拆分系统.md","articles":[]},{"title":"什么是RPC","level":"1.9.7","depth":2,"path":"notes/dubbo/什么是RPC.md","ref":"notes/dubbo/什么是RPC.md","articles":[]},{"title":"从服务服务到服务调用","level":"1.9.8","depth":2,"path":"notes/dubbo/从服务服务到服务调用.md","ref":"notes/dubbo/从服务服务到服务调用.md","articles":[]},{"title":"保证幂等性、顺序性","level":"1.9.9","depth":2,"path":"notes/dubbo/保证幂等性、顺序性.md","ref":"notes/dubbo/保证幂等性、顺序性.md","articles":[]},{"title":"如何设计一个RPC框架","level":"1.9.10","depth":2,"path":"notes/dubbo/如何设计一个RPC框架.md","ref":"notes/dubbo/如何设计一个RPC框架.md","articles":[]},{"title":"服务治理、服务降级、失败超时重试","level":"1.9.11","depth":2,"path":"notes/dubbo/服务治理、服务降级、失败超时重试.md","ref":"notes/dubbo/服务治理、服务降级、失败超时重试.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/dubbo/dubbo spi思想.md","mtime":"2020-06-07T08:43:55.374Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-07T10:15:34.210Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
