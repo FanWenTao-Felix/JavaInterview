@@ -1,0 +1,5190 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP协议 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="HTTP的长连接与短连接.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Java基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../java基础/clone的浅度克隆和深度克隆.html">
+            
+                <a href="../../java基础/clone的浅度克隆和深度克隆.html">
+            
+                    
+                    clone的浅度克隆和深度克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../java基础/hash(">
+            
+                <span>
+            
+                    
+                    hash() 在各个场景下的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../java基础/Java中的String为什么是不可变.html">
+            
+                <a href="../../java基础/Java中的String为什么是不可变.html">
+            
+                    
+                    Java中的String为什么是不可变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../java基础/Java到底是值传递还是引用传递.html">
+            
+                <a href="../../java基础/Java到底是值传递还是引用传递.html">
+            
+                    
+                    Java到底是值传递还是引用传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../java基础/Java基础.html">
+            
+                <a href="../../java基础/Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../java基础/Java异常总结.html">
+            
+                <a href="../../java基础/Java异常总结.html">
+            
+                    
+                    Java异常总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../java基础/jdk8新特性.html">
+            
+                <a href="../../java基础/jdk8新特性.html">
+            
+                    
+                    jdk8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../java基础/NIO.html">
+            
+                <a href="../../java基础/NIO.html">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../java基础/string.html">
+            
+                <a href="../../java基础/string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../java基础/ThreadLocal.html">
+            
+                <a href="../../java基础/ThreadLocal.html">
+            
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../java基础/为什么不建议使用Executors创建线程池.html">
+            
+                <a href="../../java基础/为什么不建议使用Executors创建线程池.html">
+            
+                    
+                    为什么不建议使用Executors创建线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../java基础/初始化执行顺序.html">
+            
+                <a href="../../java基础/初始化执行顺序.html">
+            
+                    
+                    初始化执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../java基础/反射.html">
+            
+                <a href="../../java基础/反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../../java基础/线程相关.html">
+            
+                <a href="../../java基础/线程相关.html">
+            
+                    
+                    线程相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" >
+            
+                <span>
+            
+                    
+                    并发包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.15.1" data-path="../../java基础/并发包/AbstractQueuedSynchronizer 源码.html">
+            
+                <a href="../../java基础/并发包/AbstractQueuedSynchronizer 源码.html">
+            
+                    
+                    AbstractQueuedSynchronizer 源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.2" data-path="../../java基础/并发包/AtomicInteger 源码.html">
+            
+                <a href="../../java基础/并发包/AtomicInteger 源码.html">
+            
+                    
+                    AtomicInteger 源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.3" data-path="../../java基础/并发包/cas.html">
+            
+                <a href="../../java基础/并发包/cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.4" data-path="../../java基础/并发包/countDownLatch.html">
+            
+                <a href="../../java基础/并发包/countDownLatch.html">
+            
+                    
+                    countDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.5" data-path="../../java基础/并发包/Java 延迟队列DelayQueue使用及原理.html">
+            
+                <a href="../../java基础/并发包/Java 延迟队列DelayQueue使用及原理.html">
+            
+                    
+                    Java 延迟队列DelayQueue使用及原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.6" data-path="../../java基础/并发包/reentrantLock.html">
+            
+                <a href="../../java基础/并发包/reentrantLock.html">
+            
+                    
+                    reentrantLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.7" data-path="../../java基础/并发包/Synchronized.html">
+            
+                <a href="../../java基础/并发包/Synchronized.html">
+            
+                    
+                    Synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.8" data-path="../../java基础/并发包/threadLocal.html">
+            
+                <a href="../../java基础/并发包/threadLocal.html">
+            
+                    
+                    threadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.9" data-path="../../java基础/并发包/原子变量类.html">
+            
+                <a href="../../java基础/并发包/原子变量类.html">
+            
+                    
+                    原子变量类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.10" data-path="../../java基础/并发包/线程中断处理.html">
+            
+                <a href="../../java基础/并发包/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.11" data-path="../../java基础/并发包/线程池.html">
+            
+                <a href="../../java基础/并发包/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.12" data-path="../../java基础/并发包/阻塞队列.html">
+            
+                <a href="../../java基础/并发包/阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.13" data-path="../../java基础/并发包/面试题.html">
+            
+                <a href="../../java基础/并发包/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" >
+            
+                <span>
+            
+                    
+                    集合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.16.1" data-path="../../java基础/集合/BlockingQueue.html">
+            
+                <a href="../../java基础/集合/BlockingQueue.html">
+            
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16.2" data-path="../../java基础/集合/ConcurrentHashmap.html">
+            
+                <a href="../../java基础/集合/ConcurrentHashmap.html">
+            
+                    
+                    ConcurrentHashmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16.3" data-path="../../java基础/集合/hashMap.html">
+            
+                <a href="../../java基础/集合/hashMap.html">
+            
+                    
+                    hashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16.4" data-path="../../java基础/集合/hashMap1.8.html">
+            
+                <a href="../../java基础/集合/hashMap1.8.html">
+            
+                    
+                    hashMap1.8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16.5" data-path="../../java基础/集合/面试题.html">
+            
+                <a href="../../java基础/集合/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    JVM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../jvm/gc过程.html">
+            
+                <a href="../../jvm/gc过程.html">
+            
+                    
+                    gc过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../jvm/Java内存区域（运行时数据区域）和内存模型.html">
+            
+                <a href="../../jvm/Java内存区域（运行时数据区域）和内存模型.html">
+            
+                    
+                    Java内存区域（运行时数据区域）和内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../jvm/JVM 架构.html">
+            
+                <a href="../../jvm/JVM 架构.html">
+            
+                    
+                    JVM 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../jvm/JVM参数调优.html">
+            
+                <a href="../../jvm/JVM参数调优.html">
+            
+                    
+                    JVM参数调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../jvm/JVM相关基础.html">
+            
+                <a href="../../jvm/JVM相关基础.html">
+            
+                    
+                    JVM相关基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../jvm/Major GC 和 Full GC的区别.html">
+            
+                <a href="../../jvm/Major GC 和 Full GC的区别.html">
+            
+                    
+                    Major GC 和 Full GC的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../jvm/Volatile.html">
+            
+                <a href="../../jvm/Volatile.html">
+            
+                    
+                    Volatile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../jvm/内存分代.html">
+            
+                <a href="../../jvm/内存分代.html">
+            
+                    
+                    内存分代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../jvm/内存模型.html">
+            
+                <a href="../../jvm/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../jvm/垃圾回收.html">
+            
+                <a href="../../jvm/垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../jvm/垃圾回收机制与内存分配策略.html">
+            
+                <a href="../../jvm/垃圾回收机制与内存分配策略.html">
+            
+                    
+                    垃圾回收机制与内存分配策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../jvm/字符串常量池.html">
+            
+                <a href="../../jvm/字符串常量池.html">
+            
+                    
+                    字符串常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../jvm/对象生命周期.html">
+            
+                <a href="../../jvm/对象生命周期.html">
+            
+                    
+                    对象生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../jvm/常量池.html">
+            
+                <a href="../../jvm/常量池.html">
+            
+                    
+                    常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../jvm/引用类型.html">
+            
+                <a href="../../jvm/引用类型.html">
+            
+                    
+                    引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../jvm/强引用，软引用，弱引用和虚引用.html">
+            
+                <a href="../../jvm/强引用，软引用，弱引用和虚引用.html">
+            
+                    
+                    强引用，软引用，弱引用和虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../../jvm/类加载机制.html">
+            
+                <a href="../../jvm/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../spring/AOP.html">
+            
+                <a href="../../spring/AOP.html">
+            
+                    
+                    AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../spring/IOC、AOP.html">
+            
+                <a href="../../spring/IOC、AOP.html">
+            
+                    
+                    IOC、AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../spring/spring 事务隔离级别.html">
+            
+                <a href="../../spring/spring 事务隔离级别.html">
+            
+                    
+                    spring 事务隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../spring/spring事务.html">
+            
+                <a href="../../spring/spring事务.html">
+            
+                    
+                    spring事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../spring/涉及的设计模式.html">
+            
+                <a href="../../spring/涉及的设计模式.html">
+            
+                    
+                    涉及的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    springMVC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../springMVC/工作流程.html">
+            
+                <a href="../../springMVC/工作流程.html">
+            
+                    
+                    工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    mybatis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../mybatis/Mybatis 动态代理.html">
+            
+                <a href="../../mybatis/Mybatis 动态代理.html">
+            
+                    
+                    Mybatis 动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../mybatis/缓存机制.html">
+            
+                <a href="../../mybatis/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../mybatis/面试题.html">
+            
+                <a href="../../mybatis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    springBoot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../springBoot/springBoot工作原理.html">
+            
+                <a href="../../springBoot/springBoot工作原理.html">
+            
+                    
+                    springBoot工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    springCloud
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../springCloud/eureka.html">
+            
+                <a href="../../springCloud/eureka.html">
+            
+                    
+                    eureka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../springCloud/hystrix.html">
+            
+                <a href="../../springCloud/hystrix.html">
+            
+                    
+                    hystrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                <a href="../../springCloud/Sentinel 与 Hystrix 对比.html">
+            
+                    
+                    Sentinel 与 Hystrix 对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../springCloud/spring cloud相关组件.html">
+            
+                <a href="../../springCloud/spring cloud相关组件.html">
+            
+                    
+                    spring cloud相关组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../springCloud/微服务概念.html">
+            
+                <a href="../../springCloud/微服务概念.html">
+            
+                    
+                    微服务概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    dubbo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../dubbo/dubbo spi思想.html">
+            
+                <a href="../../dubbo/dubbo spi思想.html">
+            
+                    
+                    dubbo spi思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../dubbo/dubbo工作原理.html">
+            
+                <a href="../../dubbo/dubbo工作原理.html">
+            
+                    
+                    dubbo工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../dubbo/dubbo支持协议.html">
+            
+                <a href="../../dubbo/dubbo支持协议.html">
+            
+                    
+                    dubbo支持协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../dubbo/dubbo组件扩展.html">
+            
+                <a href="../../dubbo/dubbo组件扩展.html">
+            
+                    
+                    dubbo组件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../dubbo/dubbo负载均衡策略.html">
+            
+                <a href="../../dubbo/dubbo负载均衡策略.html">
+            
+                    
+                    dubbo负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../dubbo/为什么拆分系统.html">
+            
+                <a href="../../dubbo/为什么拆分系统.html">
+            
+                    
+                    为什么拆分系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../dubbo/什么是RPC.html">
+            
+                <a href="../../dubbo/什么是RPC.html">
+            
+                    
+                    什么是RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../dubbo/从服务服务到服务调用.html">
+            
+                <a href="../../dubbo/从服务服务到服务调用.html">
+            
+                    
+                    从服务服务到服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../dubbo/保证幂等性、顺序性.html">
+            
+                <a href="../../dubbo/保证幂等性、顺序性.html">
+            
+                    
+                    保证幂等性、顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../dubbo/如何设计一个RPC框架.html">
+            
+                <a href="../../dubbo/如何设计一个RPC框架.html">
+            
+                    
+                    如何设计一个RPC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                <a href="../../dubbo/服务治理、服务降级、失败超时重试.html">
+            
+                    
+                    服务治理、服务降级、失败超时重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../mysql/innoDB索引.html">
+            
+                <a href="../../mysql/innoDB索引.html">
+            
+                    
+                    innoDB索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../mysql/MVCC.html">
+            
+                <a href="../../mysql/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../mysql/MyISAM与InnoDB 的区别.html">
+            
+                <a href="../../mysql/MyISAM与InnoDB 的区别.html">
+            
+                    
+                    MyISAM与InnoDB 的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../mysql/MySQL 共享锁与排他锁.html">
+            
+                <a href="../../mysql/MySQL 共享锁与排他锁.html">
+            
+                    
+                    MySQL 共享锁与排他锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../mysql/mysql 的存储引擎介绍.html">
+            
+                <a href="../../mysql/mysql 的存储引擎介绍.html">
+            
+                    
+                    mysql 的存储引擎介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../mysql/MySQL之Explain输出分析.html">
+            
+                <a href="../../mysql/MySQL之Explain输出分析.html">
+            
+                    
+                    MySQL之Explain输出分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../mysql/mysql架构.html">
+            
+                <a href="../../mysql/mysql架构.html">
+            
+                    
+                    mysql架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../mysql/undo、redo.html">
+            
+                <a href="../../mysql/undo、redo.html">
+            
+                    
+                    undo、redo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../mysql/主从复制.html">
+            
+                <a href="../../mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../mysql/事务隔离.html">
+            
+                <a href="../../mysql/事务隔离.html">
+            
+                    
+                    事务隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../mysql/分库分表策略.html">
+            
+                <a href="../../mysql/分库分表策略.html">
+            
+                    
+                    分库分表策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../../mysql/打造扛得住的MySQL.html">
+            
+                <a href="../../mysql/打造扛得住的MySQL.html">
+            
+                    
+                    打造扛得住的MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../../mysql/锁机制.html">
+            
+                <a href="../../mysql/锁机制.html">
+            
+                    
+                    锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../../mysql/面试题.html">
+            
+                <a href="../../mysql/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    kafka
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../kafka/kafka使用过程问题.html">
+            
+                <a href="../../kafka/kafka使用过程问题.html">
+            
+                    
+                    kafka使用过程问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../kafka/kafka基本概念.html">
+            
+                <a href="../../kafka/kafka基本概念.html">
+            
+                    
+                    kafka基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../kafka/kafka扩容.html">
+            
+                <a href="../../kafka/kafka扩容.html">
+            
+                    
+                    kafka扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../kafka/kafka负载均衡.html">
+            
+                <a href="../../kafka/kafka负载均衡.html">
+            
+                    
+                    kafka负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../kafka/leader选举.html">
+            
+                <a href="../../kafka/leader选举.html">
+            
+                    
+                    leader选举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../kafka/MQ基本概念.html">
+            
+                <a href="../../kafka/MQ基本概念.html">
+            
+                    
+                    MQ基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../kafka/保证幂等性.html">
+            
+                <a href="../../kafka/保证幂等性.html">
+            
+                    
+                    保证幂等性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../../kafka/保证消费顺序性.html">
+            
+                <a href="../../kafka/保证消费顺序性.html">
+            
+                    
+                    保证消费顺序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../../kafka/保证高可用性.html">
+            
+                <a href="../../kafka/保证高可用性.html">
+            
+                    
+                    保证高可用性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../../kafka/解决消息丢失问题.html">
+            
+                <a href="../../kafka/解决消息丢失问题.html">
+            
+                    
+                    解决消息丢失问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../../kafka/设计一个消息队列.html">
+            
+                <a href="../../kafka/设计一个消息队列.html">
+            
+                    
+                    设计一个消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../redis/redis 渐进式哈希.html">
+            
+                <a href="../../redis/redis 渐进式哈希.html">
+            
+                    
+                    redis 渐进式哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../redis/redis 过期策略.html">
+            
+                <a href="../../redis/redis 过期策略.html">
+            
+                    
+                    redis 过期策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../redis/redis、memcached区别.html">
+            
+                <a href="../../redis/redis、memcached区别.html">
+            
+                    
+                    redis、memcached区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../redis/redis分布式锁.html">
+            
+                <a href="../../redis/redis分布式锁.html">
+            
+                    
+                    redis分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../redis/redis哨兵保证高可用.html">
+            
+                <a href="../../redis/redis哨兵保证高可用.html">
+            
+                    
+                    redis哨兵保证高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../../redis/redis基本数据类型.html">
+            
+                <a href="../../redis/redis基本数据类型.html">
+            
+                    
+                    redis基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../../redis/redis数据结构.html">
+            
+                <a href="../../redis/redis数据结构.html">
+            
+                    
+                    redis数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../../redis/Redis的线程模型.html">
+            
+                <a href="../../redis/Redis的线程模型.html">
+            
+                    
+                    Redis的线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../../redis/redis线程模型.html">
+            
+                <a href="../../redis/redis线程模型.html">
+            
+                    
+                    redis线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="../../redis/redis集群.html">
+            
+                <a href="../../redis/redis集群.html">
+            
+                    
+                    redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="../../redis/一致性Hash.html">
+            
+                <a href="../../redis/一致性Hash.html">
+            
+                    
+                    一致性Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="../../redis/主从复制原理.html">
+            
+                <a href="../../redis/主从复制原理.html">
+            
+                    
+                    主从复制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="../../redis/内存淘汰.html">
+            
+                <a href="../../redis/内存淘汰.html">
+            
+                    
+                    内存淘汰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="../../redis/持久化方式.html">
+            
+                <a href="../../redis/持久化方式.html">
+            
+                    
+                    持久化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="../../redis/雪崩、穿透、预热.html">
+            
+                <a href="../../redis/雪崩、穿透、预热.html">
+            
+                    
+                    雪崩、穿透、预热
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="../../redis/面试题.html">
+            
+                <a href="../../redis/面试题.html">
+            
+                    
+                    面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    netty
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../netty/netty.html">
+            
+                <a href="../../netty/netty.html">
+            
+                    
+                    netty
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    nginx
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../nginx/基本命令.html">
+            
+                <a href="../../nginx/基本命令.html">
+            
+                    
+                    基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    tomcat
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../tomcat/tomcat结构.html">
+            
+                <a href="../../tomcat/tomcat结构.html">
+            
+                    
+                    tomcat结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    zookeeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../zookeeper/zk工作流程.html">
+            
+                <a href="../../zookeeper/zk工作流程.html">
+            
+                    
+                    zk工作流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../zookeeper/zk架构.html">
+            
+                <a href="../../zookeeper/zk架构.html">
+            
+                    
+                    zk架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../zookeeper/zk缺点.html">
+            
+                <a href="../../zookeeper/zk缺点.html">
+            
+                    
+                    zk缺点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../zookeeper/zookeeper使用场景.html">
+            
+                <a href="../../zookeeper/zookeeper使用场景.html">
+            
+                    
+                    zookeeper使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../zookeeper/分布式锁实现.html">
+            
+                <a href="../../zookeeper/分布式锁实现.html">
+            
+                    
+                    分布式锁实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    分布式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../分布式/分布式系统架构.html">
+            
+                <a href="../../分布式/分布式系统架构.html">
+            
+                    
+                    分布式系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    CAP,BASE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" data-path="../../分布式/CAP、Base/CAP，BASE.html">
+            
+                <a href="../../分布式/CAP、Base/CAP，BASE.html">
+            
+                    
+                    CAP，BASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    分布式事务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" data-path="../../分布式/分布式事务/分布式事务.html">
+            
+                <a href="../../分布式/分布式事务/分布式事务.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" >
+            
+                <span>
+            
+                    
+                    分布式会话
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.4.1" data-path="../../分布式/分布式会话/分布式 session.html">
+            
+                <a href="../../分布式/分布式会话/分布式 session.html">
+            
+                    
+                    分布式 session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" >
+            
+                <span>
+            
+                    
+                    分布式锁
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.5.1" data-path="../../分布式/分布式锁/分布式锁.html">
+            
+                <a href="../../分布式/分布式锁/分布式锁.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" >
+            
+                <span>
+            
+                    
+                    唯一序列号
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.6.1" data-path="../../分布式/唯一序列号/全局唯一ID.html">
+            
+                <a href="../../分布式/唯一序列号/全局唯一ID.html">
+            
+                    
+                    全局唯一ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" >
+            
+                <span>
+            
+                    
+                    短链接
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.7.1" data-path="../../分布式/短链接/短链接.html">
+            
+                <a href="../../分布式/短链接/短链接.html">
+            
+                    
+                    短链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7.2" data-path="../../分布式/短链接/短链接系统的设计.html">
+            
+                <a href="../../分布式/短链接/短链接系统的设计.html">
+            
+                    
+                    短链接系统的设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" >
+            
+                <span>
+            
+                    
+                    限流
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.8.1" >
+            
+                <span>
+            
+                    
+                    解决方案
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.8.1.1" data-path="../../分布式/限流/解决方案/限流方案.html">
+            
+                <a href="../../分布式/限流/解决方案/限流方案.html">
+            
+                    
+                    限流方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    数据库中间件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../../数据库中间件/mycat高可用数据库集群.html">
+            
+                <a href="../../数据库中间件/mycat高可用数据库集群.html">
+            
+                    
+                    mycat高可用数据库集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../../数据库中间件/ShardingSphere.html">
+            
+                <a href="../../数据库中间件/ShardingSphere.html">
+            
+                    
+                    ShardingSphere
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" >
+            
+                <span>
+            
+                    
+                    操作系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../../操作系统/IO.html">
+            
+                <a href="../../操作系统/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../../操作系统/内存管理.html">
+            
+                <a href="../../操作系统/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../../操作系统/操作系统基础.html">
+            
+                <a href="../../操作系统/操作系统基础.html">
+            
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" data-path="../../操作系统/磁盘与文件.html">
+            
+                <a href="../../操作系统/磁盘与文件.html">
+            
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5" data-path="../../操作系统/线程与进程.html">
+            
+                <a href="../../操作系统/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6" data-path="../../操作系统/设备管理.html">
+            
+                <a href="../../操作系统/设备管理.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" >
+            
+                <span>
+            
+                    
+                    数据结构与算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../../数据结构与算法/总结.html">
+            
+                <a href="../../数据结构与算法/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.2.1" >
+            
+                <span>
+            
+                    
+                    散列表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.2.1.1" data-path="../../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                <a href="../../数据结构与算法/数据结构/散列表/散列表.html">
+            
+                    
+                    散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2.2" >
+            
+                <span>
+            
+                    
+                    树
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.2.2.1" data-path="../../数据结构与算法/数据结构/树/树.html">
+            
+                <a href="../../数据结构与算法/数据结构/树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2.3" >
+            
+                <span>
+            
+                    
+                    跳表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.2.3.1" data-path="../../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                <a href="../../数据结构与算法/数据结构/跳表/跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.3.1" data-path="../../数据结构与算法/算法/大数据算法.html">
+            
+                <a href="../../数据结构与算法/算法/大数据算法.html">
+            
+                    
+                    大数据算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3.2" data-path="../../数据结构与算法/算法/字符串匹配.html">
+            
+                <a href="../../数据结构与算法/算法/字符串匹配.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3.3" data-path="../../数据结构与算法/算法/最小生成树算法.html">
+            
+                <a href="../../数据结构与算法/算法/最小生成树算法.html">
+            
+                    
+                    最小生成树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3.4" data-path="../../数据结构与算法/算法/最短路径算法.html">
+            
+                <a href="../../数据结构与算法/算法/最短路径算法.html">
+            
+                    
+                    最短路径算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3.5" >
+            
+                <span>
+            
+                    
+                    排序算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.3.5.1" data-path="../../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                <a href="../../数据结构与算法/算法/排序算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3.6" >
+            
+                <span>
+            
+                    
+                    查找算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.3.6.1" data-path="../../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                <a href="../../数据结构与算法/算法/查找算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../计算机网络基础.html">
+            
+                <a href="../计算机网络基础.html">
+            
+                    
+                    计算机网络基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="../协议.html">
+            
+                <a href="../协议.html">
+            
+                    
+                    协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" >
+            
+                <span>
+            
+                    
+                    HTTP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.21.3.1" data-path="HTTP协议.html">
+            
+                <a href="HTTP协议.html">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.2" data-path="HTTP的长连接与短连接.html">
+            
+                <a href="HTTP的长连接与短连接.html">
+            
+                    
+                    HTTP的长连接与短连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.3" data-path="HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                <a href="HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.html">
+            
+                    
+                    HTTP1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.4" data-path="http原理.html">
+            
+                <a href="http原理.html">
+            
+                    
+                    http原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.5" data-path="一次http请求过程.html">
+            
+                <a href="一次http请求过程.html">
+            
+                    
+                    一次http请求过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.6" data-path="断点续传.html">
+            
+                <a href="断点续传.html">
+            
+                    
+                    断点续传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3.7" data-path="跨站攻击.html">
+            
+                <a href="跨站攻击.html">
+            
+                    
+                    跨站攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.4" >
+            
+                <span>
+            
+                    
+                    HTTPS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.4.1" data-path="../HTTPS/https原理.html">
+            
+                <a href="../HTTPS/https原理.html">
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.5" >
+            
+                <span>
+            
+                    
+                    IP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.5.1" data-path="../IP/IP协议相关.html">
+            
+                <a href="../IP/IP协议相关.html">
+            
+                    
+                    IP协议相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6" >
+            
+                <span>
+            
+                    
+                    TCP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.6.1" data-path="../TCP/TCP.html">
+            
+                <a href="../TCP/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6.2" data-path="../TCP/TCP协议数据传输.html">
+            
+                <a href="../TCP/TCP协议数据传输.html">
+            
+                    
+                    TCP协议数据传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6.3" data-path="../TCP/TCP的三次握手.html">
+            
+                <a href="../TCP/TCP的三次握手.html">
+            
+                    
+                    TCP的三次握手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6.4" data-path="../TCP/TCP的四次挥手.html">
+            
+                <a href="../TCP/TCP的四次挥手.html">
+            
+                    
+                    TCP的四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7" >
+            
+                <span>
+            
+                    
+                    Websocket
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.7.1" data-path="../Websocket/Websocket.html">
+            
+                <a href="../Websocket/Websocket.html">
+            
+                    
+                    Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" >
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../../设计模式/常用的设计模式.html">
+            
+                <a href="../../设计模式/常用的设计模式.html">
+            
+                    
+                    常用的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../../设计模式/设计模式.html">
+            
+                <a href="../../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" >
+            
+                <span>
+            
+                    
+                    创建型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.3.1" data-path="../../设计模式/设计模式 - 单例.html">
+            
+                <a href="../../设计模式/设计模式 - 单例.html">
+            
+                    
+                    单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.2" data-path="../../设计模式/设计模式 - 简单工厂.html">
+            
+                <a href="../../设计模式/设计模式 - 简单工厂.html">
+            
+                    
+                    简单工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.3" data-path="../../设计模式/设计模式 - 工厂方法.html">
+            
+                <a href="../../设计模式/设计模式 - 工厂方法.html">
+            
+                    
+                    工厂方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.4" data-path="../../设计模式/设计模式 - 抽象工厂.html">
+            
+                <a href="../../设计模式/设计模式 - 抽象工厂.html">
+            
+                    
+                    抽象工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.5" data-path="../../设计模式/设计模式 - 生成器.html">
+            
+                <a href="../../设计模式/设计模式 - 生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.6" data-path="../../设计模式/设计模式 - 原型模式.html">
+            
+                <a href="../../设计模式/设计模式 - 原型模式.html">
+            
+                    
+                    原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4" >
+            
+                <span>
+            
+                    
+                    行为型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.4.1" data-path="../../设计模式/设计模式 - 责任链.html">
+            
+                <a href="../../设计模式/设计模式 - 责任链.html">
+            
+                    
+                    责任链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.2" data-path="../../设计模式/设计模式 - 命令.html">
+            
+                <a href="../../设计模式/设计模式 - 命令.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.3" data-path="../../设计模式/设计模式 - 解释器.html">
+            
+                <a href="../../设计模式/设计模式 - 解释器.html">
+            
+                    
+                    解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.4" data-path="../../设计模式/设计模式 - 迭代器.html">
+            
+                <a href="../../设计模式/设计模式 - 迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.5" data-path="../../设计模式/设计模式 - 中介者.html">
+            
+                <a href="../../设计模式/设计模式 - 中介者.html">
+            
+                    
+                    中介者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.6" data-path="../../设计模式/设计模式 - 备忘录.html">
+            
+                <a href="../../设计模式/设计模式 - 备忘录.html">
+            
+                    
+                    备忘录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.7" data-path="../../设计模式/设计模式 - 观察者.html">
+            
+                <a href="../../设计模式/设计模式 - 观察者.html">
+            
+                    
+                    观察者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.8" data-path="../../设计模式/设计模式 - 状态.html">
+            
+                <a href="../../设计模式/设计模式 - 状态.html">
+            
+                    
+                    状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.9" data-path="../../设计模式/设计模式 - 策略.html">
+            
+                <a href="../../设计模式/设计模式 - 策略.html">
+            
+                    
+                    策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.10" data-path="../../设计模式/设计模式 - 模板方法.html">
+            
+                <a href="../../设计模式/设计模式 - 模板方法.html">
+            
+                    
+                    模板方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.11" data-path="../../设计模式/设计模式 - 访问者.html">
+            
+                <a href="../../设计模式/设计模式 - 访问者.html">
+            
+                    
+                    访问者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.12" data-path="../../设计模式/设计模式 - 空对象.html">
+            
+                <a href="../../设计模式/设计模式 - 空对象.html">
+            
+                    
+                    空对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5" >
+            
+                <span>
+            
+                    
+                    结构型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.5.1" data-path="../../设计模式/设计模式 - 适配器.html">
+            
+                <a href="../../设计模式/设计模式 - 适配器.html">
+            
+                    
+                    适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.2" data-path="../../设计模式/设计模式 - 桥接.html">
+            
+                <a href="../../设计模式/设计模式 - 桥接.html">
+            
+                    
+                    桥接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.3" data-path="../../设计模式/设计模式 - 组合.html">
+            
+                <a href="../../设计模式/设计模式 - 组合.html">
+            
+                    
+                    组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.4" data-path="../../设计模式/设计模式 - 装饰.html">
+            
+                <a href="../../设计模式/设计模式 - 装饰.html">
+            
+                    
+                    装饰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.5" data-path="../../设计模式/设计模式 - 外观.html">
+            
+                <a href="../../设计模式/设计模式 - 外观.html">
+            
+                    
+                    外观
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.6" data-path="../../设计模式/设计模式 - 享元.html">
+            
+                <a href="../../设计模式/设计模式 - 享元.html">
+            
+                    
+                    享元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5.7" data-path="../../设计模式/设计模式 - 代理.html">
+            
+                <a href="../../设计模式/设计模式 - 代理.html">
+            
+                    
+                    代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" >
+            
+                <span>
+            
+                    
+                    密码学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.1" data-path="../../密码学/密码学加密.html">
+            
+                <a href="../../密码学/密码学加密.html">
+            
+                    
+                    密码学加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" >
+            
+                <span>
+            
+                    
+                    项目经验
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../../项目经验/设计一个高并发系统.html">
+            
+                <a href="../../项目经验/设计一个高并发系统.html">
+            
+                    
+                    设计一个高并发系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >HTTP协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>HTTP&#xFF08;HyperText Transfer Protocol&#xFF0C;&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF09;&#x662F;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#xFF0C;HTTP&#x662F;&#x4E00;&#x79CD;&#x534F;&#x8BAE;&#x89C4;&#x8303;&#xFF0C;&#x4E3A;&#x771F;&#x6B63;&#x901A;&#x8FC7;HTTP&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;HTTP&#x7684;&#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x4E86;&#x89C4;&#x8303;&#x6807;&#x51C6;&#x3002;</p>
+<h4 id="http-&#x5DE5;&#x4F5C;&#x539F;&#x7406;">HTTP &#x5DE5;&#x4F5C;&#x539F;&#x7406;</h4>
+<p>HTTP&#x534F;&#x8BAE;&#x5DE5;&#x4F5C;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;-&#x670D;&#x52A1;&#x7AEF;&#x67B6;&#x6784;&#x4E0A;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x4F5C;&#x4E3A;HTTP&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;URL&#x5411;HTTP&#x670D;&#x52A1;&#x7AEF;&#x5373;WEB&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>Web&#x670D;&#x52A1;&#x5668;&#x6839;&#x636E;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x54CD;&#x5E94;&#x4FE1;&#x606F;&#x3002;</p>
+<p>Web&#x670D;&#x52A1;&#x5668;&#x6709;&#xFF1A;Apache&#x670D;&#x52A1;&#x5668;&#xFF0C;IIS&#x670D;&#x52A1;&#x5668;&#xFF08;Internet Information Services&#xFF09;&#x7B49;&#x3002;</p>
+<p>HTTP&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;80&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x4E3A;8080&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x4ECE;&#x6280;&#x672F;&#x4E0A;&#x8BB2;&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;TCP&#x7AEF;&#x53E3;&#xFF08;&#x7AEF;&#x53E3;&#x53F7;&#x4E00;&#x822C;&#x4E3A;80&#xFF09;&#x4E0A;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;&#x3002;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x4E00;&#x76F4;&#x5728;&#x8FD9;&#x4E2A;&#x5468;&#x77E5;&#x7684;&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#x8FDE;&#x63A5;&#xFF0C;&#x5219;&#x8BE5;&#x8FDE;&#x63A5;&#x4FBF;&#x4F1A;&#x5EFA;&#x7ACB;&#x8D77;&#x6765;&#x3002;&#x7136;&#x540E;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;&#x8BE5;&#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5305;&#x542B; &#x8BF7;&#x6C42;&#x65B9;&#x6CD5; &#x7684;&#x8BF7;&#x6C42;&#x5757;&#x3002;</p>
+<p>HTTP&#x89C4;&#x8303;&#x5B9A;&#x4E49;&#x4E86;9&#x79CD; &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF0C;&#x6BCF;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x89C4;&#x5B9A;&#x4E86;&#x5BA2;&#x6237;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x4E0D;&#x540C;&#x7684;&#x4FE1;&#x606F;&#x4EA4;&#x6362;&#x65B9;&#x5F0F;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;GET &#x548C; POST&#x3002;&#x670D;&#x52A1;&#x5668;&#x5C06;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#x76F8;&#x5E94;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4EE5;&#x5E94;&#x7B54;&#x5757;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#xFF0C;&#x6700;&#x540E;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x3002;</p>
+<h4 id="http&#x7279;&#x70B9;&#xFF1A;"><strong>HTTP&#x7279;&#x70B9;&#xFF1A;</strong></h4>
+<ul>
+<li>HTTP&#x662F;&#x65E0;&#x8FDE;&#x63A5;&#xFF1A;&#x65E0;&#x8FDE;&#x63A5;&#x7684;&#x542B;&#x4E49;&#x662F;&#x9650;&#x5236;&#x6BCF;&#x6B21;&#x8FDE;&#x63A5;&#x53EA;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x3002;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x5B8C;&#x5BA2;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x6536;&#x5230;&#x5BA2;&#x6237;&#x7684;&#x5E94;&#x7B54;&#x540E;&#xFF0C;&#x5373;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x3002;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x4F20;&#x8F93;&#x65F6;&#x95F4;&#x3002;</li>
+<li>HTTP&#x662F;&#x5A92;&#x4F53;&#x72EC;&#x7ACB;&#x7684;&#xFF1A;&#x53EA;&#x8981;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x5185;&#x5BB9;&#xFF0C;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;HTTP&#x53D1;&#x9001;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x4EE5;&#x53CA;&#x670D;&#x52A1;&#x5668;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x9002;&#x5408;&#x7684;MIME-type&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#x3002;</li>
+<li>HTTP&#x662F;&#x65E0;&#x72B6;&#x6001;&#xFF1A;HTTP&#x534F;&#x8BAE;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x534F;&#x8BAE;&#x3002;&#x65E0;&#x72B6;&#x6001;&#x662F;&#x6307;&#x534F;&#x8BAE;&#x5BF9;&#x4E8E;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x6CA1;&#x6709;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x3002;&#x7F3A;&#x5C11;&#x72B6;&#x6001;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x540E;&#x7EED;&#x5904;&#x7406;&#x9700;&#x8981;&#x524D;&#x9762;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5219;&#x5B83;&#x5FC5;&#x987B;&#x91CD;&#x4F20;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6BCF;&#x6B21;&#x8FDE;&#x63A5;&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x91CF;&#x589E;&#x5927;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x9700;&#x8981;&#x5148;&#x524D;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x5B83;&#x7684;&#x5E94;&#x7B54;&#x5C31;&#x8F83;&#x5FEB;&#x3002;</li>
+</ul>
+<h4 id="http-&#x6D88;&#x606F;&#x7ED3;&#x6784;">HTTP &#x6D88;&#x606F;&#x7ED3;&#x6784;</h4>
+<p><strong>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x6D88;&#x606F;</strong></p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;HTTP&#x8BF7;&#x6C42;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x6D88;&#x606F;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#xFF1A;&#x8BF7;&#x6C42;&#x884C;&#xFF08;request line&#xFF09;&#x3001;&#x8BF7;&#x6C42;&#x5934;&#x90E8;&#xFF08;header&#xFF09;&#x3001;&#x7A7A;&#x884C;&#x548C;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x56DB;&#x4E2A;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x4E0B;&#x56FE;&#x7ED9;&#x51FA;&#x4E86;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x7684;&#x4E00;&#x822C;&#x683C;&#x5F0F;&#x3002;</p>
+<p><img src="../../image/up-2d8a000ff86c688b81a92c5b4794292362f.png" alt=""></p>
+<pre><code>&#x4F8B;&#x5982;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#xFF1A;
+</code></pre><p>GET /hello.txt HTTP/1.1
+User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3
+Host: www.example.com
+Accept-Language: en, mi</p>
+<p><strong>&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x6D88;&#x606F;</strong></p>
+<p>HTTP&#x54CD;&#x5E94;&#x4E5F;&#x7531;&#x56DB;&#x4E2A;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;&#x72B6;&#x6001;&#x884C;&#x3001;&#x6D88;&#x606F;&#x62A5;&#x5934;&#x3001;&#x7A7A;&#x884C;&#x548C;&#x54CD;&#x5E94;&#x6B63;&#x6587;&#x3002;</p>
+<p><img src="../../image/up-cab64ecb905507f4cafd6268e5a9768804c.png" alt=""></p>
+<p><img src="../../image/up-080aeec9ed5804b36a8d0afdae2238ef915.png" alt=""></p>
+<pre><code>&#x4F8B;&#x5982;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x54CD;&#x5E94;:
+</code></pre><p>HTTP/1.1 200 OK
+Date: Mon, 27 Jul 2009 12:28:53 GMT
+Server: Apache
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+ETag: &quot;34aa387-d-1568eb00&quot;
+Accept-Ranges: bytes
+Content-Length: 51
+Vary: Accept-Encoding
+Content-Type: text/plain</p>
+<h4 id="http-&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;">HTTP &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</h4>
+<pre><code>&#x6839;&#x636E; HTTP &#x6807;&#x51C6;&#xFF0C;HTTP &#x8BF7;&#x6C42;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3002;
+
+HTTP1.0 &#x5B9A;&#x4E49;&#x4E86;&#x4E09;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A; GET, POST &#x548C; HEAD&#x65B9;&#x6CD5;&#x3002;
+
+HTTP1.1 &#x65B0;&#x589E;&#x4E86;&#x516D;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;OPTIONS&#x3001;PUT&#x3001;PATCH&#x3001;DELETE&#x3001;TRACE &#x548C; CONNECT &#x65B9;&#x6CD5;&#x3002;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GET</td>
+<td>&#x8BF7;&#x6C42;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5B9E;&#x4F53;&#x4E3B;&#x4F53;&#x3002;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEAD</td>
+<td>&#x7C7B;&#x4F3C;&#x4E8E; GET &#x8BF7;&#x6C42;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD4;&#x56DE;&#x7684;&#x54CD;&#x5E94;&#x4E2D;&#x6CA1;&#x6709;&#x5177;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x62A5;&#x5934;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>POST</td>
+<td>&#x5411;&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#xFF08;&#x4F8B;&#x5982;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x6216;&#x8005;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF09;&#x3002;&#x6570;&#x636E;&#x88AB;&#x5305;&#x542B;&#x5728;&#x8BF7;&#x6C42;&#x4F53;&#x4E2D;&#x3002;POST &#x8BF7;&#x6C42;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x65B0;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x5EFA;&#x7ACB;&#x548C;/&#x6216;&#x5DF2;&#x6709;&#x8D44;&#x6E90;&#x7684;&#x4FEE;&#x6539;&#x3002;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PUT</td>
+<td>&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x670D;&#x52A1;&#x5668;&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x53D6;&#x4EE3;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x6863;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DELETE</td>
+<td>&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x3002;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CONNECT</td>
+<td>HTTP/1.1 &#x534F;&#x8BAE;&#x4E2D;&#x9884;&#x7559;&#x7ED9;&#x80FD;&#x591F;&#x5C06;&#x8FDE;&#x63A5;&#x6539;&#x4E3A;&#x7BA1;&#x9053;&#x65B9;&#x5F0F;&#x7684;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x3002;</td>
+</tr>
+<tr>
+<td>7</td>
+<td>OPTIONS</td>
+<td>&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x67E5;&#x770B;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#x3002;</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TRACE</td>
+<td>&#x56DE;&#x663E;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6216;&#x8BCA;&#x65AD;&#x3002;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>PATCH</td>
+<td>&#x662F;&#x5BF9; PUT &#x65B9;&#x6CD5;&#x7684;&#x8865;&#x5145;&#xFF0C;&#x7528;&#x6765;&#x5BF9;&#x5DF2;&#x77E5;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x5C40;&#x90E8;&#x66F4;&#x65B0; &#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http-&#x54CD;&#x5E94;&#x5934;&#x4FE1;&#x606F;">HTTP &#x54CD;&#x5E94;&#x5934;&#x4FE1;&#x606F;</h4>
+<pre><code>HTTP&#x8BF7;&#x6C42;&#x5934;&#x63D0;&#x4F9B;&#x4E86;&#x5173;&#x4E8E;&#x8BF7;&#x6C42;&#xFF0C;&#x54CD;&#x5E94;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;&#x53D1;&#x9001;&#x5B9E;&#x4F53;&#x7684;&#x4FE1;&#x606F;&#x3002;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x5E94;&#x7B54;&#x5934;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allow</td>
+</tr>
+</tbody>
+</table>
+<p>&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x54EA;&#x4E9B;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF08;&#x5982;GET&#x3001;POST&#x7B49;&#xFF09;&#x3002;</p>
+<p> |
+| Content-Encoding | </p>
+<p>&#x6587;&#x6863;&#x7684;&#x7F16;&#x7801;&#xFF08;Encode&#xFF09;&#x65B9;&#x6CD5;&#x3002;&#x53EA;&#x6709;&#x5728;&#x89E3;&#x7801;&#x4E4B;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x5F97;&#x5230;Content-Type&#x5934;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#x3002;&#x5229;&#x7528;gzip&#x538B;&#x7F29;&#x6587;&#x6863;&#x80FD;&#x591F;&#x663E;&#x8457;&#x5730;&#x51CF;&#x5C11;HTML&#x6587;&#x6863;&#x7684;&#x4E0B;&#x8F7D;&#x65F6;&#x95F4;&#x3002;Java&#x7684;GZIPOutputStream&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x8FDB;&#x884C;gzip&#x538B;&#x7F29;&#xFF0C;&#x4F46;&#x53EA;&#x6709;Unix&#x4E0A;&#x7684;Netscape&#x548C;Windows&#x4E0A;&#x7684;IE 4&#x3001;IE 5&#x624D;&#x652F;&#x6301;&#x5B83;&#x3002;&#x56E0;&#x6B64;&#xFF0C;Servlet&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x67E5;&#x770B;Accept-Encoding&#x5934;&#xFF08;&#x5373;request.getHeader(&quot;Accept-Encoding&quot;)&#xFF09;&#x68C0;&#x67E5;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x652F;&#x6301;gzip&#xFF0C;&#x4E3A;&#x652F;&#x6301;gzip&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x8FD4;&#x56DE;&#x7ECF;gzip&#x538B;&#x7F29;&#x7684;HTML&#x9875;&#x9762;&#xFF0C;&#x4E3A;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x8FD4;&#x56DE;&#x666E;&#x901A;&#x9875;&#x9762;&#x3002;</p>
+<p> |
+| Content-Length | </p>
+<p>&#x8868;&#x793A;&#x5185;&#x5BB9;&#x957F;&#x5EA6;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x6D4F;&#x89C8;&#x5668;&#x4F7F;&#x7528;&#x6301;&#x4E45;HTTP&#x8FDE;&#x63A5;&#x65F6;&#x624D;&#x9700;&#x8981;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5229;&#x7528;&#x6301;&#x4E45;&#x8FDE;&#x63A5;&#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x8F93;&#x51FA;&#x6587;&#x6863;&#x5199;&#x5165; ByteArrayOutputStream&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x67E5;&#x770B;&#x5176;&#x5927;&#x5C0F;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8BE5;&#x503C;&#x653E;&#x5165;Content-Length&#x5934;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;byteArrayStream.writeTo(response.getOutputStream()&#x53D1;&#x9001;&#x5185;&#x5BB9;&#x3002;</p>
+<p> |
+| Content-Type | </p>
+<p>&#x8868;&#x793A;&#x540E;&#x9762;&#x7684;&#x6587;&#x6863;&#x5C5E;&#x4E8E;&#x4EC0;&#x4E48;MIME&#x7C7B;&#x578B;&#x3002;Servlet&#x9ED8;&#x8BA4;&#x4E3A;text/plain&#xFF0C;&#x4F46;&#x901A;&#x5E38;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x6307;&#x5B9A;&#x4E3A;text/html&#x3002;&#x7531;&#x4E8E;&#x7ECF;&#x5E38;&#x8981;&#x8BBE;&#x7F6E;Content-Type&#xFF0C;&#x56E0;&#x6B64;HttpServletResponse&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4E13;&#x7528;&#x7684;&#x65B9;&#x6CD5;setContentType&#x3002;
+| Date | </p>
+<p>&#x5F53;&#x524D;&#x7684;GMT&#x65F6;&#x95F4;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;setDateHeader&#x6765;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x5934;&#x4EE5;&#x907F;&#x514D;&#x8F6C;&#x6362;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x7684;&#x9EBB;&#x70E6;&#x3002;
+| Expires | </p>
+<p>&#x5E94;&#x8BE5;&#x5728;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8BA4;&#x4E3A;&#x6587;&#x6863;&#x5DF2;&#x7ECF;&#x8FC7;&#x671F;&#xFF0C;&#x4ECE;&#x800C;&#x4E0D;&#x518D;&#x7F13;&#x5B58;&#x5B83;&#xFF1F;
+| Last-Modified | </p>
+<p>&#x6587;&#x6863;&#x7684;&#x6700;&#x540E;&#x6539;&#x52A8;&#x65F6;&#x95F4;&#x3002;&#x5BA2;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;If-Modified-Since&#x8BF7;&#x6C42;&#x5934;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x65E5;&#x671F;&#xFF0C;&#x8BE5;&#x8BF7;&#x6C42;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;GET&#xFF0C;&#x53EA;&#x6709;&#x6539;&#x52A8;&#x65F6;&#x95F4;&#x8FDF;&#x4E8E;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x7684;&#x6587;&#x6863;&#x624D;&#x4F1A;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;304&#xFF08;Not Modified&#xFF09;&#x72B6;&#x6001;&#x3002;Last-Modified&#x4E5F;&#x53EF;&#x7528;setDateHeader&#x65B9;&#x6CD5;&#x6765;&#x8BBE;&#x7F6E;&#x3002;
+| Location | </p>
+<p>&#x8868;&#x793A;&#x5BA2;&#x6237;&#x5E94;&#x5F53;&#x5230;&#x54EA;&#x91CC;&#x53BB;&#x63D0;&#x53D6;&#x6587;&#x6863;&#x3002;Location&#x901A;&#x5E38;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;HttpServletResponse&#x7684;sendRedirect&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x4E3A;302&#x3002;
+| Refresh | </p>
+<p>&#x8868;&#x793A;&#x6D4F;&#x89C8;&#x5668;&#x5E94;&#x8BE5;&#x5728;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x5237;&#x65B0;&#x6587;&#x6863;&#xFF0C;&#x4EE5;&#x79D2;&#x8BA1;&#x3002;&#x9664;&#x4E86;&#x5237;&#x65B0;&#x5F53;&#x524D;&#x6587;&#x6863;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;setHeader(&quot;Refresh&quot;, &quot;5; URL=<a href="http://host/path&quot;)&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x3002;" target="_blank">http://host/path&quot;)&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x3002;</a><br>&#x6CE8;&#x610F;&#x8FD9;&#x79CD;&#x529F;&#x80FD;&#x901A;&#x5E38;&#x662F;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;HTML&#x9875;&#x9762;HEAD&#x533A;&#x7684;&#xFF1C;META HTTP-EQUIV=&quot;Refresh&quot; CONTENT=&quot;5;URL=<a href="http://host/path&quot;&#xFF1E;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x6216;&#x91CD;&#x5B9A;&#x5411;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;CGI&#x6216;Servlet&#x7684;HTML&#x7F16;&#x5199;&#x8005;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;Servlet&#x6765;&#x8BF4;&#xFF0C;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;Refresh&#x5934;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x3002;" target="_blank">http://host/path&quot;&#xFF1E;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x6216;&#x91CD;&#x5B9A;&#x5411;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;CGI&#x6216;Servlet&#x7684;HTML&#x7F16;&#x5199;&#x8005;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;Servlet&#x6765;&#x8BF4;&#xFF0C;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;Refresh&#x5934;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x3002;</a>  </p>
+<p>&#x6CE8;&#x610F;Refresh&#x7684;&#x610F;&#x4E49;&#x662F;&quot;N&#x79D2;&#x4E4B;&#x540E;&#x5237;&#x65B0;&#x672C;&#x9875;&#x9762;&#x6216;&#x8BBF;&#x95EE;&#x6307;&#x5B9A;&#x9875;&#x9762;&quot;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&quot;&#x6BCF;&#x9694;N&#x79D2;&#x5237;&#x65B0;&#x672C;&#x9875;&#x9762;&#x6216;&#x8BBF;&#x95EE;&#x6307;&#x5B9A;&#x9875;&#x9762;&quot;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8FDE;&#x7EED;&#x5237;&#x65B0;&#x8981;&#x6C42;&#x6BCF;&#x6B21;&#x90FD;&#x53D1;&#x9001;&#x4E00;&#x4E2A;Refresh&#x5934;&#xFF0C;&#x800C;&#x53D1;&#x9001;204&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x5219;&#x53EF;&#x4EE5;&#x963B;&#x6B62;&#x6D4F;&#x89C8;&#x5668;&#x7EE7;&#x7EED;&#x5237;&#x65B0;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x4F7F;&#x7528;Refresh&#x5934;&#x8FD8;&#x662F;&#xFF1C;META HTTP-EQUIV=&quot;Refresh&quot; ...&#xFF1E;&#x3002;  </p>
+<p>&#x6CE8;&#x610F;Refresh&#x5934;&#x4E0D;&#x5C5E;&#x4E8E;HTTP 1.1&#x6B63;&#x5F0F;&#x89C4;&#x8303;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x6269;&#x5C55;&#xFF0C;&#x4F46;Netscape&#x548C;IE&#x90FD;&#x652F;&#x6301;&#x5B83;&#x3002;</p>
+<p> |
+| Server | </p>
+<p>&#x670D;&#x52A1;&#x5668;&#x540D;&#x5B57;&#x3002;Servlet&#x4E00;&#x822C;&#x4E0D;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x7531;Web&#x670D;&#x52A1;&#x5668;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p> |
+| Set-Cookie | </p>
+<p>&#x8BBE;&#x7F6E;&#x548C;&#x9875;&#x9762;&#x5173;&#x8054;&#x7684;Cookie&#x3002;Servlet&#x4E0D;&#x5E94;&#x4F7F;&#x7528;response.setHeader(&quot;Set-Cookie&quot;, ...)&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x4F7F;&#x7528;HttpServletResponse&#x63D0;&#x4F9B;&#x7684;&#x4E13;&#x7528;&#x65B9;&#x6CD5;addCookie&#x3002;&#x53C2;&#x89C1;&#x4E0B;&#x6587;&#x6709;&#x5173;Cookie&#x8BBE;&#x7F6E;&#x7684;&#x8BA8;&#x8BBA;&#x3002;</p>
+<p> |
+| WWW-Authenticate | </p>
+<p>&#x5BA2;&#x6237;&#x5E94;&#x8BE5;&#x5728;Authorization&#x5934;&#x4E2D;&#x63D0;&#x4F9B;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x6388;&#x6743;&#x4FE1;&#x606F;&#xFF1F;&#x5728;&#x5305;&#x542B;401&#xFF08;Unauthorized&#xFF09;&#x72B6;&#x6001;&#x884C;&#x7684;&#x5E94;&#x7B54;&#x4E2D;&#x8FD9;&#x4E2A;&#x5934;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;response.setHeader(&quot;WWW-Authenticate&quot;, &quot;BASIC realm=&#xFF3C;&quot;executives&#xFF3C;&quot;&quot;)&#x3002;<br>&#x6CE8;&#x610F;Servlet&#x4E00;&#x822C;&#x4E0D;&#x8FDB;&#x884C;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x8BA9;Web&#x670D;&#x52A1;&#x5668;&#x7684;&#x4E13;&#x95E8;&#x673A;&#x5236;&#x6765;&#x63A7;&#x5236;&#x53D7;&#x5BC6;&#x7801;&#x4FDD;&#x62A4;&#x9875;&#x9762;&#x7684;&#x8BBF;&#x95EE;&#xFF08;&#x4F8B;&#x5982;.htaccess&#xFF09;&#x3002;</p>
+<p> |</p>
+<h1 id="http&#x72B6;&#x6001;&#x7801;">HTTP&#x72B6;&#x6001;&#x7801;</h1>
+<pre><code>&#x5F53;&#x6D4F;&#x89C8;&#x8005;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x7F51;&#x9875;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x8005;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5411;&#x7F51;&#x9875;&#x6240;&#x5728;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x3002;&#x5F53;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5E76;&#x663E;&#x793A;&#x7F51;&#x9875;&#x524D;&#xFF0C;&#x6B64;&#x7F51;&#x9875;&#x6240;&#x5728;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;HTTP&#x72B6;&#x6001;&#x7801;&#x7684;&#x4FE1;&#x606F;&#x5934;&#xFF08;server header&#xFF09;&#x7528;&#x4EE5;&#x54CD;&#x5E94;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x3002;
+
+HTTP&#x72B6;&#x6001;&#x7801;&#x7684;&#x82F1;&#x6587;&#x4E3A;HTTP Status Code&#x3002;
+
+&#x4E0B;&#x9762;&#x662F;&#x5E38;&#x89C1;&#x7684;HTTP&#x72B6;&#x6001;&#x7801;&#xFF1A;
+</code></pre><ul>
+<li>200 - &#x8BF7;&#x6C42;&#x6210;&#x529F;</li>
+<li>301 - &#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#x7B49;&#xFF09;&#x88AB;&#x6C38;&#x4E45;&#x8F6C;&#x79FB;&#x5230;&#x5176;&#x5B83;URL</li>
+<li>404 - &#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#x7B49;&#xFF09;&#x4E0D;&#x5B58;&#x5728;</li>
+<li>500 - &#x5185;&#x90E8;&#x670D;&#x52A1;&#x5668;&#x9519;&#x8BEF;</li>
+</ul>
+<h4 id="http&#x72B6;&#x6001;&#x7801;&#x5206;&#x7C7B;">HTTP&#x72B6;&#x6001;&#x7801;&#x5206;&#x7C7B;</h4>
+<pre><code>HTTP&#x72B6;&#x6001;&#x7801;&#x7531;&#x4E09;&#x4E2A;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x5B9A;&#x4E49;&#x4E86;&#x72B6;&#x6001;&#x7801;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x540E;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x6CA1;&#x6709;&#x5206;&#x7C7B;&#x7684;&#x4F5C;&#x7528;&#x3002;HTTP&#x72B6;&#x6001;&#x7801;&#x5171;&#x5206;&#x4E3A;5&#x79CD;&#x7C7B;&#x578B;&#xFF1A;
+</code></pre><p>HTTP&#x72B6;&#x6001;&#x7801;&#x5206;&#x7C7B;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5206;&#x7C7B;</th>
+<th>&#x5206;&#x7C7B;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&#x4FE1;&#x606F;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x8BF7;&#x6C42;&#x8005;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x6210;&#x529F;&#xFF0C;&#x64CD;&#x4F5C;&#x88AB;&#x6210;&#x529F;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#x4EE5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x6C42;&#x5305;&#x542B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x6216;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x9519;&#x8BEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5728;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x4E86;&#x9519;&#x8BEF;</td>
+</tr>
+</tbody>
+</table>
+<p>HTTP&#x72B6;&#x6001;&#x7801;&#x5217;&#x8868;:</p>
+<p>HTTP&#x72B6;&#x6001;&#x7801;&#x5217;&#x8868;</p>
+<table>
+<thead>
+<tr>
+<th>&#x72B6;&#x6001;&#x7801;</th>
+<th>&#x72B6;&#x6001;&#x7801;&#x82F1;&#x6587;&#x540D;&#x79F0;</th>
+<th>&#x4E2D;&#x6587;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Continue</td>
+<td>&#x7EE7;&#x7EED;&#x3002;<a href="http://www.dreamdu.com/webbuild/client_vs_server/" target="_blank">&#x5BA2;&#x6237;&#x7AEF;</a>&#x5E94;&#x7EE7;&#x7EED;&#x5176;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+<td>&#x5207;&#x6362;&#x534F;&#x8BAE;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x5207;&#x6362;&#x534F;&#x8BAE;&#x3002;&#x53EA;&#x80FD;&#x5207;&#x6362;&#x5230;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5207;&#x6362;&#x5230;HTTP&#x7684;&#x65B0;&#x7248;&#x672C;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;&#x3002;&#x4E00;&#x822C;&#x7528;&#x4E8E;GET&#x4E0E;POST&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>&#x5DF2;&#x521B;&#x5EFA;&#x3002;&#x6210;&#x529F;&#x8BF7;&#x6C42;&#x5E76;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>&#x5DF2;&#x63A5;&#x53D7;&#x3002;&#x5DF2;&#x7ECF;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x672A;&#x5904;&#x7406;&#x5B8C;&#x6210;</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-Authoritative Information</td>
+<td>&#x975E;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x3002;&#x8BF7;&#x6C42;&#x6210;&#x529F;&#x3002;&#x4F46;&#x8FD4;&#x56DE;&#x7684;meta&#x4FE1;&#x606F;&#x4E0D;&#x5728;&#x539F;&#x59CB;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x526F;&#x672C;</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td>&#x65E0;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6210;&#x529F;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x672A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x672A;&#x66F4;&#x65B0;&#x7F51;&#x9875;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x786E;&#x4FDD;&#x6D4F;&#x89C8;&#x5668;&#x7EE7;&#x7EED;&#x663E;&#x793A;&#x5F53;&#x524D;&#x6587;&#x6863;</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+<td>&#x91CD;&#x7F6E;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x6210;&#x529F;&#xFF0C;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5E94;&#x91CD;&#x7F6E;&#x6587;&#x6863;&#x89C6;&#x56FE;&#x3002;&#x53EF;&#x901A;&#x8FC7;&#x6B64;&#x8FD4;&#x56DE;&#x7801;&#x6E05;&#x9664;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8868;&#x5355;&#x57DF;</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+<td>&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6210;&#x529F;&#x5904;&#x7406;&#x4E86;&#x90E8;&#x5206;GET&#x8BF7;&#x6C42;</td>
+</tr>
+</tbody>
+</table>
+<p>| 300 | Multiple Choices | &#x591A;&#x79CD;&#x9009;&#x62E9;&#x3002;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x5305;&#x62EC;&#x591A;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x76F8;&#x5E94;&#x53EF;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x7279;&#x5F81;&#x4E0E;&#x5730;&#x5740;&#x7684;&#x5217;&#x8868;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x9009;&#x62E9; |
+| 301 | Moved Permanently | &#x6C38;&#x4E45;&#x79FB;&#x52A8;&#x3002;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5DF2;&#x88AB;&#x6C38;&#x4E45;&#x7684;&#x79FB;&#x52A8;&#x5230;&#x65B0;URI&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x4F1A;&#x5305;&#x62EC;&#x65B0;&#x7684;URI&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5B9A;&#x5411;&#x5230;&#x65B0;URI&#x3002;&#x4ECA;&#x540E;&#x4EFB;&#x4F55;&#x65B0;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x5E94;&#x4F7F;&#x7528;&#x65B0;&#x7684;URI&#x4EE3;&#x66FF; |
+| 302 | Found | &#x4E34;&#x65F6;&#x79FB;&#x52A8;&#x3002;&#x4E0E;301&#x7C7B;&#x4F3C;&#x3002;&#x4F46;&#x8D44;&#x6E90;&#x53EA;&#x662F;&#x4E34;&#x65F6;&#x88AB;&#x79FB;&#x52A8;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x539F;&#x6709;URI |
+| 303 | See Other | &#x67E5;&#x770B;&#x5176;&#x5B83;&#x5730;&#x5740;&#x3002;&#x4E0E;301&#x7C7B;&#x4F3C;&#x3002;&#x4F7F;&#x7528;GET&#x548C;POST&#x8BF7;&#x6C42;&#x67E5;&#x770B; |
+| 304 | Not Modified | &#x672A;&#x4FEE;&#x6539;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x6B64;&#x72B6;&#x6001;&#x7801;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x5E38;&#x4F1A;&#x7F13;&#x5B58;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5934;&#x4FE1;&#x606F;&#x6307;&#x51FA;&#x5BA2;&#x6237;&#x7AEF;&#x5E0C;&#x671B;&#x53EA;&#x8FD4;&#x56DE;&#x5728;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x4E4B;&#x540E;&#x4FEE;&#x6539;&#x7684;&#x8D44;&#x6E90; |
+| 305 | Use Proxy | &#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x8BBF;&#x95EE; |
+| 306 | Unused | &#x5DF2;&#x7ECF;&#x88AB;&#x5E9F;&#x5F03;&#x7684;HTTP&#x72B6;&#x6001;&#x7801; |
+| 307 | Temporary Redirect | &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#x3002;&#x4E0E;302&#x7C7B;&#x4F3C;&#x3002;&#x4F7F;&#x7528;GET&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411; |</p>
+<p>| 400 | Bad Request | &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x7406;&#x89E3; |
+| 401 | Unauthorized | &#x8BF7;&#x6C42;&#x8981;&#x6C42;&#x7528;&#x6237;&#x7684;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1; |
+| 402 | Payment Required | &#x4FDD;&#x7559;&#xFF0C;&#x5C06;&#x6765;&#x4F7F;&#x7528; |
+| 403 | Forbidden | &#x670D;&#x52A1;&#x5668;&#x7406;&#x89E3;&#x8BF7;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x62D2;&#x7EDD;&#x6267;&#x884C;&#x6B64;&#x8BF7;&#x6C42; |
+| 404 | Not Found | &#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x627E;&#x5230;&#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#xFF09;&#x3002;&#x901A;&#x8FC7;&#x6B64;&#x4EE3;&#x7801;&#xFF0C;&#x7F51;&#x7AD9;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x53EF;&#x8BBE;&#x7F6E;&quot;&#x60A8;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x65E0;&#x6CD5;&#x627E;&#x5230;&quot;&#x7684;&#x4E2A;&#x6027;&#x9875;&#x9762; |
+| 405 | Method Not Allowed | &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x88AB;&#x7981;&#x6B62; |
+| 406 | Not Acceptable | &#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x5BB9;&#x7279;&#x6027;&#x5B8C;&#x6210;&#x8BF7;&#x6C42; |
+| 407 | Proxy Authentication Required | &#x8BF7;&#x6C42;&#x8981;&#x6C42;&#x4EE3;&#x7406;&#x7684;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF0C;&#x4E0E;401&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x8BF7;&#x6C42;&#x8005;&#x5E94;&#x5F53;&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x8FDB;&#x884C;&#x6388;&#x6743; |
+| 408 | Request Time-out | &#x670D;&#x52A1;&#x5668;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#xFF0C;&#x8D85;&#x65F6; |
+| 409 | Conflict | &#x670D;&#x52A1;&#x5668;&#x5B8C;&#x6210;&#x5BA2;&#x6237;&#x7AEF;&#x7684; PUT &#x8BF7;&#x6C42;&#x65F6;&#x53EF;&#x80FD;&#x8FD4;&#x56DE;&#x6B64;&#x4EE3;&#x7801;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x65F6;&#x53D1;&#x751F;&#x4E86;&#x51B2;&#x7A81; |
+| 410 | Gone | &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x3002;410&#x4E0D;&#x540C;&#x4E8E;404&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x4EE5;&#x524D;&#x6709;&#x73B0;&#x5728;&#x88AB;&#x6C38;&#x4E45;&#x5220;&#x9664;&#x4E86;&#x53EF;&#x4F7F;&#x7528;410&#x4EE3;&#x7801;&#xFF0C;&#x7F51;&#x7AD9;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x53EF;&#x901A;&#x8FC7;301&#x4EE3;&#x7801;&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x7684;&#x65B0;&#x4F4D;&#x7F6E; |
+| 411 | Length Required | &#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x4E0D;&#x5E26;Content-Length&#x7684;&#x8BF7;&#x6C42;&#x4FE1;&#x606F; |
+| 412 | Precondition Failed | &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x9519;&#x8BEF; |
+| 413 | Request Entity Too Large | &#x7531;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;&#x5B9E;&#x4F53;&#x8FC7;&#x5927;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x62D2;&#x7EDD;&#x8BF7;&#x6C42;&#x3002;&#x4E3A;&#x9632;&#x6B62;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x7EED;&#x8BF7;&#x6C42;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x53EA;&#x662F;&#x670D;&#x52A1;&#x5668;&#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x5219;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;Retry-After&#x7684;&#x54CD;&#x5E94;&#x4FE1;&#x606F; |
+| 414 | Request-URI Too Large | &#x8BF7;&#x6C42;&#x7684;URI&#x8FC7;&#x957F;&#xFF08;URI&#x901A;&#x5E38;&#x4E3A;&#x7F51;&#x5740;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406; |
+| 415 | Unsupported Media Type | &#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x9644;&#x5E26;&#x7684;&#x5A92;&#x4F53;&#x683C;&#x5F0F; |
+| 416 | Requested range not satisfiable | &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8303;&#x56F4;&#x65E0;&#x6548; |
+| 417 | Expectation Failed | &#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6EE1;&#x8DB3;Expect&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F; |</p>
+<p>| 500 | Internal Server Error | &#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;&#xFF0C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42; |
+| 501 | Not Implemented | &#x670D;&#x52A1;&#x5668;&#x4E0D;&#x652F;&#x6301;&#x8BF7;&#x6C42;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42; |
+| 502 | Bad Gateway | &#x4F5C;&#x4E3A;&#x7F51;&#x5173;&#x6216;&#x8005;&#x4EE3;&#x7406;&#x5DE5;&#x4F5C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5C1D;&#x8BD5;&#x6267;&#x884C;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4ECE;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x65E0;&#x6548;&#x7684;&#x54CD;&#x5E94; |
+| 503 | Service Unavailable | &#x7531;&#x4E8E;&#x8D85;&#x8F7D;&#x6216;&#x7CFB;&#x7EDF;&#x7EF4;&#x62A4;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x6682;&#x65F6;&#x7684;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x5EF6;&#x65F6;&#x7684;&#x957F;&#x5EA6;&#x53EF;&#x5305;&#x542B;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7684;Retry-After&#x5934;&#x4FE1;&#x606F;&#x4E2D; |
+| 504 | Gateway Time-out | &#x5145;&#x5F53;&#x7F51;&#x5173;&#x6216;&#x4EE3;&#x7406;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x672A;&#x53CA;&#x65F6;&#x4ECE;&#x8FDC;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x8BF7;&#x6C42; |
+| 505 | HTTP Version not supported | &#x670D;&#x52A1;&#x5668;&#x4E0D;&#x652F;&#x6301;&#x8BF7;&#x6C42;&#x7684;HTTP&#x534F;&#x8BAE;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x5904;&#x7406; |</p>
+<h4 id="http-content-type">HTTP content-type</h4>
+<p>Content-Type&#xFF08;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x6307;&#x7F51;&#x9875;&#x4E2D;&#x5B58;&#x5728;&#x7684; Content-Type&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x7F51;&#x9875;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x51B3;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x4EE5;&#x4EC0;&#x4E48;&#x5F62;&#x5F0F;&#x3001;&#x4EC0;&#x4E48;&#x7F16;&#x7801;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x7ECF;&#x5E38;&#x770B;&#x5230;&#x4E00;&#x4E9B; PHP &#x7F51;&#x9875;&#x70B9;&#x51FB;&#x7684;&#x7ED3;&#x679C;&#x5374;&#x662F;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6216;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>Content-Type &#x6807;&#x5934;&#x544A;&#x8BC9;&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x9645;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;</p>
+<p>Content-Type: text/html; charset=utf-8
+Content-Type: multipart/form-data; boundary=something</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<p><img src="../../image/up-5f57ee30b4e74cd71feeb5cd8cb81aecd05.png" alt=""></p>
+<p>&#x5E38;&#x89C1;&#x7684;&#x5A92;&#x4F53;&#x683C;&#x5F0F;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>text/html &#xFF1A; HTML&#x683C;&#x5F0F;</li>
+<li>text/plain &#xFF1A;&#x7EAF;&#x6587;&#x672C;&#x683C;&#x5F0F;</li>
+<li>text/xml &#xFF1A; XML&#x683C;&#x5F0F;</li>
+<li>image/gif &#xFF1A;gif&#x56FE;&#x7247;&#x683C;&#x5F0F;</li>
+<li>image/jpeg &#xFF1A;jpg&#x56FE;&#x7247;&#x683C;&#x5F0F;</li>
+<li><p>image/png&#xFF1A;png&#x56FE;&#x7247;&#x683C;&#x5F0F;</p>
+<p>&#x4EE5;application&#x5F00;&#x5934;&#x7684;&#x5A92;&#x4F53;&#x683C;&#x5F0F;&#x7C7B;&#x578B;&#xFF1A;</p>
+</li>
+<li><p>application/xhtml+xml &#xFF1A;XHTML&#x683C;&#x5F0F;</p>
+</li>
+<li>application/xml&#xFF1A; XML&#x6570;&#x636E;&#x683C;&#x5F0F;</li>
+<li>application/atom+xml &#xFF1A;Atom XML&#x805A;&#x5408;&#x683C;&#x5F0F;</li>
+<li>application/json&#xFF1A; JSON&#x6570;&#x636E;&#x683C;&#x5F0F;</li>
+<li>application/pdf&#xFF1A;pdf&#x683C;&#x5F0F;</li>
+<li>application/msword &#xFF1A; Word&#x6587;&#x6863;&#x683C;&#x5F0F;</li>
+<li>application/octet-stream &#xFF1A; &#x4E8C;&#x8FDB;&#x5236;&#x6D41;&#x6570;&#x636E;&#xFF08;&#x5982;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#xFF09;</li>
+<li><p>application/x-www-form-urlencoded &#xFF1A; <form enctype="&#x201D;&#x201D;">&#x4E2D;&#x9ED8;&#x8BA4;&#x7684;encType&#xFF0C;form&#x8868;&#x5355;&#x6570;&#x636E;&#x88AB;&#x7F16;&#x7801;&#x4E3A;key/value&#x683C;&#x5F0F;&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x8868;&#x5355;&#x9ED8;&#x8BA4;&#x7684;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#xFF09;</form></p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x5A92;&#x4F53;&#x683C;&#x5F0F;&#x662F;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x4E4B;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#xFF1A;</p>
+</li>
+<li><p>multipart/form-data &#xFF1A; &#x9700;&#x8981;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x65F6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8BE5;&#x683C;&#x5F0F;</p>
+</li>
+</ul>
+<h4 id="http-content-type-&#x5BF9;&#x7167;&#x8868;">HTTP content-type &#x5BF9;&#x7167;&#x8868;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;</th>
+<th>Content-Type(Mime-Type)</th>
+<th>&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;</th>
+<th>Content-Type(Mime-Type)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.*&#xFF08; &#x4E8C;&#x8FDB;&#x5236;&#x6D41;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF09;</td>
+<td>application/octet-stream</td>
+<td>.tif</td>
+<td>image/tiff</td>
+</tr>
+<tr>
+<td>.001</td>
+<td>application/x-001</td>
+<td>.301</td>
+<td>application/x-301</td>
+</tr>
+<tr>
+<td>.323</td>
+<td>text/h323</td>
+<td>.906</td>
+<td>application/x-906</td>
+</tr>
+<tr>
+<td>.907</td>
+<td>drawing/907</td>
+<td>.a11</td>
+<td>application/x-a11</td>
+</tr>
+<tr>
+<td>.acp</td>
+<td>audio/x-mei-aac</td>
+<td>.ai</td>
+<td>application/postscript</td>
+</tr>
+<tr>
+<td>.aif</td>
+<td>audio/aiff</td>
+<td>.aifc</td>
+<td>audio/aiff</td>
+</tr>
+<tr>
+<td>.aiff</td>
+<td>audio/aiff</td>
+<td>.anv</td>
+<td>application/x-anv</td>
+</tr>
+<tr>
+<td>.asa</td>
+<td>text/asa</td>
+<td>.asf</td>
+<td>video/x-ms-asf</td>
+</tr>
+<tr>
+<td>.asp</td>
+<td>text/asp</td>
+<td>.asx</td>
+<td>video/x-ms-asf</td>
+</tr>
+<tr>
+<td>.au</td>
+<td>audio/basic</td>
+<td>.avi</td>
+<td>video/avi</td>
+</tr>
+<tr>
+<td>.awf</td>
+<td>application/vnd.adobe.workflow</td>
+<td>.biz</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.bmp</td>
+<td>application/x-bmp</td>
+<td>.bot</td>
+<td>application/x-bot</td>
+</tr>
+<tr>
+<td>.c4t</td>
+<td>application/x-c4t</td>
+<td>.c90</td>
+<td>application/x-c90</td>
+</tr>
+<tr>
+<td>.cal</td>
+<td>application/x-cals</td>
+<td>.cat</td>
+<td>application/vnd.ms-pki.seccat</td>
+</tr>
+<tr>
+<td>.cdf</td>
+<td>application/x-netcdf</td>
+<td>.cdr</td>
+<td>application/x-cdr</td>
+</tr>
+<tr>
+<td>.cel</td>
+<td>application/x-cel</td>
+<td>.cer</td>
+<td>application/x-x509-ca-cert</td>
+</tr>
+<tr>
+<td>.cg4</td>
+<td>application/x-g4</td>
+<td>.cgm</td>
+<td>application/x-cgm</td>
+</tr>
+<tr>
+<td>.cit</td>
+<td>application/x-cit</td>
+<td>.class</td>
+<td>java/*</td>
+</tr>
+<tr>
+<td>.cml</td>
+<td>text/xml</td>
+<td>.cmp</td>
+<td>application/x-cmp</td>
+</tr>
+<tr>
+<td>.cmx</td>
+<td>application/x-cmx</td>
+<td>.cot</td>
+<td>application/x-cot</td>
+</tr>
+<tr>
+<td>.crl</td>
+<td>application/pkix-crl</td>
+<td>.crt</td>
+<td>application/x-x509-ca-cert</td>
+</tr>
+<tr>
+<td>.csi</td>
+<td>application/x-csi</td>
+<td>.css</td>
+<td>text/css</td>
+</tr>
+<tr>
+<td>.cut</td>
+<td>application/x-cut</td>
+<td>.dbf</td>
+<td>application/x-dbf</td>
+</tr>
+<tr>
+<td>.dbm</td>
+<td>application/x-dbm</td>
+<td>.dbx</td>
+<td>application/x-dbx</td>
+</tr>
+<tr>
+<td>.dcd</td>
+<td>text/xml</td>
+<td>.dcx</td>
+<td>application/x-dcx</td>
+</tr>
+<tr>
+<td>.der</td>
+<td>application/x-x509-ca-cert</td>
+<td>.dgn</td>
+<td>application/x-dgn</td>
+</tr>
+<tr>
+<td>.dib</td>
+<td>application/x-dib</td>
+<td>.dll</td>
+<td>application/x-msdownload</td>
+</tr>
+<tr>
+<td>.doc</td>
+<td>application/msword</td>
+<td>.dot</td>
+<td>application/msword</td>
+</tr>
+<tr>
+<td>.drw</td>
+<td>application/x-drw</td>
+<td>.dtd</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.dwf</td>
+<td>Model/vnd.dwf</td>
+<td>.dwf</td>
+<td>application/x-dwf</td>
+</tr>
+<tr>
+<td>.dwg</td>
+<td>application/x-dwg</td>
+<td>.dxb</td>
+<td>application/x-dxb</td>
+</tr>
+<tr>
+<td>.dxf</td>
+<td>application/x-dxf</td>
+<td>.edn</td>
+<td>application/vnd.adobe.edn</td>
+</tr>
+<tr>
+<td>.emf</td>
+<td>application/x-emf</td>
+<td>.eml</td>
+<td>message/rfc822</td>
+</tr>
+<tr>
+<td>.ent</td>
+<td>text/xml</td>
+<td>.epi</td>
+<td>application/x-epi</td>
+</tr>
+<tr>
+<td>.eps</td>
+<td>application/x-ps</td>
+<td>.eps</td>
+<td>application/postscript</td>
+</tr>
+<tr>
+<td>.etd</td>
+<td>application/x-ebx</td>
+<td>.exe</td>
+<td>application/x-msdownload</td>
+</tr>
+<tr>
+<td>.fax</td>
+<td>image/fax</td>
+<td>.fdf</td>
+<td>application/vnd.fdf</td>
+</tr>
+<tr>
+<td>.fif</td>
+<td>application/fractals</td>
+<td>.fo</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.frm</td>
+<td>application/x-frm</td>
+<td>.g4</td>
+<td>application/x-g4</td>
+</tr>
+<tr>
+<td>.gbr</td>
+<td>application/x-gbr</td>
+<td>.</td>
+<td>application/x-</td>
+</tr>
+<tr>
+<td>.gif</td>
+<td>image/gif</td>
+<td>.gl2</td>
+<td>application/x-gl2</td>
+</tr>
+<tr>
+<td>.gp4</td>
+<td>application/x-gp4</td>
+<td>.hgl</td>
+<td>application/x-hgl</td>
+</tr>
+<tr>
+<td>.hmr</td>
+<td>application/x-hmr</td>
+<td>.hpg</td>
+<td>application/x-hpgl</td>
+</tr>
+<tr>
+<td>.hpl</td>
+<td>application/x-hpl</td>
+<td>.hqx</td>
+<td>application/mac-binhex40</td>
+</tr>
+<tr>
+<td>.hrf</td>
+<td>application/x-hrf</td>
+<td>.hta</td>
+<td>application/hta</td>
+</tr>
+<tr>
+<td>.htc</td>
+<td>text/x-component</td>
+<td>.htm</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>.html</td>
+<td>text/html</td>
+<td>.htt</td>
+<td>text/webviewhtml</td>
+</tr>
+<tr>
+<td>.htx</td>
+<td>text/html</td>
+<td>.icb</td>
+<td>application/x-icb</td>
+</tr>
+<tr>
+<td>.ico</td>
+<td>image/x-icon</td>
+<td>.ico</td>
+<td>application/x-ico</td>
+</tr>
+<tr>
+<td>.iff</td>
+<td>application/x-iff</td>
+<td>.ig4</td>
+<td>application/x-g4</td>
+</tr>
+<tr>
+<td>.igs</td>
+<td>application/x-igs</td>
+<td>.iii</td>
+<td>application/x-iphone</td>
+</tr>
+<tr>
+<td>.img</td>
+<td>application/x-img</td>
+<td>.ins</td>
+<td>application/x-internet-signup</td>
+</tr>
+<tr>
+<td>.isp</td>
+<td>application/x-internet-signup</td>
+<td>.IVF</td>
+<td>video/x-ivf</td>
+</tr>
+<tr>
+<td>.java</td>
+<td>java/*</td>
+<td>.jfif</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>.jpe</td>
+<td>image/jpeg</td>
+<td>.jpe</td>
+<td>application/x-jpe</td>
+</tr>
+<tr>
+<td>.jpeg</td>
+<td>image/jpeg</td>
+<td>.jpg</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>.jpg</td>
+<td>application/x-jpg</td>
+<td>.js</td>
+<td>application/x-javascript</td>
+</tr>
+<tr>
+<td>.jsp</td>
+<td>text/html</td>
+<td>.la1</td>
+<td>audio/x-liquid-file</td>
+</tr>
+<tr>
+<td>.lar</td>
+<td>application/x-laplayer-reg</td>
+<td>.latex</td>
+<td>application/x-latex</td>
+</tr>
+<tr>
+<td>.lavs</td>
+<td>audio/x-liquid-secure</td>
+<td>.lbm</td>
+<td>application/x-lbm</td>
+</tr>
+<tr>
+<td>.lmsff</td>
+<td>audio/x-la-lms</td>
+<td>.ls</td>
+<td>application/x-javascript</td>
+</tr>
+<tr>
+<td>.ltr</td>
+<td>application/x-ltr</td>
+<td>.m1v</td>
+<td>video/x-mpeg</td>
+</tr>
+<tr>
+<td>.m2v</td>
+<td>video/x-mpeg</td>
+<td>.m3u</td>
+<td>audio/mpegurl</td>
+</tr>
+<tr>
+<td>.m4e</td>
+<td>video/mpeg4</td>
+<td>.mac</td>
+<td>application/x-mac</td>
+</tr>
+<tr>
+<td>.man</td>
+<td>application/x-troff-man</td>
+<td>.math</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.mdb</td>
+<td>application/msaccess</td>
+<td>.mdb</td>
+<td>application/x-mdb</td>
+</tr>
+<tr>
+<td>.mfp</td>
+<td>application/x-shockwave-flash</td>
+<td>.mht</td>
+<td>message/rfc822</td>
+</tr>
+<tr>
+<td>.mhtml</td>
+<td>message/rfc822</td>
+<td>.mi</td>
+<td>application/x-mi</td>
+</tr>
+<tr>
+<td>.mid</td>
+<td>audio/mid</td>
+<td>.midi</td>
+<td>audio/mid</td>
+</tr>
+<tr>
+<td>.mil</td>
+<td>application/x-mil</td>
+<td>.mml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.mnd</td>
+<td>audio/x-musicnet-download</td>
+<td>.mns</td>
+<td>audio/x-musicnet-stream</td>
+</tr>
+<tr>
+<td>.mocha</td>
+<td>application/x-javascript</td>
+<td>.movie</td>
+<td>video/x-sgi-movie</td>
+</tr>
+<tr>
+<td>.mp1</td>
+<td>audio/mp1</td>
+<td>.mp2</td>
+<td>audio/mp2</td>
+</tr>
+<tr>
+<td>.mp2v</td>
+<td>video/mpeg</td>
+<td>.mp3</td>
+<td>audio/mp3</td>
+</tr>
+<tr>
+<td>.mp4</td>
+<td>video/mpeg4</td>
+<td>.mpa</td>
+<td>video/x-mpg</td>
+</tr>
+<tr>
+<td>.mpd</td>
+<td>application/vnd.ms-project</td>
+<td>.mpe</td>
+<td>video/x-mpeg</td>
+</tr>
+<tr>
+<td>.mpeg</td>
+<td>video/mpg</td>
+<td>.mpg</td>
+<td>video/mpg</td>
+</tr>
+<tr>
+<td>.mpga</td>
+<td>audio/rn-mpeg</td>
+<td>.mpp</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mps</td>
+<td>video/x-mpeg</td>
+<td>.mpt</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mpv</td>
+<td>video/mpg</td>
+<td>.mpv2</td>
+<td>video/mpeg</td>
+</tr>
+<tr>
+<td>.mpw</td>
+<td>application/vnd.ms-project</td>
+<td>.mpx</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mtx</td>
+<td>text/xml</td>
+<td>.mxp</td>
+<td>application/x-mmxp</td>
+</tr>
+<tr>
+<td>.net</td>
+<td>image/pnetvue</td>
+<td>.nrf</td>
+<td>application/x-nrf</td>
+</tr>
+<tr>
+<td>.nws</td>
+<td>message/rfc822</td>
+<td>.odc</td>
+<td>text/x-ms-odc</td>
+</tr>
+<tr>
+<td>.out</td>
+<td>application/x-out</td>
+<td>.p10</td>
+<td>application/pkcs10</td>
+</tr>
+<tr>
+<td>.p12</td>
+<td>application/x-pkcs12</td>
+<td>.p7b</td>
+<td>application/x-pkcs7-certificates</td>
+</tr>
+<tr>
+<td>.p7c</td>
+<td>application/pkcs7-mime</td>
+<td>.p7m</td>
+<td>application/pkcs7-mime</td>
+</tr>
+<tr>
+<td>.p7r</td>
+<td>application/x-pkcs7-certreqresp</td>
+<td>.p7s</td>
+<td>application/pkcs7-signature</td>
+</tr>
+<tr>
+<td>.pc5</td>
+<td>application/x-pc5</td>
+<td>.pci</td>
+<td>application/x-pci</td>
+</tr>
+<tr>
+<td>.pcl</td>
+<td>application/x-pcl</td>
+<td>.pcx</td>
+<td>application/x-pcx</td>
+</tr>
+<tr>
+<td>.pdf</td>
+<td>application/pdf</td>
+<td>.pdf</td>
+<td>application/pdf</td>
+</tr>
+<tr>
+<td>.pdx</td>
+<td>application/vnd.adobe.pdx</td>
+<td>.pfx</td>
+<td>application/x-pkcs12</td>
+</tr>
+<tr>
+<td>.pgl</td>
+<td>application/x-pgl</td>
+<td>.pic</td>
+<td>application/x-pic</td>
+</tr>
+<tr>
+<td>.pko</td>
+<td>application/vnd.ms-pki.pko</td>
+<td>.pl</td>
+<td>application/x-perl</td>
+</tr>
+<tr>
+<td>.plg</td>
+<td>text/html</td>
+<td>.pls</td>
+<td>audio/scpls</td>
+</tr>
+<tr>
+<td>.plt</td>
+<td>application/x-plt</td>
+<td>.png</td>
+<td>image/png</td>
+</tr>
+<tr>
+<td>.png</td>
+<td>application/x-png</td>
+<td>.pot</td>
+<td>application/vnd.ms-powerpoint</td>
+</tr>
+<tr>
+<td>.ppa</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.ppm</td>
+<td>application/x-ppm</td>
+</tr>
+<tr>
+<td>.pps</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.ppt</td>
+<td>application/vnd.ms-powerpoint</td>
+</tr>
+<tr>
+<td>.ppt</td>
+<td>application/x-ppt</td>
+<td>.pr</td>
+<td>application/x-pr</td>
+</tr>
+<tr>
+<td>.prf</td>
+<td>application/pics-rules</td>
+<td>.prn</td>
+<td>application/x-prn</td>
+</tr>
+<tr>
+<td>.prt</td>
+<td>application/x-prt</td>
+<td>.ps</td>
+<td>application/x-ps</td>
+</tr>
+<tr>
+<td>.ps</td>
+<td>application/postscript</td>
+<td>.ptn</td>
+<td>application/x-ptn</td>
+</tr>
+<tr>
+<td>.pwz</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.r3t</td>
+<td>text/vnd.rn-realtext3d</td>
+</tr>
+<tr>
+<td>.ra</td>
+<td>audio/vnd.rn-realaudio</td>
+<td>.ram</td>
+<td>audio/x-pn-realaudio</td>
+</tr>
+<tr>
+<td>.ras</td>
+<td>application/x-ras</td>
+<td>.rat</td>
+<td>application/rat-file</td>
+</tr>
+<tr>
+<td>.rdf</td>
+<td>text/xml</td>
+<td>.rec</td>
+<td>application/vnd.rn-recording</td>
+</tr>
+<tr>
+<td>.red</td>
+<td>application/x-red</td>
+<td>.rgb</td>
+<td>application/x-rgb</td>
+</tr>
+<tr>
+<td>.rjs</td>
+<td>application/vnd.rn-realsystem-rjs</td>
+<td>.rjt</td>
+<td>application/vnd.rn-realsystem-rjt</td>
+</tr>
+<tr>
+<td>.rlc</td>
+<td>application/x-rlc</td>
+<td>.rle</td>
+<td>application/x-rle</td>
+</tr>
+<tr>
+<td>.rm</td>
+<td>application/vnd.rn-realmedia</td>
+<td>.rmf</td>
+<td>application/vnd.adobe.rmf</td>
+</tr>
+<tr>
+<td>.rmi</td>
+<td>audio/mid</td>
+<td>.rmj</td>
+<td>application/vnd.rn-realsystem-rmj</td>
+</tr>
+<tr>
+<td>.rmm</td>
+<td>audio/x-pn-realaudio</td>
+<td>.rmp</td>
+<td>application/vnd.rn-rn_music_package</td>
+</tr>
+<tr>
+<td>.rms</td>
+<td>application/vnd.rn-realmedia-secure</td>
+<td>.rmvb</td>
+<td>application/vnd.rn-realmedia-vbr</td>
+</tr>
+<tr>
+<td>.rmx</td>
+<td>application/vnd.rn-realsystem-rmx</td>
+<td>.rnx</td>
+<td>application/vnd.rn-realplayer</td>
+</tr>
+<tr>
+<td>.rp</td>
+<td>image/vnd.rn-realpix</td>
+<td>.rpm</td>
+<td>audio/x-pn-realaudio-plugin</td>
+</tr>
+<tr>
+<td>.rsml</td>
+<td>application/vnd.rn-rsml</td>
+<td>.rt</td>
+<td>text/vnd.rn-realtext</td>
+</tr>
+<tr>
+<td>.rtf</td>
+<td>application/msword</td>
+<td>.rtf</td>
+<td>application/x-rtf</td>
+</tr>
+<tr>
+<td>.rv</td>
+<td>video/vnd.rn-realvideo</td>
+<td>.sam</td>
+<td>application/x-sam</td>
+</tr>
+<tr>
+<td>.sat</td>
+<td>application/x-sat</td>
+<td>.sdp</td>
+<td>application/sdp</td>
+</tr>
+<tr>
+<td>.sdw</td>
+<td>application/x-sdw</td>
+<td>.sit</td>
+<td>application/x-stuffit</td>
+</tr>
+<tr>
+<td>.slb</td>
+<td>application/x-slb</td>
+<td>.sld</td>
+<td>application/x-sld</td>
+</tr>
+<tr>
+<td>.slk</td>
+<td>drawing/x-slk</td>
+<td>.smi</td>
+<td>application/smil</td>
+</tr>
+<tr>
+<td>.smil</td>
+<td>application/smil</td>
+<td>.smk</td>
+<td>application/x-smk</td>
+</tr>
+<tr>
+<td>.snd</td>
+<td>audio/basic</td>
+<td>.sol</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>.sor</td>
+<td>text/plain</td>
+<td>.spc</td>
+<td>application/x-pkcs7-certificates</td>
+</tr>
+<tr>
+<td>.spl</td>
+<td>application/futuresplash</td>
+<td>.spp</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.ssm</td>
+<td>application/streamingmedia</td>
+<td>.sst</td>
+<td>application/vnd.ms-pki.certstore</td>
+</tr>
+<tr>
+<td>.stl</td>
+<td>application/vnd.ms-pki.stl</td>
+<td>.stm</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>.sty</td>
+<td>application/x-sty</td>
+<td>.svg</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.swf</td>
+<td>application/x-shockwave-flash</td>
+<td>.tdf</td>
+<td>application/x-tdf</td>
+</tr>
+<tr>
+<td>.tg4</td>
+<td>application/x-tg4</td>
+<td>.tga</td>
+<td>application/x-tga</td>
+</tr>
+<tr>
+<td>.tif</td>
+<td>image/tiff</td>
+<td>.tif</td>
+<td>application/x-tif</td>
+</tr>
+<tr>
+<td>.tiff</td>
+<td>image/tiff</td>
+<td>.tld</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.top</td>
+<td>drawing/x-top</td>
+<td>.torrent</td>
+<td>application/x-bittorrent</td>
+</tr>
+<tr>
+<td>.tsd</td>
+<td>text/xml</td>
+<td>.txt</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>.uin</td>
+<td>application/x-icq</td>
+<td>.uls</td>
+<td>text/iuls</td>
+</tr>
+<tr>
+<td>.vcf</td>
+<td>text/x-vcard</td>
+<td>.vda</td>
+<td>application/x-vda</td>
+</tr>
+<tr>
+<td>.vdx</td>
+<td>application/vnd.visio</td>
+<td>.vml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.vpg</td>
+<td>application/x-vpeg005</td>
+<td>.vsd</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vsd</td>
+<td>application/x-vsd</td>
+<td>.vss</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vst</td>
+<td>application/vnd.visio</td>
+<td>.vst</td>
+<td>application/x-vst</td>
+</tr>
+<tr>
+<td>.vsw</td>
+<td>application/vnd.visio</td>
+<td>.vsx</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vtx</td>
+<td>application/vnd.visio</td>
+<td>.vxml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.wav</td>
+<td>audio/wav</td>
+<td>.wax</td>
+<td>audio/x-ms-wax</td>
+</tr>
+<tr>
+<td>.wb1</td>
+<td>application/x-wb1</td>
+<td>.wb2</td>
+<td>application/x-wb2</td>
+</tr>
+<tr>
+<td>.wb3</td>
+<td>application/x-wb3</td>
+<td>.wbmp</td>
+<td>image/vnd.wap.wbmp</td>
+</tr>
+<tr>
+<td>.wiz</td>
+<td>application/msword</td>
+<td>.wk3</td>
+<td>application/x-wk3</td>
+</tr>
+<tr>
+<td>.wk4</td>
+<td>application/x-wk4</td>
+<td>.wkq</td>
+<td>application/x-wkq</td>
+</tr>
+<tr>
+<td>.wks</td>
+<td>application/x-wks</td>
+<td>.wm</td>
+<td>video/x-ms-wm</td>
+</tr>
+<tr>
+<td>.wma</td>
+<td>audio/x-ms-wma</td>
+<td>.wmd</td>
+<td>application/x-ms-wmd</td>
+</tr>
+<tr>
+<td>.wmf</td>
+<td>application/x-wmf</td>
+<td>.wml</td>
+<td>text/vnd.wap.wml</td>
+</tr>
+<tr>
+<td>.wmv</td>
+<td>video/x-ms-wmv</td>
+<td>.wmx</td>
+<td>video/x-ms-wmx</td>
+</tr>
+<tr>
+<td>.wmz</td>
+<td>application/x-ms-wmz</td>
+<td>.wp6</td>
+<td>application/x-wp6</td>
+</tr>
+<tr>
+<td>.wpd</td>
+<td>application/x-wpd</td>
+<td>.wpg</td>
+<td>application/x-wpg</td>
+</tr>
+<tr>
+<td>.wpl</td>
+<td>application/vnd.ms-wpl</td>
+<td>.wq1</td>
+<td>application/x-wq1</td>
+</tr>
+<tr>
+<td>.wr1</td>
+<td>application/x-wr1</td>
+<td>.wri</td>
+<td>application/x-wri</td>
+</tr>
+<tr>
+<td>.wrk</td>
+<td>application/x-wrk</td>
+<td>.ws</td>
+<td>application/x-ws</td>
+</tr>
+<tr>
+<td>.ws2</td>
+<td>application/x-ws</td>
+<td>.wsc</td>
+<td>text/scriptlet</td>
+</tr>
+<tr>
+<td>.wsdl</td>
+<td>text/xml</td>
+<td>.wvx</td>
+<td>video/x-ms-wvx</td>
+</tr>
+<tr>
+<td>.xdp</td>
+<td>application/vnd.adobe.xdp</td>
+<td>.xdr</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xfd</td>
+<td>application/vnd.adobe.xfd</td>
+<td>.xfdf</td>
+<td>application/vnd.adobe.xfdf</td>
+</tr>
+<tr>
+<td>.xhtml</td>
+<td>text/html</td>
+<td>.xls</td>
+<td>application/vnd.ms-excel</td>
+</tr>
+<tr>
+<td>.xls</td>
+<td>application/x-xls</td>
+<td>.xlw</td>
+<td>application/x-xlw</td>
+</tr>
+<tr>
+<td>.xml</td>
+<td>text/xml</td>
+<td>.xpl</td>
+<td>audio/scpls</td>
+</tr>
+<tr>
+<td>.xq</td>
+<td>text/xml</td>
+<td>.xql</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xquery</td>
+<td>text/xml</td>
+<td>.xsd</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xsl</td>
+<td>text/xml</td>
+<td>.xslt</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xwd</td>
+<td>application/x-xwd</td>
+<td>.x_b</td>
+<td>application/x-x_b</td>
+</tr>
+<tr>
+<td>.sis</td>
+<td>application/vnd.symbian.install</td>
+<td>.sisx</td>
+<td>application/vnd.symbian.install</td>
+</tr>
+<tr>
+<td>.x_t</td>
+<td>application/x-x_t</td>
+<td>.ipa</td>
+<td>application/vnd.iphone</td>
+</tr>
+<tr>
+<td>.apk</td>
+<td>application/vnd.android.package-archive</td>
+<td>.xap</td>
+<td>application/x-silverlight-app</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http&#x54CD;&#x5E94;&#x7684;&#x6B65;&#x9AA4;">HTTP&#x54CD;&#x5E94;&#x7684;&#x6B65;&#x9AA4;</h4>
+<pre><code>1.&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x5230;web&#x670D;&#x52A1;&#x5668;
+
+2.&#x53D1;&#x9001;http&#x8BF7;&#x6C42;
+
+3.&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#x5E76;&#x8FD4;&#x56DE;HTTP&#x54CD;&#x5E94;
+
+4.&#x91CA;&#x653E;&#x8FDE;&#x63A5;TCP&#x8FDE;&#x63A5;
+
+5.&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x89E3;&#x6790;html&#x5185;&#x5BB9;
+</code></pre><h4 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;">&#x5E38;&#x89C1;&#x95EE;&#x9898;</h4>
+<p><strong>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;&#x952E;&#x5165;URL&#xFF0C;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x4E4B;&#x540E;&#x7ECF;&#x5386;&#x7684;&#x6D41;&#x7A0B;&#xFF1F;</strong></p>
+<p>1.&#x6D4F;&#x89C8;&#x5668;&#x6839;&#x636E;URL&#x4F1A;&#x9010;&#x5C42;&#x67E5;&#x8BE2;DNS&#x670D;&#x52A1;&#x5668;&#x7F13;&#x5B58;&#xFF0C;&#x89E3;&#x6790;&#x51FA;URL&#x4E2D;&#x57DF;&#x540D;&#x5BF9;&#x5E94;&#x7684;IP&#x5730;&#x5740;&#x3002;DNS&#x7F13;&#x5B58;&#x4ECE;&#x8FD1;&#x5230;&#x8FDC;&#xFF0C;&#x4F9D;&#x6B21;&#x4E3A;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;DNS&#x7F13;&#x5B58;&#xFF0C;&#x7CFB;&#x7EDF;&#x7F13;&#x5B58;(&#x672C;&#x5730;host&#x6587;&#x4EF6;)&#xFF0C;&#x8DEF;&#x7531;&#x5668;&#x7F13;&#x5B58;&#xFF0C;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6839;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;com DNS&#x670D;&#x52A1;&#x5668;&#x3002;&#x4ECE;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x5E94;&#x7684;ip,&#x5747;&#x4F1A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="../../image/1000047-20190213141232088-1179043432.png" alt=""></p>
+<p>2.&#x627E;&#x5230;ip&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x6839;&#x636E;ip&#x5730;&#x5740;&#x548C;&#x5BF9;&#x5E94;&#x7AEF;&#x53E3;&#xFF0C;&#x548C;&#x670D;&#x52A1;&#x5668;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#x3002;</p>
+<p>3.&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x53D1;&#x9001;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;HTTP&#x8BF7;&#x6C42;&#xFF0C; &#x8BE5;&#x8BF7;&#x6C42;&#x5C06;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>4.&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x6D4F;&#x89C8;&#x5668;&#x8BF7;&#x6C42;&#x505A;&#x51FA;&#x54CD;&#x5E94;&#xFF0C;&#x5E76;&#x628A;&#x5E26;&#x6709;HTML&#x7684;&#x6587;&#x672C; http&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<p>5.&#x6D4F;&#x89C8;&#x5668;&#x6536;&#x5230;html&#xFF0C;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x3002;</p>
+<p>6.&#x6D4F;&#x89C8;&#x5668;&#x91CA;&#x653E;http&#x8FDE;&#x63A5;(tcp&#x8FDE;&#x63A5;&#x65AD;&#x5F00;)&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;5 &#x548C; 6 &#x53D1;&#x751F;&#x65E0;&#x4E00;&#x5B9A;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x3002;</p>
+<p><strong>GET&#x8BF7;&#x6C42;&#x4E0E;POST&#x8BF7;&#x6C42;&#x7684;&#x533A;&#x522B;&#xFF1F;</strong></p>
+<p>HTTP&#x62A5;&#x6587;&#x5C42;&#x9762;&#xFF1A;GET&#x8BF7;&#x6C42;&#x5C06;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x653E;&#x5728;URL&#x4E2D;&#xFF0C;POST&#x8BF7;&#x6C42;&#x653E;&#x5728;&#x62A5;&#x6587;&#x4F53;&#x4E2D;&#x3002;&#x8981;&#x83B7;&#x5F97;POST&#x8BF7;&#x6C42;&#x7684;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x89E3;&#x6790;&#x62A5;&#x6587;&#xFF0C;&#x56E0;&#x6B64;&#x5B89;&#x5168;&#x6027;&#x6BD4;GET&#x8BF7;&#x6C42;&#x8981;&#x9AD8;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x8981;&#x83B7;&#x5F97;&#x62A5;&#x6587;&#x4F53;&#x4E2D;&#x7684;&#x62A5;&#x6587;&#x4FE1;&#x606F;&#x4E5F;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#xFF0C;&#x6240;&#x4EE5;POST&#x8BF7;&#x6C42;&#x4E5F;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x5177;&#x4F53;&#x89E3;&#x51B3;&#x4F20;&#x8F93;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x5B89;&#x5168;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x662F;&#x8981;&#x9760;HTTPS&#x53BB;&#x4FDD;&#x969C;&#x3002;</p>
+<p>GET&#x8BF7;&#x6C42;&#x7531;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x89C4;&#x5B9A;&#xFF0C;&#x957F;&#x5EA6;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x9650;&#x5236;&#xFF1B;POST&#x8BF7;&#x6C42;&#x662F;&#x5C06;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x653E;&#x7F6E;&#x5230;&#x62A5;&#x6587;&#x4F53;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x3002;</p>
+<p><strong>cookie &#x548C; session &#x533A;&#x522B;&#xFF1F;</strong></p>
+<p>cookie &#x662F;&#x7531;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7279;&#x6B8A;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x6587;&#x672C;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x653E;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p>&#x200B;            &#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4F1A;&#x628A;cookie&#x56DE;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>&#x200B;            &#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x5230;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x89E3;&#x6790;cookie&#x751F;&#x6210;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>cookie &#x7684;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x53D1;&#x9001;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p>&#x200B;     <img src="../../image/up-1c88e32affae6908f2f5bd5b69dcf97e8c2.png" alt=""></p>
+<p>session&#x7B80;&#x4ECB;&#xFF1A;</p>
+<p>&#x200B;    &#x670D;&#x52A1;&#x5668;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4FDD;&#x5B58;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x200B;    &#x89E3;&#x6790;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x5E76;&#x64CD;&#x4F5C;sessionId,&#x6309;&#x9700;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;</p>
+<p>   session&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<p>1.&#x57FA;&#x4E8E;cookie&#x5B9E;&#x73B0;&#xFF1A;</p>
+<p><img src="../../image/up-1f33e8eb709b405752ab2f493a2b3f74598.png" alt=""></p>
+<p>2.&#x4F7F;&#x7528;URL&#x56DE;&#x5199;&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<p>&#x200B;    &#x5728;response &#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF; sessionId&#xFF0C;&#x4E4B;&#x540E;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x5C06;&#x9644;&#x5E26;&#x4E0A;sessionId&#x3002;</p>
+<p>&#x200B;    &#x5373;&#x4F7F;&#x76F4;&#x63A5;&#x5728;URL&#x62FC;&#x63A5;&#x4E00;&#x4E2A;sessionId,&#x82E5;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E0D;&#x5B58;&#x5728;&#x8BE5;sessionId&#x5BF9;&#x5E94;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x540C;&#x6837;&#x8BE5;&#x8BF7;&#x6C42;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;</p>
+<p>Tomcat &#x5B9E;&#x73B0;&#x662F; &#x540C;&#x65F6;&#x652F;&#x6301;&#x57FA;&#x4E8E;cookie &#x548C; URL&#x56DE;&#x5199; &#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x82E5;&#x53D1;&#x73B0;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;cookie, &#x5C31;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;cookie,&#x505C;&#x6B62;&#x4F7F;&#x7528;URL&#x56DE;&#x5199;&#x3002;&#x5982;&#x679C;&#x53D1;&#x73B0;cookie &#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x7981;&#x7528;&#xFF0C;&#x5C31;&#x4F1A;&#x4E00;&#x76F4;&#x4F7F;&#x7528;URL&#x56DE;&#x5199;&#x3002;Tomcat &#x4E2D;sessionId &#x540D;&#x79F0;&#x4E3A; JsessionId&#x3002;</p>
+<p>&#x533A;&#x522B;&#xFF1A;</p>
+<p>cookie &#x6570;&#x636E;&#x5B58;&#x653E;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#xFF0C;session&#x6570;&#x636E;&#x653E;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;</p>
+<p>session&#x76F8;&#x5BF9;cookie&#x66F4;&#x5B89;&#x5168;&#x3002;</p>
+<p>&#x82E5;&#x8003;&#x8651;&#x51CF;&#x8F7B;&#x670D;&#x52A1;&#x5668;&#x8D1F;&#x62C5;&#xFF0C;&#x5E94;&#x5F53;&#x4F7F;&#x7528;cookie&#x3002;</p>
+<p><strong>session &#x5171;&#x4EAB;&#xFF1A;</strong></p>
+<p><a href="https://doocs.github.io/advanced-java/#/./docs/distributed-system/distributed-session?id=tomcat-redis" target="_blank">    tomcat + redis</a></p>
+<p>&#x4F7F;&#x7528; session &#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x8DDF;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x8FD8;&#x662F;&#x57FA;&#x4E8E; tomcat &#x539F;&#x751F;&#x7684; session &#x652F;&#x6301;&#x5373;&#x53EF;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x662F;&#x7528;&#x4E00;&#x4E2A;&#x53EB;&#x505A; <code>Tomcat RedisSessionManager</code> &#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x8BA9;&#x6240;&#x6709;&#x6211;&#x4EEC;&#x90E8;&#x7F72;&#x7684; tomcat &#x90FD;&#x5C06; session &#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230; redis &#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5728; tomcat &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>&lt;Valve className=&quot;com.orangefunction.tomcat.redissessions.RedisSessionHandlerValve&quot; /&gt;
+
+&lt;Manager className=&quot;com.orangefunction.tomcat.redissessions.RedisSessionManager&quot;
+         host=&quot;{redis.host}&quot;
+         port=&quot;{redis.port}&quot;
+         database=&quot;{redis.dbnum}&quot;
+         maxInactiveInterval=&quot;60&quot;/&gt;
+</code></pre><p>&#x7136;&#x540E;&#x6307;&#x5B9A; redis &#x7684; host &#x548C; port &#x5C31; ok &#x4E86;&#x3002;</p>
+<pre><code>&lt;Valve className=&quot;com.orangefunction.tomcat.redissessions.RedisSessionHandlerValve&quot; /&gt;
+&lt;Manager className=&quot;com.orangefunction.tomcat.redissessions.RedisSessionManager&quot;
+     sentinelMaster=&quot;mymaster&quot;
+     sentinels=&quot;&lt;sentinel1-ip&gt;:26379,&lt;sentinel2-ip&gt;:26379,&lt;sentinel3-ip&gt;:26379&quot;
+     maxInactiveInterval=&quot;60&quot;/&gt;
+</code></pre><pre><code>&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x4E0A;&#x9762;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x57FA;&#x4E8E; redis &#x54E8;&#x5175;&#x652F;&#x6301;&#x7684; redis &#x9AD8;&#x53EF;&#x7528;&#x96C6;&#x7FA4;&#x6765;&#x4FDD;&#x5B58; session &#x6570;&#x636E;&#xFF0C;&#x90FD;&#x662F; ok &#x7684;&#x3002;
+</code></pre><p><a href="https://doocs.github.io/advanced-java/#/./docs/distributed-system/distributed-session?id=spring-session-redis" target="_blank">    spring session + redis</a></p>
+<p>&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#x7684;&#x65B9;&#x5F0F;&#x4F1A;&#x4E0E; tomcat &#x5BB9;&#x5668;&#x91CD;&#x8026;&#x5408;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x8981;&#x5C06; web &#x5BB9;&#x5668;&#x8FC1;&#x79FB;&#x6210; jetty&#xFF0C;&#x96BE;&#x9053;&#x8FD8;&#x8981;&#x91CD;&#x65B0;&#x628A; jetty &#x90FD;&#x914D;&#x7F6E;&#x4E00;&#x904D;&#xFF1F;</p>
+<p>&#x56E0;&#x4E3A;&#x4E0A;&#x9762;&#x90A3;&#x79CD; tomcat + redis &#x7684;&#x65B9;&#x5F0F;&#x597D;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;<strong>&#x4E25;&#x91CD;&#x4F9D;&#x8D56;&#x4E8E;web&#x5BB9;&#x5668;</strong>&#xFF0C;&#x4E0D;&#x597D;&#x5C06;&#x4EE3;&#x7801;&#x79FB;&#x690D;&#x5230;&#x5176;&#x4ED6; web &#x5BB9;&#x5668;&#x4E0A;&#x53BB;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x4F60;&#x8981;&#x662F;&#x6362;&#x4E86;&#x6280;&#x672F;&#x6808;&#x548B;&#x6574;&#xFF1F;&#x6BD4;&#x5982;&#x6362;&#x6210;&#x4E86; spring cloud &#x6216;&#x8005;&#x662F; spring boot &#x4E4B;&#x7C7B;&#x7684;&#x5462;&#xFF1F;</p>
+<p>&#x6240;&#x4EE5;&#x73B0;&#x5728;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x8FD8;&#x662F;&#x57FA;&#x4E8E; Java &#x4E00;&#x7AD9;&#x5F0F;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; spring&#x3002;&#x4EBA;&#x5BB6; spring &#x57FA;&#x672C;&#x4E0A;&#x627F;&#x5305;&#x4E86;&#x5927;&#x90E8;&#x5206;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6846;&#x67B6;&#xFF0C;spirng cloud &#x505A;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;spring boot &#x505A;&#x811A;&#x624B;&#x67B6;&#xFF0C;&#x6240;&#x4EE5;&#x7528; sping session &#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+<p>&#x5728; pom.xml &#x4E2D;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
+  &lt;version&gt;1.2.1.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;redis.clients&lt;/groupId&gt;
+  &lt;artifactId&gt;jedis&lt;/artifactId&gt;
+  &lt;version&gt;2.8.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><p>&#x5728; spring &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>&lt;bean id=&quot;redisHttpSessionConfiguration&quot;
+     class=&quot;org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration&quot;&gt;
+    &lt;property name=&quot;maxInactiveIntervalInSeconds&quot; value=&quot;600&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;jedisPoolConfig&quot; class=&quot;redis.clients.jedis.JedisPoolConfig&quot;&gt;
+    &lt;property name=&quot;maxTotal&quot; value=&quot;100&quot; /&gt;
+    &lt;property name=&quot;maxIdle&quot; value=&quot;10&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;jedisConnectionFactory&quot;
+      class=&quot;org.springframework.data.redis.connection.jedis.JedisConnectionFactory&quot; destroy-method=&quot;destroy&quot;&gt;
+    &lt;property name=&quot;hostName&quot; value=&quot;${redis_hostname}&quot;/&gt;
+    &lt;property name=&quot;port&quot; value=&quot;${redis_port}&quot;/&gt;
+    &lt;property name=&quot;password&quot; value=&quot;${redis_pwd}&quot; /&gt;
+    &lt;property name=&quot;timeout&quot; value=&quot;3000&quot;/&gt;
+    &lt;property name=&quot;usePool&quot; value=&quot;true&quot;/&gt;
+    &lt;property name=&quot;poolConfig&quot; ref=&quot;jedisPoolConfig&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p>&#x5728; web.xml &#x4E2D;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>&lt;filter&gt;
+    &lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+</code></pre><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>@RestController
+@RequestMapping(&quot;/test&quot;)
+public class TestController {
+
+    @RequestMapping(&quot;/putIntoSession&quot;)
+    public String putIntoSession(HttpServletRequest request, String username) {
+        request.getSession().setAttribute(&quot;name&quot;,  &quot;leo&quot;);
+        return &quot;ok&quot;;
+    }
+
+    @RequestMapping(&quot;/getFromSession&quot;)
+    public String getFromSession(HttpServletRequest request, Model model){
+        String name = request.getSession().getAttribute(&quot;name&quot;);
+        return name;
+    }
+}
+</code></pre><pre><code>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x662F; ok &#x7684;&#xFF0C;&#x7ED9; sping session &#x914D;&#x7F6E;&#x57FA;&#x4E8E; redis &#x6765;&#x5B58;&#x50A8; session &#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A; spring session &#x7684;&#x8FC7;&#x6EE4;&#x5668;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;session &#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x4EA4;&#x7ED9; spring session &#x6765;&#x7BA1;&#x4E86;&#x3002;&#x63A5;&#x7740;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5C31;&#x7528;&#x539F;&#x751F;&#x7684; session &#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x57FA;&#x4E8E; spring sesion &#x4ECE; redis &#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x4E86;&#x3002;
+
+&#x5B9E;&#x73B0;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x4F1A;&#x8BDD;&#x6709;&#x5F88;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x8BF4;&#x7684;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;tomcat + redis &#x65E9;&#x671F;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x91CD;&#x8026;&#x5408;&#x5230; tomcat &#x4E2D;&#xFF1B;&#x8FD1;&#x4E9B;&#x5E74;&#xFF0C;&#x901A;&#x8FC7; spring session &#x6765;&#x5B9E;&#x73B0;&#x3002;
+
+**&#x4F7F;&#x7528; token &#x4EE3;&#x66FF; sessionId**
+
+&#x6BCF;&#x4E2A;&#x4EBA;&#x53EA;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x81EA;&#x5DF1;&#x7684;session id&#xFF0C;&#x800C;&#x670D;&#x52A1;&#x5668;&#x8981;&#x4FDD;&#x5B58;&#x6240;&#x6709;&#x4EBA;&#x7684;session id &#xFF01;&#x5982;&#x679C;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x591A;&#x4E86;&#xFF0C; &#x5C31;&#x5F97;&#x7531;&#x6210;&#x5343;&#x4E0A;&#x4E07;&#xFF0C;&#x751A;&#x81F3;&#x51E0;&#x5341;&#x4E07;&#x4E2A;&#x3002;&#x8FD9;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x5F00;&#x9500; &#xFF0C; &#x4E25;&#x91CD;&#x7684;&#x9650;&#x5236;&#x4E86;&#x670D;&#x52A1;&#x5668;&#x6269;&#x5C55;&#x80FD;&#x529B;&#xFF0C; &#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x7528;&#x4E24;&#x4E2A;&#x673A;&#x5668;&#x7EC4;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;&#xFF0C; &#x5C0F;F&#x901A;&#x8FC7;&#x673A;&#x5668;A&#x767B;&#x5F55;&#x4E86;&#x7CFB;&#x7EDF;&#xFF0C; &#x90A3;session id&#x4F1A;&#x4FDD;&#x5B58;&#x5728;&#x673A;&#x5668;A&#x4E0A;&#xFF0C; &#x5047;&#x8BBE;&#x5C0F;F&#x7684;&#x4E0B;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x88AB;&#x8F6C;&#x53D1;&#x5230;&#x673A;&#x5668;B&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x673A;&#x5668;B&#x53EF;&#x6CA1;&#x6709;&#x5C0F;F&#x7684; session id&#x554A;&#x3002;&#x5BF9;&#x4E8E; session &#x590D;&#x5236;&#xFF0C; &#x9700;&#x8981;&#x628A;session id &#x5728;&#x4E24;&#x4E2A;&#x673A;&#x5668;&#x4E4B;&#x95F4;&#x642C;&#x6765;&#x642C;&#x53BB;&#x3002;
+
+&#x628A;session id &#x96C6;&#x4E2D;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#xFF0C; &#x6240;&#x6709;&#x7684;&#x673A;&#x5668;&#x90FD;&#x6765;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x7684;&#x6570;&#x636E;&#xFF0C; &#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x590D;&#x5236;&#x4E86;&#xFF0C; &#x4F46;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x5355;&#x70B9;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C; &#x8981;&#x662F;&#x90A3;&#x4E2A;&#x8D1F;&#x8D23;session &#x7684;&#x673A;&#x5668;&#x6302;&#x4E86;&#xFF0C; &#x6240;&#x6709;&#x4EBA;&#x90FD;&#x5F97;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#x4E00;&#x904D;&#x3002;
+
+&#x5C1D;&#x8BD5;&#x628A;&#x8FD9;&#x4E2A;&#x5355;&#x70B9;&#x7684;&#x673A;&#x5668;&#x641E;&#x6210;&#x96C6;&#x7FA4;&#xFF0C;&#x589E;&#x52A0;&#x53EF;&#x9760;&#x6027;&#xFF0C; &#x4F46; session &#x59CB;&#x7EC8;&#x662F;&#x4E00;&#x4E2A;&#x6C89;&#x91CD;&#x7684;&#x8D1F;&#x62C5;&#x3002;
+
+&#x4E0D;&#x4F7F;&#x7528; sessionId &#x6765;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x662F;&#x6539;&#x4E3A;&#x57FA;&#x4E8E;Token&#x7684;&#x8EAB;&#x4EFD;&#x6821;&#x9A8C;&#x3002;
+
+&#x57FA;&#x4E8E;Token&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5C06;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x6216;Session&#x4E2D;&#x3002;
+
+&#x57FA;&#x4E8E;Token&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;:
+</code></pre><ol>
+<li><p>&#x7528;&#x6237;&#x767B;&#x5F55;&#x6821;&#x9A8C;&#xFF0C;&#x6821;&#x9A8C;&#x6210;&#x529F;&#x540E;&#x5C31;&#x8FD4;&#x56DE;Token&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+</li>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x6570;&#x636E;&#x540E;&#x4FDD;&#x5B58;&#x5728;&#x5BA2;&#x6237;&#x7AEF;</p>
+</li>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x6BCF;&#x6B21;&#x8BBF;&#x95EE;API&#x662F;&#x643A;&#x5E26;Token&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x3002;</p>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x91C7;&#x7528;filter&#x8FC7;&#x6EE4;&#x5668;&#x6821;&#x9A8C;&#x3002;&#x6821;&#x9A8C;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF0C;&#x6821;&#x9A8C;&#x5931;&#x8D25;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x7801;&#x3002;</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="HTTP的长连接与短连接.html" class="navigation navigation-next navigation-unique" aria-label="Next page: HTTP的长连接与短连接">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP协议","level":"1.21.3.1","depth":3,"next":{"title":"HTTP的长连接与短连接","level":"1.21.3.2","depth":3,"path":"notes/计算机网络/HTTP/HTTP的长连接与短连接.md","ref":"notes/计算机网络/HTTP/HTTP的长连接与短连接.md","articles":[]},"previous":{"title":"HTTP","level":"1.21.3","depth":2,"ref":"","articles":[{"title":"HTTP协议","level":"1.21.3.1","depth":3,"path":"notes/计算机网络/HTTP/HTTP协议.md","ref":"notes/计算机网络/HTTP/HTTP协议.md","articles":[]},{"title":"HTTP的长连接与短连接","level":"1.21.3.2","depth":3,"path":"notes/计算机网络/HTTP/HTTP的长连接与短连接.md","ref":"notes/计算机网络/HTTP/HTTP的长连接与短连接.md","articles":[]},{"title":"HTTP1","level":"1.21.3.3","depth":3,"path":"notes/计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.md","ref":"notes/计算机网络/HTTP/HTTP1.0、HTTP1.1 和 HTTP2.0 的区别.md","articles":[]},{"title":"http原理","level":"1.21.3.4","depth":3,"path":"notes/计算机网络/HTTP/http原理.md","ref":"notes/计算机网络/HTTP/http原理.md","articles":[]},{"title":"一次http请求过程","level":"1.21.3.5","depth":3,"path":"notes/计算机网络/HTTP/一次http请求过程.md","ref":"notes/计算机网络/HTTP/一次http请求过程.md","articles":[]},{"title":"断点续传","level":"1.21.3.6","depth":3,"path":"notes/计算机网络/HTTP/断点续传.md","ref":"notes/计算机网络/HTTP/断点续传.md","articles":[]},{"title":"跨站攻击","level":"1.21.3.7","depth":3,"path":"notes/计算机网络/HTTP/跨站攻击.md","ref":"notes/计算机网络/HTTP/跨站攻击.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/计算机网络/HTTP/HTTP协议.md","mtime":"2020-06-07T10:41:37.789Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T06:44:00.660Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
